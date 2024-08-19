@@ -1,0 +1,19 @@
+{
+  "folders": [
+    {
+      "name": "⏰ KBA",
+      "path": "./apps/kba/src"
+    },
+    {
+      "name": "🗄️ Data",
+      "path": "./data"
+    },
+    {
+      "name": "Monorepo",
+      "path": "."
+    }
+  ],
+  "settings": {
+    "terminal.integrated.cwd": "${workspaceFolder:Monorepo}"
+  }
+}
