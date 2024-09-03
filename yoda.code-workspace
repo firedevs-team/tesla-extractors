@@ -1,8 +1,8 @@
 {
   "folders": [
     {
-      "name": "⏰ KBA",
-      "path": "./apps/kba/src"
+      "name": "⏰ Sales Accumulator",
+      "path": "./apps/sales-accumulator/src"
     },
     {
       "name": "🗄️ Data",
