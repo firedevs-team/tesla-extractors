@@ -83,7 +83,7 @@ export abstract class BaseAccumulator<S> {
           let csvData = csv;
           // Si el archivo existe, omite la cabecera
           if (fileExists) {
-            csvData = csv.split('\n').slice(1).join('\n');
+            csvData = `\n${csv.split('\n').slice(1).join('\n')}`;
           }
 
           fs.appendFileSync(filePath, csvData);

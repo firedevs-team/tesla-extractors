@@ -1,3 +1,4 @@
-import { KBAAccumulator } from './KBAAccumulator';
+import { KBAAccumulator } from './KBA';
+import { CNEVTeslaTotalAccumulator } from './CNEVTeslaTotal';
 
-export default [new KBAAccumulator()];
+export default [new KBAAccumulator(), new CNEVTeslaTotalAccumulator()];

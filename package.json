@@ -5,12 +5,11 @@
   "scripts": {},
   "private": true,
   "dependencies": {
-    "@langchain/openai": "^0.2.8",
     "@nrwl/node": "^19.5.7",
     "axios": "^1.6.0",
     "cheerio": "^1.0.0",
     "json2csv": "^6.0.0-alpha.2",
-    "langchain": "^0.2.17",
+    "openai": "^4.57.0",
     "pdf-parse": "^1.1.1",
     "tslib": "^2.3.0",
     "xlsx": "^0.18.5",
