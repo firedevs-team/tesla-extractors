@@ -47,7 +47,7 @@ export abstract class BaseAccumulator<S> {
     fs.writeFileSync(this.metadataPath, JSON.stringify(metadata, null, 2));
   }
 
-  protected abstract transform(filePath: string): Promise<S[]>;
+  protected abstract transform(dataPath: string): Promise<S[]>;
 
   async run(): Promise<void> {
     console.log(`Running ${this.sourceName} accumulator...`);
@@ -67,10 +67,10 @@ export abstract class BaseAccumulator<S> {
     // Anlizo que no ha sido transformado comparando donwloaded y transformed.
     // Transformo las que no han sido transformadas y las dejo en data.csv
     const metadata = this.getMetadata();
-    for (const fileName of metadata.downloaded) {
-      if (!metadata.transformed.includes(fileName)) {
+    for (const id of metadata.downloaded) {
+      if (!metadata.transformed.includes(id)) {
         const sales = await this.transform(
-          path.join(path.join(this.downloadPath, fileName))
+          path.join(path.join(this.downloadPath, id))
         );
 
         // Guardo las ventas en data.csv
@@ -90,10 +90,10 @@ export abstract class BaseAccumulator<S> {
         }
 
         // Actualizo la metadata
-        metadata.transformed.push(fileName);
+        metadata.transformed.push(id);
         this.saveMetadata(metadata);
 
-        console.log(`> ${fileName} transformed.`);
+        console.log(`> ${id} transformed.`);
       }
     }
   }
