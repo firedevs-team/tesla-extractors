@@ -4,24 +4,12 @@ import OpenAI from 'openai';
 import { zodResponseFormat } from 'openai/helpers/zod';
 import { BaseAccumulator } from '../lib/BaseAccumulator';
 
-const openai = new OpenAI();
-
-const outputSchema = z.object({
-  deliveries: z
-    .array(
-      z.object({
-        year: z.number().describe('Año de las entregas'),
-        month: z.number().describe('Mes de las entregas'),
-        value: z.number().describe('Total de las entregas'),
-      })
-    )
-    .describe('Deliveries de autos Xpeng'),
-});
-
-interface Delivery {
+interface IManufacturerCarRegistrations {
+  manufacturer: string;
   year: number;
   month: number;
-  value: number;
+  total_registered: number;
+  market_percent_total: number;
 }
 
 export class CNEVXpengDeliveriesAccumulator extends BaseAccumulator<Delivery> {

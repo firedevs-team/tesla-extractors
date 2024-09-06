@@ -1,6 +1,10 @@
 {
   "folders": [
     {
+      "name": "⏰ Accumulator",
+      "path": "./apps/accumulator/src"
+    },
+    {
       "name": "⏰ Sales Accumulator",
       "path": "./apps/sales-accumulator/src"
     },

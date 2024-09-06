@@ -5,6 +5,7 @@
   "scripts": {},
   "private": true,
   "dependencies": {
+    "@aws-sdk/client-textract": "^3.645.0",
     "@nrwl/node": "^19.5.7",
     "axios": "^1.6.0",
     "cheerio": "^1.0.0",
