@@ -11,6 +11,8 @@ import { execSync } from 'child_process';
 import { z } from 'zod';
 
 const REGISTRATIONS_BY_MANUFACTURER_EU_ID = 'registrations_by_manufacturer_eu';
+const REGISTRATIONS_BY_MANUFACTURER_EU_EFTA_UK_ID =
+  'registrations_by_manufacturer_eu_efta_uk';
 
 export class ACEAAcumulator extends BaseAccumulator {
   private textractClient: TextractClient;
@@ -25,13 +27,22 @@ export class ACEAAcumulator extends BaseAccumulator {
   protected transform(id: string, version: string): Promise<Object[]> {
     switch (id) {
       case REGISTRATIONS_BY_MANUFACTURER_EU_ID:
-        return this.transformRegistrationsByManufacturerEU(version);
+        return this.transformRegistrationsByManufacturer(
+          REGISTRATIONS_BY_MANUFACTURER_EU_ID,
+          version
+        );
+      case REGISTRATIONS_BY_MANUFACTURER_EU_EFTA_UK_ID:
+        return this.transformRegistrationsByManufacturer(
+          REGISTRATIONS_BY_MANUFACTURER_EU_EFTA_UK_ID,
+          version
+        );
       default:
         throw new Error(`Unknown id: ${id}`);
     }
   }
 
-  private async transformRegistrationsByManufacturerEU(
+  private async transformRegistrationsByManufacturer(
+    id: string,
     version: string
   ): Promise<Object[]> {
     // Extraigo el año y el mes de la versión
@@ -40,11 +51,7 @@ export class ACEAAcumulator extends BaseAccumulator {
     const month = parseInt(parts[1]);
 
     // Cargo la imagen
-    const imagePath = path.join(
-      this.downloadPath,
-      REGISTRATIONS_BY_MANUFACTURER_EU_ID,
-      version
-    );
+    const imagePath = path.join(this.downloadPath, id, version);
     const imageContent = await fs.promises.readFile(imagePath);
 
     // La envio a AWS Textract
