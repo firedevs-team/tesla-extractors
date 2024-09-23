@@ -1,16 +1,12 @@
 {
   "folders": [
     {
-      "name": "⏰ Accumulator",
-      "path": "./apps/accumulator/src"
-    },
-    {
-      "name": "⏰ Sales Accumulator",
-      "path": "./apps/sales-accumulator/src"
+      "name": "⏰ Extractor",
+      "path": "./apps/extractor/src"
     },
     {
       "name": "🗄️ Data",
-      "path": "./data"
+      "path": "./data/extractor"
     },
     {
       "name": "Monorepo",

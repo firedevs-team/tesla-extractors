@@ -37,7 +37,8 @@
         "kba-e2e/**/*",
         "apps/kba-e2e/**/*",
         "apps/sales-accumulator-e2e/**/*",
-        "apps/accumulator-e2e/**/*"
+        "apps/accumulator-e2e/**/*",
+        "apps/extractor-e2e/**/*"
       ]
     }
   ]
