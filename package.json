@@ -10,8 +10,10 @@
     "axios": "^1.7.7",
     "cheerio": "^1.0.0",
     "json2csv": "^6.0.0-alpha.2",
+    "lodash": "^4.17.21",
     "openai": "^4.57.0",
     "pdf-parse": "^1.1.1",
+    "pdf2json": "^3.1.4",
     "tslib": "^2.3.0",
     "xlsx": "^0.18.5",
     "zod": "^3.23.8"
@@ -29,6 +31,7 @@
     "@swc/helpers": "~0.5.11",
     "@types/jest": "^29.4.0",
     "@types/json2csv": "^5.0.7",
+    "@types/lodash": "^4.17.9",
     "@types/node": "~18.16.9",
     "@types/pdf-parse": "^1.1.4",
     "@typescript-eslint/eslint-plugin": "^7.16.0",
