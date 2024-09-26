@@ -1,274 +1,366 @@
-import axios from 'axios';
-import cheerio from 'cheerio';
-import { readdir, writeFile } from 'fs/promises';
-import { Parser } from 'json2csv';
-import path from 'path';
-import PDFParser, { Output, Text } from 'pdf2json';
+import puppeteer, { Browser, Page } from 'puppeteer';
 import z from 'zod';
-import { BaseExtractor } from '../../lib/BaseExtractor';
-import os from 'os';
-import { execSync } from 'child_process';
+import {
+  BaseExtractorV2,
+  DateId,
+  FileData,
+  FileOuput,
+} from '../../lib/BaseExtractorV2';
 
-const SOURCE_URL = 'https://unrae.it/dati-statistici/immatricolazioni?page=1';
+const SOURCE_URL =
+  'https://app.powerbi.com/view?r=eyJrIjoiNzZjMzI0MWQtYzVhOC00ZjkxLWI5ZjQtNDQ4OTEyOWRlZWU2IiwidCI6ImYwOGMzNTQyLWY5NWYtNDE3ZC04NmU5LTZhZWQ5NzY1ODRhMCIsImMiOjh9';
 
-export class OFVExtractor extends BaseExtractor {
+const MONTH_MAP = {
+  1: 'Januar',
+  2: 'Februar',
+  3: 'Mars',
+  4: 'April',
+  5: 'Mai',
+  6: 'Juni',
+  7: 'Juli',
+  8: 'August',
+  9: 'September',
+  10: 'Oktober',
+  11: 'November',
+  12: 'Desember',
+};
+
+interface IData {
+  by_brand: string[][];
+  by_model: string[][];
+}
+
+export class OFVExtractor extends BaseExtractorV2 {
   constructor() {
-    super('norway', 'ofv');
+    super({
+      folder: 'norway',
+      source: 'ofv',
+      fileext: 'json',
+    });
   }
 
-  async extract(): Promise<void> {
-    // 1- Leer datos descargados previamente
-    const fileNames = await readdir(this.downloadsPath);
+  async download(dateId: DateId): Promise<Buffer | null> {
+    const [by_brand, by_model] = await Promise.all([
+      this.downloadTopRegistrationsByBrand(dateId),
+      this.downloadTopRegistrationsByModel(dateId),
+    ]);
 
-    // 2- Analizar si deben haber nuevos datos publicados
-    const today = new Date();
-    // Del día 1 en adelante
-    if (today.getDate() > 1) {
-      // Calculo el mes pasado
-      const tmpDate = new Date();
-      tmpDate.setMonth(tmpDate.getMonth() - 1);
-      const previousMonth = tmpDate.getMonth() + 1;
+    const fileContent = JSON.stringify(
+      {
+        by_brand,
+        by_model,
+      },
+      null,
+      2
+    );
 
-      // Busco si está descargado el fichero para el mes pasado
-      const previousMonthFileName = `${tmpDate.getFullYear()}_${previousMonth}.pdf`;
-      const isDownloaded = fileNames.includes(previousMonthFileName);
-      if (!isDownloaded) {
-        // 3- Chequear si los datos están publicados
-        console.log('- Checking source...');
-
-        const response = await axios.get(SOURCE_URL);
-
-        const $ = cheerio.load(response.data);
-
-        // Extraigo los links de la primera página
-        let links: { text: string; href: string }[] = [];
-        $(`.cat_art_container a`).each((_, element) => {
-          const text = $(element).text().trim();
-          const href = $(element).attr('href') || '';
-          links.push({ text, href });
-        });
-
-        // Me quedo solo el link que me intersa que empiezan con
-        // Immatricolazioni BEV per modello - Agosto 2024
-        links = links.filter((link) => {
-          return link.text.startsWith('Immatricolazioni BEV per modello');
-        });
-
-        // Mapeo los links para poder comparar
-        const months = [
-          'GENNAIO',
-          'FEBBRAIO',
-          'MARZO',
-          'APRILE',
-          'MAGGIO',
-          'GIUGNO',
-          'LUGLIO',
-          'AGOSTO',
-          'SETTEMBRE',
-          'OTTOBRE',
-          'NOVEMBRE',
-          'DICEMBRE',
-        ];
-        const mappedLinks = await Promise.all(
-          links.map(async (link, index) => {
-            const parts = link.text.split('-')[1].trim().split(' ');
-            const month = months.indexOf(parts[0].toUpperCase()) + 1;
-            const year = parseInt(parts[1]);
-
-            // La url que aparece en la página
-            // no es la misma que la que se descarga
-            // Tengo q abrir esa página y extraer el link
-
-            const response = await axios.get(link.href);
-            const $ = cheerio.load(response.data);
-
-            // Busco los links dentro de div .unrae_art_box
-            let hrefs: string[] = [];
-            $(`.unrae_art_box a`).each((_, element) => {
-              const href = $(element).attr('href') || '';
-              hrefs.push(href);
-            });
-
-            // Me quedo con el segundo link encontrado
-            // que es el que tiene el pdf
-            return {
-              url: hrefs[1],
-              year,
-              month,
-            };
-          })
-        );
-
-        // Creo una lista de pendientes para descarga
-        const pendingLinks = mappedLinks.filter((link) => {
-          if (fileNames.includes(`${link.year}_${link.month}.pdf`)) {
-            return false;
-          }
-          return true;
-        });
-
-        // 4- Descargar los datos
-        for (const pendingLink of pendingLinks) {
-          const response = await axios(pendingLink.url, {
-            responseType: 'arraybuffer',
-          });
-
-          await writeFile(
-            path.join(
-              this.downloadsPath,
-              `${pendingLink.year}_${pendingLink.month}.pdf`
-            ),
-            response.data
-          );
-        }
-      }
-    }
-
-    // 5- Procesar y salvar los datos
-    await this.processAndSave();
+    // Retorno buffer para cumplir con la interfaz
+    return Buffer.from(fileContent, 'utf-8');
   }
 
-  private async processAndSave(): Promise<void> {
-    // Leer datos descargados
-    const fileNames = await readdir(this.downloadsPath);
+  async transform(dateId: DateId, fileData: FileData): Promise<FileOuput[]> {
+    const data: IData = JSON.parse(fileData.data.toString());
 
-    // Mapeo los filenames a un objeto con year, month y name
-    const mappedFiles = fileNames.map((fileName) => {
-      const parts = fileName.split('_');
+    const outputs = await Promise.all([
+      this.transformTopRegistrationsByBrand(dateId, data.by_brand),
+      this.transformTopRegistrationsByModel(dateId, data.by_model),
+    ]);
+
+    return outputs;
+  }
+
+  private downloadTopRegistrationsByBrand = async (
+    dateId: DateId
+  ): Promise<string[][]> => {
+    // Inicia el navegador
+    const browser: Browser = await puppeteer.launch({
+      headless: true, // Cambia a true si no necesitas ver la interacción
+      args: ['--no-sandbox', '--disable-setuid-sandbox'], // Argumentos para evitar problemas de permisos
+    });
+
+    // Abre una nueva pestaña
+    const page: Page = await browser.newPage();
+
+    // Configura el viewport (opcional)
+    await page.setViewport({ width: 1280, height: 800 });
+
+    // Navega a la página deseada
+    await page.goto(SOURCE_URL, { waitUntil: 'networkidle2' });
+
+    // Espero a que se muestren los selectores de los slicers
+    await page.waitForSelector('.slicer-dropdown-menu', { timeout: 10000 });
+
+    // Selecciono año
+    await this.changeSlicer(page, 0, `${dateId.year}`);
+
+    // Selecciono mes
+    await this.changeSlicer(page, 1, MONTH_MAP[dateId.month]);
+
+    // Extraigo los valores de la tabla
+    const tableValues = await this.getTableValues(page);
+
+    // Cierro el navegador
+    await browser.close();
+
+    return tableValues;
+  };
+
+  private downloadTopRegistrationsByModel = async (
+    dateId: DateId
+  ): Promise<string[][]> => {
+    // Inicia el navegador
+    const browser: Browser = await puppeteer.launch({
+      headless: true, // Cambia a true si no necesitas ver la interacción
+      args: ['--no-sandbox', '--disable-setuid-sandbox'], // Argumentos para evitar problemas de permisos
+    });
+
+    // Abre una nueva pestaña
+    const page: Page = await browser.newPage();
+
+    // Configura el viewport (opcional)
+    await page.setViewport({ width: 1280, height: 800 });
+
+    // Navega a la página deseada
+    await page.goto(SOURCE_URL, { waitUntil: 'networkidle2' });
+
+    // Espero a que se muestren los selectores de los slicers
+    await page.waitForSelector('.slicer-dropdown-menu', { timeout: 10000 });
+
+    // Doy click en ordenar por modelos
+    // Obtiene las coordenadas del segundo <path> en el selector
+    const { x, y } = await page.evaluate(() => {
+      // Selecciona todos los elementos con el selector .ui-role-button-fill
+      const paths = document.querySelectorAll('.ui-role-button-fill');
+
+      const pathElement = paths[1]; // Selecciona el segundo elemento (posición 1)
+
+      // Obtiene el rectángulo del elemento para obtener sus coordenadas
+      const rect = pathElement.getBoundingClientRect();
+
+      // Calcula las coordenadas X, Y en el centro del elemento
       return {
-        year: parseInt(parts[0]),
-        month: parseInt(parts[1].replace('.pdf', '')),
-        name: fileName,
+        x: rect.left + rect.width / 2,
+        y: rect.top + rect.height / 2,
       };
     });
 
-    // Ordeno los archivos por año y mes
-    mappedFiles.sort((a, b) => {
-      if (a.year === b.year) {
-        return b.month - a.month;
-      }
-      return b.year - a.year;
+    // Doy click en el botón
+    await page.mouse.click(x, y);
+
+    // Espero a que cargue el contenido del dashboard
+    await new Promise((resolve) => setTimeout(resolve, 4000));
+
+    // Selecciono año
+    await this.changeSlicer(page, 0, `${dateId.year}`);
+
+    // Selecciono mes
+    await this.changeSlicer(page, 1, MONTH_MAP[dateId.month]);
+
+    // Extraigo los valores de la tabla
+    const tableValues = await this.getTableValues(page);
+
+    // Cierro el navegador
+    await browser.close();
+
+    return tableValues;
+  };
+
+  private transformTopRegistrationsByBrand = async (
+    dateId: DateId,
+    tableValues: string[][]
+  ): Promise<FileOuput> => {
+    const Schema = z.object({
+      year: z.number().int().min(1900).max(2100),
+      month: z.number().int().min(1).max(12),
+      brand: z.preprocess((value) => {
+        // Decodifica, limpia y convierte a mayúsculas
+        return (value as string).trim().toUpperCase();
+      }, z.string()),
+      registrations: z.preprocess((value) => {
+        const text = (value as string).trim().replace(/[.,]/g, '');
+        if (text === '') {
+          return undefined;
+        }
+
+        // Decodifica, limpia, elimina puntos y convierte a número entero
+        return parseInt(text, 10);
+      }, z.number().optional()),
+
+      market_share: z.preprocess((value) => {
+        const text = (value as string)
+          .replace(',', '.')
+          .replace('%', '')
+          .trim();
+        if (text === '') {
+          return undefined;
+        }
+
+        // Decodifica y convierte a número flotante
+        return parseFloat(text);
+      }, z.number().optional()),
     });
 
-    // Proceso la información
     const registrations = [];
-    for (const file of mappedFiles) {
-      // console.log(`- Processing ${file.name}...`);
-
-      const downloadFilePath = path.join(this.downloadsPath, file.name);
-      const pdfJSON = await new Promise<Output>((resolve, reject) => {
-        const pdfParser = new PDFParser();
-
-        pdfParser.on('pdfParser_dataError', (errData) =>
-          reject(errData.parserError)
-        );
-
-        pdfParser.on('pdfParser_dataReady', async (pdfData) => {
-          resolve(pdfData);
-        });
-
-        pdfParser.loadPDF(downloadFilePath);
+    for (const row of tableValues) {
+      const parsed = Schema.parse({
+        year: dateId.year,
+        month: dateId.month,
+        brand: row[1],
+        registrations: row[2],
+        market_share: row[3],
       });
 
-      // Me quedo con los textos de la primera página
-      const texts = pdfJSON.Pages[0].Texts;
-
-      // Armo la tabla usando las coordenadas
-      // Para crear un row necesito dejar en un arreglo
-      // los que tenga la y igual o muy cercana
-      const TOLERANCE = 0.036;
-      let rows: Text[][] = [];
-      for (let i = 0; i < texts.length; i++) {
-        const text = texts[i];
-
-        // Busco a que row pertenece
-        // Si no hay ninguno, se crea un nuevo row
-        const match = rows.find((row) => {
-          return Math.abs(row[0].y - text.y) < TOLERANCE;
-        });
-        if (match) {
-          match.push(text);
-        } else {
-          rows.push([text]);
-        }
-      }
-
-      // Ordenos los rows por x
-      rows = rows.map((row) => {
-        return row.sort((a, b) => a.x - b.x);
-      });
-
-      // Elimino los row que el primer texto no es un número
-      // ya que los rows que necesito empiezan un indice
-      rows = rows.filter((row) => {
-        return !isNaN(parseInt(decodeURIComponent(row[0].R[0].T)));
-      });
-
-      // Valido los YTD Registrations con zod
-      const YTDRegistrationsSchema = z.object({
-        year: z.number().int().min(1900).max(2100),
-        month: z.number().int().min(1).max(12),
-        brand: z.preprocess((value: string) => {
-          // Decodifica, limpia y convierte a mayúsculas
-          return decodeURIComponent(value).trim().toUpperCase();
-        }, z.string()),
-
-        model: z.preprocess((value: string) => {
-          // Decodifica, limpia y convierte a mayúsculas
-          return decodeURIComponent(value).trim().toUpperCase();
-        }, z.string()),
-
-        ytd_registrations: z.preprocess((value: string) => {
-          // Decodifica, limpia, elimina puntos y convierte a número entero
-          return parseInt(
-            decodeURIComponent(value).trim().replace(/\./g, ''),
-            10
-          );
-        }, z.number()),
-
-        ytd_market_share: z.preprocess((value: string) => {
-          // Decodifica y convierte a número flotante
-          return parseFloat(decodeURIComponent(value).trim().replace(',', '.'));
-        }, z.number()),
-      });
-
-      const tmpRegistrations = [];
-      for (const row of rows) {
-        const lastPosition = row.length - 1;
-
-        // El parse de Zod realiza la transformación y validación
-        const parsed = YTDRegistrationsSchema.parse({
-          year: file.year,
-          month: file.month,
-          brand: row[1].R[0].T,
-          model: row[2].R[0].T,
-          ytd_registrations: row[lastPosition - 1].R[0].T,
-          ytd_market_share: row[lastPosition].R[0].T,
-        });
-
-        tmpRegistrations.push(parsed);
-      }
-
-      // Ordeno los tmp registrations por ytd_registrations
-      tmpRegistrations.sort(
-        (a, b) => b.ytd_registrations - a.ytd_registrations
-      );
-
-      // Finalmente los agrego a registrations
-      registrations.push(...tmpRegistrations);
+      registrations.push(parsed);
     }
 
-    // const tmpFile = path.join(os.tmpdir(), `${new Date().valueOf()}.json`);
-    // await writeFile(tmpFile, JSON.stringify(registrations));
-    // execSync(`code ${tmpFile}`);
+    return {
+      name: 'top_20_registrations_by_brand',
+      data: registrations,
+    };
+  };
 
-    // Guardar la información
-    const json2csvParser = new Parser({});
-    const csv = json2csvParser.parse(registrations);
-    const filePath = path.join(this.dataPath, 'data.csv');
-    await writeFile(filePath, csv);
-    console.log(`> Data saved.`);
-  }
+  private transformTopRegistrationsByModel = async (
+    dateId: DateId,
+    tableValues: string[][]
+  ): Promise<FileOuput> => {
+    const Schema = z.object({
+      year: z.number().int().min(1900).max(2100),
+      month: z.number().int().min(1).max(12),
+      model: z.preprocess((value) => {
+        // Decodifica, limpia y convierte a mayúsculas
+        return (value as string).trim().toUpperCase();
+      }, z.string()),
+      registrations: z.preprocess((value) => {
+        const text = (value as string).trim().replace(/[.,]/g, '');
+        if (text === '') {
+          return undefined;
+        }
+
+        // Decodifica, limpia, elimina puntos y convierte a número entero
+        return parseInt(text, 10);
+      }, z.number().optional()),
+
+      market_share: z.preprocess((value) => {
+        const text = (value as string)
+          .replace(',', '.')
+          .replace('%', '')
+          .trim();
+        if (text === '') {
+          return undefined;
+        }
+
+        // Decodifica y convierte a número flotante
+        return parseFloat(text);
+      }, z.number().optional()),
+    });
+
+    const registrations = [];
+    for (const row of tableValues) {
+      const parsed = Schema.parse({
+        year: dateId.year,
+        month: dateId.month,
+        model: row[1],
+        registrations: row[2],
+        market_share: row[3],
+      });
+
+      registrations.push(parsed);
+    }
+
+    return {
+      name: 'top_20_registrations_by_model',
+      data: registrations,
+    };
+  };
+
+  private changeSlicer = async (
+    page: Page,
+    slicerIndex: number,
+    itemText: string
+  ) => {
+    // Le doy click al dropdown
+    await page.evaluate((slicerIndex: number) => {
+      // Encuentra el dropdown
+      const dropdowns = document.querySelectorAll('.slicer-dropdown-menu');
+      const dropdown = dropdowns[slicerIndex];
+
+      // Le doy click al dropdown
+      (dropdown as HTMLElement).click();
+    }, slicerIndex);
+
+    // Espero a que cargue el contenido del dropdown selecionado
+    await new Promise((resolve) => setTimeout(resolve, 3000));
+
+    // Doy click al item deseado
+    await page.evaluate(
+      (slicerIndex: number, itemText: string) => {
+        // Encuentra el dropdown content
+        const dropdownContents = document.querySelectorAll(
+          '.slicer-dropdown-content'
+        );
+        const dropdownContent = dropdownContents[slicerIndex];
+
+        // Busco la lista de items
+        const items = dropdownContent.querySelectorAll('.slicerText');
+        const item = Array.from(items).find(
+          (item) => item.textContent.trim() === itemText
+        );
+
+        // Le doy click al item
+        (item as HTMLElement).click();
+      },
+      slicerIndex,
+      itemText
+    );
+
+    // Espero a que cargue el contenido del dashboard
+    await new Promise((resolve) => setTimeout(resolve, 4000));
+  };
+
+  private getTableValues = async (page: Page): Promise<string[][]> => {
+    // Ejecuta en el contexto del navegador para extraer los textos de las celdas
+    const cellTexts = await page.evaluate(() => {
+      // Selecciona todas las celdas con el selector proporcionado
+      const cells = document.querySelectorAll(
+        '.mid-viewport .cell-interactive'
+      );
+
+      const values = Array.from(cells).map(
+        (cell) => cell.textContent?.trim() || ''
+      );
+
+      return values;
+    });
+
+    // Divido los valores en 20 sub-arrays
+    const cellValues: string[][] = [];
+    for (let i = 0; i < cellTexts.length; i += 12) {
+      cellValues.push(cellTexts.slice(i, i + 12));
+    }
+
+    return cellValues;
+  };
 }
 
 export const ofvExtractor = new OFVExtractor();
+
+// // Descargar archivo por date id
+// setTimeout(async () => {
+//   const dateId = { year: 2024, month: 8 };
+//   const fileName = `${dateId.year}_${dateId.month}.json`;
+//   const filePath = path.join(ofvExtractor.downloadsPath, fileName);
+
+//   console.log(`- Downloading file: ${fileName}`);
+//   const buffer = await ofvExtractor.download(dateId);
+//   if (buffer) {
+//     await writeFile(filePath, buffer);
+//     console.log(`- File saved: ${fileName}`);
+//   }
+// }, 2000);
+
+// // Reindexar archivos
+// setTimeout(async () => {
+//   console.log('- Reindexing files...');
+//   await ofvExtractor.reindex();
+//   console.log('- Files reindexed');
+// }, 2000);

@@ -28,7 +28,7 @@ export interface Config {
 
 export abstract class BaseExtractorV2 {
   protected config: Config;
-  protected downloadsPath: string;
+  public downloadsPath: string;
   protected dataPath: string;
 
   constructor(config: Config) {
