@@ -1,11 +1,11 @@
 import puppeteer, { Browser, Page } from 'puppeteer';
 import z from 'zod';
 import {
-  BaseExtractorV2,
+  BaseExtractor,
   DateId,
   FileData,
   FileOuput,
-} from '../../lib/BaseExtractorV2';
+} from '../../lib/BaseExtractor';
 
 const SOURCE_URL =
   'https://app.powerbi.com/view?r=eyJrIjoiNzZjMzI0MWQtYzVhOC00ZjkxLWI5ZjQtNDQ4OTEyOWRlZWU2IiwidCI6ImYwOGMzNTQyLWY5NWYtNDE3ZC04NmU5LTZhZWQ5NzY1ODRhMCIsImMiOjh9';
@@ -30,7 +30,7 @@ interface IData {
   by_model: string[][];
 }
 
-export class OFVExtractor extends BaseExtractorV2 {
+export class OFVExtractor extends BaseExtractor {
   constructor() {
     super({
       folder: 'norway',
