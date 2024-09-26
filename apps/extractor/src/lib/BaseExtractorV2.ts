@@ -91,6 +91,7 @@ export abstract class BaseExtractorV2 {
         result = await this.download(dateId);
       } catch (error) {
         console.log(`> Error downloading ${fileNameWithExt}`);
+        console.error(error);
         // Salta la ejecución del extractor
         // para no detener los demás, ahi debo revisar que le pasa
         return;
@@ -119,6 +120,7 @@ export abstract class BaseExtractorV2 {
         // Si falla la transformación o el guardado
         // elimino el archivo descargado
         // para que no quede un archivo sin procesar
+        console.log('- Deleting downloaded file...');
         await unlink(filePath);
 
         throw error;
