@@ -3,15 +3,15 @@ import * as cheerio from 'cheerio';
 import xlsx from 'xlsx';
 import {
   BaseExtractor,
-  DateId,
   FileData,
   FileOuput,
+  MonthDateId,
 } from '../../lib/BaseExtractor';
 
 const KBA_SOURCE_URL =
   'https://www.kba.de/DE/Statistik/Produktkatalog/produkte/Fahrzeuge/fz10/fz10_gentab.html?nn=3514348';
 
-export class KBAExtractor extends BaseExtractor {
+class KBAExtractor extends BaseExtractor {
   constructor() {
     super({
       folder: 'germany',
@@ -20,7 +20,7 @@ export class KBAExtractor extends BaseExtractor {
     });
   }
 
-  async download(dateId: DateId): Promise<Buffer | null> {
+  async download(dateId: MonthDateId): Promise<Buffer | null> {
     const html = await axios.get(KBA_SOURCE_URL);
     const $ = cheerio.load(html.data);
 
@@ -62,7 +62,10 @@ export class KBAExtractor extends BaseExtractor {
     return fileContent.data;
   }
 
-  async transform(dateId: DateId, fileData: FileData): Promise<FileOuput[]> {
+  async transform(
+    dateId: MonthDateId,
+    fileData: FileData
+  ): Promise<FileOuput[]> {
     const { year, month } = dateId;
     const workbook: xlsx.WorkBook = xlsx.read(fileData.data);
 
@@ -157,4 +160,13 @@ export class KBAExtractor extends BaseExtractor {
   }
 }
 
-export const kbaExtractor = new KBAExtractor();
+export default new KBAExtractor();
+
+// setTimeout(async () => {
+//   // Reindexar archivos
+//   setTimeout(async () => {
+//     console.log('- Reindexing files...');
+//     await new KBAExtractor().reindex();
+//     console.log('- Files reindexed');
+//   }, 2000);
+// }, 2000);

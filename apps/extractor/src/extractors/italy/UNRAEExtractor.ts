@@ -4,14 +4,14 @@ import PDFParser, { Output, Text } from 'pdf2json';
 import z from 'zod';
 import {
   BaseExtractor,
-  DateId,
   FileData,
   FileOuput,
+  MonthDateId,
 } from '../../lib/BaseExtractor';
 
 const SOURCE_URL = 'https://unrae.it/dati-statistici/immatricolazioni?page=1';
 
-export class UNRAEExtractor extends BaseExtractor {
+class UNRAEExtractor extends BaseExtractor {
   constructor() {
     super({
       folder: 'italy',
@@ -20,7 +20,7 @@ export class UNRAEExtractor extends BaseExtractor {
     });
   }
 
-  async download(dateId: DateId): Promise<Buffer | null> {
+  async download(dateId: MonthDateId): Promise<Buffer | null> {
     const html = await axios.get(SOURCE_URL);
     const $ = cheerio.load(html.data);
 
@@ -95,7 +95,10 @@ export class UNRAEExtractor extends BaseExtractor {
     return fileContent.data;
   }
 
-  async transform(dateId: DateId, fileData: FileData): Promise<FileOuput[]> {
+  async transform(
+    dateId: MonthDateId,
+    fileData: FileData
+  ): Promise<FileOuput[]> {
     const pdfJSON = await new Promise<Output>((resolve, reject) => {
       const pdfParser = new PDFParser();
 
@@ -201,4 +204,4 @@ export class UNRAEExtractor extends BaseExtractor {
   }
 }
 
-export const unraeExtractor = new UNRAEExtractor();
+export default new UNRAEExtractor();

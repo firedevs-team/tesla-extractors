@@ -1,7 +1,7 @@
-import path from 'path';
+import { appendFileSync, existsSync, mkdirSync, writeFileSync } from 'fs';
+import { readdir, readFile, unlink } from 'fs/promises';
 import { Parser } from 'json2csv';
-import { mkdirSync, existsSync, appendFileSync, writeFileSync } from 'fs';
-import { readdir, unlink, readFile } from 'fs/promises';
+import path from 'path';
 
 const EXTRACTOR_PATH = path.join(process.cwd(), 'data', 'extractor');
 
@@ -13,17 +13,26 @@ export interface FileData {
 export interface FileOuput {
   name: string;
   data: any[];
+  fields?: string[];
 }
 
-export interface DateId {
+export interface MonthDateId {
   year: number;
   month: number;
 }
+
+export interface QuarterDateId {
+  year: number;
+  quarter: number;
+}
+
+type DateId = MonthDateId | QuarterDateId;
 
 export interface Config {
   folder: string;
   source: string;
   fileext: string;
+  id_format?: 'month' | 'quarter';
 }
 
 export abstract class BaseExtractor {
@@ -32,7 +41,7 @@ export abstract class BaseExtractor {
   protected dataPath: string;
 
   constructor(config: Config) {
-    this.config = config;
+    this.config = Object.assign({}, { id_format: 'month' }, config);
     this.downloadsPath = path.join(
       EXTRACTOR_PATH,
       config.folder,
@@ -58,73 +67,108 @@ export abstract class BaseExtractor {
    * la transforma y la guarda en los archivos csv
    */
   async extract(): Promise<void> {
-    const { folder, source, fileext } = this.config;
+    const { folder, source, fileext, id_format } = this.config;
 
     console.log(`Running [${folder}] ${source} extractor...`);
 
-    // Analizo si me falta lo nuevo
-    const today = new Date();
-    if (today.getDate() > 1) {
-      // Calculo el mes pasado
-      const tmpDate = new Date();
-      tmpDate.setMonth(tmpDate.getMonth() - 1);
-      const previousMonth = tmpDate.getMonth() + 1;
+    // Siempre debe haber publicado algo asi que lo infiero
+    // Determino el date id y el nombre del archivo
+    // que debería estar publicado para descarga
+    // los nombres varían según el formato de id
+    let fileName = '';
+    let dateId: DateId;
+    switch (id_format) {
+      case 'month': {
+        const tmpDate = new Date();
+        tmpDate.setMonth(tmpDate.getMonth() - 1);
 
-      const fileName = `${tmpDate.getFullYear()}_${previousMonth}`;
-      const fileNameWithExt = `${fileName}.${fileext}`;
+        const year = tmpDate.getFullYear();
+        const month = tmpDate.getMonth() + 1;
 
-      // Si ya tengo el fichero no hago nada
-      const exists = existsSync(path.join(this.downloadsPath, fileNameWithExt));
-      if (exists) {
-        return;
+        fileName = `${year}_${month}.${fileext}`;
+        dateId = { year, month };
+        break;
       }
+      case 'quarter': {
+        const quarterMap = {
+          1: 1,
+          2: 1,
+          3: 1,
+          4: 2,
+          5: 2,
+          6: 2,
+          7: 3,
+          8: 3,
+          9: 3,
+          10: 4,
+          11: 4,
+          12: 4,
+        };
+        const tmpDate = new Date();
+        const currentQuarter = quarterMap[tmpDate.getMonth() + 1];
 
-      console.log('- Checking source...');
+        let year = tmpDate.getFullYear();
+        let quarter = currentQuarter - 1;
+        if (quarter === 0) {
+          quarter = 4;
+          year = year - 1;
+        }
 
-      // Lo mando a descargar
-      const dateId: DateId = {
-        year: tmpDate.getFullYear(),
-        month: previousMonth,
-      };
-      let result: Buffer | null = null;
-      try {
-        result = await this.download(dateId);
-      } catch (error) {
-        console.log(`> Error downloading ${fileNameWithExt}`);
-        console.error(error);
-        // Salta la ejecución del extractor
-        // para no detener los demás, ahi debo revisar que le pasa
-        return;
+        fileName = `${year}_Q${quarter}.${fileext}`;
+        dateId = { year, quarter };
+        break;
       }
+      default:
+        throw new Error('Invalid id_format');
+    }
 
-      if (result === null) {
-        console.log('> Nothing to download');
-        return;
-      }
+    // Si ya tengo el fichero no hago nada
+    const exists = existsSync(path.join(this.downloadsPath, fileName));
+    if (exists) {
+      return;
+    }
 
-      // Guardo el archivo en downloads
-      // Para tener un record de lo descargado
-      const filePath = path.join(this.downloadsPath, `${fileNameWithExt}`);
-      writeFileSync(filePath, result);
+    console.log('- Checking source...');
 
-      try {
-        // Lo mando a transformar
-        const fileOutputs = await this.transform(dateId, {
-          path: filePath,
-          data: result,
-        });
+    // Lo mando a descargar
+    let result: Buffer | null = null;
+    try {
+      result = await this.download(dateId);
+    } catch (error) {
+      console.log(`> Error downloading ${fileName}`);
+      console.error(error);
+      // Salta la ejecución del extractor
+      // para no detener los demás, ahi debo revisar que le pasa
+      return;
+    }
 
-        // Lo mando a salvar
-        await this.save(fileOutputs);
-      } catch (error) {
-        // Si falla la transformación o el guardado
-        // elimino el archivo descargado
-        // para que no quede un archivo sin procesar
-        console.log('- Deleting downloaded file...');
-        await unlink(filePath);
+    if (result === null) {
+      console.log('> Nothing to download');
+      return;
+    }
 
-        throw error;
-      }
+    // Guardo el archivo en downloads
+    // Para tener un record de lo descargado
+    const filePath = path.join(this.downloadsPath, fileName);
+    writeFileSync(filePath, result);
+
+    try {
+      // Lo mando a transformar
+      const fileOutputs = await this.transform(dateId, {
+        path: filePath,
+        data: result,
+      });
+
+      // Lo mando a salvar
+      await this.save(fileOutputs);
+    } catch (error) {
+      // Si falla la transformación o el guardado
+      // elimino el archivo descargado
+      // para que no quede un archivo sin procesar
+      console.log('- Cleaning downloaded file...');
+      await unlink(filePath);
+
+      throw error;
     }
   }
 
@@ -139,7 +183,9 @@ export abstract class BaseExtractor {
 
       const filePath = path.join(this.dataPath, `${fileOutput.name}.csv`);
 
-      const json2csvParser = new Parser({});
+      const json2csvParser = new Parser({
+        fields: fileOutput.fields,
+      });
       const csv = json2csvParser.parse(fileOutput.data);
       const fileExists = existsSync(filePath);
 
@@ -157,6 +203,8 @@ export abstract class BaseExtractor {
    * Reindexa los datos en base a los archivos de downloads
    */
   async reindex(): Promise<void> {
+    const { id_format, fileext } = this.config;
+
     // Elimino todos los archivos de datos del source
     const files = await readdir(this.dataPath);
     for (const file of files) {
@@ -171,13 +219,29 @@ export abstract class BaseExtractor {
     // Ignore .DS_Store files
     downloads = downloads.filter((download) => !download.startsWith('.'));
 
-    for (const download of downloads) {
-      const buffer = await readFile(path.join(this.downloadsPath, download));
+    const parseFileName = (fileName: string): DateId => {
+      switch (id_format) {
+        case 'month': {
+          const parts = fileName.replace(`.${fileext}`, '').split('_');
+          return { year: parseInt(parts[0]), month: parseInt(parts[1]) };
+        }
+
+        case 'quarter': {
+          const parts = fileName.replace(`.${fileext}`, '').split('_');
+          return {
+            year: parseInt(parts[0]),
+            quarter: parseInt(parts[1].replace('Q', '')),
+          };
+        }
+        default:
+          throw new Error('Invalid id_format');
+      }
+    };
+
+    for (const fileName of downloads) {
+      const buffer = await readFile(path.join(this.downloadsPath, fileName));
       downloadData.push({
-        dateId: {
-          year: parseInt(download.split('_')[0]),
-          month: parseInt(download.split('_')[1].split('.')[0]),
-        },
+        dateId: parseFileName(fileName),
         data: buffer,
       });
     }
@@ -185,7 +249,19 @@ export abstract class BaseExtractor {
     // Ordenos los archivos por date id
     downloadData.sort((a, b) => {
       if (a.dateId.year === b.dateId.year) {
-        return a.dateId.month - b.dateId.month;
+        switch (id_format) {
+          case 'month':
+            return (
+              (a.dateId as MonthDateId).month - (b.dateId as MonthDateId).month
+            );
+          case 'quarter':
+            return (
+              (a.dateId as QuarterDateId).quarter -
+              (b.dateId as QuarterDateId).quarter
+            );
+          default:
+            throw new Error('Invalid id_format');
+        }
       }
       return a.dateId.year - b.dateId.year;
     });
@@ -193,12 +269,28 @@ export abstract class BaseExtractor {
     // Transformo cada uno
     const transformedData: FileOuput[] = [];
     for (const download of downloadData) {
-      const { year, month } = download.dateId;
+      const { year } = download.dateId;
       const { fileext } = this.config;
-      const filePath = path.join(
-        this.downloadsPath,
-        `${year}_${month}.${fileext}`
-      );
+
+      let fileName = '';
+      switch (id_format) {
+        case 'month':
+          fileName = `${year}_${
+            (download.dateId as MonthDateId).month
+          }.${fileext}`;
+          break;
+
+        case 'quarter':
+          fileName = `${year}_Q${
+            (download.dateId as QuarterDateId).quarter
+          }.${fileext}`;
+          break;
+
+        default:
+          throw new Error('Invalid id_format');
+      }
+
+      const filePath = path.join(this.downloadsPath, fileName);
 
       const fileDatas = await this.transform(download.dateId, {
         path: filePath,

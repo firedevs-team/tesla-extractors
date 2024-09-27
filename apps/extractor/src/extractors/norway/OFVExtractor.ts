@@ -2,9 +2,9 @@ import puppeteer, { Browser, Page } from 'puppeteer';
 import z from 'zod';
 import {
   BaseExtractor,
-  DateId,
   FileData,
   FileOuput,
+  MonthDateId,
 } from '../../lib/BaseExtractor';
 
 const SOURCE_URL =
@@ -30,7 +30,7 @@ interface IData {
   by_model: string[][];
 }
 
-export class OFVExtractor extends BaseExtractor {
+class OFVExtractor extends BaseExtractor {
   constructor() {
     super({
       folder: 'norway',
@@ -39,7 +39,7 @@ export class OFVExtractor extends BaseExtractor {
     });
   }
 
-  async download(dateId: DateId): Promise<Buffer | null> {
+  async download(dateId: MonthDateId): Promise<Buffer | null> {
     const [by_brand, by_model] = await Promise.all([
       this.downloadTopRegistrationsByBrand(dateId),
       this.downloadTopRegistrationsByModel(dateId),
@@ -58,7 +58,10 @@ export class OFVExtractor extends BaseExtractor {
     return Buffer.from(fileContent, 'utf-8');
   }
 
-  async transform(dateId: DateId, fileData: FileData): Promise<FileOuput[]> {
+  async transform(
+    dateId: MonthDateId,
+    fileData: FileData
+  ): Promise<FileOuput[]> {
     const data: IData = JSON.parse(fileData.data.toString());
 
     const outputs = await Promise.all([
@@ -70,7 +73,7 @@ export class OFVExtractor extends BaseExtractor {
   }
 
   private downloadTopRegistrationsByBrand = async (
-    dateId: DateId
+    dateId: MonthDateId
   ): Promise<string[][]> => {
     // Inicia el navegador
     const browser: Browser = await puppeteer.launch({
@@ -106,7 +109,7 @@ export class OFVExtractor extends BaseExtractor {
   };
 
   private downloadTopRegistrationsByModel = async (
-    dateId: DateId
+    dateId: MonthDateId
   ): Promise<string[][]> => {
     // Inicia el navegador
     const browser: Browser = await puppeteer.launch({
@@ -166,7 +169,7 @@ export class OFVExtractor extends BaseExtractor {
   };
 
   private transformTopRegistrationsByBrand = async (
-    dateId: DateId,
+    dateId: MonthDateId,
     tableValues: string[][]
   ): Promise<FileOuput> => {
     const Schema = z.object({
@@ -220,7 +223,7 @@ export class OFVExtractor extends BaseExtractor {
   };
 
   private transformTopRegistrationsByModel = async (
-    dateId: DateId,
+    dateId: MonthDateId,
     tableValues: string[][]
   ): Promise<FileOuput> => {
     const Schema = z.object({
@@ -342,7 +345,7 @@ export class OFVExtractor extends BaseExtractor {
   };
 }
 
-export const ofvExtractor = new OFVExtractor();
+export default new OFVExtractor();
 
 // // Descargar archivo por date id
 // setTimeout(async () => {

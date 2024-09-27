@@ -4,14 +4,14 @@ import PDFParser, { Output, Text } from 'pdf2json';
 import z from 'zod';
 import {
   BaseExtractor,
-  DateId,
   FileData,
   FileOuput,
+  MonthDateId,
 } from '../../lib/BaseExtractor';
 
 const SOURCE_URL = 'https://pfa-auto.fr/marche-automobile';
 
-export class PFAExtractor extends BaseExtractor {
+class PFAExtractor extends BaseExtractor {
   constructor() {
     super({
       folder: 'france',
@@ -20,7 +20,7 @@ export class PFAExtractor extends BaseExtractor {
     });
   }
 
-  async download(dateId: DateId): Promise<Buffer | null> {
+  async download(dateId: MonthDateId): Promise<Buffer | null> {
     const response = await axios.get(SOURCE_URL);
     const $ = cheerio.load(response.data);
 
@@ -80,7 +80,10 @@ export class PFAExtractor extends BaseExtractor {
     return fileContent.data;
   }
 
-  async transform(dateId: DateId, fileData: FileData): Promise<FileOuput[]> {
+  async transform(
+    dateId: MonthDateId,
+    fileData: FileData
+  ): Promise<FileOuput[]> {
     const pdfJSON = await new Promise<Output>((resolve, reject) => {
       const pdfParser = new PDFParser();
 
@@ -183,4 +186,4 @@ export class PFAExtractor extends BaseExtractor {
   }
 }
 
-export const pfaExtractor = new PFAExtractor();
+export default new PFAExtractor();
