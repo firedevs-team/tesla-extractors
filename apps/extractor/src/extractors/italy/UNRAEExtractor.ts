@@ -88,6 +88,11 @@ class UNRAEExtractor extends BaseExtractor {
       (link) => link.year === dateId.year && link.month === dateId.month
     );
 
+    // Informo que no se encontró el link
+    if (!link) {
+      return null;
+    }
+
     const fileContent = await axios(link.url, {
       responseType: 'arraybuffer',
     });
