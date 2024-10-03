@@ -36,9 +36,9 @@ export interface Config {
 }
 
 export abstract class BaseExtractor {
-  protected config: Config;
+  public config: Config;
   public downloadsPath: string;
-  protected dataPath: string;
+  public dataPath: string;
 
   constructor(config: Config) {
     this.config = Object.assign({}, { id_format: 'month' }, config);
@@ -69,6 +69,7 @@ export abstract class BaseExtractor {
   async extract(): Promise<void> {
     const { folder, source, fileext, id_format } = this.config;
 
+    console.log('');
     console.log(`Running [${folder}] ${source} extractor...`);
 
     // Siempre debe haber publicado algo asi que lo infiero
@@ -125,6 +126,7 @@ export abstract class BaseExtractor {
     // Si ya tengo el fichero no hago nada
     const exists = existsSync(path.join(this.downloadsPath, fileName));
     if (exists) {
+      console.log(`> Nothing to do`);
       return;
     }
 
@@ -179,8 +181,6 @@ export abstract class BaseExtractor {
   async save(fileOutputs: FileOuput[]): Promise<void> {
     // Guardo los archivos
     for (const fileOutput of fileOutputs) {
-      console.log(`- Saving ${fileOutput.name}...`);
-
       const filePath = path.join(this.dataPath, `${fileOutput.name}.csv`);
 
       const json2csvParser = new Parser({
@@ -196,6 +196,8 @@ export abstract class BaseExtractor {
       }
 
       appendFileSync(filePath, csvData);
+
+      console.log(`> Saved ${fileOutput.name}`);
     }
   }
 

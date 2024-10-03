@@ -9,6 +9,11 @@ import {
   QuarterDateId,
 } from '../../lib/BaseExtractor';
 
+// import path from 'path';
+// import os from 'os';
+// import { execSync } from 'child_process';
+// import { writeFile } from 'fs/promises';
+
 const SOURCE_URL = 'https://ir.tesla.com/#quarterly-disclosure';
 
 class TslaIRExtractor extends BaseExtractor {
@@ -55,6 +60,16 @@ class TslaIRExtractor extends BaseExtractor {
 
       // Encontré el archivo
       if (year === dateId.year && quarter === dateId.quarter) {
+        // Hay un caso que en la tabla ya está el row del Q
+        // pero solo con la informacion del press release
+        // lo que significa que el link element no exite
+        const linkElement = Array.from($(shareholderDeckCell).find('a'))[0];
+        if (!linkElement) {
+          // si no se encuentra el linkElement
+          // termino el for y queda como null
+          break;
+        }
+
         link = Array.from($(shareholderDeckCell).find('a'))[0].attribs['href'];
         break;
       }
@@ -76,7 +91,30 @@ class TslaIRExtractor extends BaseExtractor {
     dateId: QuarterDateId,
     fileData: FileData
   ): Promise<FileOuput[]> {
-    const pdfJSON = await new Promise<Output>((resolve, reject) => {
+    const outputs: FileOuput[] = [];
+
+    // Transformo la información operacional
+    const operationalOutput = await this.transformOperationalSummary(
+      dateId,
+      fileData
+    );
+    outputs.push(operationalOutput);
+
+    // Transformo la información financiera
+    const financialOutput = await this.transformFinancialSummary(
+      dateId,
+      fileData
+    );
+    outputs.push(financialOutput);
+
+    return outputs;
+  }
+
+  async transformOperationalSummary(
+    dateId: QuarterDateId,
+    fileData: FileData
+  ): Promise<FileOuput> {
+    const data = await new Promise<Output>((resolve, reject) => {
       const pdfParser = new PDFParser();
 
       pdfParser.on('pdfParser_dataError', (errData) =>
@@ -93,7 +131,7 @@ class TslaIRExtractor extends BaseExtractor {
     // Encuentro la página donde está la información
     // operacional. La busco por el texto "Total%20production"
     // me quedo con la primera página que encuentre
-    const page = pdfJSON.Pages.find((page) => {
+    const page = data.Pages.find((page) => {
       return page.Texts.find((text) => {
         if (text.R[0].T === 'Total%20production') {
           return true;
@@ -215,9 +253,6 @@ class TslaIRExtractor extends BaseExtractor {
       delete raw[key];
     }
 
-    // // DEBUG CODE
-    // console.log(JSON.stringify(raw, null, 2));
-
     // Valido la información con zod
     const parseIntValue = (value: string) => {
       return parseInt(value.trim().replace(/\,/g, ''));
@@ -264,16 +299,209 @@ class TslaIRExtractor extends BaseExtractor {
       ...raw,
     });
 
-    // // DEBUG CODE
-    // console.log(JSON.stringify(parsed, null, 2));
+    return {
+      name: 'operational_summary',
+      data: [parsed],
+      fields: Object.keys(Schema.shape),
+    };
+  }
 
-    return [
-      {
-        name: 'operational_summary',
-        data: [parsed],
-        fields: Object.keys(Schema.shape),
-      },
-    ];
+  async transformFinancialSummary(
+    dateId: QuarterDateId,
+    fileData: FileData
+  ): Promise<FileOuput> {
+    const data = await new Promise<Output>((resolve, reject) => {
+      const pdfParser = new PDFParser();
+
+      pdfParser.on('pdfParser_dataError', (errData) =>
+        reject(errData.parserError)
+      );
+
+      pdfParser.on('pdfParser_dataReady', async (pdfData) => {
+        resolve(pdfData);
+      });
+
+      pdfParser.loadPDF(fileData.path);
+    });
+
+    // Encuentro la página donde está la tabla que me interesa
+    // La tabla de finnancial summary
+    const page = data.Pages.find((page) => {
+      return page.Texts.find((text) => {
+        if (text.R[0].T === 'Total%20gross%20profit') {
+          return true;
+        }
+        return false;
+      });
+    });
+
+    // Armo la tabla usando las coordenadas
+    const TOLERANCE = 0.048;
+    const texts = page.Texts;
+    let rawTable: Text[][] = [];
+    for (let i = 0; i < texts.length; i++) {
+      const text = texts[i];
+
+      // Busco a que row pertenece
+      // Si no hay ninguno, se crea un nuevo row
+      const match = rawTable.find((row) => {
+        return Math.abs(row[0].y - text.y) < TOLERANCE;
+      });
+      if (match) {
+        match.push(text);
+      } else {
+        rawTable.push([text]);
+      }
+    }
+
+    let table: Text[][] = [...rawTable];
+
+    // Elimino los primeros elementos
+    // que son el header
+    table.splice(0, 3);
+
+    // Solo dejo rows con 7 columnas o más
+    table = table.filter((row) => row.length >= 7);
+
+    // Extraigo la información de la tabla
+    const raw: Record<string, string> = {};
+    for (const row of table) {
+      // Extraigo el field
+      let field = '';
+      for (const cell of row) {
+        const decoded = decodeURIComponent(cell.R[0].T);
+
+        // si el texto empieza con una letra
+        // o un guion es el label
+        // pero en ocasiones
+        // el label está dividido en varias celdas
+        // por eso lo voy agrupando por el orden
+        if (/^[A-Za-z-]/.test(decoded)) {
+          field += ` ${decoded}`;
+        } else {
+          break;
+        }
+      }
+
+      // Extraigo el value
+      let value = '';
+      let numPos = 0;
+      for (const cell of row) {
+        let decoded = decodeURIComponent(cell.R[0].T);
+
+        // Me interesa el 5to número
+        // el texto puede empezar con numero
+        // o parentesis
+        if (/^[0-9(]/.test(decoded)) {
+          // Elimino los parentesis
+          // si existen
+          decoded = decoded.replace(/[()]/g, '');
+
+          numPos++;
+          if (numPos === 5) {
+            value = decoded;
+            break;
+          }
+        }
+      }
+
+      // Standardizo el field
+      field = field
+        .trim()
+        // reemplazo / por _
+        .replace(/\//g, '_')
+        // reemplazo ( y ) por ''
+        .replace(/[()]/g, '')
+        // reemplazo , por ''
+        .replace(/,/g, '')
+        // reemplazo - por ''
+        .replace(/-/g, '')
+        // split por espacios de cualquier tamaño
+        .split(/\s+/)
+        .join('_')
+
+        .toLowerCase();
+
+      // Lo agrego a raw
+      raw[field] = value;
+
+      // Reseteo
+      field = '';
+      value = '';
+      numPos = 0;
+    }
+
+    // Valido la información con zod
+    const parseIntValue = (value: string) => {
+      return parseInt(value.trim().replace(/\,/g, ''));
+    };
+    const parseFloatValue = (value: string) => {
+      return parseFloat(value.trim().replace(/\,/g, '').replace(/\%/g, ''));
+    };
+    const Schema = z
+      .object({
+        year: z.number(),
+        quarter: z.number(),
+
+        total_automotive_revenues: z.preprocess(parseIntValue, z.number()),
+        energy_generation_and_storage_revenue: z.preprocess(
+          parseIntValue,
+          z.number()
+        ),
+        services_and_other_revenue: z.preprocess(parseIntValue, z.number()),
+        total_revenues: z.preprocess(parseIntValue, z.number()),
+        total_gross_profit: z.preprocess(parseIntValue, z.number()),
+        total_gaap_gross_margin: z.preprocess(parseFloatValue, z.number()),
+        operating_expenses: z.preprocess(parseIntValue, z.number()),
+        income_from_operations: z.preprocess(parseIntValue, z.number()),
+        operating_margin: z.preprocess(parseFloatValue, z.number()),
+        adjusted_ebitda: z.preprocess(parseIntValue, z.number()),
+        adjusted_ebitda_margin: z.preprocess(parseFloatValue, z.number()),
+        net_income_attributable_to_common_stockholders_gaap: z.preprocess(
+          parseIntValue,
+          z.number()
+        ),
+        net_income_attributable_to_common_stockholders_non_gaap: z.preprocess(
+          parseIntValue,
+          z.number()
+        ),
+        eps_attributable_to_common_stockholders_diluted_gaap: z.preprocess(
+          parseFloatValue,
+          z.number()
+        ),
+        eps_attributable_to_common_stockholders_diluted_non_gaap: z.preprocess(
+          parseFloatValue,
+          z.number()
+        ),
+        net_cash_provided_by_operating_activities: z.preprocess(
+          parseIntValue,
+          z.number()
+        ),
+        capital_expenditures: z.preprocess(parseIntValue, z.number()),
+        free_cash_flow: z.preprocess(parseIntValue, z.number()),
+        cash_cash_equivalents_and_investments: z.preprocess(
+          parseIntValue,
+          z.number()
+        ),
+      })
+      .strict();
+
+    const parsed = Schema.parse({
+      year: dateId.year,
+      quarter: dateId.quarter,
+      ...raw,
+    });
+
+    // // DEBUG CODE
+    // const tmpFile = path.join(os.tmpdir(), `${new Date().valueOf()}.json`);
+    // await writeFile(tmpFile, JSON.stringify(parsed, null, 2));
+    // execSync(`code ${tmpFile}`);
+
+    return {
+      name: 'financial_summary',
+      data: [parsed],
+      fields: Object.keys(Schema.shape),
+    };
   }
 }
 
@@ -290,7 +518,7 @@ export default new TslaIRExtractor();
 // setTimeout(async () => {
 //   console.log('- Transforming files...');
 
-//   const dateId = { year: 2022, quarter: 3 };
+//   const dateId = { year: 2023, quarter: 1 };
 //   const fileName = `${dateId.year}_Q${dateId.quarter}.pdf`;
 
 //   const extractor = new TslaIRExtractor();

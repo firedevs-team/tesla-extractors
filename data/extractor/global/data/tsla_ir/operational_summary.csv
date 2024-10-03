@@ -1,5 +1,4 @@
 "year","quarter","model_3_y_production","other_models_production","total_production","model_3_y_deliveries","other_models_deliveries","total_deliveries","of_which_subject_to_operating_lease_accounting","total_end_of_quarter_operating_lease_vehicle_count","global_vehicle_inventory_days_of_supply","storage_deployed_mwh","solar_deployed_mw","tesla_locations","mobile_service_fleet","supercharger_stations","supercharger_connectors"
-2022,4,419088,20613,439701,388131,17147,405278,15184,140667,13,2462,100,,1584,4678,42419
 2023,1,421371,19437,440808,412180,10695,422875,22357,153988,15,3889,67,1000,1692,4947,45169
 2023,2,460211,19489,479700,446915,19225,466140,21883,168058,16,3653,66,1068,1769,5265,48082
 2023,3,416800,13688,430488,419074,15985,435059,17423,176231,16,3980,49,1129,1846,5595,51105
