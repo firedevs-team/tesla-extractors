@@ -1,10 +1,10 @@
 import { BaseExtractor } from '../lib/BaseExtractor';
-import kbaExtractor from './germany/KBAExtractor';
-import pfaExtractor from './france/PFAExtractor';
-import unraeExtractor from './italy/UNRAEExtractor';
-import ofvExtractor from './norway/OFVExtractor';
-import bovagExtractor from './netherlands/BOVAGExtractor';
-import tslaIRExtractor from './global/TslaIRExtractor';
+import kbaExtractor from './car_registrations/germany/KBAExtractor';
+import pfaExtractor from './car_registrations/france/PFAExtractor';
+import unraeExtractor from './car_registrations/italy/UNRAEExtractor';
+import ofvExtractor from './car_registrations/norway/OFVExtractor';
+import bovagExtractor from './car_registrations/netherlands/BOVAGExtractor';
+import shareholderDeckRExtractor from './tesla_ir_info/ShareholderDeckExtractor';
 
 const extractors: BaseExtractor[] = [
   kbaExtractor,
@@ -12,7 +12,7 @@ const extractors: BaseExtractor[] = [
   unraeExtractor,
   ofvExtractor,
   bovagExtractor,
-  tslaIRExtractor,
+  shareholderDeckRExtractor,
 ];
 
 export default extractors;

@@ -7,7 +7,7 @@ import {
   FileData,
   FileOuput,
   MonthDateId,
-} from '../../lib/BaseExtractor';
+} from '../../../lib/BaseExtractor';
 
 // import path from 'path';
 // import os from 'os';
@@ -19,7 +19,7 @@ const SOURCE_URL = 'https://www.bovag.nl/pers/cijfers';
 class BOVAGExtractor extends BaseExtractor {
   constructor() {
     super({
-      folder: 'netherlands',
+      folders: ['car_registrations', 'netherlands'],
       source: 'bovag',
       fileext: 'pdf',
     });

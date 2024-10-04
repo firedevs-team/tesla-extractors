@@ -16,11 +16,11 @@ import {
 
 const SOURCE_URL = 'https://ir.tesla.com/#quarterly-disclosure';
 
-class TslaIRExtractor extends BaseExtractor {
+class ShareholderDeckExtractor extends BaseExtractor {
   constructor() {
     super({
-      folder: 'global',
-      source: 'tsla_ir',
+      folders: ['tesla_ir_info'],
+      source: 'shareholder_deck',
       fileext: 'pdf',
       id_format: 'quarter',
     });
@@ -505,7 +505,7 @@ class TslaIRExtractor extends BaseExtractor {
   }
 }
 
-export default new TslaIRExtractor();
+export default new ShareholderDeckExtractor();
 
 // // Reindexar archivos
 // setTimeout(async () => {

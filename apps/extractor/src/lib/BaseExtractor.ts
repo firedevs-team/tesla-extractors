@@ -29,7 +29,7 @@ export interface QuarterDateId {
 type DateId = MonthDateId | QuarterDateId;
 
 export interface Config {
-  folder: string;
+  folders: string[];
   source: string;
   fileext: string;
   id_format?: 'month' | 'quarter';
@@ -44,13 +44,13 @@ export abstract class BaseExtractor {
     this.config = Object.assign({}, { id_format: 'month' }, config);
     this.downloadsPath = path.join(
       EXTRACTOR_PATH,
-      config.folder,
+      path.join(...config.folders),
       'downloads',
       config.source
     );
     this.dataPath = path.join(
       EXTRACTOR_PATH,
-      config.folder,
+      path.join(...config.folders),
       'data',
       config.source
     );
@@ -67,7 +67,8 @@ export abstract class BaseExtractor {
    * la transforma y la guarda en los archivos csv
    */
   async extract(): Promise<void> {
-    const { folder, source, fileext, id_format } = this.config;
+    const { folders, source, fileext, id_format } = this.config;
+    const folder = path.join(...folders);
 
     console.log('');
     console.log(`Running [${folder}] ${source} extractor...`);

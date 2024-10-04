@@ -6,7 +6,7 @@ import {
   FileData,
   FileOuput,
   MonthDateId,
-} from '../../lib/BaseExtractor';
+} from '../../../lib/BaseExtractor';
 
 const KBA_SOURCE_URL =
   'https://www.kba.de/DE/Statistik/Produktkatalog/produkte/Fahrzeuge/fz10/fz10_gentab.html?nn=3514348';
@@ -14,7 +14,7 @@ const KBA_SOURCE_URL =
 class KBAExtractor extends BaseExtractor {
   constructor() {
     super({
-      folder: 'germany',
+      folders: ['car_registrations', 'germany'],
       source: 'kba',
       fileext: 'xlsx',
     });

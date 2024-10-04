@@ -7,14 +7,14 @@ import {
   FileData,
   FileOuput,
   MonthDateId,
-} from '../../lib/BaseExtractor';
+} from '../../../lib/BaseExtractor';
 
 const SOURCE_URL = 'https://pfa-auto.fr/marche-automobile';
 
 class PFAExtractor extends BaseExtractor {
   constructor() {
     super({
-      folder: 'france',
+      folders: ['car_registrations', 'france'],
       source: 'pfa',
       fileext: 'pdf',
     });

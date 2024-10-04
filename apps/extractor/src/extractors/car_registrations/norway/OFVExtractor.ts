@@ -5,7 +5,7 @@ import {
   FileData,
   FileOuput,
   MonthDateId,
-} from '../../lib/BaseExtractor';
+} from '../../../lib/BaseExtractor';
 
 const SOURCE_URL =
   'https://app.powerbi.com/view?r=eyJrIjoiNzZjMzI0MWQtYzVhOC00ZjkxLWI5ZjQtNDQ4OTEyOWRlZWU2IiwidCI6ImYwOGMzNTQyLWY5NWYtNDE3ZC04NmU5LTZhZWQ5NzY1ODRhMCIsImMiOjh9';
@@ -33,7 +33,7 @@ interface IData {
 class OFVExtractor extends BaseExtractor {
   constructor() {
     super({
-      folder: 'norway',
+      folders: ['car_registrations', 'norway'],
       source: 'ofv',
       fileext: 'json',
     });

@@ -7,14 +7,14 @@ import {
   FileData,
   FileOuput,
   MonthDateId,
-} from '../../lib/BaseExtractor';
+} from '../../../lib/BaseExtractor';
 
 const SOURCE_URL = 'https://unrae.it/dati-statistici/immatricolazioni?page=1';
 
 class UNRAEExtractor extends BaseExtractor {
   constructor() {
     super({
-      folder: 'italy',
+      folders: ['car_registrations', 'italy'],
       source: 'unrae',
       fileext: 'pdf',
     });
