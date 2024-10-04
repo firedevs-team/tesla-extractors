@@ -187,3 +187,10 @@ class PFAExtractor extends BaseExtractor {
 }
 
 export default new PFAExtractor();
+
+// // Reindexar archivos
+// setTimeout(async () => {
+//   console.log('- Reindexing files...');
+//   await new PFAExtractor().reindex();
+//   console.log('- Files reindexed');
+// }, 2000);
