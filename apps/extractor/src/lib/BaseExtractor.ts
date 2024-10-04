@@ -324,4 +324,10 @@ export abstract class BaseExtractor {
    * @param buffer
    */
   abstract transform(dateId: DateId, fileData: FileData): Promise<FileOuput[]>;
+
+  /**
+   * Lógica para probar el funcionamiento del extractor.
+   * Se usa principalmente para construir el extractor.
+   */
+  async test(): Promise<void> {}
 }
