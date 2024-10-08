@@ -2,21 +2,11 @@ import z from 'zod';
 import axios from 'axios';
 import puppeteer, { Browser, Page } from 'puppeteer';
 import PDFParser, { Output, Text } from 'pdf2json';
-import {
-  BaseExtractor,
-  FileData,
-  FileOuput,
-  MonthDateId,
-} from '../../../lib/BaseExtractor';
-
-// import path from 'path';
-// import os from 'os';
-// import { execSync } from 'child_process';
-// import { writeFile } from 'fs/promises';
+import { FileData, FileOuput, MonthDateId, MonthExtractor } from '../../../lib';
 
 const SOURCE_URL = 'https://www.bovag.nl/pers/cijfers';
 
-class BOVAGExtractor extends BaseExtractor {
+class BOVAGExtractor extends MonthExtractor {
   constructor() {
     super({
       folders: ['car_registrations', 'netherlands'],
@@ -230,27 +220,10 @@ class BOVAGExtractor extends BaseExtractor {
       },
     ];
   }
+
+  async test() {
+    // await this.reindex();
+  }
 }
 
 export default new BOVAGExtractor();
-
-// // Reindexar archivos
-// setTimeout(async () => {
-//   console.log('- Reindexing files...');
-//   await bovagExtractor.reindex();
-//   console.log('- Files reindexed');
-// }, 2000);
-
-// setTimeout(async () => {
-//   console.log('- Transforming files...');
-
-//   const dateId = { year: 2023, month: 9 };
-//   const fileName = `${dateId.year}_${dateId.month}.pdf`;
-
-//   await bovagExtractor.transform(dateId, {
-//     path: path.join(bovagExtractor.downloadsPath, fileName),
-//     data: Buffer.from(''),
-//   });
-
-//   console.log('- File transformed');
-// }, 2000);

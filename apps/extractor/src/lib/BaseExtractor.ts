@@ -2,6 +2,7 @@ import { appendFileSync, existsSync, mkdirSync, writeFileSync } from 'fs';
 import { readdir, readFile, unlink } from 'fs/promises';
 import { Parser } from 'json2csv';
 import path from 'path';
+import chalk from 'chalk';
 
 const EXTRACTOR_PATH = path.join(process.cwd(), 'data', 'extractor');
 
@@ -16,23 +17,31 @@ export interface FileOuput {
   fields?: string[];
 }
 
-export interface MonthDateId {
-  year: number;
-  month: number;
-}
-
-export interface QuarterDateId {
-  year: number;
-  quarter: number;
-}
-
-type DateId = MonthDateId | QuarterDateId;
-
 export interface Config {
   folders: string[];
   source: string;
   fileext: string;
-  id_format?: 'month' | 'quarter';
+}
+
+export class DateId {
+  public year: number;
+
+  constructor(year: number) {
+    this.year = year;
+  }
+
+  static fromText(text: string): DateId {
+    const year = parseInt(text);
+    return new DateId(year);
+  }
+
+  valueOf(): number {
+    return this.year;
+  }
+
+  toString(): string {
+    return this.year.toString();
+  }
 }
 
 export abstract class BaseExtractor {
@@ -41,7 +50,7 @@ export abstract class BaseExtractor {
   public dataPath: string;
 
   constructor(config: Config) {
-    this.config = Object.assign({}, { id_format: 'month' }, config);
+    this.config = config;
     this.downloadsPath = path.join(
       EXTRACTOR_PATH,
       path.join(...config.folders),
@@ -63,71 +72,35 @@ export abstract class BaseExtractor {
   }
 
   /**
+   * Infiere por la fecha que id debería
+   * estar publicado en la fuente.
+   */
+  abstract resolveId(): Promise<DateId>;
+
+  /**
+   * Resuelve el id de la fecha a partir de un texto
+   * @param text
+   */
+  abstract resolveIdFromText(text: string): Promise<DateId>;
+
+  /**
    * Extrae la informacion de la fuente
    * la transforma y la guarda en los archivos csv
    */
   async extract(): Promise<void> {
-    const { folders, source, fileext, id_format } = this.config;
+    const { folders, source, fileext } = this.config;
     const folder = path.join(...folders);
 
     console.log('');
     console.log(`Running [${folder}] ${source} extractor...`);
 
-    // Siempre debe haber publicado algo asi que lo infiero
-    // Determino el date id y el nombre del archivo
-    // que debería estar publicado para descarga
-    // los nombres varían según el formato de id
-    let fileName = '';
-    let dateId: DateId;
-    switch (id_format) {
-      case 'month': {
-        const tmpDate = new Date();
-        tmpDate.setMonth(tmpDate.getMonth() - 1);
-
-        const year = tmpDate.getFullYear();
-        const month = tmpDate.getMonth() + 1;
-
-        fileName = `${year}_${month}.${fileext}`;
-        dateId = { year, month };
-        break;
-      }
-      case 'quarter': {
-        const quarterMap = {
-          1: 1,
-          2: 1,
-          3: 1,
-          4: 2,
-          5: 2,
-          6: 2,
-          7: 3,
-          8: 3,
-          9: 3,
-          10: 4,
-          11: 4,
-          12: 4,
-        };
-        const tmpDate = new Date();
-        const currentQuarter = quarterMap[tmpDate.getMonth() + 1];
-
-        let year = tmpDate.getFullYear();
-        let quarter = currentQuarter - 1;
-        if (quarter === 0) {
-          quarter = 4;
-          year = year - 1;
-        }
-
-        fileName = `${year}_Q${quarter}.${fileext}`;
-        dateId = { year, quarter };
-        break;
-      }
-      default:
-        throw new Error('Invalid id_format');
-    }
+    const dateId = await this.resolveId();
+    const fileName = `${dateId.toString()}.${fileext}`;
 
     // Si ya tengo el fichero no hago nada
     const exists = existsSync(path.join(this.downloadsPath, fileName));
     if (exists) {
-      console.log(`> Nothing to do`);
+      console.log(`> ${chalk.gray(`File ${fileName} already downloaded`)}`);
       return;
     }
 
@@ -138,7 +111,7 @@ export abstract class BaseExtractor {
     try {
       result = await this.download(dateId);
     } catch (error) {
-      console.log(`> Error downloading ${fileName}`);
+      console.log(`> ${chalk.red(`Error downloading ${fileName}`)}`);
       console.error(error);
       // Salta la ejecución del extractor
       // para no detener los demás, ahi debo revisar que le pasa
@@ -146,7 +119,7 @@ export abstract class BaseExtractor {
     }
 
     if (result === null) {
-      console.log('> Nothing to download');
+      console.log(`> ${chalk.yellow(`Data ${fileName} not published yet`)}`);
       return;
     }
 
@@ -198,7 +171,7 @@ export abstract class BaseExtractor {
 
       appendFileSync(filePath, csvData);
 
-      console.log(`> Saved ${fileOutput.name}`);
+      console.log(`> ${chalk.green(`Saved ${fileOutput.name}`)}`);
     }
   }
 
@@ -206,7 +179,7 @@ export abstract class BaseExtractor {
    * Reindexa los datos en base a los archivos de downloads
    */
   async reindex(): Promise<void> {
-    const { id_format, fileext } = this.config;
+    const { fileext } = this.config;
 
     // Elimino todos los archivos de datos del source
     const files = await readdir(this.dataPath);
@@ -222,77 +195,27 @@ export abstract class BaseExtractor {
     // Ignore .DS_Store files
     downloads = downloads.filter((download) => !download.startsWith('.'));
 
-    const parseFileName = (fileName: string): DateId => {
-      switch (id_format) {
-        case 'month': {
-          const parts = fileName.replace(`.${fileext}`, '').split('_');
-          return { year: parseInt(parts[0]), month: parseInt(parts[1]) };
-        }
-
-        case 'quarter': {
-          const parts = fileName.replace(`.${fileext}`, '').split('_');
-          return {
-            year: parseInt(parts[0]),
-            quarter: parseInt(parts[1].replace('Q', '')),
-          };
-        }
-        default:
-          throw new Error('Invalid id_format');
-      }
-    };
-
     for (const fileName of downloads) {
       const buffer = await readFile(path.join(this.downloadsPath, fileName));
+      const dateId = await this.resolveIdFromText(
+        fileName.replace(`.${fileext}`, '')
+      );
       downloadData.push({
-        dateId: parseFileName(fileName),
+        dateId,
         data: buffer,
       });
     }
 
     // Ordenos los archivos por date id
     downloadData.sort((a, b) => {
-      if (a.dateId.year === b.dateId.year) {
-        switch (id_format) {
-          case 'month':
-            return (
-              (a.dateId as MonthDateId).month - (b.dateId as MonthDateId).month
-            );
-          case 'quarter':
-            return (
-              (a.dateId as QuarterDateId).quarter -
-              (b.dateId as QuarterDateId).quarter
-            );
-          default:
-            throw new Error('Invalid id_format');
-        }
-      }
-      return a.dateId.year - b.dateId.year;
+      return a.dateId.valueOf() - b.dateId.valueOf();
     });
 
     // Transformo cada uno
     const transformedData: FileOuput[] = [];
     for (const download of downloadData) {
-      const { year } = download.dateId;
       const { fileext } = this.config;
-
-      let fileName = '';
-      switch (id_format) {
-        case 'month':
-          fileName = `${year}_${
-            (download.dateId as MonthDateId).month
-          }.${fileext}`;
-          break;
-
-        case 'quarter':
-          fileName = `${year}_Q${
-            (download.dateId as QuarterDateId).quarter
-          }.${fileext}`;
-          break;
-
-        default:
-          throw new Error('Invalid id_format');
-      }
-
+      let fileName = `${download.dateId.toString()}.${fileext}`;
       const filePath = path.join(this.downloadsPath, fileName);
 
       const fileDatas = await this.transform(download.dateId, {

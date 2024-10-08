@@ -1,11 +1,6 @@
 import puppeteer, { Browser, Page } from 'puppeteer';
 import z from 'zod';
-import {
-  BaseExtractor,
-  FileData,
-  FileOuput,
-  MonthDateId,
-} from '../../../lib/BaseExtractor';
+import { FileData, FileOuput, MonthDateId, MonthExtractor } from '../../../lib';
 
 const SOURCE_URL =
   'https://app.powerbi.com/view?r=eyJrIjoiNzZjMzI0MWQtYzVhOC00ZjkxLWI5ZjQtNDQ4OTEyOWRlZWU2IiwidCI6ImYwOGMzNTQyLWY5NWYtNDE3ZC04NmU5LTZhZWQ5NzY1ODRhMCIsImMiOjh9';
@@ -30,7 +25,7 @@ interface IData {
   by_model: string[][];
 }
 
-class OFVExtractor extends BaseExtractor {
+class OFVExtractor extends MonthExtractor {
   constructor() {
     super({
       folders: ['car_registrations', 'norway'],
@@ -70,6 +65,10 @@ class OFVExtractor extends BaseExtractor {
     ]);
 
     return outputs;
+  }
+
+  async test() {
+    // await this.reindex();
   }
 
   private downloadTopRegistrationsByBrand = async (
@@ -346,24 +345,3 @@ class OFVExtractor extends BaseExtractor {
 }
 
 export default new OFVExtractor();
-
-// // Descargar archivo por date id
-// setTimeout(async () => {
-//   const dateId = { year: 2024, month: 8 };
-//   const fileName = `${dateId.year}_${dateId.month}.json`;
-//   const filePath = path.join(ofvExtractor.downloadsPath, fileName);
-
-//   console.log(`- Downloading file: ${fileName}`);
-//   const buffer = await ofvExtractor.download(dateId);
-//   if (buffer) {
-//     await writeFile(filePath, buffer);
-//     console.log(`- File saved: ${fileName}`);
-//   }
-// }, 2000);
-
-// // Reindexar archivos
-// setTimeout(async () => {
-//   console.log('- Reindexing files...');
-//   await ofvExtractor.reindex();
-//   console.log('- Files reindexed');
-// }, 2000);

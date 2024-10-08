@@ -2,16 +2,11 @@ import axios from 'axios';
 import * as cheerio from 'cheerio';
 import PDFParser, { Output, Text } from 'pdf2json';
 import z from 'zod';
-import {
-  BaseExtractor,
-  FileData,
-  FileOuput,
-  MonthDateId,
-} from '../../../lib/BaseExtractor';
+import { FileData, FileOuput, MonthDateId, MonthExtractor } from '../../../lib';
 
 const SOURCE_URL = 'https://pfa-auto.fr/marche-automobile';
 
-class PFAExtractor extends BaseExtractor {
+class PFAExtractor extends MonthExtractor {
   constructor() {
     super({
       folders: ['car_registrations', 'france'],
@@ -184,13 +179,10 @@ class PFAExtractor extends BaseExtractor {
       },
     ];
   }
+
+  async test() {
+    // await this.reindex();
+  }
 }
 
 export default new PFAExtractor();
-
-// // Reindexar archivos
-// setTimeout(async () => {
-//   console.log('- Reindexing files...');
-//   await new PFAExtractor().reindex();
-//   console.log('- Files reindexed');
-// }, 2000);

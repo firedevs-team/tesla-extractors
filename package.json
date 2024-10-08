@@ -8,6 +8,7 @@
     "@aws-sdk/client-textract": "^3.645.0",
     "@nrwl/node": "^19.5.7",
     "axios": "^1.7.7",
+    "chalk": "^4.1.2",
     "cheerio": "^1.0.0",
     "json2csv": "^6.0.0-alpha.2",
     "lodash": "^4.17.21",

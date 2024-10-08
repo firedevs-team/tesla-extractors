@@ -3,26 +3,20 @@ import * as cheerio from 'cheerio';
 import PDFParser, { Output, Text } from 'pdf2json';
 import z from 'zod';
 import {
-  BaseExtractor,
   FileData,
   FileOuput,
   QuarterDateId,
-} from '../../lib/BaseExtractor';
-
-// import path from 'path';
-// import os from 'os';
-// import { execSync } from 'child_process';
-// import { writeFile } from 'fs/promises';
+  QuarterExtractor,
+} from '../../lib';
 
 const SOURCE_URL = 'https://ir.tesla.com/#quarterly-disclosure';
 
-class ShareholderDeckExtractor extends BaseExtractor {
+class ShareholderDeckExtractor extends QuarterExtractor {
   constructor() {
     super({
       folders: ['tesla_ir_info'],
       source: 'shareholder_deck',
       fileext: 'pdf',
-      id_format: 'quarter',
     });
   }
 
@@ -110,7 +104,11 @@ class ShareholderDeckExtractor extends BaseExtractor {
     return outputs;
   }
 
-  async transformOperationalSummary(
+  async test() {
+    // await this.reindex();
+  }
+
+  private async transformOperationalSummary(
     dateId: QuarterDateId,
     fileData: FileData
   ): Promise<FileOuput> {
@@ -306,7 +304,7 @@ class ShareholderDeckExtractor extends BaseExtractor {
     };
   }
 
-  async transformFinancialSummary(
+  private async transformFinancialSummary(
     dateId: QuarterDateId,
     fileData: FileData
   ): Promise<FileOuput> {
@@ -506,26 +504,3 @@ class ShareholderDeckExtractor extends BaseExtractor {
 }
 
 export default new ShareholderDeckExtractor();
-
-// // Reindexar archivos
-// setTimeout(async () => {
-//   console.log('- Reindexing files...');
-//   await new TslaIRExtractor().reindex();
-//   console.log('- Files reindexed');
-// }, 2000);
-
-// // Transforma un archivo dado un id de fecha
-// setTimeout(async () => {
-//   console.log('- Transforming files...');
-
-//   const dateId = { year: 2023, quarter: 1 };
-//   const fileName = `${dateId.year}_Q${dateId.quarter}.pdf`;
-
-//   const extractor = new TslaIRExtractor();
-//   await extractor.transform(dateId, {
-//     path: path.join(extractor.downloadsPath, fileName),
-//     data: Buffer.from(''),
-//   });
-
-//   console.log('- File transformed');
-// }, 2000);
