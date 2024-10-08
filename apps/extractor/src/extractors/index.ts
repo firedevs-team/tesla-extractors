@@ -5,6 +5,7 @@ import unraeExtractor from './car_registrations/italy/UNRAEExtractor';
 import ofvExtractor from './car_registrations/norway/OFVExtractor';
 import bovagExtractor from './car_registrations/netherlands/BOVAGExtractor';
 import statistikTotalExtractor from './car_registrations/austria/StatistikTotalExtractor';
+import statistikProvisionalExtractor from './car_registrations/austria/StatistikProvisionalExtractor';
 import shareholderDeckExtractor from './tesla_ir_info/ShareholderDeckExtractor';
 
 const extractors: BaseExtractor[] = [
@@ -14,6 +15,7 @@ const extractors: BaseExtractor[] = [
   ofvExtractor,
   bovagExtractor,
   statistikTotalExtractor,
+  statistikProvisionalExtractor,
   shareholderDeckExtractor,
 ];
 

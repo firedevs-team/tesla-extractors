@@ -165,7 +165,7 @@ class StatistikTotalExtractor extends MonthExtractor {
   }
 
   async test() {
-    await this.reindex();
+    // await this.reindex();
   }
 }
 
