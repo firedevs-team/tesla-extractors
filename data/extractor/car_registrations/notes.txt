@@ -1,21 +1,44 @@
 #Datos por país desde 2023_1
 
-Francia
+Austria
+...
+
+Czech Republic
+- 3 ✅
+- Y ✅
+- S ✅ * falta el 2023_7 y 2024_2
+- X ✅ * falta el 2024_2
+* En 2023 no aparecen registros hasta abril
+
+France
 - 3 ✅
 - Y ✅
 - S *faltan 2 años
 - X *faltan 2 años
 
-Italia
+Germany
+...
+
+Italy
 - 3 ✅
 - Y ✅
 - S *faltan 2 meses
 - X *faltan 1 mes
 
-Noruega
+Netherlands
+...
+
+Norway
 - 3 ✅
 - Y ✅
 - S *faltan 2 años
 - X *faltan 2 años
 * Pero tengo total x mes. total - (3 + Y) = SX. Infiero un porciento, basado en data y pongo numeros a S y X.
+
+
+
+
+
+
+
 
