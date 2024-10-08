@@ -1,7 +1,11 @@
 #Datos por país desde 2023_1
 
 Austria
-...
+- 3 ✅ * falta 2023_1
+- Y ✅ 
+- S *faltan 2 años
+- X *faltan 2 años
+* Tengo el total en brand
 
 Czech Republic
 - 3 ✅
@@ -9,6 +13,7 @@ Czech Republic
 - S ✅ * falta el 2023_7 y 2024_2
 - X ✅ * falta el 2024_2
 * En 2023 no aparecen registros hasta abril
+* Tengo el total en brand
 
 France
 - 3 ✅
@@ -17,7 +22,10 @@ France
 - X *faltan 2 años
 
 Germany
-...
+- 3 ✅
+- Y ✅
+- S ✅
+- X ✅
 
 Italy
 - 3 ✅
@@ -26,7 +34,10 @@ Italy
 - X *faltan 1 mes
 
 Netherlands
-...
+- 3 ✅
+- Y ✅
+- S ✅
+- X ✅
 
 Norway
 - 3 ✅
