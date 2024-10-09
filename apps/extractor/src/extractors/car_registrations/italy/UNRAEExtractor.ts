@@ -203,7 +203,7 @@ class UNRAEExtractor extends MonthExtractor {
     ];
   }
 
-  async test() {
+  async debug() {
     // await this.reindex();
   }
 }

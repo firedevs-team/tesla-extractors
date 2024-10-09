@@ -104,7 +104,7 @@ class ShareholderDeckExtractor extends QuarterExtractor {
     return outputs;
   }
 
-  async test() {
+  async debug() {
     // await this.reindex();
   }
 

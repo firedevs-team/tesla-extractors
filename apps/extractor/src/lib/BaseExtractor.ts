@@ -252,5 +252,5 @@ export abstract class BaseExtractor {
    * Lógica para probar el funcionamiento del extractor.
    * Se usa principalmente para construir el extractor.
    */
-  async test(): Promise<void> {}
+  async debug(): Promise<void> {}
 }

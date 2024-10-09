@@ -173,7 +173,7 @@ class StatistikProvisionalExtractor extends DayExtractor {
     ];
   }
 
-  async test() {
+  async debug() {
     await this.reindex();
   }
 }
