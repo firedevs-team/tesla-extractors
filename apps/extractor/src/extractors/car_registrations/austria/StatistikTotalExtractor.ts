@@ -61,6 +61,14 @@ class StatistikTotalExtractor extends MonthExtractor {
     return fileContent.data;
   }
 
+  /**
+   * TODO: agregar en esta transformacion la extracion
+   * de datos por marcas porque a veces es diferente al
+   * que se obtiene de forma provisional
+   * @param dateId
+   * @param fileData
+   * @returns
+   */
   async transform(
     dateId: MonthDateId,
     fileData: FileData
