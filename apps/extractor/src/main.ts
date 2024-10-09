@@ -8,7 +8,7 @@ const run = async () => {
       (e) => e.config.source === EXTRACTOR_TO_TEST
     );
     if (extractor) {
-      console.log(`Testing extractor ${EXTRACTOR_TO_TEST}...`);
+      console.log(`Running in test mode...`);
       await extractor.test();
       return;
     }

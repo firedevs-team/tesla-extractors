@@ -15,6 +15,16 @@ Czech Republic
 * En 2023 no aparecen registros hasta abril
 * Tengo el total en brand
 
+Denmark
+- 3 ✅
+- Y ✅
+- S ✅
+- X ✅
+* En el sitio solo se puede decargar los últimos dos meses
+por lo que la data parte en agosto 2024
+* Si se necesita datos antes, hay publicaciones que tienen
+un top 10 de modelos, donde sale modelo 3 y Y.
+
 France
 - 3 ✅
 - Y ✅
