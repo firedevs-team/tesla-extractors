@@ -44,12 +44,12 @@ export class DateId {
   }
 }
 
-export abstract class BaseExtractor {
-  public config: Config;
+export abstract class BaseExtractor<C extends Config = Config> {
+  public config: C;
   public downloadsPath: string;
   public dataPath: string;
 
-  constructor(config: Config) {
+  constructor(config: C) {
     this.config = config;
     this.downloadsPath = path.join(
       EXTRACTOR_PATH,
@@ -136,7 +136,7 @@ export abstract class BaseExtractor {
       });
 
       // Lo mando a salvar
-      await this.save(fileOutputs);
+      await this.save(dateId, fileOutputs);
     } catch (error) {
       // Si falla la transformación o el guardado
       // elimino el archivo descargado
@@ -152,7 +152,7 @@ export abstract class BaseExtractor {
    * Salvo los datos en los archivos csv
    * @param fileOutputs
    */
-  async save(fileOutputs: FileOuput[]): Promise<void> {
+  async save(dateId: DateId, fileOutputs: FileOuput[]): Promise<void> {
     // Guardo los archivos
     for (const fileOutput of fileOutputs) {
       const filePath = path.join(this.dataPath, `${fileOutput.name}.csv`);
@@ -171,7 +171,9 @@ export abstract class BaseExtractor {
 
       appendFileSync(filePath, csvData);
 
-      console.log(`> ${chalk.green(`Saved ${fileOutput.name}`)}`);
+      console.log(
+        `> ${chalk.green(`Saved [${dateId.toString()}] ${fileOutput.name}`)}`
+      );
     }
   }
 
@@ -211,23 +213,21 @@ export abstract class BaseExtractor {
       return a.dateId.valueOf() - b.dateId.valueOf();
     });
 
-    // Transformo cada uno
-    const transformedData: FileOuput[] = [];
+    // Transformo cada archivo y lo guardo
     for (const download of downloadData) {
+      const { dateId, data } = download;
       const { fileext } = this.config;
-      let fileName = `${download.dateId.toString()}.${fileext}`;
+      let fileName = `${dateId.toString()}.${fileext}`;
       const filePath = path.join(this.downloadsPath, fileName);
 
-      const fileDatas = await this.transform(download.dateId, {
+      const outputs = await this.transform(dateId, {
         path: filePath,
-        data: download.data,
+        data,
       });
 
-      transformedData.push(...fileDatas);
+      // Guardo los archivos
+      await this.save(dateId, outputs);
     }
-
-    // Guardo los archivos
-    await this.save(transformedData);
   }
 
   /**

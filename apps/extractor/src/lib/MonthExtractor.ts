@@ -1,4 +1,14 @@
-import { BaseExtractor, DateId, FileData, FileOuput } from './BaseExtractor';
+import {
+  BaseExtractor,
+  Config,
+  DateId,
+  FileData,
+  FileOuput,
+} from './BaseExtractor';
+
+interface MonthConfig extends Config {
+  published_day?: number;
+}
 
 export class MonthDateId extends DateId {
   public month: number;
@@ -22,21 +32,38 @@ export class MonthDateId extends DateId {
   }
 }
 
-export abstract class MonthExtractor extends BaseExtractor {
+export abstract class MonthExtractor extends BaseExtractor<MonthConfig> {
+  constructor(config: MonthConfig) {
+    super(Object.assign({}, { published_day: 1 }, config));
+  }
   /**
    * La resolución es la siguiente:
    *
-   * Al mes actual se le resta 1 mes.
+   * Si es ya es el published_day, entonces se resuelvo el mes anterior.
+   * Si no, se resuelve el mes antes del anterior.
    *
    */
   async resolveId(): Promise<DateId> {
     const tmpDate = new Date();
-    tmpDate.setMonth(tmpDate.getMonth() - 1);
 
-    const year = tmpDate.getFullYear();
-    const month = tmpDate.getMonth() + 1;
+    const publishedDay = this.config.published_day;
+    if (tmpDate.getDate() >= publishedDay) {
+      // Resuelvo el mes anterior
+      tmpDate.setMonth(tmpDate.getMonth() - 1);
 
-    return new MonthDateId(year, month);
+      const year = tmpDate.getFullYear();
+      const month = tmpDate.getMonth() + 1;
+
+      return new MonthDateId(year, month);
+    } else {
+      // Resuelvo el mes antes del anterior
+      tmpDate.setMonth(tmpDate.getMonth() - 2);
+
+      const year = tmpDate.getFullYear();
+      const month = tmpDate.getMonth() + 1;
+
+      return new MonthDateId(year, month);
+    }
   }
 
   async resolveIdFromText(text: string): Promise<DateId> {

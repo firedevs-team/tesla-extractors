@@ -173,6 +173,11 @@ class StatistikProvisionalExtractor extends DayExtractor {
     ];
   }
 
+  // TODO: debo sobrescribir save para que no se
+  // repitan las datos provisionales, inicialmente
+  // funciona pq solo tengo datos provisionales del
+  // ultimos dia del mes
+
   async debug() {
     await this.reindex();
   }

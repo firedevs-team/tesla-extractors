@@ -9,6 +9,7 @@ import statistikProvisionalExtractor from './car_registrations/austria/Statistik
 import sdaciaExtractor from './car_registrations/czech_republic/SDACIAExtractor';
 import mobilityExtractor from './car_registrations/denmark/MobilityExtractor';
 import autExtractor from './car_registrations/finland/AUTExtractor';
+import samgongustofaExtractor from './car_registrations/iceland/SamgongustofaExtractor';
 import shareholderDeckExtractor from './tesla_ir_info/ShareholderDeckExtractor';
 
 const extractors: BaseExtractor[] = [
@@ -22,6 +23,7 @@ const extractors: BaseExtractor[] = [
   sdaciaExtractor,
   mobilityExtractor,
   autExtractor,
+  samgongustofaExtractor,
   shareholderDeckExtractor,
 ];
 
