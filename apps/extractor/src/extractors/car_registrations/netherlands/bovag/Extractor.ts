@@ -2,11 +2,16 @@ import z from 'zod';
 import axios from 'axios';
 import puppeteer, { Browser, Page } from 'puppeteer';
 import PDFParser, { Output, Text } from 'pdf2json';
-import { FileData, FileOuput, MonthDateId, MonthExtractor } from '../../../lib';
+import {
+  FileData,
+  FileOuput,
+  MonthDateId,
+  MonthExtractor,
+} from '../../../../lib';
 
 const SOURCE_URL = 'https://www.bovag.nl/pers/cijfers';
 
-class BOVAGExtractor extends MonthExtractor {
+class Extractor extends MonthExtractor {
   constructor() {
     super({
       folders: ['car_registrations', 'netherlands'],
@@ -226,4 +231,4 @@ class BOVAGExtractor extends MonthExtractor {
   }
 }
 
-export default new BOVAGExtractor();
+export default new Extractor();

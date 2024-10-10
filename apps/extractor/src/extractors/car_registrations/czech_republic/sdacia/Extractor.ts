@@ -2,12 +2,17 @@ import z from 'zod';
 import axios from 'axios';
 import * as cheerio from 'cheerio';
 import xlsx, { CellObject } from 'xlsx';
-import { FileData, FileOuput, MonthDateId, MonthExtractor } from '../../../lib';
+import {
+  FileData,
+  FileOuput,
+  MonthDateId,
+  MonthExtractor,
+} from '../../../../lib';
 
 const SOURCE_URL =
   'https://www.sda-cia.cz/repository-volnedostupna?m=0&lang=EN&y=';
 
-class SDACIAExtractor extends MonthExtractor {
+class Extractor extends MonthExtractor {
   constructor() {
     super({
       folders: ['car_registrations', 'czech_republic'],
@@ -208,4 +213,4 @@ class SDACIAExtractor extends MonthExtractor {
   };
 }
 
-export default new SDACIAExtractor();
+export default new Extractor();

@@ -1,12 +1,17 @@
 import axios from 'axios';
 import * as cheerio from 'cheerio';
 import xlsx from 'xlsx';
-import { FileData, FileOuput, MonthDateId, MonthExtractor } from '../../../lib';
+import {
+  FileData,
+  FileOuput,
+  MonthDateId,
+  MonthExtractor,
+} from '../../../../lib';
 
 const KBA_SOURCE_URL =
   'https://www.kba.de/DE/Statistik/Produktkatalog/produkte/Fahrzeuge/fz10/fz10_gentab.html?nn=3514348';
 
-class KBAExtractor extends MonthExtractor {
+class Extractor extends MonthExtractor {
   constructor() {
     super({
       folders: ['car_registrations', 'germany'],
@@ -159,4 +164,4 @@ class KBAExtractor extends MonthExtractor {
   }
 }
 
-export default new KBAExtractor();
+export default new Extractor();

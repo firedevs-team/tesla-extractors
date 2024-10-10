@@ -8,7 +8,7 @@ import {
   DayExtractor,
   FileData,
   FileOuput,
-} from '../../../lib';
+} from '../../../../lib';
 
 const SOURCE_URL =
   'https://www.statistik.at/statistiken/tourismus-und-verkehr/fahrzeuge/kfz-neuzulassungen';
@@ -27,7 +27,7 @@ const MONTH_MAP = {
   12: 'Dezember', // Diciembre
 };
 
-class StatistikProvisionalExtractor extends DayExtractor {
+class Extractor extends DayExtractor {
   constructor() {
     super({
       folders: ['car_registrations', 'austria'],
@@ -183,4 +183,4 @@ class StatistikProvisionalExtractor extends DayExtractor {
   }
 }
 
-export default new StatistikProvisionalExtractor();
+export default new Extractor();

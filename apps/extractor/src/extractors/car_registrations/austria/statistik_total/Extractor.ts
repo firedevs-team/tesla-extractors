@@ -2,7 +2,12 @@ import axios from 'axios';
 import * as cheerio from 'cheerio';
 import xlsx, { CellObject } from 'xlsx';
 import z from 'zod';
-import { FileData, FileOuput, MonthDateId, MonthExtractor } from '../../../lib';
+import {
+  FileData,
+  FileOuput,
+  MonthDateId,
+  MonthExtractor,
+} from '../../../../lib';
 
 const SOURCE_URL =
   'https://www.statistik.at/statistiken/tourismus-und-verkehr/fahrzeuge/kfz-neuzulassungen';
@@ -21,7 +26,7 @@ const MONTH_MAP = {
   12: 'Dezember', // Diciembre
 };
 
-class StatistikTotalExtractor extends MonthExtractor {
+class Extractor extends MonthExtractor {
   constructor() {
     super({
       folders: ['car_registrations', 'austria'],
@@ -177,4 +182,4 @@ class StatistikTotalExtractor extends MonthExtractor {
   }
 }
 
-export default new StatistikTotalExtractor();
+export default new Extractor();

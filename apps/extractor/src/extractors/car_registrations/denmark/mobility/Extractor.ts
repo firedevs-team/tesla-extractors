@@ -1,6 +1,11 @@
 import puppeteer, { Browser, Page } from 'puppeteer';
 import z from 'zod';
-import { FileData, FileOuput, MonthDateId, MonthExtractor } from '../../../lib';
+import {
+  FileData,
+  FileOuput,
+  MonthDateId,
+  MonthExtractor,
+} from '../../../../lib';
 
 const SOURCE_URL = 'https://mobility.dk/nyregistreringer/';
 const MONTH_MAP = {
@@ -23,7 +28,7 @@ interface IData {
   by_model: string[][];
 }
 
-class MobilityExtractor extends MonthExtractor {
+class Extractor extends MonthExtractor {
   constructor() {
     super({
       folders: ['car_registrations', 'denmark'],
@@ -361,4 +366,4 @@ class MobilityExtractor extends MonthExtractor {
   };
 }
 
-export default new MobilityExtractor();
+export default new Extractor();

@@ -2,7 +2,12 @@ import z from 'zod';
 import axios from 'axios';
 import * as cheerio from 'cheerio';
 import xlsx, { CellObject } from 'xlsx';
-import { FileData, FileOuput, MonthDateId, MonthExtractor } from '../../../lib';
+import {
+  FileData,
+  FileOuput,
+  MonthDateId,
+  MonthExtractor,
+} from '../../../../lib';
 
 import os from 'os';
 import path from 'path';
@@ -26,7 +31,7 @@ const MONTH_MAP = {
   12: 'December',
 };
 
-class AUTExtractor extends MonthExtractor {
+class Extractor extends MonthExtractor {
   constructor() {
     super({
       folders: ['car_registrations', 'finland'],
@@ -239,4 +244,4 @@ class AUTExtractor extends MonthExtractor {
   }
 }
 
-export default new AUTExtractor();
+export default new Extractor();

@@ -2,11 +2,16 @@ import axios from 'axios';
 import * as cheerio from 'cheerio';
 import PDFParser, { Output, Text } from 'pdf2json';
 import z from 'zod';
-import { FileData, FileOuput, MonthDateId, MonthExtractor } from '../../../lib';
+import {
+  FileData,
+  FileOuput,
+  MonthDateId,
+  MonthExtractor,
+} from '../../../../lib';
 
 const SOURCE_URL = 'https://unrae.it/dati-statistici/immatricolazioni?page=1';
 
-class UNRAEExtractor extends MonthExtractor {
+class Extractor extends MonthExtractor {
   constructor() {
     super({
       folders: ['car_registrations', 'italy'],
@@ -208,4 +213,4 @@ class UNRAEExtractor extends MonthExtractor {
   }
 }
 
-export default new UNRAEExtractor();
+export default new Extractor();

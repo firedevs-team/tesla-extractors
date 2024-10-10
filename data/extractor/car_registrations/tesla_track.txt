@@ -37,6 +37,12 @@ Germany
 - S ✅
 - X ✅
 
+Iceland
+- 3 ✅
+- Y ✅
+- S ✅
+- X ✅
+
 Italy
 - 3 ✅
 - Y ✅

@@ -1,6 +1,11 @@
 import puppeteer, { Browser, Page } from 'puppeteer';
 import z from 'zod';
-import { FileData, FileOuput, MonthDateId, MonthExtractor } from '../../../lib';
+import {
+  FileData,
+  FileOuput,
+  MonthDateId,
+  MonthExtractor,
+} from '../../../../lib';
 
 const SOURCE_URL =
   'https://app.powerbi.com/view?r=eyJrIjoiNzZjMzI0MWQtYzVhOC00ZjkxLWI5ZjQtNDQ4OTEyOWRlZWU2IiwidCI6ImYwOGMzNTQyLWY5NWYtNDE3ZC04NmU5LTZhZWQ5NzY1ODRhMCIsImMiOjh9';
@@ -25,7 +30,7 @@ interface IData {
   by_model: string[][];
 }
 
-class OFVExtractor extends MonthExtractor {
+class Extractor extends MonthExtractor {
   constructor() {
     super({
       folders: ['car_registrations', 'norway'],
@@ -344,4 +349,4 @@ class OFVExtractor extends MonthExtractor {
   };
 }
 
-export default new OFVExtractor();
+export default new Extractor();
