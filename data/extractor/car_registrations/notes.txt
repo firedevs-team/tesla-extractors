@@ -1,5 +1,10 @@
 #Datos por país desde 2023_1
 
+#Info diaria
+Austria - Cada 10 días
+Iceland - Diario
+
+#Tesla
 Austria
 - 3 ✅ * falta 2023_1
 - Y ✅ 
