@@ -1,13 +1,20 @@
 import z from 'zod';
+import { existsSync, createReadStream } from 'fs';
+import path from 'path';
 import axios from 'axios';
+import chalk from 'chalk';
+import Papa from 'papaparse';
+import { Parser } from 'json2csv';
 import * as cheerio from 'cheerio';
 import xlsx, { CellObject } from 'xlsx';
+import { readFile, writeFile } from 'fs/promises';
 import {
   DateId,
   DayDateId,
   DayExtractor,
   FileData,
   FileOuput,
+  MonthDateId,
 } from '../../../../lib';
 
 const SOURCE_URL =
@@ -173,14 +180,7 @@ class Extractor extends DayExtractor {
     ];
   }
 
-  // TODO: debo sobrescribir save para que no se
-  // repitan las datos provisionales, inicialmente
-  // funciona pq solo tengo datos provisionales del
-  // ultimos dia del mes
-
-  async debug() {
-    await this.reindex();
-  }
+  async debug() {}
 }
 
 export default new Extractor();
