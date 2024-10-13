@@ -1,0 +1,1702 @@
+{
+  "by_brand": [
+    {
+      "brand": "TOYOTA",
+      "registrations": "5,452",
+      "market_share": "17.36%"
+    },
+    {
+      "brand": "HYUNDAI",
+      "registrations": "3,763",
+      "market_share": "11.98%"
+    },
+    {
+      "brand": "VOLKSWAGEN",
+      "registrations": "3,021",
+      "market_share": "9.62%"
+    },
+    {
+      "brand": "SKODA",
+      "registrations": "2,716",
+      "market_share": "8.65%"
+    },
+    {
+      "brand": "KIA",
+      "registrations": "2,055",
+      "market_share": "6.54%"
+    },
+    {
+      "brand": "NISSAN",
+      "registrations": "1,606",
+      "market_share": "5.11%"
+    },
+    {
+      "brand": "PEUGEOT",
+      "registrations": "1,546",
+      "market_share": "4.92%"
+    },
+    {
+      "brand": "AUDI",
+      "registrations": "1,302",
+      "market_share": "4.15%"
+    },
+    {
+      "brand": "FORD",
+      "registrations": "1,297",
+      "market_share": "4.13%"
+    },
+    {
+      "brand": "DACIA",
+      "registrations": "1,016",
+      "market_share": "3.23%"
+    },
+    {
+      "brand": "BMW",
+      "registrations": "928",
+      "market_share": "2.95%"
+    },
+    {
+      "brand": "RENAULT",
+      "registrations": "927",
+      "market_share": "2.95%"
+    },
+    {
+      "brand": "OPEL",
+      "registrations": "859",
+      "market_share": "2.74%"
+    },
+    {
+      "brand": "MERCEDES-BENZ",
+      "registrations": "784",
+      "market_share": "2.50%"
+    },
+    {
+      "brand": "SEAT",
+      "registrations": "614",
+      "market_share": "1.95%"
+    },
+    {
+      "brand": "SUZUKI",
+      "registrations": "453",
+      "market_share": "1.44%"
+    },
+    {
+      "brand": "BYD",
+      "registrations": "429",
+      "market_share": "1.37%"
+    },
+    {
+      "brand": "MAZDA",
+      "registrations": "355",
+      "market_share": "1.13%"
+    },
+    {
+      "brand": "CUPRA",
+      "registrations": "336",
+      "market_share": "1.07%"
+    },
+    {
+      "brand": "CITROEN",
+      "registrations": "325",
+      "market_share": "1.03%"
+    },
+    {
+      "brand": "MG",
+      "registrations": "321",
+      "market_share": "1.02%"
+    },
+    {
+      "brand": "VOLVO",
+      "registrations": "300",
+      "market_share": "0.96%"
+    },
+    {
+      "brand": "LAND ROVER",
+      "registrations": "295",
+      "market_share": "0.94%"
+    },
+    {
+      "brand": "LEXUS",
+      "registrations": "188",
+      "market_share": "0.60%"
+    },
+    {
+      "brand": "MINI",
+      "registrations": "85",
+      "market_share": "0.27%"
+    },
+    {
+      "brand": "PORSCHE",
+      "registrations": "82",
+      "market_share": "0.26%"
+    },
+    {
+      "brand": "FIAT",
+      "registrations": "76",
+      "market_share": "0.24%"
+    },
+    {
+      "brand": "TESLA",
+      "registrations": "66",
+      "market_share": "0.21%"
+    },
+    {
+      "brand": "JEEP",
+      "registrations": "40",
+      "market_share": "0.13%"
+    },
+    {
+      "brand": "DS",
+      "registrations": "39",
+      "market_share": "0.12%"
+    },
+    {
+      "brand": "HONDA",
+      "registrations": "33",
+      "market_share": "0.11%"
+    },
+    {
+      "brand": "POLESTAR",
+      "registrations": "31",
+      "market_share": "0.10%"
+    },
+    {
+      "brand": "ALFA ROMEO",
+      "registrations": "23",
+      "market_share": "0.07%"
+    },
+    {
+      "brand": "JAGUAR",
+      "registrations": "17",
+      "market_share": "0.05%"
+    },
+    {
+      "brand": "GWM",
+      "registrations": "11",
+      "market_share": "0.04%"
+    },
+    {
+      "brand": "SSANGYONG",
+      "registrations": "9",
+      "market_share": "0.03%"
+    },
+    {
+      "brand": "SUBARU",
+      "registrations": "6",
+      "market_share": "0.02%"
+    },
+    {
+      "brand": "INEOS",
+      "registrations": "1",
+      "market_share": "0.00%"
+    }
+  ],
+  "by_model": [
+    {
+      "brand": "HYUNDAI",
+      "model": "TUCSON",
+      "registrations": "1,880",
+      "market_share": "5.99%"
+    },
+    {
+      "brand": "TOYOTA",
+      "model": "YARIS CROSS",
+      "registrations": "1,191",
+      "market_share": "3.79%"
+    },
+    {
+      "brand": "TOYOTA",
+      "model": "RAV 4",
+      "registrations": "1,163",
+      "market_share": "3.70%"
+    },
+    {
+      "brand": "KIA",
+      "model": "SPORTAGE",
+      "registrations": "986",
+      "market_share": "3.14%"
+    },
+    {
+      "brand": "TOYOTA",
+      "model": "COROLLA",
+      "registrations": "966",
+      "market_share": "3.08%"
+    },
+    {
+      "brand": "HYUNDAI",
+      "model": "KONA",
+      "registrations": "853",
+      "market_share": "2.72%"
+    },
+    {
+      "brand": "TOYOTA",
+      "model": "C-HR",
+      "registrations": "740",
+      "market_share": "2.36%"
+    },
+    {
+      "brand": "SKODA",
+      "model": "OCTAVIA",
+      "registrations": "645",
+      "market_share": "2.05%"
+    },
+    {
+      "brand": "NISSAN",
+      "model": "JUKE",
+      "registrations": "598",
+      "market_share": "1.90%"
+    },
+    {
+      "brand": "VOLKSWAGEN",
+      "model": "GOLF",
+      "registrations": "596",
+      "market_share": "1.90%"
+    },
+    {
+      "brand": "SKODA",
+      "model": "KODIAQ",
+      "registrations": "586",
+      "market_share": "1.87%"
+    },
+    {
+      "brand": "TOYOTA",
+      "model": "YARIS",
+      "registrations": "565",
+      "market_share": "1.80%"
+    },
+    {
+      "brand": "TOYOTA",
+      "model": "COROLLA CROSS",
+      "registrations": "549",
+      "market_share": "1.75%"
+    },
+    {
+      "brand": "NISSAN",
+      "model": "QASHQAI",
+      "registrations": "546",
+      "market_share": "1.74%"
+    },
+    {
+      "brand": "FORD",
+      "model": "PUMA",
+      "registrations": "532",
+      "market_share": "1.69%"
+    },
+    {
+      "brand": "DACIA",
+      "model": "SANDERO",
+      "registrations": "512",
+      "market_share": "1.63%"
+    },
+    {
+      "brand": "PEUGEOT",
+      "model": "3008",
+      "registrations": "481",
+      "market_share": "1.53%"
+    },
+    {
+      "brand": "VOLKSWAGEN",
+      "model": "T-ROC",
+      "registrations": "433",
+      "market_share": "1.38%"
+    },
+    {
+      "brand": "HYUNDAI",
+      "model": "I20",
+      "registrations": "404",
+      "market_share": "1.29%"
+    },
+    {
+      "brand": "DACIA",
+      "model": "DUSTER",
+      "registrations": "401",
+      "market_share": "1.28%"
+    },
+    {
+      "brand": "PEUGEOT",
+      "model": "2008",
+      "registrations": "389",
+      "market_share": "1.24%"
+    },
+    {
+      "brand": "FORD",
+      "model": "KUGA",
+      "registrations": "380",
+      "market_share": "1.21%"
+    },
+    {
+      "brand": "VOLKSWAGEN",
+      "model": "ID.4",
+      "registrations": "378",
+      "market_share": "1.20%"
+    },
+    {
+      "brand": "PEUGEOT",
+      "model": "5008",
+      "registrations": "365",
+      "market_share": "1.16%"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "ARKANA",
+      "registrations": "356",
+      "market_share": "1.13%"
+    },
+    {
+      "brand": "FORD",
+      "model": "FOCUS",
+      "registrations": "354",
+      "market_share": "1.13%"
+    },
+    {
+      "brand": "VOLKSWAGEN",
+      "model": "POLO",
+      "registrations": "345",
+      "market_share": "1.10%"
+    },
+    {
+      "brand": "VOLKSWAGEN",
+      "model": "ARTEON",
+      "registrations": "324",
+      "market_share": "1.03%"
+    },
+    {
+      "brand": "SKODA",
+      "model": "KAMIQ",
+      "registrations": "318",
+      "market_share": "1.01%"
+    },
+    {
+      "brand": "SKODA",
+      "model": "SUPERB",
+      "registrations": "295",
+      "market_share": "0.94%"
+    },
+    {
+      "brand": "SKODA",
+      "model": "FABIA",
+      "registrations": "275",
+      "market_share": "0.88%"
+    },
+    {
+      "brand": "AUDI",
+      "model": "Q3",
+      "registrations": "265",
+      "market_share": "0.84%"
+    },
+    {
+      "brand": "VOLKSWAGEN",
+      "model": "TIGUAN",
+      "registrations": "262",
+      "market_share": "0.83%"
+    },
+    {
+      "brand": "SKODA",
+      "model": "KAROQ",
+      "registrations": "262",
+      "market_share": "0.83%"
+    },
+    {
+      "brand": "OPEL",
+      "model": "MOKKA",
+      "registrations": "255",
+      "market_share": "0.81%"
+    },
+    {
+      "brand": "SEAT",
+      "model": "ARONA",
+      "registrations": "239",
+      "market_share": "0.76%"
+    },
+    {
+      "brand": "OPEL",
+      "model": "CORSA",
+      "registrations": "232",
+      "market_share": "0.74%"
+    },
+    {
+      "brand": "NISSAN",
+      "model": "X-TRAIL",
+      "registrations": "219",
+      "market_share": "0.70%"
+    },
+    {
+      "brand": "BYD",
+      "model": "SEAL",
+      "registrations": "210",
+      "market_share": "0.67%"
+    },
+    {
+      "brand": "KIA",
+      "model": "CEE'D",
+      "registrations": "208",
+      "market_share": "0.66%"
+    },
+    {
+      "brand": "MG",
+      "model": "MG4",
+      "registrations": "208",
+      "market_share": "0.66%"
+    },
+    {
+      "brand": "KIA",
+      "model": "NIRO",
+      "registrations": "203",
+      "market_share": "0.65%"
+    },
+    {
+      "brand": "AUDI",
+      "model": "A6",
+      "registrations": "195",
+      "market_share": "0.62%"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "CAPTUR",
+      "registrations": "194",
+      "market_share": "0.62%"
+    },
+    {
+      "brand": "AUDI",
+      "model": "A4",
+      "registrations": "191",
+      "market_share": "0.61%"
+    },
+    {
+      "brand": "AUDI",
+      "model": "A3",
+      "registrations": "191",
+      "market_share": "0.61%"
+    },
+    {
+      "brand": "VOLKSWAGEN",
+      "model": "ID.3",
+      "registrations": "191",
+      "market_share": "0.61%"
+    },
+    {
+      "brand": "KIA",
+      "model": "STONIC",
+      "registrations": "184",
+      "market_share": "0.59%"
+    },
+    {
+      "brand": "SKODA",
+      "model": "ENYAQ",
+      "registrations": "184",
+      "market_share": "0.59%"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "AUSTRAL",
+      "registrations": "175",
+      "market_share": "0.56%"
+    },
+    {
+      "brand": "HYUNDAI",
+      "model": "IONIQ 5",
+      "registrations": "174",
+      "market_share": "0.55%"
+    },
+    {
+      "brand": "BMW",
+      "model": "3 SERIES",
+      "registrations": "171",
+      "market_share": "0.54%"
+    },
+    {
+      "brand": "NISSAN",
+      "model": "LEAF",
+      "registrations": "169",
+      "market_share": "0.54%"
+    },
+    {
+      "brand": "LAND ROVER",
+      "model": "RANGE ROVER SPORT RA",
+      "registrations": "165",
+      "market_share": "0.53%"
+    },
+    {
+      "brand": "SUZUKI",
+      "model": "VITARA",
+      "registrations": "162",
+      "market_share": "0.52%"
+    },
+    {
+      "brand": "VOLKSWAGEN",
+      "model": "T-CROSS",
+      "registrations": "162",
+      "market_share": "0.52%"
+    },
+    {
+      "brand": "KIA",
+      "model": "EV6",
+      "registrations": "161",
+      "market_share": "0.51%"
+    },
+    {
+      "brand": "PEUGEOT",
+      "model": "408",
+      "registrations": "158",
+      "market_share": "0.50%"
+    },
+    {
+      "brand": "SKODA",
+      "model": "SCALA",
+      "registrations": "151",
+      "market_share": "0.48%"
+    },
+    {
+      "brand": "OPEL",
+      "model": "GRANDLAND X",
+      "registrations": "150",
+      "market_share": "0.48%"
+    },
+    {
+      "brand": "KIA",
+      "model": "SORENTO",
+      "registrations": "149",
+      "market_share": "0.47%"
+    },
+    {
+      "brand": "CUPRA",
+      "model": "FORMENTOR",
+      "registrations": "146",
+      "market_share": "0.46%"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "CLIO",
+      "registrations": "146",
+      "market_share": "0.46%"
+    },
+    {
+      "brand": "VOLKSWAGEN",
+      "model": "TAIGO",
+      "registrations": "137",
+      "market_share": "0.44%"
+    },
+    {
+      "brand": "SEAT",
+      "model": "TARRACO",
+      "registrations": "134",
+      "market_share": "0.43%"
+    },
+    {
+      "brand": "OPEL",
+      "model": "ASTRA",
+      "registrations": "133",
+      "market_share": "0.42%"
+    },
+    {
+      "brand": "BMW",
+      "model": "5 SERIES",
+      "registrations": "129",
+      "market_share": "0.41%"
+    },
+    {
+      "brand": "BYD",
+      "model": "ATTO 3",
+      "registrations": "128",
+      "market_share": "0.41%"
+    },
+    {
+      "brand": "HYUNDAI",
+      "model": "IONIQ 6",
+      "registrations": "119",
+      "market_share": "0.38%"
+    },
+    {
+      "brand": "HYUNDAI",
+      "model": "I30",
+      "registrations": "118",
+      "market_share": "0.38%"
+    },
+    {
+      "brand": "SEAT",
+      "model": "IBIZA",
+      "registrations": "117",
+      "market_share": "0.37%"
+    },
+    {
+      "brand": "SEAT",
+      "model": "ATECA",
+      "registrations": "116",
+      "market_share": "0.37%"
+    },
+    {
+      "brand": "MERCEDES-BENZ",
+      "model": "GLA CLASS",
+      "registrations": "112",
+      "market_share": "0.36%"
+    },
+    {
+      "brand": "BMW",
+      "model": "X1",
+      "registrations": "109",
+      "market_share": "0.35%"
+    },
+    {
+      "brand": "SUZUKI",
+      "model": "SX4",
+      "registrations": "108",
+      "market_share": "0.34%"
+    },
+    {
+      "brand": "HYUNDAI",
+      "model": "I10",
+      "registrations": "107",
+      "market_share": "0.34%"
+    },
+    {
+      "brand": "MERCEDES-BENZ",
+      "model": "GLC",
+      "registrations": "105",
+      "market_share": "0.33%"
+    },
+    {
+      "brand": "MAZDA",
+      "model": "CX-5",
+      "registrations": "103",
+      "market_share": "0.33%"
+    },
+    {
+      "brand": "DACIA",
+      "model": "JOGGER",
+      "registrations": "103",
+      "market_share": "0.33%"
+    },
+    {
+      "brand": "AUDI",
+      "model": "Q5",
+      "registrations": "97",
+      "market_share": "0.31%"
+    },
+    {
+      "brand": "MERCEDES-BENZ",
+      "model": "CLA CLASS",
+      "registrations": "96",
+      "market_share": "0.31%"
+    },
+    {
+      "brand": "CITROEN",
+      "model": "C5 AIRCROSS",
+      "registrations": "94",
+      "market_share": "0.30%"
+    },
+    {
+      "brand": "CITROEN",
+      "model": "C4",
+      "registrations": "93",
+      "market_share": "0.30%"
+    },
+    {
+      "brand": "KIA",
+      "model": "EV9",
+      "registrations": "92",
+      "market_share": "0.29%"
+    },
+    {
+      "brand": "BYD",
+      "model": "DOLPHIN",
+      "registrations": "91",
+      "market_share": "0.29%"
+    },
+    {
+      "brand": "HYUNDAI",
+      "model": "BAYON",
+      "registrations": "91",
+      "market_share": "0.29%"
+    },
+    {
+      "brand": "BMW",
+      "model": "X5",
+      "registrations": "90",
+      "market_share": "0.29%"
+    },
+    {
+      "brand": "LEXUS",
+      "model": "NX",
+      "registrations": "84",
+      "market_share": "0.27%"
+    },
+    {
+      "brand": "OPEL",
+      "model": "CROSSLAND X",
+      "registrations": "84",
+      "market_share": "0.27%"
+    },
+    {
+      "brand": "TOYOTA",
+      "model": "AYGO",
+      "registrations": "81",
+      "market_share": "0.26%"
+    },
+    {
+      "brand": "VOLVO",
+      "model": "XC90",
+      "registrations": "79",
+      "market_share": "0.25%"
+    },
+    {
+      "brand": "BMW",
+      "model": "IX1",
+      "registrations": "78",
+      "market_share": "0.25%"
+    },
+    {
+      "brand": "BMW",
+      "model": "2 SERIES",
+      "registrations": "78",
+      "market_share": "0.25%"
+    },
+    {
+      "brand": "MERCEDES-BENZ",
+      "model": "E CLASS",
+      "registrations": "78",
+      "market_share": "0.25%"
+    },
+    {
+      "brand": "VOLVO",
+      "model": "XC40",
+      "registrations": "77",
+      "market_share": "0.25%"
+    },
+    {
+      "brand": "SUZUKI",
+      "model": "IGNIS",
+      "registrations": "76",
+      "market_share": "0.24%"
+    },
+    {
+      "brand": "AUDI",
+      "model": "A5",
+      "registrations": "76",
+      "market_share": "0.24%"
+    },
+    {
+      "brand": "TOYOTA",
+      "model": "PRIUS HYBRID",
+      "registrations": "74",
+      "market_share": "0.24%"
+    },
+    {
+      "brand": "NISSAN",
+      "model": "ARIYA",
+      "registrations": "74",
+      "market_share": "0.24%"
+    },
+    {
+      "brand": "BMW",
+      "model": "X3",
+      "registrations": "73",
+      "market_share": "0.23%"
+    },
+    {
+      "brand": "AUDI",
+      "model": "Q4 ETRON",
+      "registrations": "73",
+      "market_share": "0.23%"
+    },
+    {
+      "brand": "AUDI",
+      "model": "Q2",
+      "registrations": "73",
+      "market_share": "0.23%"
+    },
+    {
+      "brand": "KIA",
+      "model": "PICANTO",
+      "registrations": "72",
+      "market_share": "0.23%"
+    },
+    {
+      "brand": "CUPRA",
+      "model": "LEON",
+      "registrations": "71",
+      "market_share": "0.23%"
+    },
+    {
+      "brand": "TOYOTA",
+      "model": "CAMRY",
+      "registrations": "67",
+      "market_share": "0.21%"
+    },
+    {
+      "brand": "PEUGEOT",
+      "model": "208",
+      "registrations": "67",
+      "market_share": "0.21%"
+    },
+    {
+      "brand": "MAZDA",
+      "model": "CX-30",
+      "registrations": "63",
+      "market_share": "0.20%"
+    },
+    {
+      "brand": "MAZDA",
+      "model": "MAZDA2",
+      "registrations": "62",
+      "market_share": "0.20%"
+    },
+    {
+      "brand": "MG",
+      "model": "ZS",
+      "registrations": "62",
+      "market_share": "0.20%"
+    },
+    {
+      "brand": "TESLA",
+      "model": "MODEL Y",
+      "registrations": "62",
+      "market_share": "0.20%"
+    },
+    {
+      "brand": "VOLVO",
+      "model": "XC60",
+      "registrations": "59",
+      "market_share": "0.19%"
+    },
+    {
+      "brand": "SUZUKI",
+      "model": "SWIFT",
+      "registrations": "58",
+      "market_share": "0.18%"
+    },
+    {
+      "brand": "MERCEDES-BENZ",
+      "model": "EQB",
+      "registrations": "58",
+      "market_share": "0.18%"
+    },
+    {
+      "brand": "BMW",
+      "model": "1 SERIES",
+      "registrations": "56",
+      "market_share": "0.18%"
+    },
+    {
+      "brand": "MAZDA",
+      "model": "CX-60",
+      "registrations": "56",
+      "market_share": "0.18%"
+    },
+    {
+      "brand": "RENAULT",
+      "model": "MEGANE",
+      "registrations": "56",
+      "market_share": "0.18%"
+    },
+    {
+      "brand": "CUPRA",
+      "model": "BORN",
+      "registrations": "56",
+      "market_share": "0.18%"
+    },
+    {
+      "brand": "MAZDA",
+      "model": "MAZDA3",
+      "registrations": "55",
+      "market_share": "0.18%"
+    },
+    {
+      "brand": "VOLKSWAGEN",
+      "model": "UP",
+      "registrations": "52",
+      "market_share": "0.17%"
+    },
+    {
+      "brand": "LEXUS",
+      "model": "RX",
+      "registrations": "49",
+      "market_share": "0.16%"
+    },
+    {
+      "brand": "LAND ROVER",
+      "model": "DEFENDER",
+      "registrations": "47",
+      "market_share": "0.15%"
+    },
+    {
+      "brand": "VOLVO",
+      "model": "EX30",
+      "registrations": "47",
+      "market_share": "0.15%"
+    },
+    {
+      "brand": "TOYOTA",
+      "model": "BZ4X",
+      "registrations": "46",
+      "market_share": "0.15%"
+    },
+    {
+      "brand": "VOLKSWAGEN",
+      "model": "ID.7",
+      "registrations": "44",
+      "market_share": "0.14%"
+    },
+    {
+      "brand": "BMW",
+      "model": "I4",
+      "registrations": "43",
+      "market_share": "0.14%"
+    },
+    {
+      "brand": "MERCEDES-BENZ",
+      "model": "GLE CLASS",
+      "registrations": "43",
+      "market_share": "0.14%"
+    },
+    {
+      "brand": "MINI",
+      "model": "MINI HATCH",
+      "registrations": "42",
+      "market_share": "0.13%"
+    },
+    {
+      "brand": "AUDI",
+      "model": "A1",
+      "registrations": "42",
+      "market_share": "0.13%"
+    },
+    {
+      "brand": "MERCEDES-BENZ",
+      "model": "EQE",
+      "registrations": "41",
+      "market_share": "0.13%"
+    },
+    {
+      "brand": "VOLKSWAGEN",
+      "model": "ID.5",
+      "registrations": "41",
+      "market_share": "0.13%"
+    },
+    {
+      "brand": "LEXUS",
+      "model": "ES",
+      "registrations": "40",
+      "market_share": "0.13%"
+    },
+    {
+      "brand": "PEUGEOT",
+      "model": "308",
+      "registrations": "40",
+      "market_share": "0.13%"
+    },
+    {
+      "brand": "FIAT",
+      "model": "500",
+      "registrations": "38",
+      "market_share": "0.12%"
+    },
+    {
+      "brand": "CITROEN",
+      "model": "C3",
+      "registrations": "37",
+      "market_share": "0.12%"
+    },
+    {
+      "brand": "SUZUKI",
+      "model": "S CROSS",
+      "registrations": "36",
+      "market_share": "0.11%"
+    },
+    {
+      "brand": "MERCEDES-BENZ",
+      "model": "EQE SUV",
+      "registrations": "36",
+      "market_share": "0.11%"
+    },
+    {
+      "brand": "PORSCHE",
+      "model": "TAYCAN",
+      "registrations": "36",
+      "market_share": "0.11%"
+    },
+    {
+      "brand": "CUPRA",
+      "model": "LEON SP",
+      "registrations": "35",
+      "market_share": "0.11%"
+    },
+    {
+      "brand": "VOLVO",
+      "model": "C40",
+      "registrations": "34",
+      "market_share": "0.11%"
+    },
+    {
+      "brand": "PEUGEOT",
+      "model": "508",
+      "registrations": "34",
+      "market_share": "0.11%"
+    },
+    {
+      "brand": "CITROEN",
+      "model": "C3 AIRCROSS",
+      "registrations": "34",
+      "market_share": "0.11%"
+    },
+    {
+      "brand": "LAND ROVER",
+      "model": "DISCOVERY SPORT",
+      "registrations": "33",
+      "market_share": "0.11%"
+    },
+    {
+      "brand": "MERCEDES-BENZ",
+      "model": "GLB",
+      "registrations": "32",
+      "market_share": "0.10%"
+    },
+    {
+      "brand": "AUDI",
+      "model": "Q8 E-TRON",
+      "registrations": "31",
+      "market_share": "0.10%"
+    },
+    {
+      "brand": "MERCEDES-BENZ",
+      "model": "EQA",
+      "registrations": "31",
+      "market_share": "0.10%"
+    },
+    {
+      "brand": "MERCEDES-BENZ",
+      "model": "CLE COUPE",
+      "registrations": "31",
+      "market_share": "0.10%"
+    },
+    {
+      "brand": "POLESTAR",
+      "model": "POLESTAR 2",
+      "registrations": "31",
+      "market_share": "0.10%"
+    },
+    {
+      "brand": "FIAT",
+      "model": "PANDA",
+      "registrations": "30",
+      "market_share": "0.10%"
+    },
+    {
+      "brand": "MERCEDES-BENZ",
+      "model": "GLE COUPE",
+      "registrations": "29",
+      "market_share": "0.09%"
+    },
+    {
+      "brand": "CUPRA",
+      "model": "ATECA",
+      "registrations": "28",
+      "market_share": "0.09%"
+    },
+    {
+      "brand": "MERCEDES-BENZ",
+      "model": "C CLASS",
+      "registrations": "28",
+      "market_share": "0.09%"
+    },
+    {
+      "brand": "MG",
+      "model": "MG5",
+      "registrations": "27",
+      "market_share": "0.09%"
+    },
+    {
+      "brand": "JEEP",
+      "model": "AVENGER",
+      "registrations": "26",
+      "market_share": "0.08%"
+    },
+    {
+      "brand": "PORSCHE",
+      "model": "CAYENNE",
+      "registrations": "25",
+      "market_share": "0.08%"
+    },
+    {
+      "brand": "MG",
+      "model": "HS",
+      "registrations": "24",
+      "market_share": "0.08%"
+    },
+    {
+      "brand": "BMW",
+      "model": "I5",
+      "registrations": "24",
+      "market_share": "0.08%"
+    },
+    {
+      "brand": "DS",
+      "model": "DS7",
+      "registrations": "23",
+      "market_share": "0.07%"
+    },
+    {
+      "brand": "BMW",
+      "model": "IX3",
+      "registrations": "21",
+      "market_share": "0.07%"
+    },
+    {
+      "brand": "VOLKSWAGEN",
+      "model": "TOUAREG",
+      "registrations": "21",
+      "market_share": "0.07%"
+    },
+    {
+      "brand": "VOLKSWAGEN",
+      "model": "ID BUZZ PC",
+      "registrations": "21",
+      "market_share": "0.07%"
+    },
+    {
+      "brand": "MINI",
+      "model": "MINI CONVERTIBLE",
+      "registrations": "19",
+      "market_share": "0.06%"
+    },
+    {
+      "brand": "MERCEDES-BENZ",
+      "model": "S CLASS",
+      "registrations": "19",
+      "market_share": "0.06%"
+    },
+    {
+      "brand": "CITROEN",
+      "model": "C5 X",
+      "registrations": "19",
+      "market_share": "0.06%"
+    },
+    {
+      "brand": "CITROEN",
+      "model": "BERLINGO PASS",
+      "registrations": "19",
+      "market_share": "0.06%"
+    },
+    {
+      "brand": "AUDI",
+      "model": "Q7",
+      "registrations": "18",
+      "market_share": "0.06%"
+    },
+    {
+      "brand": "FORD",
+      "model": "FIESTA",
+      "registrations": "18",
+      "market_share": "0.06%"
+    },
+    {
+      "brand": "LAND ROVER",
+      "model": "RANGE ROVER EVOQUE R",
+      "registrations": "18",
+      "market_share": "0.06%"
+    },
+    {
+      "brand": "HYUNDAI",
+      "model": "SANTA FE",
+      "registrations": "17",
+      "market_share": "0.05%"
+    },
+    {
+      "brand": "BMW",
+      "model": "4 SERIES",
+      "registrations": "16",
+      "market_share": "0.05%"
+    },
+    {
+      "brand": "LEXUS",
+      "model": "UX",
+      "registrations": "15",
+      "market_share": "0.05%"
+    },
+    {
+      "brand": "HONDA",
+      "model": "CIVIC",
+      "registrations": "15",
+      "market_share": "0.05%"
+    },
+    {
+      "brand": "LAND ROVER",
+      "model": "VELAR",
+      "registrations": "15",
+      "market_share": "0.05%"
+    },
+    {
+      "brand": "ALFA ROMEO",
+      "model": "TONALE",
+      "registrations": "15",
+      "market_share": "0.05%"
+    },
+    {
+      "brand": "MINI",
+      "model": "MINI COUNTRYMAN",
+      "registrations": "14",
+      "market_share": "0.04%"
+    },
+    {
+      "brand": "BMW",
+      "model": "IX",
+      "registrations": "14",
+      "market_share": "0.04%"
+    },
+    {
+      "brand": "HONDA",
+      "model": "JAZZ",
+      "registrations": "14",
+      "market_share": "0.04%"
+    },
+    {
+      "brand": "AUDI",
+      "model": "Q8",
+      "registrations": "14",
+      "market_share": "0.04%"
+    },
+    {
+      "brand": "SUZUKI",
+      "model": "SWACE",
+      "registrations": "13",
+      "market_share": "0.04%"
+    },
+    {
+      "brand": "LAND ROVER",
+      "model": "RANGE ROVER",
+      "registrations": "13",
+      "market_share": "0.04%"
+    },
+    {
+      "brand": "VOLKSWAGEN",
+      "model": "CADDY PASS",
+      "registrations": "13",
+      "market_share": "0.04%"
+    },
+    {
+      "brand": "PORSCHE",
+      "model": "PANAMERA",
+      "registrations": "12",
+      "market_share": "0.04%"
+    },
+    {
+      "brand": "MERCEDES-BENZ",
+      "model": "V CLASS",
+      "registrations": "12",
+      "market_share": "0.04%"
+    },
+    {
+      "brand": "CITROEN",
+      "model": "EC4X",
+      "registrations": "12",
+      "market_share": "0.04%"
+    },
+    {
+      "brand": "PEUGEOT",
+      "model": "RIFTER",
+      "registrations": "12",
+      "market_share": "0.04%"
+    },
+    {
+      "brand": "AUDI",
+      "model": "A7",
+      "registrations": "11",
+      "market_share": "0.04%"
+    },
+    {
+      "brand": "BMW",
+      "model": "7 SERIES",
+      "registrations": "11",
+      "market_share": "0.04%"
+    },
+    {
+      "brand": "GWM",
+      "model": "ORA 03",
+      "registrations": "11",
+      "market_share": "0.04%"
+    },
+    {
+      "brand": "MINI",
+      "model": "MINI CLUBMAN",
+      "registrations": "10",
+      "market_share": "0.03%"
+    },
+    {
+      "brand": "MERCEDES-BENZ",
+      "model": "EQS SUV",
+      "registrations": "10",
+      "market_share": "0.03%"
+    },
+    {
+      "brand": "MERCEDES-BENZ",
+      "model": "A CLASS",
+      "registrations": "10",
+      "market_share": "0.03%"
+    },
+    {
+      "brand": "TOYOTA",
+      "model": "HIGHLANDER",
+      "registrations": "10",
+      "market_share": "0.03%"
+    },
+    {
+      "brand": "DS",
+      "model": "DS4",
+      "registrations": "10",
+      "market_share": "0.03%"
+    },
+    {
+      "brand": "JAGUAR",
+      "model": "F-PACE",
+      "registrations": "9",
+      "market_share": "0.03%"
+    },
+    {
+      "brand": "MAZDA",
+      "model": "MX",
+      "registrations": "9",
+      "market_share": "0.03%"
+    },
+    {
+      "brand": "AUDI",
+      "model": "E-TRON GT",
+      "registrations": "9",
+      "market_share": "0.03%"
+    },
+    {
+      "brand": "CITROEN",
+      "model": "SPACE TOURER",
+      "registrations": "9",
+      "market_share": "0.03%"
+    },
+    {
+      "brand": "CITROEN",
+      "model": "C4 X",
+      "registrations": "8",
+      "market_share": "0.03%"
+    },
+    {
+      "brand": "FORD",
+      "model": "MACH-E",
+      "registrations": "8",
+      "market_share": "0.03%"
+    },
+    {
+      "brand": "PORSCHE",
+      "model": "911",
+      "registrations": "7",
+      "market_share": "0.02%"
+    },
+    {
+      "brand": "MAZDA",
+      "model": "MX-5",
+      "registrations": "7",
+      "market_share": "0.02%"
+    },
+    {
+      "brand": "JEEP",
+      "model": "RENEGADE",
+      "registrations": "7",
+      "market_share": "0.02%"
+    },
+    {
+      "brand": "JEEP",
+      "model": "COMPASS",
+      "registrations": "7",
+      "market_share": "0.02%"
+    },
+    {
+      "brand": "MERCEDES-BENZ",
+      "model": "EQS",
+      "registrations": "6",
+      "market_share": "0.02%"
+    },
+    {
+      "brand": "JAGUAR",
+      "model": "I-PACE",
+      "registrations": "6",
+      "market_share": "0.02%"
+    },
+    {
+      "brand": "SEAT",
+      "model": "LEON",
+      "registrations": "6",
+      "market_share": "0.02%"
+    },
+    {
+      "brand": "AUDI",
+      "model": "E-TRON",
+      "registrations": "5",
+      "market_share": "0.02%"
+    },
+    {
+      "brand": "SSANGYONG",
+      "model": "KORANDO",
+      "registrations": "5",
+      "market_share": "0.02%"
+    },
+    {
+      "brand": "BMW",
+      "model": "X4",
+      "registrations": "5",
+      "market_share": "0.02%"
+    },
+    {
+      "brand": "OPEL",
+      "model": "COMBO PASS",
+      "registrations": "5",
+      "market_share": "0.02%"
+    },
+    {
+      "brand": "ALFA ROMEO",
+      "model": "GIULIA",
+      "registrations": "5",
+      "market_share": "0.02%"
+    },
+    {
+      "brand": "VOLVO",
+      "model": "V60",
+      "registrations": "4",
+      "market_share": "0.01%"
+    },
+    {
+      "brand": "BMW",
+      "model": "XM",
+      "registrations": "4",
+      "market_share": "0.01%"
+    },
+    {
+      "brand": "TESLA",
+      "model": "MODEL 3",
+      "registrations": "4",
+      "market_share": "0.01%"
+    },
+    {
+      "brand": "SUBARU",
+      "model": "SOLTERRA",
+      "registrations": "4",
+      "market_share": "0.01%"
+    },
+    {
+      "brand": "LAND ROVER",
+      "model": "DISCOVERY",
+      "registrations": "4",
+      "market_share": "0.01%"
+    },
+    {
+      "brand": "DS",
+      "model": "DS3",
+      "registrations": "4",
+      "market_share": "0.01%"
+    },
+    {
+      "brand": "MERCEDES-BENZ",
+      "model": "GLS",
+      "registrations": "3",
+      "market_share": "0.01%"
+    },
+    {
+      "brand": "FIAT",
+      "model": "500C",
+      "registrations": "3",
+      "market_share": "0.01%"
+    },
+    {
+      "brand": "FIAT",
+      "model": "500X",
+      "registrations": "3",
+      "market_share": "0.01%"
+    },
+    {
+      "brand": "MERCEDES-BENZ",
+      "model": "AMG",
+      "registrations": "3",
+      "market_share": "0.01%"
+    },
+    {
+      "brand": "ALFA ROMEO",
+      "model": "STELVIO",
+      "registrations": "3",
+      "market_share": "0.01%"
+    },
+    {
+      "brand": "HONDA",
+      "model": "NY1",
+      "registrations": "3",
+      "market_share": "0.01%"
+    },
+    {
+      "brand": "PORSCHE",
+      "model": "CARRERA GT",
+      "registrations": "2",
+      "market_share": "0.01%"
+    },
+    {
+      "brand": "SUBARU",
+      "model": "FORESTER",
+      "registrations": "2",
+      "market_share": "0.01%"
+    },
+    {
+      "brand": "SSANGYONG",
+      "model": "REXTON",
+      "registrations": "2",
+      "market_share": "0.01%"
+    },
+    {
+      "brand": "AUDI",
+      "model": "RS3",
+      "registrations": "2",
+      "market_share": "0.01%"
+    },
+    {
+      "brand": "BMW",
+      "model": "X7",
+      "registrations": "2",
+      "market_share": "0.01%"
+    },
+    {
+      "brand": "AUDI",
+      "model": "S3",
+      "registrations": "2",
+      "market_share": "0.01%"
+    },
+    {
+      "brand": "AUDI",
+      "model": "S7",
+      "registrations": "2",
+      "market_share": "0.01%"
+    },
+    {
+      "brand": "SSANGYONG",
+      "model": "TIVOLI",
+      "registrations": "2",
+      "market_share": "0.01%"
+    },
+    {
+      "brand": "FORD",
+      "model": "UNIDENTIFIED",
+      "registrations": "2",
+      "market_share": "0.01%"
+    },
+    {
+      "brand": "SEAT",
+      "model": "LEON SP",
+      "registrations": "2",
+      "market_share": "0.01%"
+    },
+    {
+      "brand": "BMW",
+      "model": "X6",
+      "registrations": "2",
+      "market_share": "0.01%"
+    },
+    {
+      "brand": "DS",
+      "model": "DS9",
+      "registrations": "2",
+      "market_share": "0.01%"
+    },
+    {
+      "brand": "FIAT",
+      "model": "DOBLO",
+      "registrations": "2",
+      "market_share": "0.01%"
+    },
+    {
+      "brand": "AUDI",
+      "model": "A8",
+      "registrations": "1",
+      "market_share": "0.00%"
+    },
+    {
+      "brand": "AUDI",
+      "model": "S4",
+      "registrations": "1",
+      "market_share": "0.00%"
+    },
+    {
+      "brand": "AUDI",
+      "model": "S6",
+      "registrations": "1",
+      "market_share": "0.00%"
+    },
+    {
+      "brand": "FORD",
+      "model": "MUSTANG",
+      "registrations": "1",
+      "market_share": "0.00%"
+    },
+    {
+      "brand": "AUDI",
+      "model": "RS6",
+      "registrations": "1",
+      "market_share": "0.00%"
+    },
+    {
+      "brand": "INEOS",
+      "model": "GRENADIER",
+      "registrations": "1",
+      "market_share": "0.00%"
+    },
+    {
+      "brand": "FORD",
+      "model": "TOURNEO PASS",
+      "registrations": "1",
+      "market_share": "0.00%"
+    },
+    {
+      "brand": "HONDA",
+      "model": "HONDA E",
+      "registrations": "1",
+      "market_share": "0.00%"
+    },
+    {
+      "brand": "BMW",
+      "model": "M4",
+      "registrations": "1",
+      "market_share": "0.00%"
+    },
+    {
+      "brand": "JAGUAR",
+      "model": "F-TYPE",
+      "registrations": "1",
+      "market_share": "0.00%"
+    },
+    {
+      "brand": "JAGUAR",
+      "model": "E-PACE",
+      "registrations": "1",
+      "market_share": "0.00%"
+    },
+    {
+      "brand": "FORD",
+      "model": "GALAXY",
+      "registrations": "1",
+      "market_share": "0.00%"
+    },
+    {
+      "brand": "BMW",
+      "model": "X2",
+      "registrations": "1",
+      "market_share": "0.00%"
+    },
+    {
+      "brand": "AUDI",
+      "model": "TT",
+      "registrations": "1",
+      "market_share": "0.00%"
+    },
+    {
+      "brand": "MERCEDES-BENZ",
+      "model": "EQV",
+      "registrations": "1",
+      "market_share": "0.00%"
+    },
+    {
+      "brand": "VOLKSWAGEN",
+      "model": "T7",
+      "registrations": "1",
+      "market_share": "0.00%"
+    }
+  ]
+}
