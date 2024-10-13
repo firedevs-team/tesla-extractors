@@ -53,6 +53,7 @@ Italy
 - Y ✅
 - S *faltan 2 meses
 - X *faltan 1 mes
+* Tengo los registros por marcas
 
 Netherlands
 - 3 ✅
@@ -68,7 +69,20 @@ Norway
 * Pero tengo total x mes. total - (3 + Y) = SX. Infiero un porciento, basado en data y pongo numeros a S y X.
 
 
+ESTADO PARA TENER REGISTROS DE TESLA POR PAISES
+OK
+AUSTRIA
+CZECH_REPUBLIC
+DENMARK
+FINLAND
+GERMANY
+ICELAND
+NETHERLANDS
+NORWAY (hay q sumar los modelos)
+ITALY
 
+NOT_OK
+FRANCE (https://pfa-auto.fr/2024/10/01/marche-automobile-francais-septembre-2024/)
 
 
 
