@@ -12,6 +12,7 @@ import mobilityExtractor from './car_registrations/denmark/mobility/Extractor';
 import autExtractor from './car_registrations/finland/aut/Extractor';
 import samgongustofaExtractor from './car_registrations/iceland/samgongustofa/Extractor';
 import beepbeepExtractor from './car_registrations/ireland/beepbeep/Extractor';
+import pzpmExtractor from './car_registrations/poland/pzpm/Extractor';
 import shareholderDeckExtractor from './tesla_ir_info/sharehold_deck/Extractor';
 
 const extractors: BaseExtractor[] = [
@@ -28,6 +29,7 @@ const extractors: BaseExtractor[] = [
   autExtractor,
   samgongustofaExtractor,
   beepbeepExtractor,
+  pzpmExtractor,
   shareholderDeckExtractor,
 ];
 

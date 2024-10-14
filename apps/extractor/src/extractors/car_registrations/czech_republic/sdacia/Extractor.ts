@@ -65,7 +65,7 @@ class Extractor extends MonthExtractor {
     return [byBrand, byModel];
   }
 
-  async test() {
+  async debug() {
     // await this.reindex();
   }
 

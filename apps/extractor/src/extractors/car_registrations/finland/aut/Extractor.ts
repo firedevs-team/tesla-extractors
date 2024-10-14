@@ -85,7 +85,7 @@ class Extractor extends MonthExtractor {
     return outputs;
   }
 
-  async test() {
+  async debug() {
     // await this.reindex();
   }
 
