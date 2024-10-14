@@ -1,0 +1,460 @@
+{
+  "lastyear": [
+    "14639",
+    "16080",
+    "21472",
+    "16107",
+    "19816",
+    "22041",
+    "16074",
+    "13050",
+    "14077"
+  ],
+  "thisyear": [
+    "15737",
+    "20512",
+    "22797",
+    "17329",
+    "19850",
+    "20193",
+    "14550",
+    "11822",
+    "15055"
+  ],
+  "result_table": [
+    {
+      "Marca": "PEUGEOT",
+      "Mensal": "1496",
+      "Acumulado": "15858",
+      "varAcumulado": "-8,1",
+      "varMensal": "7,8"
+    },
+    {
+      "Marca": "MERCEDES-BENZ",
+      "Mensal": "1357",
+      "Acumulado": "12520",
+      "varAcumulado": "16,8",
+      "varMensal": "-12,4"
+    },
+    {
+      "Marca": "DACIA",
+      "Mensal": "1276",
+      "Acumulado": "12008",
+      "varAcumulado": "8,3",
+      "varMensal": "-12,1"
+    },
+    {
+      "Marca": "RENAULT",
+      "Mensal": "995",
+      "Acumulado": "11416",
+      "varAcumulado": "-4,9",
+      "varMensal": "9,1"
+    },
+    {
+      "Marca": "BMW",
+      "Mensal": "1086",
+      "Acumulado": "10079",
+      "varAcumulado": "-2,6",
+      "varMensal": "-11,5"
+    },
+    {
+      "Marca": "TOYOTA",
+      "Mensal": "817",
+      "Acumulado": "8557",
+      "varAcumulado": "9,6",
+      "varMensal": "84,0"
+    },
+    {
+      "Marca": "VOLKSWAGEN",
+      "Mensal": "828",
+      "Acumulado": "8486",
+      "varAcumulado": "-9,3",
+      "varMensal": "39,6"
+    },
+    {
+      "Marca": "CITROEN",
+      "Mensal": "369",
+      "Acumulado": "8186",
+      "varAcumulado": "10,4",
+      "varMensal": "-49,5"
+    },
+    {
+      "Marca": "TESLA",
+      "Mensal": "1025",
+      "Acumulado": "7227",
+      "varAcumulado": "18,0",
+      "varMensal": "189,5"
+    },
+    {
+      "Marca": "SEAT",
+      "Mensal": "450",
+      "Acumulado": "5932",
+      "varAcumulado": "-8,5",
+      "varMensal": "47,1"
+    },
+    {
+      "Marca": "KIA",
+      "Mensal": "480",
+      "Acumulado": "5919",
+      "varAcumulado": "9,1",
+      "varMensal": "1,1"
+    },
+    {
+      "Marca": "NISSAN",
+      "Mensal": "514",
+      "Acumulado": "5511",
+      "varAcumulado": "8,6",
+      "varMensal": "0,2"
+    },
+    {
+      "Marca": "VOLVO",
+      "Mensal": "467",
+      "Acumulado": "5347",
+      "varAcumulado": "35,9",
+      "varMensal": "2,4"
+    },
+    {
+      "Marca": "HYUNDAI",
+      "Mensal": "562",
+      "Acumulado": "5335",
+      "varAcumulado": "12,2",
+      "varMensal": "11,5"
+    },
+    {
+      "Marca": "OPEL",
+      "Mensal": "298",
+      "Acumulado": "4898",
+      "varAcumulado": "-21,0",
+      "varMensal": "-36,1"
+    },
+    {
+      "Marca": "FIAT",
+      "Mensal": "147",
+      "Acumulado": "3991",
+      "varAcumulado": "-15,2",
+      "varMensal": "-59,2"
+    },
+    {
+      "Marca": "FORD",
+      "Mensal": "510",
+      "Acumulado": "3792",
+      "varAcumulado": "-26,1",
+      "varMensal": "20,3"
+    },
+    {
+      "Marca": "AUDI",
+      "Mensal": "298",
+      "Acumulado": "3524",
+      "varAcumulado": "-5,1",
+      "varMensal": "-12,4"
+    },
+    {
+      "Marca": "SKODA",
+      "Mensal": "221",
+      "Acumulado": "3010",
+      "varAcumulado": "3,6",
+      "varMensal": "-28,5"
+    },
+    {
+      "Marca": "MITSUBISHI",
+      "Mensal": "173",
+      "Acumulado": "2637",
+      "varAcumulado": "44,1",
+      "varMensal": "35,2"
+    },
+    {
+      "Marca": "BYD",
+      "Mensal": "353",
+      "Acumulado": "1908",
+      "varAcumulado": "1,131,0",
+      "varMensal": "854,1"
+    },
+    {
+      "Marca": "MG",
+      "Mensal": "255",
+      "Acumulado": "1742",
+      "varAcumulado": "130,4",
+      "varMensal": "304,8"
+    },
+    {
+      "Marca": "CUPRA",
+      "Mensal": "109",
+      "Acumulado": "1563",
+      "varAcumulado": "-14,8",
+      "varMensal": "-40,1"
+    },
+    {
+      "Marca": "JEEP",
+      "Mensal": "121",
+      "Acumulado": "1474",
+      "varAcumulado": "42,6",
+      "varMensal": "-40,7"
+    },
+    {
+      "Marca": "MINI",
+      "Mensal": "176",
+      "Acumulado": "1241",
+      "varAcumulado": "-18,9",
+      "varMensal": "-17,4"
+    },
+    {
+      "Marca": "PORSCHE",
+      "Mensal": "166",
+      "Acumulado": "931",
+      "varAcumulado": "37,7",
+      "varMensal": "213,2"
+    },
+    {
+      "Marca": "DS",
+      "Mensal": "91",
+      "Acumulado": "786",
+      "varAcumulado": "-10,4",
+      "varMensal": "102,2"
+    },
+    {
+      "Marca": "LAND ROVER",
+      "Mensal": "64",
+      "Acumulado": "731",
+      "varAcumulado": "-22,5",
+      "varMensal": "-3,0"
+    },
+    {
+      "Marca": "HONDA",
+      "Mensal": "53",
+      "Acumulado": "588",
+      "varAcumulado": "47,0",
+      "varMensal": "-8,6"
+    },
+    {
+      "Marca": "MAZDA",
+      "Mensal": "53",
+      "Acumulado": "518",
+      "varAcumulado": "-45,1",
+      "varMensal": "-18,5"
+    },
+    {
+      "Marca": "LEXUS",
+      "Mensal": "63",
+      "Acumulado": "467",
+      "varAcumulado": "27,9",
+      "varMensal": "53,7"
+    },
+    {
+      "Marca": "SMART",
+      "Mensal": "57",
+      "Acumulado": "441",
+      "varAcumulado": "132,1",
+      "varMensal": "119,2"
+    },
+    {
+      "Marca": "ALFA ROMEO",
+      "Mensal": "27",
+      "Acumulado": "397",
+      "varAcumulado": "2,3",
+      "varMensal": "12,5"
+    },
+    {
+      "Marca": "SUZUKI",
+      "Mensal": "22",
+      "Acumulado": "247",
+      "varAcumulado": "2,9",
+      "varMensal": "4,8"
+    },
+    {
+      "Marca": "POLESTAR",
+      "Mensal": "24",
+      "Acumulado": "181",
+      "varAcumulado": "-23,9",
+      "varMensal": "118,2"
+    },
+    {
+      "Marca": "JAGUAR",
+      "Mensal": "5",
+      "Acumulado": "107",
+      "varAcumulado": "-52,2",
+      "varMensal": "-68,8"
+    },
+    {
+      "Marca": "KGM",
+      "Mensal": "9",
+      "Acumulado": "39",
+      "varAcumulado": "inf",
+      "varMensal": "inf"
+    },
+    {
+      "Marca": "ASTON MARTIN",
+      "Mensal": "5",
+      "Acumulado": "39",
+      "varAcumulado": "8,3",
+      "varMensal": "400,0"
+    },
+    {
+      "Marca": "MERCEDES-BENZ - AUTO RIBEIRO",
+      "Mensal": "5",
+      "Acumulado": "28",
+      "varAcumulado": "inf",
+      "varMensal": "inf"
+    },
+    {
+      "Marca": "LAMBORGHINI",
+      "Mensal": "0",
+      "Acumulado": "26",
+      "varAcumulado": "100,0",
+      "varMensal": "-100,0"
+    },
+    {
+      "Marca": "BENTLEY",
+      "Mensal": "3",
+      "Acumulado": "26",
+      "varAcumulado": "-42,2",
+      "varMensal": "-57,1"
+    },
+    {
+      "Marca": "FERRARI",
+      "Mensal": "1",
+      "Acumulado": "24",
+      "varAcumulado": "-11,1",
+      "varMensal": "-66,7"
+    },
+    {
+      "Marca": "MASERATI",
+      "Mensal": "2",
+      "Acumulado": "23",
+      "varAcumulado": "-41,0",
+      "varMensal": "-33,3"
+    },
+    {
+      "Marca": "OPEL - AUTO RIBEIRO",
+      "Mensal": "0",
+      "Acumulado": "16",
+      "varAcumulado": "inf",
+      "varMensal": "nan"
+    },
+    {
+      "Marca": "XPENG",
+      "Mensal": "11",
+      "Acumulado": "11",
+      "varAcumulado": "inf",
+      "varMensal": "inf"
+    },
+    {
+      "Marca": "AIWAYS",
+      "Mensal": "0",
+      "Acumulado": "10",
+      "varAcumulado": "-73,7",
+      "varMensal": "-100,0"
+    },
+    {
+      "Marca": "MAN",
+      "Mensal": "3",
+      "Acumulado": "9",
+      "varAcumulado": "-57,1",
+      "varMensal": "200,0"
+    },
+    {
+      "Marca": "FORTHING",
+      "Mensal": "2",
+      "Acumulado": "5",
+      "varAcumulado": "inf",
+      "varMensal": "inf"
+    },
+    {
+      "Marca": "LOTUS",
+      "Mensal": "3",
+      "Acumulado": "5",
+      "varAcumulado": "400,0",
+      "varMensal": "inf"
+    },
+    {
+      "Marca": "MORGAN",
+      "Mensal": "0",
+      "Acumulado": "5",
+      "varAcumulado": "inf",
+      "varMensal": "nan"
+    },
+    {
+      "Marca": "ALPINE",
+      "Mensal": "1",
+      "Acumulado": "4",
+      "varAcumulado": "-33,3",
+      "varMensal": "0,0"
+    },
+    {
+      "Marca": "FORD - AUTO RIBEIRO",
+      "Mensal": "0",
+      "Acumulado": "4",
+      "varAcumulado": "-90,2",
+      "varMensal": "nan"
+    },
+    {
+      "Marca": "ROLLS-ROYCE",
+      "Mensal": "1",
+      "Acumulado": "3",
+      "varAcumulado": "200,0",
+      "varMensal": "inf"
+    },
+    {
+      "Marca": "SSANGYONG",
+      "Mensal": "0",
+      "Acumulado": "2",
+      "varAcumulado": "inf",
+      "varMensal": "nan"
+    },
+    {
+      "Marca": "CATERHAM",
+      "Mensal": "0",
+      "Acumulado": "2",
+      "varAcumulado": "0,0",
+      "varMensal": "nan"
+    },
+    {
+      "Marca": "VOYAH",
+      "Mensal": "1",
+      "Acumulado": "2",
+      "varAcumulado": "inf",
+      "varMensal": "inf"
+    },
+    {
+      "Marca": "FISKER",
+      "Mensal": "0",
+      "Acumulado": "2",
+      "varAcumulado": "inf",
+      "varMensal": "nan"
+    },
+    {
+      "Marca": "CHEVROLET",
+      "Mensal": "0",
+      "Acumulado": "1",
+      "varAcumulado": "inf",
+      "varMensal": "nan"
+    },
+    {
+      "Marca": "ALLIED VEHICLES LTD",
+      "Mensal": "0",
+      "Acumulado": "1",
+      "varAcumulado": "inf",
+      "varMensal": "nan"
+    },
+    {
+      "Marca": "KTM",
+      "Mensal": "0",
+      "Acumulado": "1",
+      "varAcumulado": "inf",
+      "varMensal": "nan"
+    },
+    {
+      "Marca": "RADAR",
+      "Mensal": "0",
+      "Acumulado": "1",
+      "varAcumulado": "inf",
+      "varMensal": "nan"
+    },
+    {
+      "Marca": "FIAT - AUTO RIBEIRO",
+      "Mensal": "0",
+      "Acumulado": "1",
+      "varAcumulado": "inf",
+      "varMensal": "nan"
+    }
+  ]
+}
