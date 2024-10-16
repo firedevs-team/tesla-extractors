@@ -86,6 +86,12 @@ Sweden
 - S ✅
 - X ✅
 
+Switzerland
+- 3 ✅
+- Y ✅
+- S ✅
+- X ✅
+
 ESTADO PARA TENER REGISTROS DE TESLA POR PAISES
 OK
 AUSTRIA
