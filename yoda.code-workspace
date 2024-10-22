@@ -5,8 +5,8 @@
       "path": "./apps/extractor/src"
     },
     {
-      "name": "🗄️ Data",
-      "path": "./data/extractor"
+      "name": "🗄️ Sources",
+      "path": "./data/sources"
     },
     {
       "name": "Monorepo",

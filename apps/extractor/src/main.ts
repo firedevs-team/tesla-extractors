@@ -1,22 +1,44 @@
 import extractors from './extractors';
+import transformers from './transformers';
 
-const EXTRACTOR_TO_DEBUG = process.env['DEBUG'];
+const DEBUG_EXTRACTOR = process.env['DEBUG_EXTRACTOR'];
+const DEBUG_TRANSFORMER = process.env['DEBUG_TRANSFORMER'];
+let isDebugMode = DEBUG_EXTRACTOR || DEBUG_TRANSFORMER;
 
 const run = async () => {
-  if (EXTRACTOR_TO_DEBUG) {
-    const extractor = extractors.find(
-      (e) => e.config.source === EXTRACTOR_TO_DEBUG
-    );
-    if (extractor) {
-      console.log(`Running in debug mode...`);
-      await extractor.debug();
-      return;
+  // Corriendo en modo debug
+  if (isDebugMode) {
+    console.log(`Running in debug mode...`);
+
+    // Debug extractor
+    if (DEBUG_EXTRACTOR) {
+      // Encuentro el extractor
+      const extractor = extractors.find(
+        (e) => e.config.source === DEBUG_EXTRACTOR
+      );
+
+      if (!extractor) {
+        console.error(`Extractor ${DEBUG_EXTRACTOR} not found`);
+      } else {
+        await extractor.debug();
+      }
     }
-    console.error(`Extractor ${EXTRACTOR_TO_DEBUG} not found`);
-    return;
-  } else {
+
+    // Debug transformer
+    if (DEBUG_TRANSFORMER) {
+      throw new Error('Not implemented yet');
+    }
+  }
+  // Corriendo en modo producción
+  else {
+    // Ejecuto los extractores
     for (const extractor of extractors) {
       await extractor.extract();
+    }
+
+    // Ejecuto los transformers
+    for (const transformer of transformers) {
+      await transformer.run();
     }
   }
 };

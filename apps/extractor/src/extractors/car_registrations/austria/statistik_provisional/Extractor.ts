@@ -180,9 +180,7 @@ class Extractor extends DayExtractor {
     ];
   }
 
-  async debug() {
-    await this.extract();
-  }
+  async debug() {}
 }
 
 export default new Extractor();
