@@ -124,7 +124,7 @@ class Extractor extends MonthExtractor {
 
   async debug() {}
 
-  protected async donwloadZip(dateId: MonthDateId): Promise<Buffer | null> {
+  private async donwloadZip(dateId: MonthDateId): Promise<Buffer | null> {
     const { year, month } = dateId;
 
     const { data: mainPage } = await axios.get(SOURCE_URL);

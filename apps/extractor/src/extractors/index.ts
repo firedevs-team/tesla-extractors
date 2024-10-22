@@ -17,6 +17,7 @@ import autoinformaExtractor from './car_registrations/portugal/autoinforma/Extra
 import mobilityswedenExtractor from './car_registrations/sweden/mobilitysweden/Extractor';
 import autoswissExtractor from './car_registrations/switzerland/autoswiss/Extractor';
 import smmtExtractor from './car_registrations/uk/smmt/Extractor';
+import smmtModelExtractor from './car_registrations/uk/smmt_model/Extractor';
 import shareholderDeckExtractor from './tesla_ir_info/sharehold_deck/Extractor';
 
 const extractors: BaseExtractor[] = [
@@ -38,6 +39,7 @@ const extractors: BaseExtractor[] = [
   mobilityswedenExtractor,
   autoswissExtractor,
   smmtExtractor,
+  smmtModelExtractor,
   shareholderDeckExtractor,
 ];
 
