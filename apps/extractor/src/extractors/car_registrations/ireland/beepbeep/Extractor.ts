@@ -22,7 +22,7 @@ interface IData {
 class Extractor extends MonthExtractor {
   constructor() {
     super({
-      folders: ['car_registrations', 'ireland'],
+      folders: ['car_registrations', 'countries', 'ireland'],
       source: 'beepbeep',
       fileext: 'json',
     });

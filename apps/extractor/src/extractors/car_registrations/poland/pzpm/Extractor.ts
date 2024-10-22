@@ -28,7 +28,7 @@ const MONTH_MAP = {
 class Extractor extends MonthExtractor {
   constructor() {
     super({
-      folders: ['car_registrations', 'poland'],
+      folders: ['car_registrations', 'countries', 'poland'],
       source: 'pzpm',
       fileext: 'xlsx',
     });

@@ -4,7 +4,7 @@ import { Parser } from 'json2csv';
 import path from 'path';
 import chalk from 'chalk';
 
-const EXTRACTOR_PATH = path.join(process.cwd(), 'data', 'extractor');
+const SOURCES_PATH = path.join(process.cwd(), 'data', 'sources');
 
 export interface FileData {
   path: string;
@@ -52,17 +52,12 @@ export abstract class BaseExtractor<C extends Config = Config> {
   constructor(config: C) {
     this.config = config;
     this.downloadsPath = path.join(
-      EXTRACTOR_PATH,
+      SOURCES_PATH,
       path.join(...config.folders),
-      'downloads',
+      '_',
       config.source
     );
-    this.dataPath = path.join(
-      EXTRACTOR_PATH,
-      path.join(...config.folders),
-      'data',
-      config.source
-    );
+    this.dataPath = path.join(SOURCES_PATH, path.join(...config.folders));
 
     // Crear directorios
     // downloads
@@ -183,20 +178,14 @@ export abstract class BaseExtractor<C extends Config = Config> {
   async reindex(): Promise<void> {
     const { fileext } = this.config;
 
-    // Elimino todos los archivos de datos del source
-    const files = await readdir(this.dataPath);
-    for (const file of files) {
-      const filePath = path.join(this.dataPath, file);
-      await unlink(filePath);
-    }
-
     // Cargo los archivos de downloads
-    const downloadData: { dateId: DateId; data: Buffer }[] = [];
     let downloads = await readdir(this.downloadsPath);
 
     // Ignore .DS_Store files
     downloads = downloads.filter((download) => !download.startsWith('.'));
 
+    // Creo download data que tiene mas info de los archivos
+    const downloadData: { dateId: DateId; data: Buffer }[] = [];
     for (const fileName of downloads) {
       const buffer = await readFile(path.join(this.downloadsPath, fileName));
       const dateId = await this.resolveIdFromText(
@@ -224,6 +213,12 @@ export abstract class BaseExtractor<C extends Config = Config> {
         path: filePath,
         data,
       });
+
+      // Como estoy reindexando, debo sobre escribir los archivos
+      // por eso elimino los archivos antes de guardar los nuevos
+      for (const output of outputs) {
+        await unlink(path.join(this.dataPath, `${output.name}.csv`));
+      }
 
       // Guardo los archivos
       await this.save(dateId, outputs);

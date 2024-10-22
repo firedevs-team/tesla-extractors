@@ -20,7 +20,7 @@ interface IRow {
 class Extractor extends MonthExtractor {
   constructor() {
     super({
-      folders: ['car_registrations', 'switzerland'],
+      folders: ['car_registrations', 'countries', 'switzerland'],
       source: 'autoswiss',
       fileext: 'xlsx',
     });

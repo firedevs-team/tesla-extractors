@@ -14,7 +14,7 @@ const KBA_SOURCE_URL =
 class Extractor extends MonthExtractor {
   constructor() {
     super({
-      folders: ['car_registrations', 'germany'],
+      folders: ['car_registrations', 'countries', 'germany'],
       source: 'kba',
       fileext: 'xlsx',
     });

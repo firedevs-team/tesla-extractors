@@ -14,7 +14,7 @@ const SOURCE_URL = 'https://unrae.it/dati-statistici/immatricolazioni?page=1';
 class Extractor extends MonthExtractor {
   constructor() {
     super({
-      folders: ['car_registrations', 'italy'],
+      folders: ['car_registrations', 'countries', 'italy'],
       source: 'unrae_brand',
       fileext: 'pdf',
     });

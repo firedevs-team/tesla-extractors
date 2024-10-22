@@ -14,7 +14,7 @@ const SOURCE_URL = 'https://pfa-auto.fr/marche-automobile';
 class Extractor extends MonthExtractor {
   constructor() {
     super({
-      folders: ['car_registrations', 'france'],
+      folders: ['car_registrations', 'countries', 'france'],
       source: 'pfa',
       fileext: 'pdf',
     });

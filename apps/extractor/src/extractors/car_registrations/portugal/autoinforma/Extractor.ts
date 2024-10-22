@@ -24,7 +24,7 @@ interface IData {
 class Extractor extends MonthExtractor {
   constructor() {
     super({
-      folders: ['car_registrations', 'portugal'],
+      folders: ['car_registrations', 'countries', 'portugal'],
       source: 'autoinforma',
       fileext: 'json',
     });

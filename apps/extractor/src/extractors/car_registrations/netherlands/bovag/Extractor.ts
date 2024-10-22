@@ -14,7 +14,7 @@ const SOURCE_URL = 'https://www.bovag.nl/pers/cijfers';
 class Extractor extends MonthExtractor {
   constructor() {
     super({
-      folders: ['car_registrations', 'netherlands'],
+      folders: ['car_registrations', 'countries', 'netherlands'],
       source: 'bovag',
       fileext: 'pdf',
     });

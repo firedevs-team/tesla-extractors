@@ -37,7 +37,7 @@ const MONTH_MAP = {
 class Extractor extends DayExtractor {
   constructor() {
     super({
-      folders: ['car_registrations', 'austria'],
+      folders: ['car_registrations', 'countries', 'austria'],
       source: 'statistik_provisional',
       fileext: 'ods',
     });
@@ -180,7 +180,9 @@ class Extractor extends DayExtractor {
     ];
   }
 
-  async debug() {}
+  async debug() {
+    await this.extract();
+  }
 }
 
 export default new Extractor();

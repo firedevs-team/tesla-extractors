@@ -15,7 +15,7 @@ const SOURCE_URL =
 class Extractor extends MonthExtractor {
   constructor() {
     super({
-      folders: ['car_registrations', 'sweden'],
+      folders: ['car_registrations', 'countries', 'sweden'],
       source: 'mobilitysweden',
       fileext: 'xlsx',
     });

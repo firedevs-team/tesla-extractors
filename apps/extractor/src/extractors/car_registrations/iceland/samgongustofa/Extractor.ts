@@ -18,7 +18,7 @@ interface IData {
 class Extractor extends MonthExtractor {
   constructor() {
     super({
-      folders: ['car_registrations', 'iceland'],
+      folders: ['car_registrations', 'countries', 'iceland'],
       source: 'samgongustofa',
       fileext: 'json',
       published_day: 5,

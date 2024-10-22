@@ -29,7 +29,7 @@ const MONTH_MAP = {
 class Extractor extends MonthExtractor {
   constructor() {
     super({
-      folders: ['car_registrations', 'austria'],
+      folders: ['car_registrations', 'countries', 'austria'],
       source: 'statistik_total',
       fileext: 'ods',
     });

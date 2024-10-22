@@ -15,7 +15,7 @@ const SOURCE_URL = 'https://www.smmt.co.uk/category/news/registrations/';
 class Extractor extends MonthExtractor {
   constructor() {
     super({
-      folders: ['car_registrations', 'uk'],
+      folders: ['car_registrations', 'countries', 'uk'],
       source: 'smmt',
       fileext: 'xls',
     });
