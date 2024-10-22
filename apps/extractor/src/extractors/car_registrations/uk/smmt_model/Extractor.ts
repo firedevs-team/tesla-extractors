@@ -182,7 +182,7 @@ class Extractor extends MonthExtractor {
 
     // Valido la data de la tabla 1
     const top_10_models_output: FileOuput = {
-      name: 'top_10_models',
+      name: 'top_10_registrations_by_model',
       data: [],
     };
     for (const row of table1) {
@@ -201,7 +201,7 @@ class Extractor extends MonthExtractor {
 
     // Valido la data de la tabla 2
     const top_10_ytd_models_output: FileOuput = {
-      name: 'top_10_ytd_models',
+      name: 'top_10_ytd_registrations_by_model',
       data: [],
     };
     for (const row of table2) {

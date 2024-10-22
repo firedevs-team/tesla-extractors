@@ -171,7 +171,7 @@ class Extractor extends MonthExtractor {
 
     return [
       {
-        name: 'ytd_top_12_registrations',
+        name: 'top_12_ytd_registrations_by_model',
         data: ytdRegistrations,
       },
     ];

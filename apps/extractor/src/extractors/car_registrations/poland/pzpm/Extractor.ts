@@ -197,11 +197,11 @@ class Extractor extends MonthExtractor {
 
     return [
       {
-        name: 'ytd_bev_top_10_registrations_by_brand',
+        name: 'top_10_ytd_bev_registrations_by_brand',
         data: by_brand_registrations,
       },
       {
-        name: 'ytd_bev_top_10_registrations_by_model',
+        name: 'top_10_ytd_bev_registrations_by_model',
         data: by_model_registrations,
       },
     ];
