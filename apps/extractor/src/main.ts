@@ -13,20 +13,27 @@ const run = async () => {
     // Debug extractor
     if (DEBUG_EXTRACTOR) {
       // Encuentro el extractor
-      const extractor = extractors.find(
+      const toDebug = extractors.find(
         (e) => e.config.source === DEBUG_EXTRACTOR
       );
 
-      if (!extractor) {
+      if (!toDebug) {
         console.error(`Extractor ${DEBUG_EXTRACTOR} not found`);
       } else {
-        await extractor.debug();
+        await toDebug.debug();
       }
     }
 
     // Debug transformer
     if (DEBUG_TRANSFORMER) {
-      throw new Error('Not implemented yet');
+      // Encuentro el transformer
+      const toDebug = transformers.find((t) => t.getId() === DEBUG_TRANSFORMER);
+
+      if (!toDebug) {
+        console.error(`Transformer ${DEBUG_TRANSFORMER} not found`);
+      } else {
+        await toDebug.debug();
+      }
     }
   }
   // Corriendo en modo producción
