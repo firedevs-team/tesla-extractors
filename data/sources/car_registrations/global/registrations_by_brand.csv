@@ -20,7 +20,7 @@
 2024,7,"austria","TESLA",245
 2024,8,"austria","TESLA",398
 2024,9,"austria","TESLA",961
-2024,10,"austria","TESLA",113
+2024,10,"austria","TESLA",273
 2023,1,"czech_republic","TESLA",48
 2023,2,"czech_republic","TESLA",93
 2023,3,"czech_republic","TESLA",159
@@ -42,6 +42,7 @@
 2024,7,"czech_republic","TESLA",245
 2024,8,"czech_republic","TESLA",155
 2024,9,"czech_republic","TESLA",639
+2024,10,"czech_republic","TESLA",347
 2023,1,"finland","TESLA",49
 2023,2,"finland","TESLA",382
 2023,3,"finland","TESLA",897
@@ -63,6 +64,7 @@
 2024,7,"finland","TESLA",59
 2024,8,"finland","TESLA",312
 2024,9,"finland","TESLA",456
+2024,10,"finland","TESLA",145
 2023,1,"germany","TESLA",4241
 2023,2,"germany","TESLA",7710
 2023,3,"germany","TESLA",8703
@@ -105,6 +107,7 @@
 2024,7,"iceland","TESLA",29
 2024,8,"iceland","TESLA",43
 2024,9,"iceland","TESLA",53
+2024,10,"iceland","TESLA",74
 2023,1,"ireland","TESLA",1
 2023,2,"ireland","TESLA",1
 2023,3,"ireland","TESLA",676
@@ -126,6 +129,7 @@
 2024,7,"ireland","TESLA",203
 2024,8,"ireland","TESLA",365
 2024,9,"ireland","TESLA",254
+2024,10,"ireland","TESLA",38
 2023,1,"italy","TESLA",326
 2023,2,"italy","TESLA",1313
 2023,3,"italy","TESLA",2911
@@ -147,6 +151,7 @@
 2024,7,"italy","TESLA",474
 2024,8,"italy","TESLA",435
 2024,9,"italy","TESLA",1949
+2024,10,"italy","TESLA",484
 2023,1,"netherlands","TESLA",591
 2023,2,"netherlands","TESLA",725
 2023,3,"netherlands","TESLA",3160
@@ -168,6 +173,7 @@
 2024,7,"netherlands","TESLA",1180
 2024,8,"netherlands","TESLA",1547
 2024,9,"netherlands","TESLA",3884
+2024,10,"netherlands","TESLA",1238
 2023,1,"norway","TESLA",21
 2023,2,"norway","TESLA",1551
 2023,3,"norway","TESLA",7899
@@ -189,6 +195,7 @@
 2024,7,"norway","TESLA",457
 2024,8,"norway","TESLA",2485
 2024,9,"norway","TESLA",4210
+2024,10,"norway","TESLA",1348
 2023,1,"sweden","TESLA",225
 2023,2,"sweden","TESLA",518
 2023,3,"sweden","TESLA",3940
@@ -210,6 +217,7 @@
 2024,7,"sweden","TESLA",1146
 2024,8,"sweden","TESLA",1348
 2024,9,"sweden","TESLA",4792
+2024,10,"sweden","TESLA",1175
 2023,1,"switzerland","TESLA",115
 2023,2,"switzerland","TESLA",195
 2023,3,"switzerland","TESLA",1252
@@ -231,6 +239,7 @@
 2024,7,"switzerland","TESLA",368
 2024,8,"switzerland","TESLA",629
 2024,9,"switzerland","TESLA",1048
+2024,10,"switzerland","TESLA",260
 2023,1,"uk","TESLA",579
 2023,2,"uk","TESLA",2283
 2023,3,"uk","TESLA",10493
@@ -252,3 +261,4 @@
 2024,7,"uk","TESLA",2462
 2024,8,"uk","TESLA",3013
 2024,9,"uk","TESLA",7656
+2024,10,"uk","TESLA",971

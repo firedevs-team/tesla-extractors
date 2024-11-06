@@ -22,6 +22,20 @@ const MONTH_MAP = {
   11: 'NOVEMBER',
   12: 'DECEMBER',
 };
+const MONTH_MAP_EN = {
+  1: 'JANUARY',
+  2: 'FEBRUARY',
+  3: 'MARCH',
+  4: 'APRIL',
+  5: 'MAY',
+  6: 'JUNE',
+  7: 'JULY',
+  8: 'AUGUST',
+  9: 'SEPTEMBER',
+  10: 'OCTOBER',
+  11: 'NOVEMBER',
+  12: 'DECEMBER',
+};
 
 interface IData {
   by_brand: string[][];
@@ -140,7 +154,7 @@ class Extractor extends MonthExtractor {
   }
 
   async debug() {
-    // await this.reindex();
+    await this.extract();
   }
 
   private checkIfDataIsAvailable = async (
@@ -231,10 +245,14 @@ class Extractor extends MonthExtractor {
     // Selecciona la opción deseada por su valor
     await page.select('#selectPeriod', 'last_month');
 
+    // Espero a que cargue la seleccion del período
+    await new Promise((resolve) => setTimeout(resolve, 3000));
+
     // Espero a que el header de la tabla diga el periodo correcto
-    const monthName = MONTH_MAP[month];
+    const monthName = MONTH_MAP_EN[month];
     const lastDay = new Date(year, month, 0).getDate();
     const textExpected = `1. ${monthName} TIL ${lastDay}. ${monthName} ${year}`;
+
     await page.waitForFunction(
       (text: string) => {
         const element = document.querySelectorAll(
@@ -306,9 +324,12 @@ class Extractor extends MonthExtractor {
     // Seleciono vista por modelos
     await page.select('#selectView', 'models');
 
+    // Espero a que cargue los selectores
+    await new Promise((resolve) => setTimeout(resolve, 3000));
+
     // Espero a que el header de la tabla
     // diga el periodo correcto
-    const monthName = MONTH_MAP[month];
+    const monthName = MONTH_MAP_EN[month];
     const lastDay = new Date(year, month, 0).getDate();
     const periodExpected = `1. ${monthName} TIL ${lastDay}. ${monthName} ${year}`;
     await page.waitForFunction(

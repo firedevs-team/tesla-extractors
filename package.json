@@ -11,6 +11,7 @@
     "axios": "^1.7.7",
     "chalk": "^4.1.2",
     "cheerio": "^1.0.0",
+    "cli-table3": "^0.6.5",
     "json2csv": "^6.0.0-alpha.2",
     "lodash": "^4.17.21",
     "openai": "^4.57.0",

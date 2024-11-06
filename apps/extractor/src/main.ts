@@ -48,6 +48,8 @@ const run = async () => {
       await transformer.run();
     }
   }
+
+  process.exit(0);
 };
 
 run();
