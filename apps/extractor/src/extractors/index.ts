@@ -20,9 +20,11 @@ import smmtExtractor from './car_registrations/uk/smmt/Extractor';
 import smmtModelExtractor from './car_registrations/uk/smmt_model/Extractor';
 import motorIntelligenceExtractor from './car_registrations/usa/motor_intelligence/Extractor';
 import anfacExtractor from './car_registrations/spain/anfac/Extractor';
+import febiacExtractor from './car_registrations/belgium/febiac/Extractor';
 import shareholderDeckExtractor from './tesla_ir_info/sharehold_deck/Extractor';
 
 const extractors: BaseExtractor[] = [
+  // Countries
   kbaExtractor,
   pfaExtractor,
   unraeExtractor,
@@ -44,6 +46,8 @@ const extractors: BaseExtractor[] = [
   smmtModelExtractor,
   motorIntelligenceExtractor,
   anfacExtractor,
+  febiacExtractor,
+  // Tesla IR info
   shareholderDeckExtractor,
 ];
 

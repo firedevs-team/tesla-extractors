@@ -125,9 +125,9 @@ const run = async () => {
     totalQ4_24,
     totalQ3_24,
     totalQ4_23,
-    '', // No sumamos porcentajes
+    `${Math.round(((totalQ4_24 - totalQ3_24) * 100) / totalQ3_24)}%`,
     totalQoqDifference,
-    '',
+    `${Math.round(((totalQ4_24 - totalQ4_23) * 100) / totalQ4_23)}%`,
     totalYoyDifference,
   ]);
 
