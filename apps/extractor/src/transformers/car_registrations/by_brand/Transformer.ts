@@ -6,7 +6,7 @@ import { Parser } from 'json2csv';
 
 const COUNTRIES_PATH = path.join('car_registrations', 'countries');
 const TESLA_BRAND = 'TESLA';
-const ALLOW_PARTIAL = false;
+const ALLOW_PARTIAL = true;
 
 interface IBrandRegistrations {
   year: number;
@@ -488,6 +488,62 @@ class Transformer extends BaseTransformer {
     // Nota: Data Tesla OK
     await (async () => {
       const country = 'uk';
+      const dataPath = path.join(
+        COUNTRIES_PATH,
+        country,
+        'registrations_by_brand.csv'
+      );
+      let data = await this.loadSource(dataPath);
+      data = data.filter((r) => r['brand'] === 'TESLA');
+      registrations.push(
+        ...data.map((r) => {
+          const result: IBrandRegistrations = {
+            year: r['year'],
+            month: r['month'],
+            country,
+            brand: TESLA_BRAND,
+            registrations: r['registrations'],
+          };
+
+          return result;
+        })
+      );
+    })();
+
+    if (ALLOW_PARTIAL) {
+      // --------
+      // Cargo usa registrations_by_brand.csv
+      // Nota: Data Tesla OK
+      await (async () => {
+        const country = 'usa';
+        const dataPath = path.join(
+          COUNTRIES_PATH,
+          country,
+          'registrations_by_brand.csv'
+        );
+        let data = await this.loadSource(dataPath);
+        data = data.filter((r) => r['brand'] === 'TESLA');
+        registrations.push(
+          ...data.map((r) => {
+            const result: IBrandRegistrations = {
+              year: r['year'],
+              month: r['month'],
+              country,
+              brand: TESLA_BRAND,
+              registrations: r['registrations'],
+            };
+
+            return result;
+          })
+        );
+      })();
+    }
+
+    // --------
+    // Cargo spain registrations_by_brand.csv
+    // Nota: Data Tesla OK
+    await (async () => {
+      const country = 'spain';
       const dataPath = path.join(
         COUNTRIES_PATH,
         country,

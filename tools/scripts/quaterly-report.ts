@@ -27,9 +27,9 @@ const run = async () => {
   });
 
   // Extraer los registros de octubre 2024
-  const octoberRegistrations = result.data.filter(
-    (r) => r.year === 2024 && r.month === 10
-  );
+  const octoberRegistrations = result.data
+    .filter((r) => r.year === 2024 && r.month === 10)
+    .sort((a, b) => b.registrations - a.registrations); // Orden descendente por registros de octubre
 
   // Extraer los registros de julio 2024
   const julyRegistrations: Registrations[] = [];
@@ -97,14 +97,16 @@ const run = async () => {
       : '-';
     const yoyDifference = oct23Regs ? q4_24 - oct23Regs.registrations : 0;
 
-    // Acumular los totales
-    totalQ4_24 += q4_24;
-    totalQ3_24 += q3_24;
-    totalQ4_23 += q4_23;
-    totalQoqDifference += typeof qoqDifference === 'number' ? qoqDifference : 0;
-    totalYoyDifference += typeof yoyDifference === 'number' ? yoyDifference : 0;
+    // Acumular los totales solo si existen los tres datos
+    if (julRegs && oct23Regs) {
+      totalQ4_24 += q4_24;
+      totalQ3_24 += q3_24;
+      totalQ4_23 += q4_23;
+      totalQoqDifference += qoqDifference;
+      totalYoyDifference += yoyDifference;
+    }
 
-    // Agregar la fila a la tabla
+    // Agregar la fila a la tabla, independientemente de si tiene los tres datos
     table.push([
       octRegs.country,
       q4_24,
@@ -119,7 +121,7 @@ const run = async () => {
 
   // Agregar la fila de totales al final de la tabla
   table.push([
-    'Total',
+    'Total*',
     totalQ4_24,
     totalQ3_24,
     totalQ4_23,
@@ -131,6 +133,7 @@ const run = async () => {
 
   // Mostrar la tabla en la consola
   console.log(table.toString());
+  console.log('* Totales solo si existen los tres datos');
 };
 
 run();

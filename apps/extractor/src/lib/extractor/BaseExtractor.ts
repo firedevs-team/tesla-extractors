@@ -203,6 +203,7 @@ export abstract class BaseExtractor<C extends Config = Config> {
     });
 
     // Transformo cada archivo y lo guardo
+    let deletedMap: { [key: string]: boolean } = {};
     for (const download of downloadData) {
       const { dateId, data } = download;
       const { fileext } = this.config;
@@ -216,8 +217,15 @@ export abstract class BaseExtractor<C extends Config = Config> {
 
       // Como estoy reindexando, debo sobre escribir los archivos
       // por eso elimino los archivos antes de guardar los nuevos
+      // pero esto lo hago una sola vez por cada archivo
       for (const output of outputs) {
-        await unlink(path.join(this.dataPath, `${output.name}.csv`));
+        if (!deletedMap[output.name]) {
+          // Lo dejo en un try catch por si no existe el archivo
+          try {
+            await unlink(path.join(this.dataPath, `${output.name}.csv`));
+          } catch (error) {}
+          deletedMap[output.name] = true;
+        }
       }
 
       // Guardo los archivos
