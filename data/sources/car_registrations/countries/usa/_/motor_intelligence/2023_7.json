@@ -1,0 +1,331 @@
+[
+  {
+    "brand": "Acura ",
+    "car_registrations": "4,373",
+    "truck_registrations": "7,689",
+    "registrations": "12,062",
+    "is_estimated": false
+  },
+  {
+    "brand": "Alfa Romeo *",
+    "car_registrations": "241",
+    "truck_registrations": "628",
+    "registrations": "869",
+    "is_estimated": true
+  },
+  {
+    "brand": "Audi *",
+    "car_registrations": "5,581",
+    "truck_registrations": "14,180",
+    "registrations": "19,761",
+    "is_estimated": true
+  },
+  {
+    "brand": "Bentley *",
+    "car_registrations": "196",
+    "truck_registrations": "147",
+    "registrations": "343",
+    "is_estimated": true
+  },
+  {
+    "brand": "BMW ",
+    "car_registrations": "11,693",
+    "truck_registrations": "13,714",
+    "registrations": "25,407",
+    "is_estimated": false
+  },
+  {
+    "brand": "BrightDrop ",
+    "car_registrations": " ",
+    "truck_registrations": " ",
+    "registrations": " ",
+    "is_estimated": false
+  },
+  {
+    "brand": "Buick ",
+    "car_registrations": " ",
+    "truck_registrations": " ",
+    "registrations": "13,811",
+    "is_estimated": false
+  },
+  {
+    "brand": "Buick *",
+    "car_registrations": " ",
+    "truck_registrations": "13,811",
+    "registrations": " ",
+    "is_estimated": true
+  },
+  {
+    "brand": "Cadillac *",
+    "car_registrations": "1,971",
+    "truck_registrations": "9,586",
+    "registrations": "11,557",
+    "is_estimated": true
+  },
+  {
+    "brand": "Chevrolet *",
+    "car_registrations": "16,014",
+    "truck_registrations": "125,414",
+    "registrations": "141,428",
+    "is_estimated": true
+  },
+  {
+    "brand": "Chrysler *",
+    "car_registrations": "1,394",
+    "truck_registrations": "15,301",
+    "registrations": "16,695",
+    "is_estimated": true
+  },
+  {
+    "brand": "Dodge ",
+    "car_registrations": " ",
+    "truck_registrations": "5,457",
+    "registrations": "14,683",
+    "is_estimated": false
+  },
+  {
+    "brand": "Dodge *",
+    "car_registrations": "9,226",
+    "truck_registrations": " ",
+    "registrations": " ",
+    "is_estimated": true
+  },
+  {
+    "brand": "Ferrari ",
+    "car_registrations": "267",
+    "truck_registrations": " ",
+    "registrations": "267",
+    "is_estimated": false
+  },
+  {
+    "brand": "Fiat ",
+    "car_registrations": " ",
+    "truck_registrations": "47",
+    "registrations": "47",
+    "is_estimated": false
+  },
+  {
+    "brand": "Ford ",
+    "car_registrations": "1,233",
+    "truck_registrations": "164,741",
+    "registrations": "165,974",
+    "is_estimated": false
+  },
+  {
+    "brand": "Genesis ",
+    "car_registrations": "2,045",
+    "truck_registrations": "4,285",
+    "registrations": "6,330",
+    "is_estimated": false
+  },
+  {
+    "brand": "GMC *",
+    "car_registrations": " ",
+    "truck_registrations": "46,242",
+    "registrations": "46,242",
+    "is_estimated": true
+  },
+  {
+    "brand": "Honda ",
+    "car_registrations": "35,027",
+    "truck_registrations": "64,673",
+    "registrations": "99,700",
+    "is_estimated": false
+  },
+  {
+    "brand": "Hyundai ",
+    "car_registrations": "16,853",
+    "truck_registrations": "49,674",
+    "registrations": "66,527",
+    "is_estimated": false
+  },
+  {
+    "brand": "Infiniti *",
+    "car_registrations": "646",
+    "truck_registrations": "4,395",
+    "registrations": "5,041",
+    "is_estimated": true
+  },
+  {
+    "brand": "Jaguar *",
+    "car_registrations": "167",
+    "truck_registrations": "407",
+    "registrations": "574",
+    "is_estimated": true
+  },
+  {
+    "brand": "Jeep ",
+    "car_registrations": " ",
+    "truck_registrations": "52,314",
+    "registrations": "52,314",
+    "is_estimated": false
+  },
+  {
+    "brand": "Karma *",
+    "car_registrations": "4",
+    "truck_registrations": " ",
+    "registrations": "4",
+    "is_estimated": true
+  },
+  {
+    "brand": "Kia ",
+    "car_registrations": "20,041",
+    "truck_registrations": "50,889",
+    "registrations": "70,930",
+    "is_estimated": false
+  },
+  {
+    "brand": "Lamborghini *",
+    "car_registrations": "99",
+    "truck_registrations": "153",
+    "registrations": "252",
+    "is_estimated": true
+  },
+  {
+    "brand": "Land Rover *",
+    "car_registrations": " ",
+    "truck_registrations": "6,305",
+    "registrations": "6,305",
+    "is_estimated": true
+  },
+  {
+    "brand": "Lexus *",
+    "car_registrations": "5,621",
+    "truck_registrations": "19,160",
+    "registrations": "24,781",
+    "is_estimated": true
+  },
+  {
+    "brand": "Lincoln ",
+    "car_registrations": " ",
+    "truck_registrations": "6,661",
+    "registrations": "6,661",
+    "is_estimated": false
+  },
+  {
+    "brand": "Lucid *",
+    "car_registrations": "482",
+    "truck_registrations": " ",
+    "registrations": "482",
+    "is_estimated": true
+  },
+  {
+    "brand": "Maserati ",
+    "car_registrations": "89",
+    "truck_registrations": "413",
+    "registrations": "502",
+    "is_estimated": false
+  },
+  {
+    "brand": "Mazda ",
+    "car_registrations": "3,714",
+    "truck_registrations": "26,915",
+    "registrations": "30,629",
+    "is_estimated": false
+  },
+  {
+    "brand": "Mercedes-Benz *",
+    "car_registrations": "7,528",
+    "truck_registrations": "22,439",
+    "registrations": "29,967",
+    "is_estimated": true
+  },
+  {
+    "brand": "MINI ",
+    "car_registrations": "1,907",
+    "truck_registrations": "1,207",
+    "registrations": "3,114",
+    "is_estimated": false
+  },
+  {
+    "brand": "Mitsubishi ",
+    "car_registrations": "1,080",
+    "truck_registrations": "6,254",
+    "registrations": "7,334",
+    "is_estimated": false
+  },
+  {
+    "brand": "Nissan *",
+    "car_registrations": "23,087",
+    "truck_registrations": "42,885",
+    "registrations": "65,972",
+    "is_estimated": true
+  },
+  {
+    "brand": "Polestar *",
+    "car_registrations": "1,242",
+    "truck_registrations": " ",
+    "registrations": "1,242",
+    "is_estimated": true
+  },
+  {
+    "brand": "Porsche *",
+    "car_registrations": "3,054",
+    "truck_registrations": "5,249",
+    "registrations": "8,303",
+    "is_estimated": true
+  },
+  {
+    "brand": "Ram ",
+    "car_registrations": " ",
+    "truck_registrations": "40,567",
+    "registrations": "40,567",
+    "is_estimated": false
+  },
+  {
+    "brand": "Rivian *",
+    "car_registrations": " ",
+    "truck_registrations": "4,346",
+    "registrations": "4,346",
+    "is_estimated": true
+  },
+  {
+    "brand": "Rolls Royce *",
+    "car_registrations": "60",
+    "truck_registrations": "69",
+    "registrations": "129",
+    "is_estimated": true
+  },
+  {
+    "brand": "Subaru ",
+    "car_registrations": "19,605",
+    "truck_registrations": "30,784",
+    "registrations": "50,389",
+    "is_estimated": false
+  },
+  {
+    "brand": "Tesla *",
+    "car_registrations": "20,931",
+    "truck_registrations": "37,211",
+    "registrations": "58,142",
+    "is_estimated": true
+  },
+  {
+    "brand": "Toyota *",
+    "car_registrations": "54,612",
+    "truck_registrations": "113,362",
+    "registrations": "167,974",
+    "is_estimated": true
+  },
+  {
+    "brand": "VinFast *",
+    "car_registrations": " ",
+    "truck_registrations": "380",
+    "registrations": "380",
+    "is_estimated": true
+  },
+  {
+    "brand": "Volkswagen *",
+    "car_registrations": "5,764",
+    "truck_registrations": "19,726",
+    "registrations": "25,490",
+    "is_estimated": true
+  },
+  {
+    "brand": "Volvo ",
+    "car_registrations": "785",
+    "truck_registrations": "10,000",
+    "registrations": "10,785",
+    "is_estimated": false
+  }
+]

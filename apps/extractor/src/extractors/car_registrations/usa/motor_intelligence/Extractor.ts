@@ -7,8 +7,12 @@ import {
   MonthDateId,
   MonthExtractor,
 } from '../../../../lib';
+import { writeFile } from 'fs/promises';
+import path from 'path';
 
-const SOURCE_URL = 'https://motorintelligence.com/';
+// const SOURCE_URL = 'https://motorintelligence.com/';
+const SOURCE_URL =
+  'https://web.archive.org/web/20241001100656/http://www.motorintelligence.com/';
 const MONTH_MAP = {
   1: 'JAN',
   2: 'FEB',
@@ -43,6 +47,9 @@ class Extractor extends MonthExtractor {
 
   async download(dateId: MonthDateId): Promise<Buffer | null> {
     const { year, month } = dateId;
+
+    // Para cargar datos antiguos
+    // const { data: mainPage } = await axios.get(this.getOldSourceUrl(dateId));
 
     const { data: mainPage } = await axios.get(SOURCE_URL);
     const $ = cheerio.load(mainPage);
@@ -157,6 +164,58 @@ class Extractor extends MonthExtractor {
         data: registrations,
       },
     ];
+  }
+
+  /**
+   * Encuentra versiones de la página en archive.org
+   * No se encontraron datos para 2024_9 y 2023_4
+   * @param dateId
+   * @returns
+   */
+  getOldSourceUrl(dateId: MonthDateId): string {
+    const dateIdStr = dateId.toString();
+    switch (dateIdStr) {
+      case '2024_8':
+        return 'https://web.archive.org/web/20241001100656/http://www.motorintelligence.com/';
+      case '2024_7':
+        return 'https://web.archive.org/web/20240820141458/http://www.motorintelligence.com/';
+      case '2024_6':
+        return 'https://web.archive.org/web/20240707013622/http://motorintelligence.com/';
+      case '2024_5':
+        return 'https://web.archive.org/web/20240615033748/http://motorintelligence.com/';
+      case '2024_4':
+        return 'https://web.archive.org/web/20240516111000/http://motorintelligence.com/';
+      case '2024_3':
+        return 'https://web.archive.org/web/20240424161807/http://www.motorintelligence.com/';
+      case '2024_2':
+        return 'https://web.archive.org/web/20240306130904/http://motorintelligence.com/';
+      case '2024_1':
+        return 'https://web.archive.org/web/20240221073118/http://motorintelligence.com/';
+      case '2023_12':
+        return 'https://web.archive.org/web/20240110083926/https://www.motorintelligence.com/';
+      case '2023_11':
+        return 'https://web.archive.org/web/20231215233359/http://motorintelligence.com/';
+      case '2023_10':
+        return 'https://web.archive.org/web/20231110191928/http://motorintelligence.com/';
+      case '2023_9':
+        return 'https://web.archive.org/web/20231011163818/http://motorintelligence.com/';
+      case '2023_8':
+        return 'https://web.archive.org/web/20230913092152/https://www.motorintelligence.com/';
+      case '2023_7':
+        return 'https://web.archive.org/web/20230819233845/https://www.motorintelligence.com/';
+      case '2023_6':
+        return 'https://web.archive.org/web/20230720001104/https://www.motorintelligence.com/';
+      case '2023_5':
+        return 'https://web.archive.org/web/20230629211627/https://www.motorintelligence.com/';
+      case '2023_3':
+        return 'https://web.archive.org/web/20230405030813/http://motorintelligence.com/';
+      case '2023_2':
+        return 'https://web.archive.org/web/20230325031956/http://motorintelligence.com/';
+      case '2023_1':
+        return 'https://web.archive.org/web/20230209091445/https://www.motorintelligence.com/';
+      default:
+        throw new Error('No source data found');
+    }
   }
 
   async debug() {}
