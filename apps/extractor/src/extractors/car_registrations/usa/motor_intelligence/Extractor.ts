@@ -7,12 +7,8 @@ import {
   MonthDateId,
   MonthExtractor,
 } from '../../../../lib';
-import { writeFile } from 'fs/promises';
-import path from 'path';
 
-// const SOURCE_URL = 'https://motorintelligence.com/';
-const SOURCE_URL =
-  'https://web.archive.org/web/20241001100656/http://www.motorintelligence.com/';
+const SOURCE_URL = 'https://motorintelligence.com/';
 const MONTH_MAP = {
   1: 'JAN',
   2: 'FEB',
