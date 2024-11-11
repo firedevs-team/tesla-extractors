@@ -1,6 +1,7 @@
 import { BaseExtractor } from '../lib/extractor/BaseExtractor';
 import kbaExtractor from './car_registrations/germany/kba/Extractor';
 import pfaExtractor from './car_registrations/france/pfa/Extractor';
+import pfaBrandExtractor from './car_registrations/france/pfa_brand/Extractor';
 import unraeExtractor from './car_registrations/italy/unrae/Extractor';
 import unraeBrandExtractor from './car_registrations/italy/unrae_brand/Extractor';
 import ofvExtractor from './car_registrations/norway/ofv/Extractor';
@@ -28,6 +29,7 @@ const extractors: BaseExtractor[] = [
   // Countries
   kbaExtractor,
   pfaExtractor,
+  pfaBrandExtractor,
   unraeExtractor,
   unraeBrandExtractor,
   ofvExtractor,

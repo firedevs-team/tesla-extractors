@@ -15,7 +15,7 @@ class Extractor extends MonthExtractor {
   constructor() {
     super({
       folders: ['car_registrations', 'countries', 'france'],
-      source: 'pfa',
+      source: 'pfa_brand',
       fileext: 'pdf',
     });
   }
@@ -94,8 +94,8 @@ class Extractor extends MonthExtractor {
       throw new Error('Expected links not found');
     }
 
-    // Descargo el documento con datos detallados
-    const downloadUrl = $(aElements[1]).attr('href');
+    // Descargo el documento con datos esenciales
+    const downloadUrl = $(aElements[0]).attr('href');
 
     const fileContent = await axios(downloadUrl, {
       responseType: 'arraybuffer',
@@ -108,6 +108,8 @@ class Extractor extends MonthExtractor {
     dateId: MonthDateId,
     fileData: FileData
   ): Promise<FileOuput[]> {
+    const { year, month } = dateId;
+
     const pdfJSON = await new Promise<Output>((resolve, reject) => {
       const pdfParser = new PDFParser();
 
@@ -122,9 +124,9 @@ class Extractor extends MonthExtractor {
       pdfParser.loadPDF(fileData.path);
     });
 
-    // La tabla siempre está en la página 18
-    // así reduzco el espacio de búsqueda
-    const texts = pdfJSON.Pages[17].Texts;
+    // Me quedo con los textos de la página 2
+    // La tabla siempre está en la página 2
+    const texts = pdfJSON.Pages[1].Texts;
 
     // Armo la tabla usando las coordenadas
     // Para crear un row necesito dejar en un arreglo
@@ -146,66 +148,65 @@ class Extractor extends MonthExtractor {
       }
     }
 
-    // Hay rows que tiene 20 columnas en vez de 16
-    // esto ocurre pq el primero top 10 está en negritas
-    // y duplica cada texto pq es otro formato
-    // si tiene length 20 elimino los ultimos 4 elementos
-    rows = rows.map((row) => {
-      if (row.length === 20) {
-        return row.slice(0, 16);
-      }
-      return row;
+    // Encuentro la ubicación del primer row de la tabla
+    // el que dice "TOTAL MARCHE", a partir de ahí
+    // se encuentran los datos de la tabla
+    const totalMarcheIndex = rows.findIndex((row) => {
+      return decodeURIComponent(row[0].R[0].T) === 'TOTAL MARCHE';
     });
 
-    // Dejo solo los rows que tengan 16 columnas
-    rows = rows.filter((row) => row.length === 16);
+    // Me quedo con los rows que están
+    // después de "TOTAL MARCHE"
+    rows = rows.slice(totalMarcheIndex + 1);
 
-    // Ordenos los rows por x
-    rows = rows.map((row) => {
-      return row.sort((a, b) => a.x - b.x);
+    // Encuentro la ubicación del último row de la tabla
+    // el que dice "AUSTRES", a partir de ahí elimino lo que sigue
+    const austresIndex = rows.findIndex((row) => {
+      return decodeURIComponent(row[0].R[0].T) === 'AUSTRES';
     });
+    rows = rows.slice(0, austresIndex);
 
-    // Valido los YTD Registrations con zod
-    const YTDRegistrationsSchema = z
+    // Valido con zod
+    const Schema = z
       .object({
-        year: z.number().int().min(1900).max(2100),
-        month: z.number().int().min(1).max(12),
-        model: z.string(),
-        ytd_registrations: z.number(),
-        ytd_market_share: z.number(),
+        year: z.number().int(),
+        month: z.number().int(),
+        brand: z.preprocess(
+          (val: string) =>
+            decodeURIComponent(val).trim().toUpperCase().replace(/\s+/g, '_'),
+          z.string()
+        ),
+        registrations: z.preprocess(
+          (val: string) =>
+            parseInt(decodeURIComponent(val).replace(/\s/g, ''), 10),
+          z.number().int()
+        ),
+        market_share: z.preprocess(
+          (val: string) =>
+            parseFloat(
+              decodeURIComponent(val).replace(/\s/g, '').replace(',', '.')
+            ),
+          z.number()
+        ),
       })
       .strict();
+    type Registrations = z.infer<typeof Schema>;
 
-    const registrations = [];
+    const registrations: Registrations[] = [];
     for (const row of rows) {
-      for (let i = 0; i < row.length; i += 4) {
-        const model = row[i + 1];
-        const ytd_registrations = row[i + 2];
-        const ytd_market_share = row[i + 3];
-
-        const parsed = YTDRegistrationsSchema.parse({
-          year: dateId.year,
-          month: dateId.month,
-          model: decodeURIComponent(model.R[0].T).toUpperCase(),
-          ytd_registrations: parseInt(
-            decodeURIComponent(ytd_registrations.R[0].T).replace(/\s/g, '')
-          ),
-          ytd_market_share: parseFloat(
-            decodeURIComponent(ytd_market_share.R[0].T)
-              .replace(',', '.')
-              .replace('%', '')
-          ),
-        });
-        registrations.push(parsed);
-      }
+      const parsed = Schema.parse({
+        year,
+        month,
+        brand: row[0].R[0].T,
+        registrations: row[3].R[0].T,
+        market_share: row[4].R[0].T,
+      });
+      registrations.push(parsed);
     }
-
-    // Ordeno los registrations por ytd_registrations
-    registrations.sort((a, b) => b.ytd_registrations - a.ytd_registrations);
 
     return [
       {
-        name: 'top_100_ytd_registrations_by_model',
+        name: 'registrations_by_brand',
         data: registrations,
       },
     ];
