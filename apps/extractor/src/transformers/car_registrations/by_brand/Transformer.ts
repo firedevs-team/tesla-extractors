@@ -135,8 +135,31 @@ class Transformer extends BaseTransformer {
     })();
 
     // --------
-    // Cargo France
-    // TODO: falta agregar france
+    // Cargo France registrations_by_brand.csv
+    // Nota: Data Tesla OK
+    await (async () => {
+      const country = 'france';
+      const dataPath = path.join(
+        COUNTRIES_PATH,
+        country,
+        'registrations_by_brand.csv'
+      );
+      let data = await this.loadSource(dataPath);
+      data = data.filter((r) => r['brand'] === 'TESLA');
+      registrations.push(
+        ...data.map((r) => {
+          const result: IBrandRegistrations = {
+            year: r['year'],
+            month: r['month'],
+            country,
+            brand: TESLA_BRAND,
+            registrations: r['registrations'],
+          };
+
+          return result;
+        })
+      );
+    })();
 
     // --------
     // Cargo Germany registrations_by_model.csv
