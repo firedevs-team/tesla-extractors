@@ -21,59 +21,83 @@ class Extractor extends MonthExtractor {
   }
 
   async download(dateId: MonthDateId): Promise<Buffer | null> {
-    const response = await axios.get(SOURCE_URL);
-    const $ = cheerio.load(response.data);
+    const { month, year } = dateId;
 
-    const titles = [];
-    const links = [];
-    const h3Elements = $('.tab-pane.active h3');
-    const aElements = $('.tab-pane.active a');
+    // Descargo la página princial
+    let response = await axios.get(SOURCE_URL);
+    let $ = cheerio.load(response.data);
 
-    h3Elements.each((_, h3) => {
-      titles.push($(h3).text().trim().toUpperCase());
-    });
-    aElements.each((_, a) => {
-      links.push($(a).attr('href'));
-    });
+    let aElements = Array.from($('.t-entry-title a'));
+    // Siempre debería haber al menos un artículo
+    // si no lo hay, es un error, seguro cambiaron la estructura del html
+    if (aElements.length === 0) {
+      console.debug({
+        SOURCE_URL,
+      });
+      throw new Error('Articles not found');
+    }
 
-    // Mapeo los links para poder comparar
-    const months = [
-      'JANVIER',
-      'FÉVRIER',
-      'MARS',
-      'AVRIL',
-      'MAI',
-      'JUIN',
-      'JUILLET',
-      'AOÛT',
-      'SEPTEMBRE',
-      'OCTOBRE',
-      'NOVEMBRE',
-      'DÉCEMBRE',
-    ];
-    const mappedLinks = titles.map((title, index) => {
-      const url = links[index];
-      const parts = title.split(' ');
-      const month = months.indexOf(parts[0]) + 1;
-      const year = parseInt(parts[1]);
+    const MONTH_MAP = {
+      1: 'JANVIER',
+      2: 'FEVRIER',
+      3: 'MARS',
+      4: 'AVRIL',
+      5: 'MAI',
+      6: 'JUIN',
+      7: 'JUILLET',
+      8: 'AOUT',
+      9: 'SEPTEMBRE',
+      10: 'OCTOBRE',
+      11: 'NOVEMBRE',
+      12: 'DECEMBRE',
+    };
+    let articleUrl: string = null;
+    for (const aElement of aElements) {
+      const text = $(aElement)
+        .text()
+        .trim()
+        .toUpperCase()
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '');
 
-      return {
-        url,
-        year,
-        month,
-      };
-    });
+      if (text.endsWith(`${MONTH_MAP[month]} ${year}`)) {
+        articleUrl = $(aElement).attr('href');
+        break;
+      }
+    }
 
-    // Encuentro el link que corresponde a la fecha
-    const link = mappedLinks.find((link) => {
-      return link.year === dateId.year && link.month === dateId.month;
-    });
-    // Informo que no se encontró el dato
-    if (!link) {
+    // Informo que no hay datos publicados aún
+    if (!articleUrl) {
       return null;
     }
 
-    const fileContent = await axios(link.url, {
+    // Descargo la página del artículo
+    response = await axios.get(articleUrl);
+    $ = cheerio.load(response.data);
+
+    aElements = Array.from($('.post-content a'));
+
+    // Me quedo con los links que tengan el texto
+    // "Télécharger le document"
+    aElements = aElements.filter((aElement) => {
+      return (
+        $(aElement).text().trim().toUpperCase() === 'TÉLÉCHARGER LE DOCUMENT'
+      );
+    });
+
+    // Deben haber dos links un documento con datos esenciales
+    // y otro con datos más detallados
+    if (aElements.length !== 2) {
+      console.debug({
+        articleUrl,
+      });
+      throw new Error('Expected links not found');
+    }
+
+    // Descargo el documento con datos detallados
+    const downloadUrl = $(aElements[1]).attr('href');
+
+    const fileContent = await axios(downloadUrl, {
       responseType: 'arraybuffer',
     });
 
@@ -185,9 +209,7 @@ class Extractor extends MonthExtractor {
     ];
   }
 
-  async debug() {
-    // await this.reindex();
-  }
+  async debug() {}
 }
 
 export default new Extractor();
