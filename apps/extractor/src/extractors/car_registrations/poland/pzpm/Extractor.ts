@@ -8,8 +8,10 @@ import {
   MonthDateId,
   MonthExtractor,
 } from '../../../../lib';
+import path from 'path';
+import { writeFile } from 'fs/promises';
 
-const SOURCE_URL = `https://www.pzpm.org.pl/en/Automotive-market/eRegistrations/`;
+const SOURCE_URL = `https://www.pzpm.org.pl/en/Electromobility/eRegistrations`;
 const MONTH_MAP = {
   1: 'JANUARY',
   2: 'FEBRUARY',
@@ -38,41 +40,51 @@ class Extractor extends MonthExtractor {
     const { year, month } = dateId;
 
     // Descargo la página principal
-    const response = await axios.get(SOURCE_URL);
-    const $ = cheerio.load(response.data);
+    let response = await axios.get(SOURCE_URL);
+    let $ = cheerio.load(response.data);
 
     // Extraigo los links de las páginas
-    const pageLinks = $('.mblock-content ul:nth-child(1) li:nth-child(2) li a');
+    const pageLinks = $('.content-view-line a');
 
-    // Encuentro el link de descarga
-    let downloadLink: string = null;
+    // Encuentro la url del artículo
+    let arcticleUrl: string = null;
     for (let i = 0; i < pageLinks.length; i++) {
-      const href = $(pageLinks[i]).attr('href');
       const text = $(pageLinks[i]).text().trim();
       if (text === `${MONTH_MAP[month]} ${year}`) {
-        // Descargo la página
-        const response = await axios.get(`https://www.pzpm.org.pl${href}`);
-        const $ = cheerio.load(response.data);
-
-        const items = $('.content-view-line');
-        items.each((_, element) => {
-          const aElements = $(element).find('a');
-          const text = $(aElements[0]).text().trim();
-          if (text === 'eRegistrations') {
-            downloadLink = `https://www.pzpm.org.pl${$(aElements[1]).attr(
-              'href'
-            )}`;
-          }
-        });
+        arcticleUrl = $(pageLinks[i]).attr('href');
+        break;
       }
     }
 
     // Informo que los datos aún no están publicados
-    if (!downloadLink) {
+    if (!arcticleUrl) {
       return null;
     }
 
-    const fileContent = await axios(downloadLink, {
+    // Descargo el artículo
+    response = await axios.get(`https://www.pzpm.org.pl${arcticleUrl}`);
+    $ = cheerio.load(response.data);
+
+    let downloadUrl: string = null;
+    const items = Array.from($('.content-view-line'));
+    for (const item of items) {
+      const aElements = $(item).find('a');
+      const text = $(aElements[0]).text().trim();
+      if (text === 'eRegistrations') {
+        downloadUrl = `https://www.pzpm.org.pl${$(aElements[1]).attr('href')}`;
+        break;
+      }
+    }
+
+    // Debe haber un link de descarga si no es un error
+    if (!downloadUrl) {
+      console.debug({
+        arcticleUrl,
+      });
+      throw new Error('Download link not found');
+    }
+
+    const fileContent = await axios(downloadUrl, {
       responseType: 'arraybuffer',
     });
 
@@ -207,9 +219,7 @@ class Extractor extends MonthExtractor {
     ];
   }
 
-  async debug() {
-    // await this.reindex();
-  }
+  async debug() {}
 }
 
 export default new Extractor();
