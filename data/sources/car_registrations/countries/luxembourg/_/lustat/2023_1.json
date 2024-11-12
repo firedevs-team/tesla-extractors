@@ -1,0 +1,126 @@
+[
+  {
+    "brand": "ALFA ROMEO",
+    "registrations": 9
+  },
+  {
+    "brand": "AUDI",
+    "registrations": 258
+  },
+  {
+    "brand": "BMW",
+    "registrations": 396
+  },
+  {
+    "brand": "CITROEN",
+    "registrations": 64
+  },
+  {
+    "brand": "CUPRA",
+    "registrations": 52
+  },
+  {
+    "brand": "DACIA",
+    "registrations": 65
+  },
+  {
+    "brand": "DS",
+    "registrations": 41
+  },
+  {
+    "brand": "FIAT",
+    "registrations": 93
+  },
+  {
+    "brand": "FORD",
+    "registrations": 51
+  },
+  {
+    "brand": "FORD (D)",
+    "registrations": 49
+  },
+  {
+    "brand": "HYUNDAI",
+    "registrations": 56
+  },
+  {
+    "brand": "JAGUAR",
+    "registrations": 9
+  },
+  {
+    "brand": "KIA",
+    "registrations": 107
+  },
+  {
+    "brand": "LAND ROVER",
+    "registrations": 43
+  },
+  {
+    "brand": "MASERATI",
+    "registrations": 4
+  },
+  {
+    "brand": "MAZDA",
+    "registrations": 26
+  },
+  {
+    "brand": "MERCEDES",
+    "registrations": 380
+  },
+  {
+    "brand": "MINI",
+    "registrations": 70
+  },
+  {
+    "brand": "NISSAN",
+    "registrations": 44
+  },
+  {
+    "brand": "OPEL",
+    "registrations": 158
+  },
+  {
+    "brand": "PEUGEOT",
+    "registrations": 251
+  },
+  {
+    "brand": "POLESTAR",
+    "registrations": 22
+  },
+  {
+    "brand": "PORSCHE",
+    "registrations": 101
+  },
+  {
+    "brand": "RENAULT",
+    "registrations": 232
+  },
+  {
+    "brand": "SEAT",
+    "registrations": 57
+  },
+  {
+    "brand": "SKODA",
+    "registrations": 226
+  },
+  {
+    "brand": "SUZUKI",
+    "registrations": 17
+  },
+  {
+    "brand": "TESLA",
+    "registrations": 94
+  },
+  {
+    "brand": "TOYOTA",
+    "registrations": 70
+  },
+  {
+    "brand": "VOLKSWAGEN",
+    "registrations": 500
+  },
+  {
+    "brand": "VOLVO",
+    "registrations": 74
+  }
+]

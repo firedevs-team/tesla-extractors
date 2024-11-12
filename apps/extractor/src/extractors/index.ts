@@ -24,6 +24,7 @@ import anfacExtractor from './car_registrations/spain/anfac/Extractor';
 import febiacExtractor from './car_registrations/belgium/febiac/Extractor';
 import cnevTeslaSalesExtractor from './car_registrations/china/cnev_tesla_sales/Extractor';
 import seaaExtractor from './car_registrations/greece/seaa/Extractor';
+import lustatExtractor from './car_registrations/luxembourg/lustat/Extractor';
 import shareholderDeckExtractor from './tesla_ir_info/sharehold_deck/Extractor';
 
 const extractors: BaseExtractor[] = [
@@ -53,6 +54,7 @@ const extractors: BaseExtractor[] = [
   febiacExtractor,
   cnevTeslaSalesExtractor,
   seaaExtractor,
+  lustatExtractor,
   // Tesla IR info
   shareholderDeckExtractor,
 ];
