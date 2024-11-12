@@ -710,6 +710,35 @@ class Transformer extends BaseTransformer {
     })();
 
     // --------
+    // Cargo Japan registrations_by_brand.csv
+    // Nota: Data Tesla OK
+    await (async () => {
+      const country = 'japan';
+      const dataPath = path.join(
+        COUNTRIES_PATH,
+        country,
+        'registrations_by_brand.csv'
+      );
+      let data = await this.loadSource(dataPath);
+      // En japón los datos de Tesla están en OTHERS
+      // pero parece que la mayoría de OTHERS son Tesla
+      data = data.filter((r) => r['brand'] === 'OTHERS');
+      registrations.push(
+        ...data.map((r) => {
+          const result: IBrandRegistrations = {
+            year: r['year'],
+            month: r['month'],
+            country,
+            brand: TESLA_BRAND,
+            registrations: r['registrations'],
+          };
+
+          return result;
+        })
+      );
+    })();
+
+    // --------
     // Salvo registrations_by_brand.csv
     const json2csvParser = new Parser();
     const csv = json2csvParser.parse(registrations);
