@@ -640,6 +640,49 @@ class Transformer extends BaseTransformer {
     })();
 
     // --------
+    // Cargo Greece ytd_registrations_by_brand.csv
+    // Nota: Data Tesla OK
+    await (async () => {
+      const country = 'greece';
+      const dataPath = path.join(
+        COUNTRIES_PATH,
+        country,
+        'ytd_registrations_by_brand.csv'
+      );
+      let data = await this.loadSource(dataPath);
+      data = data.filter((r) => r['brand'] === 'TESLA');
+
+      // Standarizo porque es ytd
+      let beforeRegistrations = 0;
+      const standarized: Object[] = [];
+      for (const item of data) {
+        standarized.push({
+          ...item,
+          registrations: item['ytd_registrations'] - beforeRegistrations,
+        });
+
+        beforeRegistrations = item['ytd_registrations'];
+        if (item['month'] === 12) {
+          beforeRegistrations = 0;
+        }
+      }
+
+      registrations.push(
+        ...standarized.map((r) => {
+          const result: IBrandRegistrations = {
+            year: r['year'],
+            month: r['month'],
+            country,
+            brand: TESLA_BRAND,
+            registrations: r['registrations'],
+          };
+
+          return result;
+        })
+      );
+    })();
+
+    // --------
     // Salvo registrations_by_brand.csv
     const json2csvParser = new Parser();
     const csv = json2csvParser.parse(registrations);
