@@ -15,7 +15,7 @@ class Extractor extends MonthExtractor {
   constructor() {
     super({
       folders: ['car_registrations', 'countries', 'new_zealand'],
-      source: 'mia',
+      source: 'mia_model',
       fileext: 'pdf',
     });
   }
@@ -27,13 +27,17 @@ class Extractor extends MonthExtractor {
     const response = await axios.get(SOURCE_URL);
     const $ = cheerio.load(response.data);
 
-    const containers = Array.from($('.DnnModule-842 .org-box'));
-    // Deben haber mínimo 19 contenedores
+    const containers = Array.from($('.DnnModule-845 .org-box'));
+    // Deben haber mínimo 14 contenedores
     // por cada año que parten en el 2006
-    if (containers.length < 19) {
+    if (containers.length < 14) {
+      console.debug({
+        containers_length: containers.length,
+      });
       throw new Error('Unexpected number of containers');
     }
 
+    // Encuento el link de descarga
     const MONTH_MAP = {
       1: 'JANUARY',
       2: 'FEBRUARY',
@@ -55,7 +59,7 @@ class Extractor extends MonthExtractor {
         const links = $(container).find('a');
         for (const link of links) {
           const text = $(link).text().trim().toUpperCase();
-          if (text === `LPV ${MONTH_MAP[month]} ${year}`) {
+          if (text === `EV SALES ${MONTH_MAP[month]} ${year}`) {
             downloadLink = $(link).attr('href');
             break;
           }
@@ -110,63 +114,47 @@ class Extractor extends MonthExtractor {
     const texts = pages[0].Texts;
 
     // Me quedo con las celdas de la tabla
-    const startPos = texts.findIndex((cell) => cell.R[0].T === 'MAKE');
-    const endPos = texts.findIndex((cell) => cell.R[0].T === 'TOTALS');
-    const cells = texts.slice(startPos, endPos);
+    const startPos = texts.findIndex((cell) => cell.R[0].T.startsWith('YTD'));
+    const cells = texts.slice(startPos + 3);
 
     // Creo rows por las coordenadas
     const TOLERANCE = 0.036;
     let rows: Text[][] = [];
     for (let i = 0; i < cells.length; i++) {
-      const text = cells[i];
+      const cell = cells[i];
 
       // Busco a que row pertenece
       // Si no hay ninguno, se crea un nuevo row
       const match = rows.find((row) => {
-        return Math.abs(row[0].y - text.y) < TOLERANCE;
+        return Math.abs(row[0].y - cell.y) < TOLERANCE;
       });
       if (match) {
-        match.push(text);
+        match.push(cell);
       } else {
-        rows.push([text]);
+        rows.push([cell]);
       }
     }
-
-    // El primer row es el header, lo extraigo
-    const headerRow = rows.shift();
-    const MONTH_MAP = {
-      1: 'JAN',
-      2: 'FEB',
-      3: 'MAR',
-      4: 'APR',
-      5: 'MAY',
-      6: 'JUN',
-      7: 'JUL',
-      8: 'AUG',
-      9: 'SEP',
-      10: 'OCT',
-      11: 'NOV',
-      12: 'DEC',
-    };
-    const cellMonthIndex = headerRow.findIndex(
-      (cell) => cell.R[0].T === MONTH_MAP[month]
-    );
-    // Del header month saco las coordenadas de la celda
-    const [leftX, rightX] = [
-      headerRow[cellMonthIndex].x,
-      headerRow[cellMonthIndex + 1].x,
-    ];
 
     // Valido con zod
     const Schema = z
       .object({
         year: z.number(),
         month: z.number(),
-        brand: z
-          .string()
-          .transform((val) =>
-            decodeURIComponent(val).trim().toUpperCase().replace(/\s+/g, '_')
-          ),
+        engine_type: z.preprocess(
+          (val: string) =>
+            decodeURIComponent(val).toUpperCase().trim().replace(/\s+/g, '_'),
+          z.string()
+        ),
+        segment: z.preprocess(
+          (val: string) =>
+            decodeURIComponent(val).toUpperCase().trim().replace(/\s+/g, '_'),
+          z.string()
+        ),
+        model: z.preprocess(
+          (val: string) =>
+            decodeURIComponent(val).toUpperCase().trim().replace(/\s+/g, '_'),
+          z.string()
+        ),
         registrations: z.preprocess((val: string) => {
           return parseInt(decodeURIComponent(val).replace(/\s/g, ''), 10);
         }, z.number().int()),
@@ -174,29 +162,41 @@ class Extractor extends MonthExtractor {
       .strict();
     type Registrations = z.infer<typeof Schema>;
 
+    let engine_type = '';
+    let segment = '';
     const registrations: Registrations[] = [];
     for (const row of rows) {
-      const brand = row[0].R[0].T;
-
-      let regs = '0';
-      const match = row.find((cell) => cell.x >= leftX && cell.x < rightX);
-      if (match) {
-        regs = match.R[0].T;
+      // Es un atributo
+      if (row.length === 1) {
+        // Si la primera letra es del abecedario es un engine_type
+        if (/^[A-Z]/.test(row[0].R[0].T)) {
+          engine_type = row[0].R[0].T;
+        } else {
+          segment = row[0].R[0].T;
+        }
+        continue;
       }
 
-      // Valido los datos
       const parsed = Schema.parse({
         year,
         month,
-        brand,
-        registrations: regs,
+        engine_type,
+        segment,
+        model: row[0].R[0].T,
+        registrations: row[month].R[0].T,
       });
+
+      // Ignoro el brand Total_...
+      if (parsed.model.startsWith('TOTAL')) {
+        continue;
+      }
+
       registrations.push(parsed);
     }
 
     return [
       {
-        name: 'registrations_by_brand',
+        name: 'registrations_by_model',
         data: registrations,
       },
     ];
