@@ -106,8 +106,12 @@ export abstract class BaseExtractor<C extends Config = Config> {
     try {
       result = await this.download(dateId);
     } catch (error) {
-      console.log(`> ${chalk.red(`Error downloading ${fileName}`)}`);
       console.error(error);
+      console.log(`> ${chalk.red(`Error downloading ${fileName}`)}`);
+
+      // Espero un segundo para que los errores
+      // se vean antes de la ejecución del siguiente extractor
+      await new Promise((resolve) => setTimeout(resolve, 1000));
       // Salta la ejecución del extractor
       // para no detener los demás, ahi debo revisar que le pasa
       return;

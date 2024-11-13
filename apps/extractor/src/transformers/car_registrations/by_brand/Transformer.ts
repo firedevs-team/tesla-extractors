@@ -3,6 +3,7 @@ import { BaseTransformer } from '../../../lib';
 import { mkdir, readFile, writeFile } from 'fs/promises';
 import path from 'path';
 import { Parser } from 'json2csv';
+import chalk from 'chalk';
 
 const COUNTRIES_PATH = path.join('car_registrations', 'countries');
 const TESLA_BRAND = 'TESLA';
@@ -739,6 +740,49 @@ class Transformer extends BaseTransformer {
     })();
 
     // --------
+    // Cargo Israel ytd_registrations_by_brand.csv
+    // Nota: Data Tesla OK
+    await (async () => {
+      const country = 'israel';
+      const dataPath = path.join(
+        COUNTRIES_PATH,
+        country,
+        'ytd_registrations_by_brand.csv'
+      );
+      let data = await this.loadSource(dataPath);
+      data = data.filter((r) => r['brand'] === 'TESLA');
+
+      // Standarizo porque es ytd
+      let beforeRegistrations = 0;
+      const standarized: Object[] = [];
+      for (const item of data) {
+        standarized.push({
+          ...item,
+          registrations: item['ytd_registrations'] - beforeRegistrations,
+        });
+
+        beforeRegistrations = item['ytd_registrations'];
+        if (item['month'] === 12) {
+          beforeRegistrations = 0;
+        }
+      }
+
+      registrations.push(
+        ...standarized.map((r) => {
+          const result: IBrandRegistrations = {
+            year: r['year'],
+            month: r['month'],
+            country,
+            brand: TESLA_BRAND,
+            registrations: r['registrations'],
+          };
+
+          return result;
+        })
+      );
+    })();
+
+    // --------
     // Salvo registrations_by_brand.csv
     const json2csvParser = new Parser();
     const csv = json2csvParser.parse(registrations);
@@ -751,7 +795,7 @@ class Transformer extends BaseTransformer {
     const outputPath = path.join(outputFolder, 'registrations_by_brand.csv');
     await writeFile(outputPath, csv);
 
-    console.log(`> Saved [registrations_by_brand]`);
+    console.log(`> ${chalk.gray(`Saved [registrations_by_brand]`)}`);
   }
 
   async debug(): Promise<void> {

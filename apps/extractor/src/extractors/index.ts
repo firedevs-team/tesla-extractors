@@ -1,64 +1,31 @@
 import { BaseExtractor } from '../lib/extractor/BaseExtractor';
-import kbaExtractor from './car_registrations/germany/kba/Extractor';
-import pfaExtractor from './car_registrations/france/pfa/Extractor';
-import pfaBrandExtractor from './car_registrations/france/pfa_brand/Extractor';
-import unraeExtractor from './car_registrations/italy/unrae/Extractor';
-import unraeBrandExtractor from './car_registrations/italy/unrae_brand/Extractor';
-import ofvExtractor from './car_registrations/norway/ofv/Extractor';
-import bovagExtractor from './car_registrations/netherlands/bovag/Extractor';
-import statistikTotalExtractor from './car_registrations/austria/statistik_total/Extractor';
-import statistikProvisionalExtractor from './car_registrations/austria/statistik_provisional/Extractor';
-import sdaciaExtractor from './car_registrations/czech_republic/sdacia/Extractor';
-import mobilityExtractor from './car_registrations/denmark/mobility/Extractor';
-import autExtractor from './car_registrations/finland/aut/Extractor';
-import samgongustofaExtractor from './car_registrations/iceland/samgongustofa/Extractor';
-import beepbeepExtractor from './car_registrations/ireland/beepbeep/Extractor';
-import pzpmExtractor from './car_registrations/poland/pzpm/Extractor';
-import autoinformaExtractor from './car_registrations/portugal/autoinforma/Extractor';
-import mobilityswedenExtractor from './car_registrations/sweden/mobilitysweden/Extractor';
-import autoswissExtractor from './car_registrations/switzerland/autoswiss/Extractor';
-import smmtExtractor from './car_registrations/uk/smmt/Extractor';
-import smmtModelExtractor from './car_registrations/uk/smmt_model/Extractor';
-import motorIntelligenceExtractor from './car_registrations/usa/motor_intelligence/Extractor';
-import anfacExtractor from './car_registrations/spain/anfac/Extractor';
-import febiacExtractor from './car_registrations/belgium/febiac/Extractor';
-import cnevTeslaSalesExtractor from './car_registrations/china/cnev_tesla_sales/Extractor';
-import seaaExtractor from './car_registrations/greece/seaa/Extractor';
-import lustatExtractor from './car_registrations/luxembourg/lustat/Extractor';
-import jaiaExtractor from './car_registrations/japan/jaia/Extractor';
-import shareholderDeckExtractor from './tesla_ir_info/sharehold_deck/Extractor';
+import path from 'path';
+import fs from 'fs';
 
-const extractors: BaseExtractor[] = [
-  // Countries
-  kbaExtractor,
-  pfaExtractor,
-  pfaBrandExtractor,
-  unraeExtractor,
-  unraeBrandExtractor,
-  ofvExtractor,
-  bovagExtractor,
-  statistikTotalExtractor,
-  statistikProvisionalExtractor,
-  sdaciaExtractor,
-  mobilityExtractor,
-  autExtractor,
-  samgongustofaExtractor,
-  beepbeepExtractor,
-  pzpmExtractor,
-  autoinformaExtractor,
-  mobilityswedenExtractor,
-  autoswissExtractor,
-  smmtExtractor,
-  smmtModelExtractor,
-  motorIntelligenceExtractor,
-  anfacExtractor,
-  febiacExtractor,
-  cnevTeslaSalesExtractor,
-  seaaExtractor,
-  lustatExtractor,
-  jaiaExtractor,
-  // Tesla IR info
-  shareholderDeckExtractor,
-];
+const extractors: BaseExtractor[] = [];
 
+// Define la ruta base donde están los extractores
+const extractorsPath = path.resolve(__dirname);
+
+// Función recursiva para buscar y cargar todos los extractores
+function loadExtractorsRecursively(dir: string) {
+  fs.readdirSync(dir).forEach((item) => {
+    const fullPath = path.join(dir, item);
+    if (fs.statSync(fullPath).isDirectory()) {
+      // Si es un directorio, busca dentro de él
+      loadExtractorsRecursively(fullPath);
+    } else if (item === 'Extractor.ts' || item === 'Extractor.js') {
+      // Si es un archivo que coincide con el patrón, cárgalo
+      const extractor = require(fullPath).default;
+      if (extractor) {
+        extractors.push(extractor);
+      }
+    }
+  });
+}
+
+// Cargar todos los extractores desde la carpeta base
+loadExtractorsRecursively(extractorsPath);
+
+// Exportar los extractores
 export default extractors;
