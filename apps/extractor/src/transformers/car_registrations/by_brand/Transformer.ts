@@ -26,7 +26,6 @@ class Transformer extends BaseTransformer {
 
     // --------
     // Cargo Austria registrations_by_brand.csv
-    // Nota: Data Tesla OK
     await (async () => {
       const country = 'austria';
       const dataPath = path.join(
@@ -53,7 +52,6 @@ class Transformer extends BaseTransformer {
 
     // --------
     // Cargo Czech Republic registrations_by_brand.csv
-    // Nota: Data Tesla OK
     await (async () => {
       const country = 'czech_republic';
       const dataPath = path.join(
@@ -80,7 +78,6 @@ class Transformer extends BaseTransformer {
 
     // --------
     // Cargo Denmark registrations_by_brand.csv
-    // Nota: Solo hay datos de agosto 2024 en adelante
     await (async () => {
       const country = 'denmark';
       const dataPath = path.join(
@@ -107,7 +104,6 @@ class Transformer extends BaseTransformer {
 
     // --------
     // Cargo Finland top_30_registrations_by_brand.csv
-    // Nota: Data Tesla OK
     await (async () => {
       const country = 'finland';
       const dataPath = path.join(
@@ -134,7 +130,6 @@ class Transformer extends BaseTransformer {
 
     // --------
     // Cargo France registrations_by_brand.csv
-    // Nota: Data Tesla OK
     await (async () => {
       const country = 'france';
       const dataPath = path.join(
@@ -161,7 +156,6 @@ class Transformer extends BaseTransformer {
 
     // --------
     // Cargo Germany registrations_by_model.csv
-    // Nota: Data Tesla OK
     await (async () => {
       const country = 'germany';
       const dataPath = path.join(
@@ -202,7 +196,6 @@ class Transformer extends BaseTransformer {
 
     // --------
     // Cargo Iceland registrations_by_brand.csv
-    // Nota: Data Tesla OK
     await (async () => {
       const country = 'iceland';
       const dataPath = path.join(
@@ -229,7 +222,6 @@ class Transformer extends BaseTransformer {
 
     // --------
     // Cargo Ireland registrations_by_brand.csv
-    // Nota: Data Tesla OK
     await (async () => {
       const country = 'ireland';
       const dataPath = path.join(
@@ -256,7 +248,6 @@ class Transformer extends BaseTransformer {
 
     // --------
     // Cargo Italy registrations_by_brand.csv
-    // Nota: Data Tesla OK
     await (async () => {
       const country = 'italy';
       const dataPath = path.join(
@@ -283,7 +274,6 @@ class Transformer extends BaseTransformer {
 
     // --------
     // Cargo Netherlands registrations_by_model.csv
-    // Nota: Data Tesla OK
     await (async () => {
       const country = 'netherlands';
       const dataPath = path.join(
@@ -310,7 +300,6 @@ class Transformer extends BaseTransformer {
 
     // --------
     // Cargo Norway top_20_registrations_by_brand.csv
-    // Nota: Data Tesla OK
     await (async () => {
       const country = 'norway';
       const dataPath = path.join(
@@ -337,7 +326,6 @@ class Transformer extends BaseTransformer {
 
     // --------
     // Cargo Poland top_10_ytd_bev_registrations_by_brand.csv
-    // Nota: Solo tengo datos de enero 2024 en adelante
     await (async () => {
       const country = 'poland';
       const dataPath = path.join(
@@ -378,7 +366,6 @@ class Transformer extends BaseTransformer {
 
     // --------
     // Cargo Portugal registrations_by_brand.csv
-    // Nota: Solo tengo datos de septiembre de 2024 en adelante
     await (async () => {
       const country = 'portugal';
       const dataPath = path.join(
@@ -405,7 +392,6 @@ class Transformer extends BaseTransformer {
 
     // --------
     // Cargo Sweden registrations_by_model.csv
-    // Nota: Data Tesla OK
     await (async () => {
       const country = 'sweden';
       const dataPath = path.join(
@@ -446,7 +432,6 @@ class Transformer extends BaseTransformer {
 
     // --------
     // Cargo Switzerland ytd_registrations_by_model.csv
-    // Nota: Data Tesla OK
     await (async () => {
       const country = 'switzerland';
       const dataPath = path.join(
@@ -501,8 +486,7 @@ class Transformer extends BaseTransformer {
     })();
 
     // --------
-    // Cargo uk registrations_by_brand.csv
-    // Nota: Data Tesla OK
+    // Cargo UK registrations_by_brand.csv
     await (async () => {
       const country = 'uk';
       const dataPath = path.join(
@@ -528,8 +512,7 @@ class Transformer extends BaseTransformer {
     })();
 
     // --------
-    // Cargo usa registrations_by_brand.csv
-    // Nota: Data Tesla OK
+    // Cargo USA registrations_by_brand.csv
     await (async () => {
       const country = 'usa';
       const dataPath = path.join(
@@ -555,8 +538,7 @@ class Transformer extends BaseTransformer {
     })();
 
     // --------
-    // Cargo spain registrations_by_brand.csv
-    // Nota: Data Tesla OK
+    // Cargo Spain registrations_by_brand.csv
     await (async () => {
       const country = 'spain';
       const dataPath = path.join(
@@ -582,8 +564,7 @@ class Transformer extends BaseTransformer {
     })();
 
     // --------
-    // Cargo belgium registrations_by_brand.csv
-    // Nota: Data Tesla OK
+    // Cargo Belgium registrations_by_brand.csv
     await (async () => {
       const country = 'belgium';
       const dataPath = path.join(
@@ -609,8 +590,7 @@ class Transformer extends BaseTransformer {
     })();
 
     // --------
-    // Cargo china tesla_sales.csv
-    // Nota: Data Tesla OK
+    // Cargo China tesla_sales.csv
     await (async () => {
       const country = 'china';
       const dataPath = path.join(COUNTRIES_PATH, country, 'tesla_sales.csv');
@@ -633,7 +613,6 @@ class Transformer extends BaseTransformer {
 
     // --------
     // Cargo Greece ytd_registrations_by_brand.csv
-    // Nota: Data Tesla OK
     await (async () => {
       const country = 'greece';
       const dataPath = path.join(
@@ -676,7 +655,6 @@ class Transformer extends BaseTransformer {
 
     // --------
     // Cargo Luxembourg registrations_by_brand.csv
-    // Nota: Data Tesla OK
     await (async () => {
       const country = 'luxembourg';
       const dataPath = path.join(
@@ -703,7 +681,6 @@ class Transformer extends BaseTransformer {
 
     // --------
     // Cargo Japan registrations_by_brand.csv
-    // Nota: Data Tesla OK
     await (async () => {
       const country = 'japan';
       const dataPath = path.join(
@@ -732,7 +709,6 @@ class Transformer extends BaseTransformer {
 
     // --------
     // Cargo Israel ytd_registrations_by_brand.csv
-    // Nota: Data Tesla OK
     await (async () => {
       const country = 'israel';
       const dataPath = path.join(
@@ -775,7 +751,6 @@ class Transformer extends BaseTransformer {
 
     // --------
     // Cargo New Zealand registrations_by_brand.csv
-    // Nota: Data Tesla OK
     await (async () => {
       const country = 'new_zealand';
       const dataPath = path.join(
@@ -802,7 +777,6 @@ class Transformer extends BaseTransformer {
 
     // --------
     // Cargo Chile registrations_by_brand.csv
-    // Nota: Data Tesla OK
     await (async () => {
       const country = 'chile';
       const dataPath = path.join(
@@ -829,7 +803,6 @@ class Transformer extends BaseTransformer {
 
     // --------
     // Cargo Australia registrations_by_brand.csv
-    // Nota: Data Tesla OK
     await (async () => {
       const country = 'australia';
       const dataPath = path.join(
@@ -841,6 +814,46 @@ class Transformer extends BaseTransformer {
       data = data.filter((r) => r['brand'] === 'TESLA');
       registrations.push(
         ...data.map((r) => {
+          const result: IBrandRegistrations = {
+            year: r['year'],
+            month: r['month'],
+            country,
+            brand: TESLA_BRAND,
+            registrations: r['registrations'],
+          };
+
+          return result;
+        })
+      );
+    })();
+
+    // --------
+    // Cargo Romania top_ytd_bev_registrations_by_brand.csv
+    await (async () => {
+      const country = 'romania';
+      const dataPath = path.join(
+        COUNTRIES_PATH,
+        country,
+        'top_ytd_bev_registrations_by_brand.csv'
+      );
+      let data = await this.loadSource(dataPath);
+      data = data.filter((r) => r['brand'] === 'TESLA');
+      // Normalizo registrations pq es ytd
+      let beforeRegistrations = 0;
+      const normalized: object[] = [];
+      for (const item of data) {
+        normalized.push({
+          ...item,
+          registrations: item['ytd_registrations'] - beforeRegistrations,
+        });
+
+        beforeRegistrations = item['ytd_registrations'];
+        if (item['month'] === 12) {
+          beforeRegistrations = 0;
+        }
+      }
+      registrations.push(
+        ...normalized.map((r) => {
           const result: IBrandRegistrations = {
             year: r['year'],
             month: r['month'],

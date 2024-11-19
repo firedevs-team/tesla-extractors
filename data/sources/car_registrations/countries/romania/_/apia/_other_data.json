@@ -1,0 +1,90 @@
+{
+  "top_ytd_bev_registrations_by_brand": [
+    {
+      "year": 2024,
+      "month": 2,
+      "brand": "DACIA",
+      "ytd_registrations": 1012
+    },
+    {
+      "year": 2024,
+      "month": 2,
+      "brand": "TESLA",
+      "ytd_registrations": 859
+    },
+    {
+      "year": 2024,
+      "month": 2,
+      "brand": "HYUNDAI",
+      "ytd_registrations": 147
+    },
+    {
+      "year": 2024,
+      "month": 2,
+      "brand": "VOLKSWAGEN",
+      "ytd_registrations": 143
+    },
+    {
+      "year": 2024,
+      "month": 2,
+      "brand": "BMW",
+      "ytd_registrations": 104
+    },
+    {
+      "year": 2024,
+      "month": 2,
+      "brand": "OTHERS",
+      "ytd_registrations": 464
+    },
+
+    {
+      "year": 2024,
+      "month": 1,
+      "brand": "TESLA",
+      "ytd_registrations": 564
+    },
+    {
+      "year": 2024,
+      "month": 1,
+      "brand": "DACIA",
+      "ytd_registrations": 561
+    },
+    {
+      "year": 2024,
+      "month": 1,
+      "brand": "VOLKSWAGEN",
+      "ytd_registrations": 108
+    },
+    {
+      "year": 2024,
+      "month": 1,
+      "brand": "HYUNDAI",
+      "ytd_registrations": 75
+    },
+    {
+      "year": 2024,
+      "month": 1,
+      "brand": "BMW",
+      "ytd_registrations": 61
+    },
+    {
+      "year": 2024,
+      "month": 1,
+      "brand": "OTHERS",
+      "ytd_registrations": 262
+    },
+
+    { "year": 2023, "month": 1, "brand": "TESLA", "ytd_registrations": 88 },
+    { "year": 2023, "month": 2, "brand": "TESLA", "ytd_registrations": 140 },
+    { "year": 2023, "month": 3, "brand": "TESLA", "ytd_registrations": 274 },
+    { "year": 2023, "month": 4, "brand": "TESLA", "ytd_registrations": 534 },
+    { "year": 2023, "month": 5, "brand": "TESLA", "ytd_registrations": 782 },
+    { "year": 2023, "month": 6, "brand": "TESLA", "ytd_registrations": 1105 },
+    { "year": 2023, "month": 7, "brand": "TESLA", "ytd_registrations": 1739 },
+    { "year": 2023, "month": 8, "brand": "TESLA", "ytd_registrations": 2248 },
+    { "year": 2023, "month": 9, "brand": "TESLA", "ytd_registrations": 2487 },
+    { "year": 2023, "month": 10, "brand": "TESLA", "ytd_registrations": 2705 },
+    { "year": 2023, "month": 11, "brand": "TESLA", "ytd_registrations": 2903 },
+    { "year": 2023, "month": 12, "brand": "TESLA", "ytd_registrations": 3154 }
+  ]
+}
