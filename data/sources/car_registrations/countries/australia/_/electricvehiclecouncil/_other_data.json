@@ -1,0 +1,76 @@
+{
+  "registrations_by_brand": [
+    {
+      "year": 2023,
+      "month": 12,
+      "brand": "TESLA",
+      "registrations": 2192
+    },
+    {
+      "year": 2023,
+      "month": 11,
+      "brand": "TESLA",
+      "registrations": 3939
+    },
+    {
+      "year": 2023,
+      "month": 10,
+      "brand": "TESLA",
+      "registrations": 1988
+    },
+    {
+      "year": 2023,
+      "month": 9,
+      "brand": "TESLA",
+      "registrations": 5177
+    },
+    {
+      "year": 2023,
+      "month": 8,
+      "brand": "TESLA",
+      "registrations": 3309
+    },
+    {
+      "year": 2023,
+      "month": 7,
+      "brand": "TESLA",
+      "registrations": 3934
+    },
+    {
+      "year": 2023,
+      "month": 6,
+      "brand": "TESLA",
+      "registrations": 7018
+    },
+    {
+      "year": 2023,
+      "month": 5,
+      "brand": "TESLA",
+      "registrations": 4476
+    },
+    {
+      "year": 2023,
+      "month": 4,
+      "brand": "TESLA",
+      "registrations": 3676
+    },
+    {
+      "year": 2023,
+      "month": 3,
+      "brand": "TESLA",
+      "registrations": 3578
+    },
+    {
+      "year": 2023,
+      "month": 2,
+      "brand": "TESLA",
+      "registrations": 3516
+    },
+    {
+      "year": 2023,
+      "month": 1,
+      "brand": "TESLA",
+      "registrations": 3313
+    }
+  ]
+}

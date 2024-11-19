@@ -153,9 +153,7 @@ class Extractor extends MonthExtractor {
     ];
   }
 
-  async debug() {
-    await this.extract();
-  }
+  async debug() {}
 
   private checkIfDataIsAvailable = async (
     dateId: MonthDateId

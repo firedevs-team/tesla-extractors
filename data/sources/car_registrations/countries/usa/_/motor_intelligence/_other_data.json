@@ -1,0 +1,13 @@
+{
+  "registrations_by_brand": [
+    {
+      "year": 2023,
+      "month": 4,
+      "brand": "TESLA",
+      "car_registrations": 0,
+      "truck_registrations": 0,
+      "registrations": 56887,
+      "is_estimated": true
+    }
+  ]
+}

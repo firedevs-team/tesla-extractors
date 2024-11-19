@@ -185,8 +185,10 @@ export abstract class BaseExtractor<C extends Config = Config> {
     // Cargo los archivos de downloads
     let downloads = await readdir(this.downloadsPath);
 
-    // Ignore .DS_Store files
-    downloads = downloads.filter((download) => !download.startsWith('.'));
+    // Ignore .DS_Store files y ficheros que empiezan por _
+    downloads = downloads.filter(
+      (download) => !(download.startsWith('.') || download.startsWith('_'))
+    );
 
     // Creo download data que tiene mas info de los archivos
     const downloadData: { dateId: DateId; data: Buffer }[] = [];

@@ -1,0 +1,127 @@
+{
+  "registrations_by_brand": [
+    {
+      "year": 2024,
+      "month": 7,
+      "brand": "TESLA",
+      "registrations": 706,
+      "market_share": 6.1
+    },
+    {
+      "year": 2024,
+      "month": 6,
+      "brand": "TESLA",
+      "registrations": 3337,
+      "market_share": 17.1
+    },
+    {
+      "year": 2024,
+      "month": 5,
+      "brand": "TESLA",
+      "registrations": 1066,
+      "market_share": 7.3
+    },
+    {
+      "year": 2024,
+      "month": 4,
+      "brand": "TESLA",
+      "registrations": 549,
+      "market_share": 3.6
+    },
+    {
+      "year": 2024,
+      "month": 3,
+      "brand": "TESLA",
+      "registrations": 1724,
+      "market_share": 9.9
+    },
+    {
+      "year": 2024,
+      "month": 2,
+      "brand": "TESLA",
+      "registrations": 1071
+    },
+    {
+      "year": 2024,
+      "month": 1,
+      "brand": "TESLA",
+      "registrations": 763,
+      "market_share": 8.6
+    },
+    {
+      "year": 2023,
+      "month": 12,
+      "brand": "TESLA",
+      "registrations": 4069,
+      "market_share": 21.2
+    },
+    {
+      "year": 2023,
+      "month": 11,
+      "brand": "TESLA",
+      "registrations": 2427,
+      "market_share": 8.7
+    },
+    {
+      "year": 2023,
+      "month": 10,
+      "brand": "TESLA",
+      "registrations": 780,
+      "market_share": 5.9
+    },
+    {
+      "year": 2023,
+      "month": 9,
+      "brand": "TESLA",
+      "registrations": 2425
+    },
+    {
+      "year": 2023,
+      "month": 8,
+      "brand": "TESLA",
+      "registrations": 1390
+    },
+    {
+      "year": 2023,
+      "month": 7,
+      "brand": "TESLA",
+      "registrations": 830
+    },
+    {
+      "year": 2023,
+      "month": 6,
+      "brand": "TESLA",
+      "registrations": 2827
+    },
+    {
+      "year": 2023,
+      "month": 5,
+      "brand": "TESLA",
+      "registrations": 1431
+    },
+    {
+      "year": 2023,
+      "month": 4,
+      "brand": "TESLA",
+      "registrations": 932
+    },
+    {
+      "year": 2023,
+      "month": 3,
+      "brand": "TESLA",
+      "registrations": 3675
+    },
+    {
+      "year": 2023,
+      "month": 2,
+      "brand": "TESLA",
+      "registrations": 1051
+    },
+    {
+      "year": 2023,
+      "month": 1,
+      "brand": "TESLA",
+      "registrations": 499
+    }
+  ]
+}

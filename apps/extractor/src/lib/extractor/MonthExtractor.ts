@@ -1,3 +1,4 @@
+import path from 'path';
 import {
   BaseExtractor,
   Config,
@@ -5,6 +6,16 @@ import {
   FileData,
   FileOuput,
 } from './BaseExtractor';
+import fs from 'fs';
+import { readFile, writeFile } from 'fs/promises';
+import Papa from 'papaparse';
+import { Parser } from 'json2csv';
+import chalk from 'chalk';
+
+interface MonthData {
+  year: number;
+  month: number;
+}
 
 interface MonthConfig extends Config {
   published_day?: number;
@@ -76,4 +87,42 @@ export abstract class MonthExtractor extends BaseExtractor<MonthConfig> {
     dateId: MonthDateId,
     fileData: FileData
   ): Promise<FileOuput[]>;
+
+  async reindex(): Promise<void> {
+    await super.reindex();
+
+    // Debo agregar _other_data.json al output
+    const otherDatafileName = '_other_data.json';
+    const otherDataPath = path.join(this.downloadsPath, otherDatafileName);
+    if (fs.existsSync(otherDataPath)) {
+      const otherDataRaw = await readFile(otherDataPath, 'utf-8');
+      const otherData: Record<string, MonthData[]> = JSON.parse(otherDataRaw);
+
+      for (const key of Object.keys(otherData)) {
+        const outputPath = path.join(this.dataPath, `${key}.csv`);
+        const outputRaw = await readFile(outputPath, 'utf-8');
+        const outputParsed = Papa.parse<MonthData>(outputRaw, {
+          header: true,
+          dynamicTyping: true,
+        });
+
+        const otherOutputData = otherData[key];
+        const finalData = [...outputParsed.data, ...otherOutputData]
+          // Ordeno por año y mes
+          .sort((a, b) => {
+            if (a.year === b.year) {
+              return a.month - b.month;
+            }
+
+            return a.year - b.year;
+          });
+
+        const json2csvParser = new Parser({});
+        const csv = json2csvParser.parse(finalData);
+        await writeFile(outputPath, csv);
+
+        console.log(`> ${chalk.green(`Saved [${otherDatafileName}] ${key}`)}`);
+      }
+    }
+  }
 }

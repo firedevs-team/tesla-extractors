@@ -7,7 +7,6 @@ import chalk from 'chalk';
 
 const COUNTRIES_PATH = path.join('car_registrations', 'countries');
 const TESLA_BRAND = 'TESLA';
-const ALLOW_PARTIAL = true;
 
 interface IBrandRegistrations {
   year: number;
@@ -79,34 +78,32 @@ class Transformer extends BaseTransformer {
       );
     })();
 
-    if (ALLOW_PARTIAL) {
-      // --------
-      // Cargo Denmark registrations_by_brand.csv
-      // Nota: Solo hay datos de agosto 2024 en adelante
-      await (async () => {
-        const country = 'denmark';
-        const dataPath = path.join(
-          COUNTRIES_PATH,
-          country,
-          'registrations_by_brand.csv'
-        );
-        let data = await this.loadSource(dataPath);
-        data = data.filter((r) => r['brand'] === 'TESLA');
-        registrations.push(
-          ...data.map((r) => {
-            const result: IBrandRegistrations = {
-              year: r['year'],
-              month: r['month'],
-              country,
-              brand: TESLA_BRAND,
-              registrations: r['registrations'],
-            };
+    // --------
+    // Cargo Denmark registrations_by_brand.csv
+    // Nota: Solo hay datos de agosto 2024 en adelante
+    await (async () => {
+      const country = 'denmark';
+      const dataPath = path.join(
+        COUNTRIES_PATH,
+        country,
+        'registrations_by_brand.csv'
+      );
+      let data = await this.loadSource(dataPath);
+      data = data.filter((r) => r['brand'] === 'TESLA');
+      registrations.push(
+        ...data.map((r) => {
+          const result: IBrandRegistrations = {
+            year: r['year'],
+            month: r['month'],
+            country,
+            brand: TESLA_BRAND,
+            registrations: r['registrations'],
+          };
 
-            return result;
-          })
-        );
-      })();
-    }
+          return result;
+        })
+      );
+    })();
 
     // --------
     // Cargo Finland top_30_registrations_by_brand.csv
@@ -338,77 +335,73 @@ class Transformer extends BaseTransformer {
       );
     })();
 
-    if (ALLOW_PARTIAL) {
-      // --------
-      // Cargo Poland top_10_ytd_bev_registrations_by_brand.csv
-      // Nota: Solo tengo datos de enero 2024 en adelante
-      await (async () => {
-        const country = 'poland';
-        const dataPath = path.join(
-          COUNTRIES_PATH,
-          country,
-          'top_10_ytd_bev_registrations_by_brand.csv'
-        );
-        let data = await this.loadSource(dataPath);
-        data = data.filter((r) => r['brand'] === 'TESLA');
-        // Normalizo registrations pq es ytd
-        let beforeRegistrations = 0;
-        const normalized: object[] = [];
-        for (const item of data) {
-          normalized.push({
-            ...item,
-            registrations: item['ytd_registrations'] - beforeRegistrations,
-          });
+    // --------
+    // Cargo Poland top_10_ytd_bev_registrations_by_brand.csv
+    // Nota: Solo tengo datos de enero 2024 en adelante
+    await (async () => {
+      const country = 'poland';
+      const dataPath = path.join(
+        COUNTRIES_PATH,
+        country,
+        'top_10_ytd_bev_registrations_by_brand.csv'
+      );
+      let data = await this.loadSource(dataPath);
+      data = data.filter((r) => r['brand'] === 'TESLA');
+      // Normalizo registrations pq es ytd
+      let beforeRegistrations = 0;
+      const normalized: object[] = [];
+      for (const item of data) {
+        normalized.push({
+          ...item,
+          registrations: item['ytd_registrations'] - beforeRegistrations,
+        });
 
-          beforeRegistrations = item['ytd_registrations'];
-          if (item['month'] === 12) {
-            beforeRegistrations = 0;
-          }
+        beforeRegistrations = item['ytd_registrations'];
+        if (item['month'] === 12) {
+          beforeRegistrations = 0;
         }
-        registrations.push(
-          ...normalized.map((r) => {
-            const result: IBrandRegistrations = {
-              year: r['year'],
-              month: r['month'],
-              country,
-              brand: TESLA_BRAND,
-              registrations: r['registrations'],
-            };
+      }
+      registrations.push(
+        ...normalized.map((r) => {
+          const result: IBrandRegistrations = {
+            year: r['year'],
+            month: r['month'],
+            country,
+            brand: TESLA_BRAND,
+            registrations: r['registrations'],
+          };
 
-            return result;
-          })
-        );
-      })();
-    }
+          return result;
+        })
+      );
+    })();
 
-    if (ALLOW_PARTIAL) {
-      // --------
-      // Cargo Portugal registrations_by_brand.csv
-      // Nota: Solo tengo datos de septiembre de 2024 en adelante
-      await (async () => {
-        const country = 'portugal';
-        const dataPath = path.join(
-          COUNTRIES_PATH,
-          country,
-          'registrations_by_brand.csv'
-        );
-        let data = await this.loadSource(dataPath);
-        data = data.filter((r) => r['brand'] === 'TESLA');
-        registrations.push(
-          ...data.map((r) => {
-            const result: IBrandRegistrations = {
-              year: r['year'],
-              month: r['month'],
-              country,
-              brand: TESLA_BRAND,
-              registrations: r['registrations'],
-            };
+    // --------
+    // Cargo Portugal registrations_by_brand.csv
+    // Nota: Solo tengo datos de septiembre de 2024 en adelante
+    await (async () => {
+      const country = 'portugal';
+      const dataPath = path.join(
+        COUNTRIES_PATH,
+        country,
+        'registrations_by_brand.csv'
+      );
+      let data = await this.loadSource(dataPath);
+      data = data.filter((r) => r['brand'] === 'TESLA');
+      registrations.push(
+        ...data.map((r) => {
+          const result: IBrandRegistrations = {
+            year: r['year'],
+            month: r['month'],
+            country,
+            brand: TESLA_BRAND,
+            registrations: r['registrations'],
+          };
 
-            return result;
-          })
-        );
-      })();
-    }
+          return result;
+        })
+      );
+    })();
 
     // --------
     // Cargo Sweden registrations_by_model.csv
@@ -534,34 +527,32 @@ class Transformer extends BaseTransformer {
       );
     })();
 
-    if (ALLOW_PARTIAL) {
-      // --------
-      // Cargo usa registrations_by_brand.csv
-      // Nota: Data Tesla OK
-      await (async () => {
-        const country = 'usa';
-        const dataPath = path.join(
-          COUNTRIES_PATH,
-          country,
-          'registrations_by_brand.csv'
-        );
-        let data = await this.loadSource(dataPath);
-        data = data.filter((r) => r['brand'] === 'TESLA');
-        registrations.push(
-          ...data.map((r) => {
-            const result: IBrandRegistrations = {
-              year: r['year'],
-              month: r['month'],
-              country,
-              brand: TESLA_BRAND,
-              registrations: r['registrations'],
-            };
+    // --------
+    // Cargo usa registrations_by_brand.csv
+    // Nota: Data Tesla OK
+    await (async () => {
+      const country = 'usa';
+      const dataPath = path.join(
+        COUNTRIES_PATH,
+        country,
+        'registrations_by_brand.csv'
+      );
+      let data = await this.loadSource(dataPath);
+      data = data.filter((r) => r['brand'] === 'TESLA');
+      registrations.push(
+        ...data.map((r) => {
+          const result: IBrandRegistrations = {
+            year: r['year'],
+            month: r['month'],
+            country,
+            brand: TESLA_BRAND,
+            registrations: r['registrations'],
+          };
 
-            return result;
-          })
-        );
-      })();
-    }
+          return result;
+        })
+      );
+    })();
 
     // --------
     // Cargo spain registrations_by_brand.csv
