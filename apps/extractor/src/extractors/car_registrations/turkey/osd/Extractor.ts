@@ -103,10 +103,16 @@ class Extractor extends MonthExtractor {
         }
       }
     }
+    if (startIndex === -1) {
+      throw new Error('Start index not found');
+    }
     texts = texts.slice(startIndex + 1);
     const endIndex = texts.findIndex((text) =>
       text.data.R[0].T.startsWith('GENEL')
     );
+    if (endIndex === -1) {
+      throw new Error('End index not found');
+    }
     texts = texts.slice(0, endIndex);
 
     // Creo rows usando coordenas y una tolerancia
