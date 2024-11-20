@@ -1,0 +1,28 @@
+{
+  "registrations_by_brand": [
+    {
+      "year": 2023,
+      "month": 8,
+      "brand": "TESLA",
+      "registrations": 3000
+    },
+    {
+      "year": 2023,
+      "month": 7,
+      "brand": "TESLA",
+      "registrations": 1500
+    },
+    {
+      "year": 2023,
+      "month": 6,
+      "brand": "TESLA",
+      "registrations": 800
+    },
+    {
+      "year": 2023,
+      "month": 5,
+      "brand": "TESLA",
+      "registrations": 200
+    }
+  ]
+}
