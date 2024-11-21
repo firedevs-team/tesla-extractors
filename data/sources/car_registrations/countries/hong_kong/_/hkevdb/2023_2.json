@@ -1,0 +1,298 @@
+{
+  "by_brand": [
+    {
+      "brand": "TESLA",
+      "registrations": "1421"
+    },
+    {
+      "brand": "B.M.W.",
+      "registrations": "387"
+    },
+    {
+      "brand": "MERCEDES BENZ",
+      "registrations": "194"
+    },
+    {
+      "brand": "PORSCHE",
+      "registrations": "161"
+    },
+    {
+      "brand": "KIA",
+      "registrations": "123"
+    },
+    {
+      "brand": "M.G.",
+      "registrations": "99"
+    },
+    {
+      "brand": "BYD",
+      "registrations": "87"
+    },
+    {
+      "brand": "VOLVO",
+      "registrations": "62"
+    },
+    {
+      "brand": "NISSAN",
+      "registrations": "23"
+    },
+    {
+      "brand": "POLESTAR",
+      "registrations": "19"
+    },
+    {
+      "brand": "AUDI",
+      "registrations": "16"
+    },
+    {
+      "brand": "HYUNDAI",
+      "registrations": "10"
+    },
+    {
+      "brand": "MINI",
+      "registrations": "6"
+    },
+    {
+      "brand": "FIAT",
+      "registrations": "4"
+    },
+    {
+      "brand": "PEUGEOT",
+      "registrations": "1"
+    }
+  ],
+  "by_model": [
+    {
+      "model": "MODEL Y RWD",
+      "registrations": "1218"
+    },
+    {
+      "model": "I4 M50 GRAN COUPE (G26)",
+      "registrations": "182"
+    },
+    {
+      "model": "MODEL 3 RWD",
+      "registrations": "163"
+    },
+    {
+      "model": "TAYCAN",
+      "registrations": "141"
+    },
+    {
+      "model": "IX XDRIVE40 (I20)",
+      "registrations": "139"
+    },
+    {
+      "model": "MG ZS EV",
+      "registrations": "89"
+    },
+    {
+      "model": "ATTO 3",
+      "registrations": "81"
+    },
+    {
+      "model": "EQA 250 (H243)",
+      "registrations": "74"
+    },
+    {
+      "model": "EQB 250 (X243)",
+      "registrations": "67"
+    },
+    {
+      "model": "EV6 DELUXE",
+      "registrations": "64"
+    },
+    {
+      "model": "IX3 M SPORT EDITION (G08)",
+      "registrations": "61"
+    },
+    {
+      "model": "XC40 P6 RECHARGE PRO",
+      "registrations": "36"
+    },
+    {
+      "model": "EV6",
+      "registrations": "23"
+    },
+    {
+      "model": "EQE 350+ (V295)",
+      "registrations": "23"
+    },
+    {
+      "model": "EV6 GT-LINE",
+      "registrations": "17"
+    },
+    {
+      "model": "NIRO EV DELUXE",
+      "registrations": "16"
+    },
+    {
+      "model": "TAYCAN 4 CROSS TURISMO",
+      "registrations": "15"
+    },
+    {
+      "model": "MODEL Y LONG RANGE DUAL MOTOR ALL WHEEL DRIVE",
+      "registrations": "15"
+    },
+    {
+      "model": "MODEL Y PERFORMANCE DUAL MOTOR ALL WHEEL DRIVE",
+      "registrations": "14"
+    },
+    {
+      "model": "XC40 P8 RECHARGE PRO",
+      "registrations": "13"
+    },
+    {
+      "model": "POLESTAR 2 STANDARD RANGE SINGLE MOTOR",
+      "registrations": "13"
+    },
+    {
+      "model": "EQA 350 4MATIC (H243)",
+      "registrations": "13"
+    },
+    {
+      "model": "EQS 450+ (V297)",
+      "registrations": "12"
+    },
+    {
+      "model": "LEAF LUX",
+      "registrations": "11"
+    },
+    {
+      "model": "MG5 SW EV",
+      "registrations": "10"
+    },
+    {
+      "model": "LEAF",
+      "registrations": "10"
+    },
+    {
+      "model": "MODEL 3 LONG RANGE DUAL MOTOR ALL WHEEL DRIVE",
+      "registrations": "7"
+    },
+    {
+      "model": "E-TRON 55 QUATTRO",
+      "registrations": "7"
+    },
+    {
+      "model": "C40 P8 RECHARGE PRO",
+      "registrations": "7"
+    },
+    {
+      "model": "MINI COOPER S E AUTOMATIC (F56)",
+      "registrations": "6"
+    },
+    {
+      "model": "E6",
+      "registrations": "6"
+    },
+    {
+      "model": "E-TRON 50 QUATTRO",
+      "registrations": "6"
+    },
+    {
+      "model": "C40 P6 RECHARGE PRO",
+      "registrations": "6"
+    },
+    {
+      "model": "POLESTAR 2 LONG RANGE SINGLE MOTOR",
+      "registrations": "4"
+    },
+    {
+      "model": "MODEL 3 PERFORMANCE DUAL MOTOR ALL WHEEL DRIVE",
+      "registrations": "4"
+    },
+    {
+      "model": "I4 EDRIVE40 GRAN COUPE M SPORT EDITION (G26)",
+      "registrations": "4"
+    },
+    {
+      "model": "NEW 500 ELECTRIC HATCHBACK LA PRIMA",
+      "registrations": "3"
+    },
+    {
+      "model": "KONA ELECTRIC PE (URBAN)",
+      "registrations": "3"
+    },
+    {
+      "model": "KONA ELECTRIC",
+      "registrations": "3"
+    },
+    {
+      "model": "TAYCAN GTS",
+      "registrations": "2"
+    },
+    {
+      "model": "TAYCAN 4S CROSS TURISMO",
+      "registrations": "2"
+    },
+    {
+      "model": "SOUL EV+",
+      "registrations": "2"
+    },
+    {
+      "model": "POLESTAR 2 LONG RANGE DUAL MOTOR",
+      "registrations": "2"
+    },
+    {
+      "model": "MERCEDES-AMG EQE43 4M (V295)",
+      "registrations": "2"
+    },
+    {
+      "model": "IONIQ ELECTRIC",
+      "registrations": "2"
+    },
+    {
+      "model": "EQC 400 4MATIC (N293)",
+      "registrations": "2"
+    },
+    {
+      "model": "E-TRON GT",
+      "registrations": "2"
+    },
+    {
+      "model": "TAYCAN 4S",
+      "registrations": "1"
+    },
+    {
+      "model": "RS E-TRON GT",
+      "registrations": "1"
+    },
+    {
+      "model": "NIRO EV",
+      "registrations": "1"
+    },
+    {
+      "model": "NEW 500 ELECTRIC HATCHBACK ICON",
+      "registrations": "1"
+    },
+    {
+      "model": "LEAF NISMO",
+      "registrations": "1"
+    },
+    {
+      "model": "LEAF E+G",
+      "registrations": "1"
+    },
+    {
+      "model": "KONA ELECTRIC RANGE+",
+      "registrations": "1"
+    },
+    {
+      "model": "IONIQ 5 R+",
+      "registrations": "1"
+    },
+    {
+      "model": "I7 XDRIVE60 (G70)",
+      "registrations": "1"
+    },
+    {
+      "model": "EQV300 LONG",
+      "registrations": "1"
+    },
+    {
+      "model": "E-TRAVELLER 8-SEATER MPV",
+      "registrations": "1"
+    }
+  ]
+}

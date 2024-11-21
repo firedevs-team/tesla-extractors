@@ -894,6 +894,32 @@ class Transformer extends BaseTransformer {
     })();
 
     // --------
+    // Cargo Hong Kong registrations_by_brand.csv
+    await (async () => {
+      const country = 'hong_kong';
+      const dataPath = path.join(
+        COUNTRIES_PATH,
+        country,
+        'registrations_by_brand.csv'
+      );
+      let data = await this.loadSource(dataPath);
+      data = data.filter((r) => r['brand'] === 'TESLA');
+      registrations.push(
+        ...data.map((r) => {
+          const result: IBrandRegistrations = {
+            year: r['year'],
+            month: r['month'],
+            country,
+            brand: TESLA_BRAND,
+            registrations: r['registrations'],
+          };
+
+          return result;
+        })
+      );
+    })();
+
+    // --------
     // Salvo registrations_by_brand.csv
     const json2csvParser = new Parser();
     const csv = json2csvParser.parse(registrations);

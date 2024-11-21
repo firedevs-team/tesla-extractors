@@ -1,0 +1,346 @@
+{
+  "by_brand": [
+    {
+      "brand": "TESLA",
+      "registrations": "647"
+    },
+    {
+      "brand": "B.M.W.",
+      "registrations": "402"
+    },
+    {
+      "brand": "MERCEDES BENZ",
+      "registrations": "376"
+    },
+    {
+      "brand": "BYD",
+      "registrations": "243"
+    },
+    {
+      "brand": "M.G.",
+      "registrations": "139"
+    },
+    {
+      "brand": "HYUNDAI",
+      "registrations": "99"
+    },
+    {
+      "brand": "LEXUS",
+      "registrations": "82"
+    },
+    {
+      "brand": "PORSCHE",
+      "registrations": "64"
+    },
+    {
+      "brand": "KIA",
+      "registrations": "51"
+    },
+    {
+      "brand": "ORA",
+      "registrations": "45"
+    },
+    {
+      "brand": "NISSAN",
+      "registrations": "36"
+    },
+    {
+      "brand": "MAXUS",
+      "registrations": "34"
+    },
+    {
+      "brand": "POLESTAR",
+      "registrations": "19"
+    },
+    {
+      "brand": "AUDI",
+      "registrations": "16"
+    },
+    {
+      "brand": "MINI",
+      "registrations": "15"
+    },
+    {
+      "brand": "VOLVO",
+      "registrations": "7"
+    },
+    {
+      "brand": "TOYOTA",
+      "registrations": "1"
+    }
+  ],
+  "by_model": [
+    {
+      "model": "MODEL Y RWD",
+      "registrations": "477"
+    },
+    {
+      "model": "ATTO 3",
+      "registrations": "242"
+    },
+    {
+      "model": "EQB 250 (X243)",
+      "registrations": "194"
+    },
+    {
+      "model": "IX1 XDRIVE30 M SPORT EDITION (U11)",
+      "registrations": "99"
+    },
+    {
+      "model": "MG ZS EV",
+      "registrations": "90"
+    },
+    {
+      "model": "RZ450E",
+      "registrations": "82"
+    },
+    {
+      "model": "MODEL 3 RWD",
+      "registrations": "77"
+    },
+    {
+      "model": "EQA 350 4MATIC (H243)",
+      "registrations": "75"
+    },
+    {
+      "model": "IX3 M SPORT EDITION (G08)",
+      "registrations": "65"
+    },
+    {
+      "model": "IX1 XDRIVE30 XLINE (U11)",
+      "registrations": "63"
+    },
+    {
+      "model": "EQE 350+ (V295)",
+      "registrations": "63"
+    },
+    {
+      "model": "IX XDRIVE40 (I20)",
+      "registrations": "50"
+    },
+    {
+      "model": "MODEL Y PERFORMANCE DUAL MOTOR ALL WHEEL DRIVE",
+      "registrations": "46"
+    },
+    {
+      "model": "MG4 ELECTRIC",
+      "registrations": "46"
+    },
+    {
+      "model": "EQA 250 (H243)",
+      "registrations": "41"
+    },
+    {
+      "model": "TAYCAN 4 CROSS TURISMO",
+      "registrations": "36"
+    },
+    {
+      "model": "IONIQ 6 RANGE+ AWD",
+      "registrations": "35"
+    },
+    {
+      "model": "I4 EDRIVE35 M SPORT EDITION (G26)",
+      "registrations": "34"
+    },
+    {
+      "model": "IONIQ 5 RANGE+ AWD",
+      "registrations": "31"
+    },
+    {
+      "model": "I4 EDRIVE35 (G26)",
+      "registrations": "29"
+    },
+    {
+      "model": "TAYCAN",
+      "registrations": "27"
+    },
+    {
+      "model": "IONIQ 5 RANGE+",
+      "registrations": "27"
+    },
+    {
+      "model": "I4 EDRIVE40 GRAN COUPE M SPORT EDITION (G26)",
+      "registrations": "27"
+    },
+    {
+      "model": "FUNKY CAT 300",
+      "registrations": "20"
+    },
+    {
+      "model": "MODEL Y LONG RANGE DUAL MOTOR ALL WHEEL DRIVE",
+      "registrations": "19"
+    },
+    {
+      "model": "MODEL 3 LONG RANGE DUAL MOTOR ALL WHEEL DRIVE",
+      "registrations": "18"
+    },
+    {
+      "model": "MIFA 9 LUXURY",
+      "registrations": "18"
+    },
+    {
+      "model": "LEAF",
+      "registrations": "18"
+    },
+    {
+      "model": "FUNKY CAT 400 PRO",
+      "registrations": "17"
+    },
+    {
+      "model": "NIRO EV DELUXE",
+      "registrations": "15"
+    },
+    {
+      "model": "MINI COOPER S E AUTOMATIC (F56)",
+      "registrations": "15"
+    },
+    {
+      "model": "IX XDRIVE50 (I20)",
+      "registrations": "15"
+    },
+    {
+      "model": "EV6",
+      "registrations": "14"
+    },
+    {
+      "model": "MIFA 9 PREMIUM",
+      "registrations": "13"
+    },
+    {
+      "model": "I4 M50 GRAN COUPE (G26)",
+      "registrations": "12"
+    },
+    {
+      "model": "LEAF LUX",
+      "registrations": "11"
+    },
+    {
+      "model": "EV6 DELUXE",
+      "registrations": "11"
+    },
+    {
+      "model": "Q8 50 E-TRON",
+      "registrations": "10"
+    },
+    {
+      "model": "POLESTAR 2 STANDARD RANGE SINGLE MOTOR",
+      "registrations": "10"
+    },
+    {
+      "model": "MODEL 3 PERFORMANCE DUAL MOTOR ALL WHEEL DRIVE",
+      "registrations": "10"
+    },
+    {
+      "model": "POLESTAR 2 LONG RANGE DUAL MOTOR",
+      "registrations": "8"
+    },
+    {
+      "model": "FUNKY CAT 400 GT",
+      "registrations": "8"
+    },
+    {
+      "model": "EV6 GT-LINE",
+      "registrations": "6"
+    },
+    {
+      "model": "SOUL EV+",
+      "registrations": "5"
+    },
+    {
+      "model": "KONA ELECTRIC",
+      "registrations": "5"
+    },
+    {
+      "model": "Q8 SPORTBACK 55 E-TRON",
+      "registrations": "4"
+    },
+    {
+      "model": "LEAF X",
+      "registrations": "4"
+    },
+    {
+      "model": "I4 EDRIVE40 GRAN COUPE (G26)",
+      "registrations": "4"
+    },
+    {
+      "model": "MG5 SW EV",
+      "registrations": "3"
+    },
+    {
+      "model": "C40 P8 RECHARGE",
+      "registrations": "3"
+    },
+    {
+      "model": "XC40 P8 RECHARGE PRO",
+      "registrations": "2"
+    },
+    {
+      "model": "MIFA 9 ELITE",
+      "registrations": "2"
+    },
+    {
+      "model": "I7 XDRIVE60 M SPORT EDITION (G70)",
+      "registrations": "2"
+    },
+    {
+      "model": "I7 XDRIVE60 (G70)",
+      "registrations": "2"
+    },
+    {
+      "model": "EQV300 LONG",
+      "registrations": "2"
+    },
+    {
+      "model": "C40 P6 RECHARGE PRO",
+      "registrations": "2"
+    },
+    {
+      "model": "TAYCAN GTS",
+      "registrations": "1"
+    },
+    {
+      "model": "POLESTAR 2 LONG RANGE DUAL MOTOR SE",
+      "registrations": "1"
+    },
+    {
+      "model": "MIFA9 PREMIUM",
+      "registrations": "1"
+    },
+    {
+      "model": "MERCEDES-AMG EQE43 4M (V295)",
+      "registrations": "1"
+    },
+    {
+      "model": "LEAF S",
+      "registrations": "1"
+    },
+    {
+      "model": "LEAF E+G",
+      "registrations": "1"
+    },
+    {
+      "model": "LEAF E+ G",
+      "registrations": "1"
+    },
+    {
+      "model": "IONIQ 5 R+",
+      "registrations": "1"
+    },
+    {
+      "model": "E6",
+      "registrations": "1"
+    },
+    {
+      "model": "E-TRON GT",
+      "registrations": "1"
+    },
+    {
+      "model": "E-TRON 50 QUATTRO",
+      "registrations": "1"
+    },
+    {
+      "model": "BZ4X PURE",
+      "registrations": "1"
+    }
+  ]
+}
