@@ -1,0 +1,5474 @@
+[
+  {
+    "month": "2024-09",
+    "make": "ALFA ROMEO",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "ALFA ROMEO",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "ASTON MARTIN",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "AUDI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "AUDI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Hatchback",
+    "number": 8
+  },
+  {
+    "month": "2024-09",
+    "make": "AUDI",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "AUDI",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "AUDI",
+    "importer_type": "PI",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "AUDI",
+    "importer_type": "PI",
+    "fuel_type": "Petrol-Electric (Plug-In)",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "AUSTIN",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "B.M.W.",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Hatchback",
+    "number": 55
+  },
+  {
+    "month": "2024-09",
+    "make": "B.M.W.",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "B.M.W.",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "B.M.W.",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "B.M.W.",
+    "importer_type": "PI",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "B.M.W.",
+    "importer_type": "PI",
+    "fuel_type": "Electric",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "BENTLEY",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "BYD",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Hatchback",
+    "number": 7
+  },
+  {
+    "month": "2024-09",
+    "make": "CHERY",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "CITROEN",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "FERRARI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "FERRARI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric (Plug-In)",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "FERRARI",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "GAC",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "GREAT WALL",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Hatchback",
+    "number": 6
+  },
+  {
+    "month": "2024-09",
+    "make": "HONDA",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "HONDA",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Hatchback",
+    "number": 30
+  },
+  {
+    "month": "2024-09",
+    "make": "HONDA",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Hatchback",
+    "number": 10
+  },
+  {
+    "month": "2024-09",
+    "make": "HONDA",
+    "importer_type": "PI",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "HONDA",
+    "importer_type": "PI",
+    "fuel_type": "Electric",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "HYUNDAI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "HYUNDAI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "HYUNDAI",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "JAGUAR",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "JAGUAR",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "JEEP",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "JEEP",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "KIA",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "KIA",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "LAMBORGHINI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric (Plug-In)",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "LAMBORGHINI",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "LAND ROVER",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "LAND ROVER",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "LAND ROVER",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric (Plug-In)",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "LAND ROVER",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "LOTUS",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "LOTUS",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "M.G.",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "M.G.",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Hatchback",
+    "number": 11
+  },
+  {
+    "month": "2024-09",
+    "make": "MASERATI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MASERATI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MASERATI",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MAXUS",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MAZDA",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Hatchback",
+    "number": 1
+  },
+  {
+    "month": "2024-09",
+    "make": "MAZDA",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Hatchback",
+    "number": 3
+  },
+  {
+    "month": "2024-09",
+    "make": "MCLAREN",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MERCEDES BENZ",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MERCEDES BENZ",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Hatchback",
+    "number": 5
+  },
+  {
+    "month": "2024-09",
+    "make": "MERCEDES BENZ",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric (Plug-In)",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MERCEDES BENZ",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MERCEDES BENZ",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Hatchback",
+    "number": 1
+  },
+  {
+    "month": "2024-09",
+    "make": "MERCEDES BENZ",
+    "importer_type": "PI",
+    "fuel_type": "Diesel",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MERCEDES BENZ",
+    "importer_type": "PI",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MERCEDES BENZ",
+    "importer_type": "PI",
+    "fuel_type": "Electric",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MINI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Hatchback",
+    "number": 2
+  },
+  {
+    "month": "2024-09",
+    "make": "MINI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MINI",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Hatchback",
+    "number": 7
+  },
+  {
+    "month": "2024-09",
+    "make": "MINI",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MORGAN",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "NISSAN",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Hatchback",
+    "number": 18
+  },
+  {
+    "month": "2024-09",
+    "make": "NISSAN",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Hatchback",
+    "number": 2
+  },
+  {
+    "month": "2024-09",
+    "make": "NISSAN",
+    "importer_type": "PI",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "OPEL",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "PEUGEOT",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "PEUGEOT",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "POLESTAR",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "PORSCHE",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Hatchback",
+    "number": 2
+  },
+  {
+    "month": "2024-09",
+    "make": "PORSCHE",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric (Plug-In)",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "PORSCHE",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "PORSCHE",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "PORSCHE",
+    "importer_type": "PI",
+    "fuel_type": "Electric",
+    "vehicle_type": "Hatchback",
+    "number": 1
+  },
+  {
+    "month": "2024-09",
+    "make": "ROLLS ROYCE",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "ROLLS ROYCE",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "ROLLS ROYCE",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "SERES",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "SKODA",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "SKODA",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "SKODA",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "SMART",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "SMART",
+    "importer_type": "PI",
+    "fuel_type": "Electric",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "SUBARU",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "SUBARU",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "SUZUKI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Hatchback",
+    "number": 7
+  },
+  {
+    "month": "2024-09",
+    "make": "SUZUKI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Hatchback",
+    "number": 10
+  },
+  {
+    "month": "2024-09",
+    "make": "SUZUKI",
+    "importer_type": "PI",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "TESLA",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "TOYOTA",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "TOYOTA",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Hatchback",
+    "number": 2
+  },
+  {
+    "month": "2024-09",
+    "make": "TOYOTA",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric (Plug-In)",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "TOYOTA",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "TOYOTA",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "TOYOTA",
+    "importer_type": "PI",
+    "fuel_type": "Diesel",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "TOYOTA",
+    "importer_type": "PI",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "VOLKSWAGEN",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Hatchback",
+    "number": 1
+  },
+  {
+    "month": "2024-09",
+    "make": "VOLKSWAGEN",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Hatchback",
+    "number": 7
+  },
+  {
+    "month": "2024-09",
+    "make": "VOLKSWAGEN",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "VOLKSWAGEN",
+    "importer_type": "PI",
+    "fuel_type": "Electric",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "VOLVO",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "VOLVO",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric (Plug-In)",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "VOLVO",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "VOLVO",
+    "importer_type": "PI",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "VOLVO",
+    "importer_type": "PI",
+    "fuel_type": "Petrol-Electric (Plug-In)",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "XPENG",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "ZEEKR",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Hatchback",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "ALFA ROMEO",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "ALFA ROMEO",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "ASTON MARTIN",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "AUDI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "AUDI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Sedan",
+    "number": 10
+  },
+  {
+    "month": "2024-09",
+    "make": "AUDI",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "AUDI",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "AUDI",
+    "importer_type": "PI",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "AUDI",
+    "importer_type": "PI",
+    "fuel_type": "Petrol-Electric (Plug-In)",
+    "vehicle_type": "Sedan",
+    "number": 1
+  },
+  {
+    "month": "2024-09",
+    "make": "AUSTIN",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "B.M.W.",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sedan",
+    "number": 42
+  },
+  {
+    "month": "2024-09",
+    "make": "B.M.W.",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Sedan",
+    "number": 42
+  },
+  {
+    "month": "2024-09",
+    "make": "B.M.W.",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Sedan",
+    "number": 32
+  },
+  {
+    "month": "2024-09",
+    "make": "B.M.W.",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sedan",
+    "number": 1
+  },
+  {
+    "month": "2024-09",
+    "make": "B.M.W.",
+    "importer_type": "PI",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "B.M.W.",
+    "importer_type": "PI",
+    "fuel_type": "Electric",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "BENTLEY",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sedan",
+    "number": 2
+  },
+  {
+    "month": "2024-09",
+    "make": "BYD",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Sedan",
+    "number": 132
+  },
+  {
+    "month": "2024-09",
+    "make": "CHERY",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "CITROEN",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Sedan",
+    "number": 7
+  },
+  {
+    "month": "2024-09",
+    "make": "FERRARI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "FERRARI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric (Plug-In)",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "FERRARI",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "GAC",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Sedan",
+    "number": 1
+  },
+  {
+    "month": "2024-09",
+    "make": "GREAT WALL",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "HONDA",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sedan",
+    "number": 7
+  },
+  {
+    "month": "2024-09",
+    "make": "HONDA",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "HONDA",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "HONDA",
+    "importer_type": "PI",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "HONDA",
+    "importer_type": "PI",
+    "fuel_type": "Electric",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "HYUNDAI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "HYUNDAI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Sedan",
+    "number": 62
+  },
+  {
+    "month": "2024-09",
+    "make": "HYUNDAI",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Sedan",
+    "number": 12
+  },
+  {
+    "month": "2024-09",
+    "make": "JAGUAR",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "JAGUAR",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sedan",
+    "number": 1
+  },
+  {
+    "month": "2024-09",
+    "make": "JEEP",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "JEEP",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "KIA",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "KIA",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "LAMBORGHINI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric (Plug-In)",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "LAMBORGHINI",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "LAND ROVER",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "LAND ROVER",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "LAND ROVER",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric (Plug-In)",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "LAND ROVER",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "LOTUS",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "LOTUS",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "M.G.",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "M.G.",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MASERATI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MASERATI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MASERATI",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MAXUS",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MAZDA",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sedan",
+    "number": 21
+  },
+  {
+    "month": "2024-09",
+    "make": "MAZDA",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Sedan",
+    "number": 52
+  },
+  {
+    "month": "2024-09",
+    "make": "MCLAREN",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MERCEDES BENZ",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MERCEDES BENZ",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Sedan",
+    "number": 119
+  },
+  {
+    "month": "2024-09",
+    "make": "MERCEDES BENZ",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric (Plug-In)",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MERCEDES BENZ",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Sedan",
+    "number": 7
+  },
+  {
+    "month": "2024-09",
+    "make": "MERCEDES BENZ",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MERCEDES BENZ",
+    "importer_type": "PI",
+    "fuel_type": "Diesel",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MERCEDES BENZ",
+    "importer_type": "PI",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Sedan",
+    "number": 2
+  },
+  {
+    "month": "2024-09",
+    "make": "MERCEDES BENZ",
+    "importer_type": "PI",
+    "fuel_type": "Electric",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MINI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MINI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MINI",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MINI",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MORGAN",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "NISSAN",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "NISSAN",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "NISSAN",
+    "importer_type": "PI",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "OPEL",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "PEUGEOT",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "PEUGEOT",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "POLESTAR",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Sedan",
+    "number": 1
+  },
+  {
+    "month": "2024-09",
+    "make": "PORSCHE",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sedan",
+    "number": 1
+  },
+  {
+    "month": "2024-09",
+    "make": "PORSCHE",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric (Plug-In)",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "PORSCHE",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Sedan",
+    "number": 10
+  },
+  {
+    "month": "2024-09",
+    "make": "PORSCHE",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "PORSCHE",
+    "importer_type": "PI",
+    "fuel_type": "Electric",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "ROLLS ROYCE",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "ROLLS ROYCE",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "ROLLS ROYCE",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "SERES",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "SKODA",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "SKODA",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Sedan",
+    "number": 7
+  },
+  {
+    "month": "2024-09",
+    "make": "SKODA",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "SMART",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "SMART",
+    "importer_type": "PI",
+    "fuel_type": "Electric",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "SUBARU",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "SUBARU",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "SUZUKI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "SUZUKI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "SUZUKI",
+    "importer_type": "PI",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "TESLA",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Sedan",
+    "number": 217
+  },
+  {
+    "month": "2024-09",
+    "make": "TOYOTA",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sedan",
+    "number": 168
+  },
+  {
+    "month": "2024-09",
+    "make": "TOYOTA",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Sedan",
+    "number": 62
+  },
+  {
+    "month": "2024-09",
+    "make": "TOYOTA",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric (Plug-In)",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "TOYOTA",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "TOYOTA",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "TOYOTA",
+    "importer_type": "PI",
+    "fuel_type": "Diesel",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "TOYOTA",
+    "importer_type": "PI",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Sedan",
+    "number": 4
+  },
+  {
+    "month": "2024-09",
+    "make": "VOLKSWAGEN",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "VOLKSWAGEN",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "VOLKSWAGEN",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "VOLKSWAGEN",
+    "importer_type": "PI",
+    "fuel_type": "Electric",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "VOLVO",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Sedan",
+    "number": 2
+  },
+  {
+    "month": "2024-09",
+    "make": "VOLVO",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric (Plug-In)",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "VOLVO",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "VOLVO",
+    "importer_type": "PI",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "VOLVO",
+    "importer_type": "PI",
+    "fuel_type": "Petrol-Electric (Plug-In)",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "XPENG",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "ZEEKR",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Sedan",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "ALFA ROMEO",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "ALFA ROMEO",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "ASTON MARTIN",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "AUDI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "AUDI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "AUDI",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "AUDI",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "AUDI",
+    "importer_type": "PI",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "AUDI",
+    "importer_type": "PI",
+    "fuel_type": "Petrol-Electric (Plug-In)",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "AUSTIN",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "B.M.W.",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "B.M.W.",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "B.M.W.",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "B.M.W.",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "B.M.W.",
+    "importer_type": "PI",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "B.M.W.",
+    "importer_type": "PI",
+    "fuel_type": "Electric",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "BENTLEY",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "BYD",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": 22
+  },
+  {
+    "month": "2024-09",
+    "make": "CHERY",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "CITROEN",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "FERRARI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "FERRARI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric (Plug-In)",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "FERRARI",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "GAC",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "GREAT WALL",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "HONDA",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": 31
+  },
+  {
+    "month": "2024-09",
+    "make": "HONDA",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "HONDA",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": 8
+  },
+  {
+    "month": "2024-09",
+    "make": "HONDA",
+    "importer_type": "PI",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": 173
+  },
+  {
+    "month": "2024-09",
+    "make": "HONDA",
+    "importer_type": "PI",
+    "fuel_type": "Electric",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "HYUNDAI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "HYUNDAI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "HYUNDAI",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "JAGUAR",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "JAGUAR",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "JEEP",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "JEEP",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "KIA",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": 16
+  },
+  {
+    "month": "2024-09",
+    "make": "KIA",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "LAMBORGHINI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric (Plug-In)",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "LAMBORGHINI",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "LAND ROVER",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "LAND ROVER",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "LAND ROVER",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric (Plug-In)",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "LAND ROVER",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "LOTUS",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "LOTUS",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "M.G.",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "M.G.",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": 2
+  },
+  {
+    "month": "2024-09",
+    "make": "MASERATI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MASERATI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MASERATI",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MAXUS",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": 9
+  },
+  {
+    "month": "2024-09",
+    "make": "MAZDA",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MAZDA",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MCLAREN",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MERCEDES BENZ",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MERCEDES BENZ",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MERCEDES BENZ",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric (Plug-In)",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MERCEDES BENZ",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MERCEDES BENZ",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MERCEDES BENZ",
+    "importer_type": "PI",
+    "fuel_type": "Diesel",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": 1
+  },
+  {
+    "month": "2024-09",
+    "make": "MERCEDES BENZ",
+    "importer_type": "PI",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MERCEDES BENZ",
+    "importer_type": "PI",
+    "fuel_type": "Electric",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MINI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MINI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MINI",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MINI",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MORGAN",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "NISSAN",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": 149
+  },
+  {
+    "month": "2024-09",
+    "make": "NISSAN",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "NISSAN",
+    "importer_type": "PI",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": 25
+  },
+  {
+    "month": "2024-09",
+    "make": "OPEL",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": 3
+  },
+  {
+    "month": "2024-09",
+    "make": "PEUGEOT",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "PEUGEOT",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "POLESTAR",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "PORSCHE",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "PORSCHE",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric (Plug-In)",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "PORSCHE",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "PORSCHE",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "PORSCHE",
+    "importer_type": "PI",
+    "fuel_type": "Electric",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "ROLLS ROYCE",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "ROLLS ROYCE",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "ROLLS ROYCE",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "SERES",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "SKODA",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "SKODA",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "SKODA",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "SMART",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "SMART",
+    "importer_type": "PI",
+    "fuel_type": "Electric",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "SUBARU",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "SUBARU",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "SUZUKI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "SUZUKI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "SUZUKI",
+    "importer_type": "PI",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": 7
+  },
+  {
+    "month": "2024-09",
+    "make": "TESLA",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "TOYOTA",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "TOYOTA",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": 124
+  },
+  {
+    "month": "2024-09",
+    "make": "TOYOTA",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric (Plug-In)",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "TOYOTA",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "TOYOTA",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": 9
+  },
+  {
+    "month": "2024-09",
+    "make": "TOYOTA",
+    "importer_type": "PI",
+    "fuel_type": "Diesel",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "TOYOTA",
+    "importer_type": "PI",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": 140
+  },
+  {
+    "month": "2024-09",
+    "make": "VOLKSWAGEN",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "VOLKSWAGEN",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "VOLKSWAGEN",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "VOLKSWAGEN",
+    "importer_type": "PI",
+    "fuel_type": "Electric",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "VOLVO",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "VOLVO",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric (Plug-In)",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "VOLVO",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "VOLVO",
+    "importer_type": "PI",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "VOLVO",
+    "importer_type": "PI",
+    "fuel_type": "Petrol-Electric (Plug-In)",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "XPENG",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "ZEEKR",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Multi-purpose Vehicle",
+    "number": 2
+  },
+  {
+    "month": "2024-09",
+    "make": "ALFA ROMEO",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "ALFA ROMEO",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "ASTON MARTIN",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "AUDI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "AUDI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "AUDI",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "AUDI",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "AUDI",
+    "importer_type": "PI",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Station-wagon",
+    "number": 1
+  },
+  {
+    "month": "2024-09",
+    "make": "AUDI",
+    "importer_type": "PI",
+    "fuel_type": "Petrol-Electric (Plug-In)",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "AUSTIN",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "B.M.W.",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "B.M.W.",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "B.M.W.",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Station-wagon",
+    "number": 2
+  },
+  {
+    "month": "2024-09",
+    "make": "B.M.W.",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "B.M.W.",
+    "importer_type": "PI",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "B.M.W.",
+    "importer_type": "PI",
+    "fuel_type": "Electric",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "BENTLEY",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "BYD",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "CHERY",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "CITROEN",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "FERRARI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "FERRARI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric (Plug-In)",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "FERRARI",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "GAC",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "GREAT WALL",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "HONDA",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "HONDA",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "HONDA",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Station-wagon",
+    "number": 1
+  },
+  {
+    "month": "2024-09",
+    "make": "HONDA",
+    "importer_type": "PI",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "HONDA",
+    "importer_type": "PI",
+    "fuel_type": "Electric",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "HYUNDAI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "HYUNDAI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "HYUNDAI",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "JAGUAR",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "JAGUAR",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "JEEP",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "JEEP",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "KIA",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "KIA",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "LAMBORGHINI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric (Plug-In)",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "LAMBORGHINI",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "LAND ROVER",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "LAND ROVER",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "LAND ROVER",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric (Plug-In)",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "LAND ROVER",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "LOTUS",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "LOTUS",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "M.G.",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "M.G.",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MASERATI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MASERATI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MASERATI",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MAXUS",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MAZDA",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MAZDA",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MCLAREN",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MERCEDES BENZ",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MERCEDES BENZ",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MERCEDES BENZ",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric (Plug-In)",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MERCEDES BENZ",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MERCEDES BENZ",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MERCEDES BENZ",
+    "importer_type": "PI",
+    "fuel_type": "Diesel",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MERCEDES BENZ",
+    "importer_type": "PI",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MERCEDES BENZ",
+    "importer_type": "PI",
+    "fuel_type": "Electric",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MINI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Station-wagon",
+    "number": 1
+  },
+  {
+    "month": "2024-09",
+    "make": "MINI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Station-wagon",
+    "number": 8
+  },
+  {
+    "month": "2024-09",
+    "make": "MINI",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Station-wagon",
+    "number": 8
+  },
+  {
+    "month": "2024-09",
+    "make": "MINI",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MORGAN",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "NISSAN",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "NISSAN",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "NISSAN",
+    "importer_type": "PI",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "OPEL",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "PEUGEOT",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "PEUGEOT",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "POLESTAR",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "PORSCHE",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "PORSCHE",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric (Plug-In)",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "PORSCHE",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Station-wagon",
+    "number": 2
+  },
+  {
+    "month": "2024-09",
+    "make": "PORSCHE",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "PORSCHE",
+    "importer_type": "PI",
+    "fuel_type": "Electric",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "ROLLS ROYCE",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "ROLLS ROYCE",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "ROLLS ROYCE",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "SERES",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "SKODA",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "SKODA",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "SKODA",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "SMART",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "SMART",
+    "importer_type": "PI",
+    "fuel_type": "Electric",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "SUBARU",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "SUBARU",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "SUZUKI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "SUZUKI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "SUZUKI",
+    "importer_type": "PI",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "TESLA",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "TOYOTA",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "TOYOTA",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "TOYOTA",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric (Plug-In)",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "TOYOTA",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "TOYOTA",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "TOYOTA",
+    "importer_type": "PI",
+    "fuel_type": "Diesel",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "TOYOTA",
+    "importer_type": "PI",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "VOLKSWAGEN",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "VOLKSWAGEN",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "VOLKSWAGEN",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "VOLKSWAGEN",
+    "importer_type": "PI",
+    "fuel_type": "Electric",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "VOLVO",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Station-wagon",
+    "number": 3
+  },
+  {
+    "month": "2024-09",
+    "make": "VOLVO",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric (Plug-In)",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "VOLVO",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "VOLVO",
+    "importer_type": "PI",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "VOLVO",
+    "importer_type": "PI",
+    "fuel_type": "Petrol-Electric (Plug-In)",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "XPENG",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "ZEEKR",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Station-wagon",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "ALFA ROMEO",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "ALFA ROMEO",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": 1
+  },
+  {
+    "month": "2024-09",
+    "make": "ASTON MARTIN",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "AUDI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "AUDI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": 11
+  },
+  {
+    "month": "2024-09",
+    "make": "AUDI",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": 13
+  },
+  {
+    "month": "2024-09",
+    "make": "AUDI",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "AUDI",
+    "importer_type": "PI",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "AUDI",
+    "importer_type": "PI",
+    "fuel_type": "Petrol-Electric (Plug-In)",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "AUSTIN",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "B.M.W.",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": 125
+  },
+  {
+    "month": "2024-09",
+    "make": "B.M.W.",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": 11
+  },
+  {
+    "month": "2024-09",
+    "make": "B.M.W.",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": 86
+  },
+  {
+    "month": "2024-09",
+    "make": "B.M.W.",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "B.M.W.",
+    "importer_type": "PI",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "B.M.W.",
+    "importer_type": "PI",
+    "fuel_type": "Electric",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "BENTLEY",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "BYD",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": 278
+  },
+  {
+    "month": "2024-09",
+    "make": "CHERY",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": 11
+  },
+  {
+    "month": "2024-09",
+    "make": "CITROEN",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "FERRARI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": 1
+  },
+  {
+    "month": "2024-09",
+    "make": "FERRARI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric (Plug-In)",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "FERRARI",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "GAC",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": 41
+  },
+  {
+    "month": "2024-09",
+    "make": "GREAT WALL",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "HONDA",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": 87
+  },
+  {
+    "month": "2024-09",
+    "make": "HONDA",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": 1
+  },
+  {
+    "month": "2024-09",
+    "make": "HONDA",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": 45
+  },
+  {
+    "month": "2024-09",
+    "make": "HONDA",
+    "importer_type": "PI",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": 18
+  },
+  {
+    "month": "2024-09",
+    "make": "HONDA",
+    "importer_type": "PI",
+    "fuel_type": "Electric",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "HYUNDAI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": 1
+  },
+  {
+    "month": "2024-09",
+    "make": "HYUNDAI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": 85
+  },
+  {
+    "month": "2024-09",
+    "make": "HYUNDAI",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": 23
+  },
+  {
+    "month": "2024-09",
+    "make": "JAGUAR",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": 3
+  },
+  {
+    "month": "2024-09",
+    "make": "JAGUAR",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "JEEP",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": 4
+  },
+  {
+    "month": "2024-09",
+    "make": "JEEP",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "KIA",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": 99
+  },
+  {
+    "month": "2024-09",
+    "make": "KIA",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": 8
+  },
+  {
+    "month": "2024-09",
+    "make": "LAMBORGHINI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric (Plug-In)",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "LAMBORGHINI",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "LAND ROVER",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": 3
+  },
+  {
+    "month": "2024-09",
+    "make": "LAND ROVER",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": 10
+  },
+  {
+    "month": "2024-09",
+    "make": "LAND ROVER",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric (Plug-In)",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "LAND ROVER",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "LOTUS",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "LOTUS",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "M.G.",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "M.G.",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": 15
+  },
+  {
+    "month": "2024-09",
+    "make": "MASERATI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MASERATI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": 12
+  },
+  {
+    "month": "2024-09",
+    "make": "MASERATI",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MAXUS",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MAZDA",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": 5
+  },
+  {
+    "month": "2024-09",
+    "make": "MAZDA",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": 35
+  },
+  {
+    "month": "2024-09",
+    "make": "MCLAREN",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MERCEDES BENZ",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MERCEDES BENZ",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": 288
+  },
+  {
+    "month": "2024-09",
+    "make": "MERCEDES BENZ",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric (Plug-In)",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": 1
+  },
+  {
+    "month": "2024-09",
+    "make": "MERCEDES BENZ",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": 25
+  },
+  {
+    "month": "2024-09",
+    "make": "MERCEDES BENZ",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": 3
+  },
+  {
+    "month": "2024-09",
+    "make": "MERCEDES BENZ",
+    "importer_type": "PI",
+    "fuel_type": "Diesel",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MERCEDES BENZ",
+    "importer_type": "PI",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": 4
+  },
+  {
+    "month": "2024-09",
+    "make": "MERCEDES BENZ",
+    "importer_type": "PI",
+    "fuel_type": "Electric",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MINI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MINI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MINI",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MINI",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MORGAN",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "NISSAN",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": 43
+  },
+  {
+    "month": "2024-09",
+    "make": "NISSAN",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "NISSAN",
+    "importer_type": "PI",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "OPEL",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": 3
+  },
+  {
+    "month": "2024-09",
+    "make": "PEUGEOT",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": 5
+  },
+  {
+    "month": "2024-09",
+    "make": "PEUGEOT",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": 5
+  },
+  {
+    "month": "2024-09",
+    "make": "POLESTAR",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": 9
+  },
+  {
+    "month": "2024-09",
+    "make": "PORSCHE",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": 20
+  },
+  {
+    "month": "2024-09",
+    "make": "PORSCHE",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric (Plug-In)",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": 2
+  },
+  {
+    "month": "2024-09",
+    "make": "PORSCHE",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "PORSCHE",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": 1
+  },
+  {
+    "month": "2024-09",
+    "make": "PORSCHE",
+    "importer_type": "PI",
+    "fuel_type": "Electric",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "ROLLS ROYCE",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "ROLLS ROYCE",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "ROLLS ROYCE",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "SERES",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "SKODA",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "SKODA",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": 26
+  },
+  {
+    "month": "2024-09",
+    "make": "SKODA",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": 1
+  },
+  {
+    "month": "2024-09",
+    "make": "SMART",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": 1
+  },
+  {
+    "month": "2024-09",
+    "make": "SMART",
+    "importer_type": "PI",
+    "fuel_type": "Electric",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "SUBARU",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "SUBARU",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": 35
+  },
+  {
+    "month": "2024-09",
+    "make": "SUZUKI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "SUZUKI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "SUZUKI",
+    "importer_type": "PI",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "TESLA",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": 137
+  },
+  {
+    "month": "2024-09",
+    "make": "TOYOTA",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "TOYOTA",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": 203
+  },
+  {
+    "month": "2024-09",
+    "make": "TOYOTA",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric (Plug-In)",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": 1
+  },
+  {
+    "month": "2024-09",
+    "make": "TOYOTA",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": 3
+  },
+  {
+    "month": "2024-09",
+    "make": "TOYOTA",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": 3
+  },
+  {
+    "month": "2024-09",
+    "make": "TOYOTA",
+    "importer_type": "PI",
+    "fuel_type": "Diesel",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": 1
+  },
+  {
+    "month": "2024-09",
+    "make": "TOYOTA",
+    "importer_type": "PI",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": 22
+  },
+  {
+    "month": "2024-09",
+    "make": "VOLKSWAGEN",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": 8
+  },
+  {
+    "month": "2024-09",
+    "make": "VOLKSWAGEN",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": 9
+  },
+  {
+    "month": "2024-09",
+    "make": "VOLKSWAGEN",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": 16
+  },
+  {
+    "month": "2024-09",
+    "make": "VOLKSWAGEN",
+    "importer_type": "PI",
+    "fuel_type": "Electric",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "VOLVO",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": 8
+  },
+  {
+    "month": "2024-09",
+    "make": "VOLVO",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric (Plug-In)",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": 3
+  },
+  {
+    "month": "2024-09",
+    "make": "VOLVO",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": 28
+  },
+  {
+    "month": "2024-09",
+    "make": "VOLVO",
+    "importer_type": "PI",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "VOLVO",
+    "importer_type": "PI",
+    "fuel_type": "Petrol-Electric (Plug-In)",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": 1
+  },
+  {
+    "month": "2024-09",
+    "make": "XPENG",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": 90
+  },
+  {
+    "month": "2024-09",
+    "make": "ZEEKR",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Sports Utility Vehicle",
+    "number": 15
+  },
+  {
+    "month": "2024-09",
+    "make": "ALFA ROMEO",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "ALFA ROMEO",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "ASTON MARTIN",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "AUDI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "AUDI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "AUDI",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "AUDI",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "AUDI",
+    "importer_type": "PI",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "AUDI",
+    "importer_type": "PI",
+    "fuel_type": "Petrol-Electric (Plug-In)",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "AUSTIN",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": 1
+  },
+  {
+    "month": "2024-09",
+    "make": "B.M.W.",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": 11
+  },
+  {
+    "month": "2024-09",
+    "make": "B.M.W.",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "B.M.W.",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "B.M.W.",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "B.M.W.",
+    "importer_type": "PI",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "B.M.W.",
+    "importer_type": "PI",
+    "fuel_type": "Electric",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "BENTLEY",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "BYD",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "CHERY",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "CITROEN",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "FERRARI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": 1
+  },
+  {
+    "month": "2024-09",
+    "make": "FERRARI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric (Plug-In)",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "FERRARI",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "GAC",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "GREAT WALL",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "HONDA",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "HONDA",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "HONDA",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "HONDA",
+    "importer_type": "PI",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "HONDA",
+    "importer_type": "PI",
+    "fuel_type": "Electric",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "HYUNDAI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "HYUNDAI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "HYUNDAI",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "JAGUAR",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "JAGUAR",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "JEEP",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "JEEP",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "KIA",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "KIA",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "LAMBORGHINI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric (Plug-In)",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "LAMBORGHINI",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "LAND ROVER",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "LAND ROVER",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "LAND ROVER",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric (Plug-In)",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "LAND ROVER",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "LOTUS",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": 2
+  },
+  {
+    "month": "2024-09",
+    "make": "LOTUS",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "M.G.",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "M.G.",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MASERATI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MASERATI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MASERATI",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MAXUS",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MAZDA",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MAZDA",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MCLAREN",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": 1
+  },
+  {
+    "month": "2024-09",
+    "make": "MERCEDES BENZ",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": 1
+  },
+  {
+    "month": "2024-09",
+    "make": "MERCEDES BENZ",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": 64
+  },
+  {
+    "month": "2024-09",
+    "make": "MERCEDES BENZ",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric (Plug-In)",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": 6
+  },
+  {
+    "month": "2024-09",
+    "make": "MERCEDES BENZ",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MERCEDES BENZ",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MERCEDES BENZ",
+    "importer_type": "PI",
+    "fuel_type": "Diesel",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MERCEDES BENZ",
+    "importer_type": "PI",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": 1
+  },
+  {
+    "month": "2024-09",
+    "make": "MERCEDES BENZ",
+    "importer_type": "PI",
+    "fuel_type": "Electric",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MINI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MINI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MINI",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MINI",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "MORGAN",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "NISSAN",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "NISSAN",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "NISSAN",
+    "importer_type": "PI",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "OPEL",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "PEUGEOT",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "PEUGEOT",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "POLESTAR",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "PORSCHE",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": 8
+  },
+  {
+    "month": "2024-09",
+    "make": "PORSCHE",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric (Plug-In)",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "PORSCHE",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "PORSCHE",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": 3
+  },
+  {
+    "month": "2024-09",
+    "make": "PORSCHE",
+    "importer_type": "PI",
+    "fuel_type": "Electric",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": 2
+  },
+  {
+    "month": "2024-09",
+    "make": "ROLLS ROYCE",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "ROLLS ROYCE",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": 1
+  },
+  {
+    "month": "2024-09",
+    "make": "ROLLS ROYCE",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "SERES",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "SKODA",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "SKODA",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "SKODA",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "SMART",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "SMART",
+    "importer_type": "PI",
+    "fuel_type": "Electric",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "SUBARU",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": 1
+  },
+  {
+    "month": "2024-09",
+    "make": "SUBARU",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "SUZUKI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "SUZUKI",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "SUZUKI",
+    "importer_type": "PI",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "TESLA",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "TOYOTA",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": 1
+  },
+  {
+    "month": "2024-09",
+    "make": "TOYOTA",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "TOYOTA",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric (Plug-In)",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "TOYOTA",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "TOYOTA",
+    "importer_type": "PI",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": 1
+  },
+  {
+    "month": "2024-09",
+    "make": "TOYOTA",
+    "importer_type": "PI",
+    "fuel_type": "Diesel",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "TOYOTA",
+    "importer_type": "PI",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "VOLKSWAGEN",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "VOLKSWAGEN",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "VOLKSWAGEN",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "VOLKSWAGEN",
+    "importer_type": "PI",
+    "fuel_type": "Electric",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "VOLVO",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "VOLVO",
+    "importer_type": "AMD",
+    "fuel_type": "Petrol-Electric (Plug-In)",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "VOLVO",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "VOLVO",
+    "importer_type": "PI",
+    "fuel_type": "Petrol-Electric",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "VOLVO",
+    "importer_type": "PI",
+    "fuel_type": "Petrol-Electric (Plug-In)",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "XPENG",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  },
+  {
+    "month": "2024-09",
+    "make": "ZEEKR",
+    "importer_type": "AMD",
+    "fuel_type": "Electric",
+    "vehicle_type": "Coupe/ Convertible",
+    "number": null
+  }
+]
