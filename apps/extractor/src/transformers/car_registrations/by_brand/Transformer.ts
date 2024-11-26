@@ -946,6 +946,46 @@ class Transformer extends BaseTransformer {
     })();
 
     // --------
+    // Cargo Thailand registrations_by_model.csv
+    await (async () => {
+      const country = 'thailand';
+      const dataPath = path.join(
+        COUNTRIES_PATH,
+        country,
+        'registrations_by_model.csv'
+      );
+      let data = await this.loadSource(dataPath);
+      data = data.filter((r) => r['model'].startsWith('TESLA'));
+
+      // Sumo los modelos en un mismo mes para obtener el total
+      const agruped: Object[] = [];
+      for (const item of data) {
+        const match = agruped.find(
+          (a) => a['year'] === item['year'] && a['month'] === item['month']
+        );
+        if (match) {
+          match['registrations'] += item['registrations'];
+        } else {
+          agruped.push({ ...item });
+        }
+      }
+
+      registrations.push(
+        ...agruped.map((r) => {
+          const result: IBrandRegistrations = {
+            year: r['year'],
+            month: r['month'],
+            country,
+            brand: TESLA_BRAND,
+            registrations: r['registrations'],
+          };
+
+          return result;
+        })
+      );
+    })();
+
+    // --------
     // Salvo registrations_by_brand.csv
     const json2csvParser = new Parser();
     const csv = json2csvParser.parse(registrations);
