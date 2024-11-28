@@ -125,4 +125,31 @@ export abstract class MonthExtractor extends BaseExtractor<MonthConfig> {
       }
     }
   }
+
+  private async debugDownload(year: number, month: number) {
+    const dateId = new MonthDateId(year, month);
+    const result = await this.download(dateId);
+    if (result === null) {
+      console.log('> No data available');
+      return;
+    }
+
+    const filePath = path.join(
+      this.downloadsPath,
+      `${dateId.toString()}.${this.config.fileext}`
+    );
+    await writeFile(filePath, result);
+    console.log(`> File saved at ${filePath}`);
+  }
+
+  private async debugTransform(year: number, month: number) {
+    const dateId = new MonthDateId(year, month);
+    const filePath = path.join(
+      this.downloadsPath,
+      `${dateId.toString()}.${this.config.fileext}`
+    );
+    const fileData = await readFile(filePath);
+    await this.transform(dateId, { path: filePath, data: fileData });
+    console.log(`> Data transformed ${dateId.toString()}`);
+  }
 }
