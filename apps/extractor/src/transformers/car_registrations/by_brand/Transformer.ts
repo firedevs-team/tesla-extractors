@@ -697,6 +697,28 @@ class Transformer extends BaseTransformer {
     })();
 
     // --------
+    // Cargo China tesla_sales.csv
+    await (async () => {
+      const country = 'china';
+      const dataPath = path.join(COUNTRIES_PATH, country, 'tesla_sales.csv');
+      let data = await this.loadSource(dataPath);
+
+      registrations.push(
+        ...data.map((r) => {
+          const result: IBrandRegistrations = {
+            year: r['year'],
+            month: r['month'],
+            region: 'CHINA',
+            country: country.toUpperCase(),
+            registrations: r['sales'],
+          };
+
+          return result;
+        })
+      );
+    })();
+
+    // --------
     // Cargo Turkey registrations_by_brand.csv
     await (async () => {
       const country = 'turkey';
@@ -712,31 +734,9 @@ class Transformer extends BaseTransformer {
           const result: IBrandRegistrations = {
             year: r['year'],
             month: r['month'],
-            region: 'EUROPE',
+            region: 'ROW',
             country: country.toUpperCase(),
             registrations: r['registrations'],
-          };
-
-          return result;
-        })
-      );
-    })();
-
-    // --------
-    // Cargo China tesla_sales.csv
-    await (async () => {
-      const country = 'china';
-      const dataPath = path.join(COUNTRIES_PATH, country, 'tesla_sales.csv');
-      let data = await this.loadSource(dataPath);
-
-      registrations.push(
-        ...data.map((r) => {
-          const result: IBrandRegistrations = {
-            year: r['year'],
-            month: r['month'],
-            region: 'CHINA',
-            country: country.toUpperCase(),
-            registrations: r['sales'],
           };
 
           return result;

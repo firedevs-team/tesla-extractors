@@ -18,7 +18,7 @@ const run = async () => {
     'sources',
     'car_registrations',
     'global',
-    'registrations_by_brand.csv'
+    'tesla_registrations.csv'
   );
   const fileContent = await readFile(filePath, 'utf-8');
   const result = Papa.parse<Registrations>(fileContent, {
