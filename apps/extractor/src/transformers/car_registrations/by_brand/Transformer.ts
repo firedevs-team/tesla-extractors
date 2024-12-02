@@ -6,14 +6,13 @@ import { Parser } from 'json2csv';
 import chalk from 'chalk';
 
 const COUNTRIES_PATH = path.join('car_registrations', 'countries');
-const TESLA_BRAND = 'TESLA';
 
 interface IBrandRegistrations {
   year: number;
   month: number;
   registrations: number;
+  region: 'USA' | 'CANADA' | 'EUROPE' | 'CHINA' | 'ROW';
   country: string;
-  brand: string;
 }
 
 class Transformer extends BaseTransformer {
@@ -23,6 +22,32 @@ class Transformer extends BaseTransformer {
 
   async transform(): Promise<void> {
     const registrations: IBrandRegistrations[] = [];
+
+    // --------
+    // Cargo USA registrations_by_brand.csv
+    await (async () => {
+      const country = 'usa';
+      const dataPath = path.join(
+        COUNTRIES_PATH,
+        country,
+        'registrations_by_brand.csv'
+      );
+      let data = await this.loadSource(dataPath);
+      data = data.filter((r) => r['brand'] === 'TESLA');
+      registrations.push(
+        ...data.map((r) => {
+          const result: IBrandRegistrations = {
+            year: r['year'],
+            month: r['month'],
+            region: 'USA',
+            country: country.toUpperCase(),
+            registrations: r['registrations'],
+          };
+
+          return result;
+        })
+      );
+    })();
 
     // --------
     // Cargo Austria registrations_by_brand.csv
@@ -40,8 +65,8 @@ class Transformer extends BaseTransformer {
           const result: IBrandRegistrations = {
             year: r['year'],
             month: r['month'],
-            country,
-            brand: TESLA_BRAND,
+            region: 'EUROPE',
+            country: country.toUpperCase(),
             registrations: r['registrations'],
           };
 
@@ -66,8 +91,8 @@ class Transformer extends BaseTransformer {
           const result: IBrandRegistrations = {
             year: r['year'],
             month: r['month'],
-            country,
-            brand: TESLA_BRAND,
+            region: 'EUROPE',
+            country: country.toUpperCase(),
             registrations: r['registrations'],
           };
 
@@ -92,8 +117,8 @@ class Transformer extends BaseTransformer {
           const result: IBrandRegistrations = {
             year: r['year'],
             month: r['month'],
-            country,
-            brand: TESLA_BRAND,
+            region: 'EUROPE',
+            country: country.toUpperCase(),
             registrations: r['registrations'],
           };
 
@@ -118,8 +143,8 @@ class Transformer extends BaseTransformer {
           const result: IBrandRegistrations = {
             year: r['year'],
             month: r['month'],
-            country,
-            brand: TESLA_BRAND,
+            region: 'EUROPE',
+            country: country.toUpperCase(),
             registrations: r['registrations'],
           };
 
@@ -144,8 +169,8 @@ class Transformer extends BaseTransformer {
           const result: IBrandRegistrations = {
             year: r['year'],
             month: r['month'],
-            country,
-            brand: TESLA_BRAND,
+            region: 'EUROPE',
+            country: country.toUpperCase(),
             registrations: r['registrations'],
           };
 
@@ -184,8 +209,8 @@ class Transformer extends BaseTransformer {
           const result: IBrandRegistrations = {
             year: r['year'],
             month: r['month'],
-            country,
-            brand: TESLA_BRAND,
+            region: 'EUROPE',
+            country: country.toUpperCase(),
             registrations: r['value'],
           };
 
@@ -210,8 +235,8 @@ class Transformer extends BaseTransformer {
           const result: IBrandRegistrations = {
             year: r['year'],
             month: r['month'],
-            country,
-            brand: TESLA_BRAND,
+            region: 'EUROPE',
+            country: country.toUpperCase(),
             registrations: r['registrations'],
           };
 
@@ -236,8 +261,8 @@ class Transformer extends BaseTransformer {
           const result: IBrandRegistrations = {
             year: r['year'],
             month: r['month'],
-            country,
-            brand: TESLA_BRAND,
+            region: 'EUROPE',
+            country: country.toUpperCase(),
             registrations: r['registrations'],
           };
 
@@ -262,8 +287,8 @@ class Transformer extends BaseTransformer {
           const result: IBrandRegistrations = {
             year: r['year'],
             month: r['month'],
-            country,
-            brand: TESLA_BRAND,
+            region: 'EUROPE',
+            country: country.toUpperCase(),
             registrations: r['registrations'],
           };
 
@@ -288,8 +313,8 @@ class Transformer extends BaseTransformer {
           const result: IBrandRegistrations = {
             year: r['year'],
             month: r['month'],
-            country,
-            brand: TESLA_BRAND,
+            region: 'EUROPE',
+            country: country.toUpperCase(),
             registrations: r['registrations'],
           };
 
@@ -314,8 +339,8 @@ class Transformer extends BaseTransformer {
           const result: IBrandRegistrations = {
             year: r['year'],
             month: r['month'],
-            country,
-            brand: TESLA_BRAND,
+            region: 'EUROPE',
+            country: country.toUpperCase(),
             registrations: r['registrations'],
           };
 
@@ -354,8 +379,8 @@ class Transformer extends BaseTransformer {
           const result: IBrandRegistrations = {
             year: r['year'],
             month: r['month'],
-            country,
-            brand: TESLA_BRAND,
+            region: 'EUROPE',
+            country: country.toUpperCase(),
             registrations: r['registrations'],
           };
 
@@ -380,8 +405,8 @@ class Transformer extends BaseTransformer {
           const result: IBrandRegistrations = {
             year: r['year'],
             month: r['month'],
-            country,
-            brand: TESLA_BRAND,
+            region: 'EUROPE',
+            country: country.toUpperCase(),
             registrations: r['registrations'],
           };
 
@@ -420,8 +445,8 @@ class Transformer extends BaseTransformer {
           const result: IBrandRegistrations = {
             year: r['year'],
             month: r['month'],
-            country,
-            brand: TESLA_BRAND,
+            region: 'EUROPE',
+            country: country.toUpperCase(),
             registrations: r['registrations'],
           };
 
@@ -475,8 +500,8 @@ class Transformer extends BaseTransformer {
           const result: IBrandRegistrations = {
             year: r['year'],
             month: r['month'],
-            country,
-            brand: TESLA_BRAND,
+            region: 'EUROPE',
+            country: country.toUpperCase(),
             registrations: r['registrations'],
           };
 
@@ -501,34 +526,8 @@ class Transformer extends BaseTransformer {
           const result: IBrandRegistrations = {
             year: r['year'],
             month: r['month'],
-            country,
-            brand: TESLA_BRAND,
-            registrations: r['registrations'],
-          };
-
-          return result;
-        })
-      );
-    })();
-
-    // --------
-    // Cargo USA registrations_by_brand.csv
-    await (async () => {
-      const country = 'usa';
-      const dataPath = path.join(
-        COUNTRIES_PATH,
-        country,
-        'registrations_by_brand.csv'
-      );
-      let data = await this.loadSource(dataPath);
-      data = data.filter((r) => r['brand'] === 'TESLA');
-      registrations.push(
-        ...data.map((r) => {
-          const result: IBrandRegistrations = {
-            year: r['year'],
-            month: r['month'],
-            country,
-            brand: TESLA_BRAND,
+            region: 'EUROPE',
+            country: country.toUpperCase(),
             registrations: r['registrations'],
           };
 
@@ -553,8 +552,8 @@ class Transformer extends BaseTransformer {
           const result: IBrandRegistrations = {
             year: r['year'],
             month: r['month'],
-            country,
-            brand: TESLA_BRAND,
+            region: 'EUROPE',
+            country: country.toUpperCase(),
             registrations: r['registrations'],
           };
 
@@ -579,31 +578,9 @@ class Transformer extends BaseTransformer {
           const result: IBrandRegistrations = {
             year: r['year'],
             month: r['month'],
-            country,
-            brand: TESLA_BRAND,
+            region: 'EUROPE',
+            country: country.toUpperCase(),
             registrations: r['registrations'],
-          };
-
-          return result;
-        })
-      );
-    })();
-
-    // --------
-    // Cargo China tesla_sales.csv
-    await (async () => {
-      const country = 'china';
-      const dataPath = path.join(COUNTRIES_PATH, country, 'tesla_sales.csv');
-      let data = await this.loadSource(dataPath);
-
-      registrations.push(
-        ...data.map((r) => {
-          const result: IBrandRegistrations = {
-            year: r['year'],
-            month: r['month'],
-            country,
-            brand: TESLA_BRAND,
-            registrations: r['sales'],
           };
 
           return result;
@@ -643,8 +620,8 @@ class Transformer extends BaseTransformer {
           const result: IBrandRegistrations = {
             year: r['year'],
             month: r['month'],
-            country,
-            brand: TESLA_BRAND,
+            region: 'EUROPE',
+            country: country.toUpperCase(),
             registrations: r['registrations'],
           };
 
@@ -669,9 +646,97 @@ class Transformer extends BaseTransformer {
           const result: IBrandRegistrations = {
             year: r['year'],
             month: r['month'],
-            country,
-            brand: TESLA_BRAND,
+            region: 'EUROPE',
+            country: country.toUpperCase(),
             registrations: r['registrations'],
+          };
+
+          return result;
+        })
+      );
+    })();
+
+    // --------
+    // Cargo Romania top_ytd_bev_registrations_by_brand.csv
+    await (async () => {
+      const country = 'romania';
+      const dataPath = path.join(
+        COUNTRIES_PATH,
+        country,
+        'top_ytd_bev_registrations_by_brand.csv'
+      );
+      let data = await this.loadSource(dataPath);
+      data = data.filter((r) => r['brand'] === 'TESLA');
+      // Normalizo registrations pq es ytd
+      let beforeRegistrations = 0;
+      const normalized: object[] = [];
+      for (const item of data) {
+        normalized.push({
+          ...item,
+          registrations: item['ytd_registrations'] - beforeRegistrations,
+        });
+
+        beforeRegistrations = item['ytd_registrations'];
+        if (item['month'] === 12) {
+          beforeRegistrations = 0;
+        }
+      }
+      registrations.push(
+        ...normalized.map((r) => {
+          const result: IBrandRegistrations = {
+            year: r['year'],
+            month: r['month'],
+            region: 'EUROPE',
+            country: country.toUpperCase(),
+            registrations: r['registrations'],
+          };
+
+          return result;
+        })
+      );
+    })();
+
+    // --------
+    // Cargo Turkey registrations_by_brand.csv
+    await (async () => {
+      const country = 'turkey';
+      const dataPath = path.join(
+        COUNTRIES_PATH,
+        country,
+        'registrations_by_brand.csv'
+      );
+      let data = await this.loadSource(dataPath);
+      data = data.filter((r) => r['brand'] === 'TESLA');
+      registrations.push(
+        ...data.map((r) => {
+          const result: IBrandRegistrations = {
+            year: r['year'],
+            month: r['month'],
+            region: 'EUROPE',
+            country: country.toUpperCase(),
+            registrations: r['registrations'],
+          };
+
+          return result;
+        })
+      );
+    })();
+
+    // --------
+    // Cargo China tesla_sales.csv
+    await (async () => {
+      const country = 'china';
+      const dataPath = path.join(COUNTRIES_PATH, country, 'tesla_sales.csv');
+      let data = await this.loadSource(dataPath);
+
+      registrations.push(
+        ...data.map((r) => {
+          const result: IBrandRegistrations = {
+            year: r['year'],
+            month: r['month'],
+            region: 'CHINA',
+            country: country.toUpperCase(),
+            registrations: r['sales'],
           };
 
           return result;
@@ -697,8 +762,8 @@ class Transformer extends BaseTransformer {
           const result: IBrandRegistrations = {
             year: r['year'],
             month: r['month'],
-            country,
-            brand: TESLA_BRAND,
+            region: 'ROW',
+            country: country.toUpperCase(),
             registrations: r['registrations'],
           };
 
@@ -739,8 +804,8 @@ class Transformer extends BaseTransformer {
           const result: IBrandRegistrations = {
             year: r['year'],
             month: r['month'],
-            country,
-            brand: TESLA_BRAND,
+            region: 'ROW',
+            country: country.toUpperCase(),
             registrations: r['registrations'],
           };
 
@@ -765,8 +830,8 @@ class Transformer extends BaseTransformer {
           const result: IBrandRegistrations = {
             year: r['year'],
             month: r['month'],
-            country,
-            brand: TESLA_BRAND,
+            region: 'ROW',
+            country: country.toUpperCase(),
             registrations: r['registrations'],
           };
 
@@ -791,8 +856,8 @@ class Transformer extends BaseTransformer {
           const result: IBrandRegistrations = {
             year: r['year'],
             month: r['month'],
-            country,
-            brand: TESLA_BRAND,
+            region: 'ROW',
+            country: country.toUpperCase(),
             registrations: r['registrations'],
           };
 
@@ -817,74 +882,8 @@ class Transformer extends BaseTransformer {
           const result: IBrandRegistrations = {
             year: r['year'],
             month: r['month'],
-            country,
-            brand: TESLA_BRAND,
-            registrations: r['registrations'],
-          };
-
-          return result;
-        })
-      );
-    })();
-
-    // --------
-    // Cargo Romania top_ytd_bev_registrations_by_brand.csv
-    await (async () => {
-      const country = 'romania';
-      const dataPath = path.join(
-        COUNTRIES_PATH,
-        country,
-        'top_ytd_bev_registrations_by_brand.csv'
-      );
-      let data = await this.loadSource(dataPath);
-      data = data.filter((r) => r['brand'] === 'TESLA');
-      // Normalizo registrations pq es ytd
-      let beforeRegistrations = 0;
-      const normalized: object[] = [];
-      for (const item of data) {
-        normalized.push({
-          ...item,
-          registrations: item['ytd_registrations'] - beforeRegistrations,
-        });
-
-        beforeRegistrations = item['ytd_registrations'];
-        if (item['month'] === 12) {
-          beforeRegistrations = 0;
-        }
-      }
-      registrations.push(
-        ...normalized.map((r) => {
-          const result: IBrandRegistrations = {
-            year: r['year'],
-            month: r['month'],
-            country,
-            brand: TESLA_BRAND,
-            registrations: r['registrations'],
-          };
-
-          return result;
-        })
-      );
-    })();
-
-    // --------
-    // Cargo Turkey registrations_by_brand.csv
-    await (async () => {
-      const country = 'turkey';
-      const dataPath = path.join(
-        COUNTRIES_PATH,
-        country,
-        'registrations_by_brand.csv'
-      );
-      let data = await this.loadSource(dataPath);
-      data = data.filter((r) => r['brand'] === 'TESLA');
-      registrations.push(
-        ...data.map((r) => {
-          const result: IBrandRegistrations = {
-            year: r['year'],
-            month: r['month'],
-            country,
-            brand: TESLA_BRAND,
+            region: 'ROW',
+            country: country.toUpperCase(),
             registrations: r['registrations'],
           };
 
@@ -909,8 +908,8 @@ class Transformer extends BaseTransformer {
           const result: IBrandRegistrations = {
             year: r['year'],
             month: r['month'],
-            country,
-            brand: TESLA_BRAND,
+            region: 'ROW',
+            country: country.toUpperCase(),
             registrations: r['registrations'],
           };
 
@@ -935,8 +934,8 @@ class Transformer extends BaseTransformer {
           const result: IBrandRegistrations = {
             year: r['year'],
             month: r['month'],
-            country,
-            brand: TESLA_BRAND,
+            region: 'ROW',
+            country: country.toUpperCase(),
             registrations: r['registrations'],
           };
 
@@ -975,8 +974,8 @@ class Transformer extends BaseTransformer {
           const result: IBrandRegistrations = {
             year: r['year'],
             month: r['month'],
-            country,
-            brand: TESLA_BRAND,
+            region: 'ROW',
+            country: country.toUpperCase(),
             registrations: r['registrations'],
           };
 
@@ -1001,8 +1000,8 @@ class Transformer extends BaseTransformer {
           const result: IBrandRegistrations = {
             year: r['year'],
             month: r['month'],
-            country,
-            brand: TESLA_BRAND,
+            region: 'ROW',
+            country: country.toUpperCase(),
             registrations: r['registrations'],
           };
 
@@ -1027,8 +1026,8 @@ class Transformer extends BaseTransformer {
           const result: IBrandRegistrations = {
             year: r['year'],
             month: r['month'],
-            country,
-            brand: TESLA_BRAND,
+            region: 'ROW',
+            country: country.toUpperCase(),
             registrations: r['registrations'],
           };
 
@@ -1047,10 +1046,10 @@ class Transformer extends BaseTransformer {
       'global'
     );
     await mkdir(outputFolder, { recursive: true });
-    const outputPath = path.join(outputFolder, 'registrations_by_brand.csv');
+    const outputPath = path.join(outputFolder, 'tesla_registrations.csv');
     await writeFile(outputPath, csv);
 
-    console.log(`> ${chalk.gray(`Saved [registrations_by_brand]`)}`);
+    console.log(`> ${chalk.gray(`Saved [tesla_registrations]`)}`);
   }
 
   async debug(): Promise<void> {
