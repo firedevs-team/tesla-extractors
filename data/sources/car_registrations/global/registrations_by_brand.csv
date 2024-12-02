@@ -21,7 +21,7 @@
 2024,8,"austria","TESLA",398
 2024,9,"austria","TESLA",961
 2024,10,"austria","TESLA",273
-2024,11,"austria","TESLA",93
+2024,11,"austria","TESLA",440
 2023,1,"czech_republic","TESLA",48
 2023,2,"czech_republic","TESLA",93
 2023,3,"czech_republic","TESLA",159
@@ -88,6 +88,7 @@
 2024,8,"finland","TESLA",312
 2024,9,"finland","TESLA",456
 2024,10,"finland","TESLA",145
+2024,11,"finland","TESLA",323
 2023,1,"france","TESLA",741
 2023,2,"france","TESLA",3376
 2023,3,"france","TESLA",8710
@@ -110,6 +111,7 @@
 2024,8,"france","TESLA",2523
 2024,9,"france","TESLA",5435
 2024,10,"france","TESLA",1741
+2024,11,"france","TESLA",3773
 2023,1,"germany","TESLA",4241
 2023,2,"germany","TESLA",7710
 2023,3,"germany","TESLA",8703
@@ -220,6 +222,7 @@
 2024,8,"netherlands","TESLA",1547
 2024,9,"netherlands","TESLA",3884
 2024,10,"netherlands","TESLA",1238
+2024,11,"netherlands","TESLA",2881
 2023,1,"norway","TESLA",21
 2023,2,"norway","TESLA",1551
 2023,3,"norway","TESLA",7899
@@ -242,6 +245,7 @@
 2024,8,"norway","TESLA",2485
 2024,9,"norway","TESLA",4210
 2024,10,"norway","TESLA",1348
+2024,11,"norway","TESLA",2258
 2023,1,"poland","TESLA",53
 2023,2,"poland","TESLA",260
 2023,3,"poland","TESLA",733
@@ -286,6 +290,7 @@
 2024,8,"portugal","TESLA",181
 2024,9,"portugal","TESLA",1025
 2024,10,"portugal","TESLA",349
+2024,11,"portugal","TESLA",801
 2023,1,"sweden","TESLA",225
 2023,2,"sweden","TESLA",518
 2023,3,"sweden","TESLA",3940
@@ -308,6 +313,7 @@
 2024,8,"sweden","TESLA",1348
 2024,9,"sweden","TESLA",4792
 2024,10,"sweden","TESLA",1175
+2024,11,"sweden","TESLA",1446
 2023,1,"switzerland","TESLA",115
 2023,2,"switzerland","TESLA",195
 2023,3,"switzerland","TESLA",1252
@@ -656,6 +662,7 @@
 2024,8,"south_korea","TESLA",2208
 2024,9,"south_korea","TESLA",1349
 2024,10,"south_korea","TESLA",1263
+2024,11,"south_korea","TESLA",3618
 2023,1,"thailand","TESLA",32
 2023,2,"thailand","TESLA",709
 2023,3,"thailand","TESLA",1523
