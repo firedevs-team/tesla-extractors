@@ -126,7 +126,7 @@ export abstract class MonthExtractor extends BaseExtractor<MonthConfig> {
     }
   }
 
-  private async debugDownload(year: number, month: number) {
+  protected async debugDownload(year: number, month: number) {
     const dateId = new MonthDateId(year, month);
     const result = await this.download(dateId);
     if (result === null) {
@@ -142,7 +142,7 @@ export abstract class MonthExtractor extends BaseExtractor<MonthConfig> {
     console.log(`> File saved at ${filePath}`);
   }
 
-  private async debugTransform(year: number, month: number) {
+  protected async debugTransform(year: number, month: number) {
     const dateId = new MonthDateId(year, month);
     const filePath = path.join(
       this.downloadsPath,
