@@ -1,0 +1,112 @@
+[
+  {
+    "year": 2024,
+    "month": 10,
+    "registrations": 13451
+  },
+  {
+    "year": 2024,
+    "month": 9,
+    "registrations": 44402
+  },
+  {
+    "year": 2024,
+    "month": 8,
+    "registrations": 19088
+  },
+  {
+    "year": 2024,
+    "month": 7,
+    "registrations": 14561
+  },
+  {
+    "year": 2024,
+    "month": 6,
+    "registrations": 42468
+  },
+  {
+    "year": 2024,
+    "month": 5,
+    "registrations": 19558
+  },
+  {
+    "year": 2024,
+    "month": 4,
+    "registrations": 14207
+  },
+  {
+    "year": 2024,
+    "month": 3,
+    "registrations": 39288
+  },
+  {
+    "year": 2024,
+    "month": 2,
+    "registrations": 27827
+  },
+  {
+    "year": 2024,
+    "month": 1,
+    "registrations": 18177
+  },
+  {
+    "year": 2023,
+    "month": 12,
+    "registrations": 362300 // Yearly
+  },
+  {
+    "year": 2023,
+    "month": 11,
+    "registrations":  // Missing
+  },
+  {
+    "year": 2023,
+    "month": 10,
+    "registrations": 17602
+  },
+  {
+    "year": 2023,
+    "month": 9,
+    "registrations": 33922
+  },
+  {
+    "year": 2023,
+    "month": 8,
+    "registrations": 33809
+  },
+  {
+    "year": 2023,
+    "month": 7,
+    "registrations": 17334
+  },
+  {
+    "year": 2023,
+    "month": 6,
+    "registrations": 48197
+  },
+  {
+    "year": 2023,
+    "month": 5,
+    "registrations": 29362
+  },
+  {
+    "year": 2023,
+    "month": 4,
+    "registrations": 14120
+  },
+  {
+    "year": 2023,
+    "month": 3,
+    "registrations": 60958
+  },
+  {
+    "year": 2023,
+    "month": 2,
+    "registrations": 23243
+  },
+  {
+    "year": 2023,
+    "month": 1,
+    "registrations": 9358
+  }
+]
