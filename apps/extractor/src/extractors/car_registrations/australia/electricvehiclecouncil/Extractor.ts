@@ -76,6 +76,14 @@ class Extractor extends MonthExtractor {
     // Encuentro la url a descargar
     let downloadUrl: string = null;
     const links = Array.from($('#table-content td a'));
+
+    // Este es un caso donde la SOURCE_URL está pero no tiene contenido
+    // en este caso informo que no hay datos aún publicados
+    // se q la pagina esta vacia pq solo tiene el link de volver atrás
+    if (links.length === 1) {
+      return null;
+    }
+
     for (const link of links) {
       const text = $(link).text();
       if (text === textExpected) {

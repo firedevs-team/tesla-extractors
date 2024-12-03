@@ -57,9 +57,9 @@ export default abstract class CNEVExtractor extends MonthExtractor {
       // Espero a que el home me diga que estoy loggeado
       await page.waitForSelector('.home.logged-in');
 
-      console.log('Page authenticated');
+      // console.log('Page authenticated');
     } else {
-      console.log('Using cached page');
+      // console.log('Using cached page');
     }
 
     const buffer = await this.downloadFromPage(dateId, page);

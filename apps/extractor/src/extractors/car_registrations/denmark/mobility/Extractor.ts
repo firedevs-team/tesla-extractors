@@ -153,7 +153,9 @@ class Extractor extends MonthExtractor {
     ];
   }
 
-  async debug() {}
+  async debug() {
+    await this.extract();
+  }
 
   private checkIfDataIsAvailable = async (
     dateId: MonthDateId
@@ -259,7 +261,7 @@ class Extractor extends MonthExtractor {
 
         return element && element.textContent.trim().toUpperCase() === text;
       },
-      { timeout: 10000 },
+      {},
       textExpected
     );
 
@@ -319,6 +321,10 @@ class Extractor extends MonthExtractor {
 
     // Selecciono el periodo del ultimo mes
     await page.select('#selectPeriod', 'last_month');
+
+    // Espero a que cargue los selectores
+    await new Promise((resolve) => setTimeout(resolve, 3000));
+
     // Seleciono vista por modelos
     await page.select('#selectView', 'models');
 
@@ -335,9 +341,10 @@ class Extractor extends MonthExtractor {
         const element = document.querySelectorAll(
           '.statistic-table thead tr .th-inner'
         )[1];
+
         return element && element.textContent.trim().toUpperCase() === text;
       },
-      { timeout: 10000 },
+      {},
       periodExpected
     );
 
@@ -355,10 +362,9 @@ class Extractor extends MonthExtractor {
           .trim() // Elimina espacios en blanco al inicio y al final
           .toUpperCase();
 
-        console.log(textFound, text);
         return textFound === text;
       },
-      { timeout: 10000 },
+      {},
       viewExpected
     );
 

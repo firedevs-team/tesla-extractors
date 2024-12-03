@@ -31,7 +31,7 @@ class Extractor extends MonthExtractor {
 
     // Inicia el navegador
     const browser: Browser = await puppeteer.launch({
-      headless: false, // Cambia a true si no necesitas ver la interacción
+      headless: true, // Cambia a true si no necesitas ver la interacción
       args: ['--no-sandbox', '--disable-setuid-sandbox'], // Argumentos para evitar problemas de permisos
     });
 
