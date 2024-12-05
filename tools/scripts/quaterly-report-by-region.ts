@@ -77,8 +77,6 @@ const run = async () => {
 
   const totalCountriesByRegion = fillTotalCountriesByRegion(registrations);
 
-  console.log('Total countries by region:', totalCountriesByRegion);
-
   const table = new Table({
     head: [
       'Region',
