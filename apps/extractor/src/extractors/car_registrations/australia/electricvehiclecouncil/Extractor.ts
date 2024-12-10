@@ -11,6 +11,20 @@ import {
 
 const SOURCE_URL =
   'https://electricvehiclecouncil.com.au/wp-content/uploads/{YEAR}/{MONTH}';
+const MONTH_MAP = {
+  1: 'JANUARY',
+  2: 'FEBRUARY',
+  3: 'MARCH',
+  4: 'APRIL',
+  5: 'MAY',
+  6: 'JUNE',
+  7: 'JULY',
+  8: 'AUGUST',
+  9: 'SEPTEMBER',
+  10: 'OCTOBER',
+  11: 'NOVEMBER',
+  12: 'DECEMBER',
+};
 
 interface Cell {
   key: string;
@@ -115,7 +129,7 @@ class Extractor extends MonthExtractor {
     dateId: MonthDateId,
     fileData: FileData
   ): Promise<FileOuput[]> {
-    const { month } = dateId;
+    const { year, month } = dateId;
 
     // Cargo el archivo xlsx
     const workbook = xlsx.read(fileData.data, { type: 'buffer' });
@@ -127,40 +141,58 @@ class Extractor extends MonthExtractor {
       data: sheet[key],
     }));
 
-    // Me quedo solo con las celdas que tienen datos
-    const startIndex = cells.findIndex((cell) => cell.data.v === 'Brand');
-    const cellData = cells.slice(startIndex + 1);
+    // Elimino el header, para esto encuentro la ultima celda
+    // del header que es la que tiene el texto 'Brand'
+    // en la version 2024_11 en adelante el texto es 'State'
+    let lastHeaderText = 'Brand';
+    if (dateId.greaterOrEqualThan(new MonthDateId(2024, 11))) {
+      lastHeaderText = 'State';
+    }
+    const startIndex = cells.findIndex(
+      (cell) => cell.data.v === lastHeaderText
+    );
+    if (startIndex === -1) {
+      throw new Error('Start index not found');
+    }
+    const cellsData = cells.slice(startIndex + 1);
 
-    // Convierto las celdas en una tabla de 4 columnas
-    const table: Cell[][] = [];
+    // Convierto las celdas en una tabla de n columnas
+    // La tabla siempre tuvo 4 columnas desde sus inicios
+    // pero de la version 2024_11 en adelante tiene 5 columnas
+    let totalColumns = 4;
+    if (dateId.greaterOrEqualThan(new MonthDateId(2024, 11))) {
+      totalColumns = 5;
+    }
+    let table: Cell[][] = [];
     let currentRow: Cell[] = [];
-    for (let i = 0; i < cellData.length; i++) {
-      if (currentRow.length === 4) {
+    for (let i = 0; i < cellsData.length; i++) {
+      if (currentRow.length === totalColumns) {
         table.push(currentRow);
         currentRow = [];
       }
-
-      currentRow.push(cellData[i]);
+      currentRow.push(cellsData[i]);
     }
 
-    // Me quedo solo con los datos del mes
-    const MONTH_MAP = {
-      1: 'JANUARY',
-      2: 'FEBRUARY',
-      3: 'MARCH',
-      4: 'APRIL',
-      5: 'MAY',
-      6: 'JUNE',
-      7: 'JULY',
-      8: 'AUGUST',
-      9: 'SEPTEMBER',
-      10: 'OCTOBER',
-      11: 'NOVEMBER',
-      12: 'DECEMBER',
-    };
-    const monthTable = table.filter(
-      (row) => row[0].data.v === MONTH_MAP[month]
-    );
+    // Filtro para quedarme con los datos del mes
+    // En la versiones anteriores el mes viene como texto
+    // ejemplo 'JANUARY', 'FEBRUARY', etc, pero en la version 2024_11
+    // viene como un número entero desde 1 de enero de 1900.
+    const monthTable = table.filter((row) => {
+      if (dateId.greaterOrEqualThan(new MonthDateId(2024, 11))) {
+        // El número serial lo convierto a year y month
+        // y lo comparo con el year y month esperado
+        const baseDate = new Date(1900, 0, 1);
+        const adjustedSerial = (row[0].data.v as number) - 2;
+        const date = new Date(
+          baseDate.getTime() + adjustedSerial * 24 * 60 * 60 * 1000
+        );
+        const serialYear = date.getFullYear();
+        const serialMonth = date.getMonth() + 1;
+        return serialYear === year && serialMonth === month;
+      }
+
+      return row[0].data.v === MONTH_MAP[month];
+    });
 
     return [
       {
@@ -178,21 +210,27 @@ class Extractor extends MonthExtractor {
 
   private getRegistrationsByModel(dateId: MonthDateId, table: Cell[][]) {
     const { year, month } = dateId;
+    let brandIndex = 3;
+    let modelIndex = 2;
+    if (dateId.greaterOrEqualThan(new MonthDateId(2024, 11))) {
+      brandIndex = 2;
+      modelIndex = 3;
+    }
 
     // Unifico la data por modelo
     const data: {
       [key: string]: { brand: string; model: string; registrations: number };
     } = {};
     for (const row of table) {
-      const key = (row[2].data.v + '')
+      const key = (row[modelIndex].data.v + '')
         .trim()
         .toUpperCase()
         .replace(/\s+/g, '_')
         .replace(/-/g, '_');
       if (!data[key]) {
         data[key] = {
-          brand: row[3].data.v as string,
-          model: row[2].data.v as string,
+          brand: row[brandIndex].data.v as string,
+          model: row[modelIndex].data.v as string,
           registrations: 0,
         };
       }
@@ -232,20 +270,24 @@ class Extractor extends MonthExtractor {
 
   private getRegistrationsByBrand(dateId: MonthDateId, table: Cell[][]) {
     const { year, month } = dateId;
+    let brandIndex = 3;
+    if (dateId.greaterOrEqualThan(new MonthDateId(2024, 11))) {
+      brandIndex = 2;
+    }
 
     // Unifico la data por modelo
     const data: {
       [key: string]: { brand: string; registrations: number };
     } = {};
     for (const row of table) {
-      const key = (row[3].data.v + '')
+      const key = (row[brandIndex].data.v + '')
         .trim()
         .toUpperCase()
         .replace(/\s+/g, '_')
         .replace(/-/g, '_');
       if (!data[key]) {
         data[key] = {
-          brand: row[3].data.v as string,
+          brand: row[brandIndex].data.v as string,
           registrations: 0,
         };
       }

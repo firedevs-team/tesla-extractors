@@ -42,6 +42,22 @@ export class DateId {
   toString(): string {
     return this.year.toString();
   }
+
+  greaterThan(dateId: DateId): boolean {
+    return this.valueOf() > dateId.valueOf();
+  }
+
+  lessThan(dateId: DateId): boolean {
+    return this.valueOf() < dateId.valueOf();
+  }
+
+  greaterOrEqualThan(dateId: DateId): boolean {
+    return this.valueOf() >= dateId.valueOf();
+  }
+
+  lessOrEqualThan(dateId: DateId): boolean {
+    return this.valueOf() <= dateId.valueOf();
+  }
 }
 
 export abstract class BaseExtractor<C extends Config = Config> {
