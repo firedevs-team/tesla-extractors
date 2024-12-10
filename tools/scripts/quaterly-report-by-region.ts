@@ -77,54 +77,35 @@ const run = async () => {
 
   const totalCountriesByRegion = fillTotalCountriesByRegion(registrations);
 
-  const table = new Table({
-    head: [
-      'Region',
-      currentQuarter,
-      MONTH_MAP[currentQuarterMonths[0]],
-      MONTH_MAP[currentQuarterMonths[1]],
-      MONTH_MAP[currentQuarterMonths[2]],
-      prevQuarter,
-      MONTH_MAP[prevQuarterMonths[0]],
-      MONTH_MAP[prevQuarterMonths[1]],
-      MONTH_MAP[prevQuarterMonths[2]],
-      `${currentQuarter}-${shortPrevYear}`,
-      MONTH_MAP[currentQuarterMonths[0]],
-      MONTH_MAP[currentQuarterMonths[1]],
-      MONTH_MAP[currentQuarterMonths[2]],
-    ],
-    colWidths: [12, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9],
-  });
-
-  const findRegistrations = (
-    year: number,
-    month: number,
-    region: string
-  ): { total: number | null; complete: boolean } => {
-    let total = 0;
-    let totalCountries = 0;
-    for (const regs of registrations) {
-      if (
-        regs.year === year &&
-        regs.month === month &&
-        regs.region === region
-      ) {
-        total += regs.registrations;
-        totalCountries++;
-      }
-    }
-
-    if (total === 0) {
-      return { total: null, complete: false };
-    }
-
-    return {
-      total,
-      complete: totalCountries === totalCountriesByRegion[region],
-    };
-  };
-
   const getRow = (region: string) => {
+    const findRegistrations = (
+      year: number,
+      month: number,
+      region: string
+    ): { total: number | null; complete: boolean } => {
+      let total = 0;
+      let totalCountries = 0;
+      for (const regs of registrations) {
+        if (
+          regs.year === year &&
+          regs.month === month &&
+          regs.region === region
+        ) {
+          total += regs.registrations;
+          totalCountries++;
+        }
+      }
+
+      if (total === 0) {
+        return { total: null, complete: false };
+      }
+
+      return {
+        total,
+        complete: totalCountries === totalCountriesByRegion[region],
+      };
+    };
+
     const _region = region.toUpperCase();
     const registrationsCurrentQuarter = currentQuarterMonths.map((month) =>
       findRegistrations(currentYear, month, _region)
@@ -166,6 +147,25 @@ const run = async () => {
       ),
     ];
   };
+
+  const table = new Table({
+    head: [
+      'Region',
+      currentQuarter,
+      MONTH_MAP[currentQuarterMonths[0]],
+      MONTH_MAP[currentQuarterMonths[1]],
+      MONTH_MAP[currentQuarterMonths[2]],
+      prevQuarter,
+      MONTH_MAP[prevQuarterMonths[0]],
+      MONTH_MAP[prevQuarterMonths[1]],
+      MONTH_MAP[prevQuarterMonths[2]],
+      `${currentQuarter}-${shortPrevYear}`,
+      MONTH_MAP[currentQuarterMonths[0]],
+      MONTH_MAP[currentQuarterMonths[1]],
+      MONTH_MAP[currentQuarterMonths[2]],
+    ],
+    colWidths: [12, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9],
+  });
 
   table.push(getRow('USA'));
   table.push(getRow('Canada'));

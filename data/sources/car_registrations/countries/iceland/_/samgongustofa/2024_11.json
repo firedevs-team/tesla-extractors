@@ -1,0 +1,1350 @@
+{
+  "by_brand": [
+    {
+      "brand": "TOYOTA",
+      "registrations": "113"
+    },
+    {
+      "brand": "TESLA",
+      "registrations": "53"
+    },
+    {
+      "brand": "KIA",
+      "registrations": "51"
+    },
+    {
+      "brand": "RENAULT",
+      "registrations": "46"
+    },
+    {
+      "brand": "VOLVO",
+      "registrations": "41"
+    },
+    {
+      "brand": "FORD",
+      "registrations": "40"
+    },
+    {
+      "brand": "HONDA",
+      "registrations": "33"
+    },
+    {
+      "brand": "HYUNDAI",
+      "registrations": "33"
+    },
+    {
+      "brand": "MERCEDES-BENZ",
+      "registrations": "28"
+    },
+    {
+      "brand": "SKODA",
+      "registrations": "25"
+    },
+    {
+      "brand": "VINNUVÉL",
+      "registrations": "19"
+    },
+    {
+      "brand": "CFMOTO",
+      "registrations": "17"
+    },
+    {
+      "brand": "MAZDA",
+      "registrations": "17"
+    },
+    {
+      "brand": "SCANIA",
+      "registrations": "17"
+    },
+    {
+      "brand": "VOLKSWAGEN, VW",
+      "registrations": "16"
+    },
+    {
+      "brand": "MG",
+      "registrations": "15"
+    },
+    {
+      "brand": "PEUGEOT",
+      "registrations": "14"
+    },
+    {
+      "brand": "AUDI",
+      "registrations": "13"
+    },
+    {
+      "brand": "XPENG",
+      "registrations": "13"
+    },
+    {
+      "brand": "PORSCHE",
+      "registrations": "12"
+    },
+    {
+      "brand": "IFOR WILLIAMS",
+      "registrations": "11"
+    },
+    {
+      "brand": "LYNX",
+      "registrations": "11"
+    },
+    {
+      "brand": "NISSAN",
+      "registrations": "11"
+    },
+    {
+      "brand": "CAN-AM",
+      "registrations": "9"
+    },
+    {
+      "brand": "POLESTAR",
+      "registrations": "9"
+    },
+    {
+      "brand": "BMW",
+      "registrations": "8"
+    },
+    {
+      "brand": "LAND ROVER",
+      "registrations": "7"
+    },
+    {
+      "brand": "POLARIS",
+      "registrations": "7"
+    },
+    {
+      "brand": "SKI-DOO",
+      "registrations": "7"
+    },
+    {
+      "brand": "BYD",
+      "registrations": "6"
+    },
+    {
+      "brand": "DACIA",
+      "registrations": "6"
+    },
+    {
+      "brand": "CITROEN",
+      "registrations": "5"
+    },
+    {
+      "brand": "IVECO",
+      "registrations": "5"
+    },
+    {
+      "brand": "LEXUS",
+      "registrations": "5"
+    },
+    {
+      "brand": "SCHMITZ",
+      "registrations": "5"
+    },
+    {
+      "brand": "SUZUKI",
+      "registrations": "5"
+    },
+    {
+      "brand": "CHEVAL LIBERTE",
+      "registrations": "4"
+    },
+    {
+      "brand": "EKERI",
+      "registrations": "4"
+    },
+    {
+      "brand": "GOES",
+      "registrations": "4"
+    },
+    {
+      "brand": "JEEP",
+      "registrations": "4"
+    },
+    {
+      "brand": "KAYO",
+      "registrations": "4"
+    },
+    {
+      "brand": "MAN",
+      "registrations": "4"
+    },
+    {
+      "brand": "BRENDERUP",
+      "registrations": "3"
+    },
+    {
+      "brand": "FIAT",
+      "registrations": "3"
+    },
+    {
+      "brand": "HAPERT",
+      "registrations": "3"
+    },
+    {
+      "brand": "ISUZU",
+      "registrations": "3"
+    },
+    {
+      "brand": "NIEWIADOW",
+      "registrations": "3"
+    },
+    {
+      "brand": "NUGENT",
+      "registrations": "3"
+    },
+    {
+      "brand": "SEGWAY",
+      "registrations": "3"
+    },
+    {
+      "brand": "SUBARU",
+      "registrations": "3"
+    },
+    {
+      "brand": "VALTRA",
+      "registrations": "3"
+    },
+    {
+      "brand": "CRRC",
+      "registrations": "2"
+    },
+    {
+      "brand": "DODGE",
+      "registrations": "2"
+    },
+    {
+      "brand": "ERT",
+      "registrations": "2"
+    },
+    {
+      "brand": "GAS GAS",
+      "registrations": "2"
+    },
+    {
+      "brand": "HENGIVAGN",
+      "registrations": "2"
+    },
+    {
+      "brand": "HUMBAUR",
+      "registrations": "2"
+    },
+    {
+      "brand": "HUMUS",
+      "registrations": "2"
+    },
+    {
+      "brand": "INDESPENSION",
+      "registrations": "2"
+    },
+    {
+      "brand": "KTM",
+      "registrations": "2"
+    },
+    {
+      "brand": "LEIKNIR",
+      "registrations": "2"
+    },
+    {
+      "brand": "NEW HOLLAND",
+      "registrations": "2"
+    },
+    {
+      "brand": "NOOTEBOOM",
+      "registrations": "2"
+    },
+    {
+      "brand": "OPEL",
+      "registrations": "2"
+    },
+    {
+      "brand": "SCHMIDT",
+      "registrations": "2"
+    },
+    {
+      "brand": "SOLIS",
+      "registrations": "2"
+    },
+    {
+      "brand": "V OG Þ",
+      "registrations": "2"
+    },
+    {
+      "brand": "ACKERMANN",
+      "registrations": "1"
+    },
+    {
+      "brand": "BATESON",
+      "registrations": "1"
+    },
+    {
+      "brand": "BLYSS",
+      "registrations": "1"
+    },
+    {
+      "brand": "BOECKMANN",
+      "registrations": "1"
+    },
+    {
+      "brand": "CAN AM",
+      "registrations": "1"
+    },
+    {
+      "brand": "CLAAS",
+      "registrations": "1"
+    },
+    {
+      "brand": "ISEKI",
+      "registrations": "1"
+    },
+    {
+      "brand": "JOHN DEERE",
+      "registrations": "1"
+    },
+    {
+      "brand": "KAWASAKI",
+      "registrations": "1"
+    },
+    {
+      "brand": "KUBOTA",
+      "registrations": "1"
+    },
+    {
+      "brand": "MINI",
+      "registrations": "1"
+    },
+    {
+      "brand": "MULTIHOG",
+      "registrations": "1"
+    },
+    {
+      "brand": "ODES",
+      "registrations": "1"
+    },
+    {
+      "brand": "PLS",
+      "registrations": "1"
+    },
+    {
+      "brand": "ROSERO-P",
+      "registrations": "1"
+    },
+    {
+      "brand": "SEB",
+      "registrations": "1"
+    },
+    {
+      "brand": "SMART",
+      "registrations": "1"
+    },
+    {
+      "brand": "TEMARED",
+      "registrations": "1"
+    },
+    {
+      "brand": "TOMPLAN",
+      "registrations": "1"
+    },
+    {
+      "brand": "TREDAL",
+      "registrations": "1"
+    },
+    {
+      "brand": "VÍKURVAGN",
+      "registrations": "1"
+    },
+    {
+      "brand": "WECKMAN",
+      "registrations": "1"
+    },
+    {
+      "brand": "YUNQUE",
+      "registrations": "1"
+    }
+  ],
+  "by_model": [
+    {
+      "model": "LAND CRUISER",
+      "registrations": "59"
+    },
+    {
+      "model": "MODEL Y",
+      "registrations": "46"
+    },
+    {
+      "model": "E:NY1",
+      "registrations": "32"
+    },
+    {
+      "model": "KANGOO VAN E-TECH ELECTRI",
+      "registrations": "25"
+    },
+    {
+      "model": "(En blanco)",
+      "registrations": "23"
+    },
+    {
+      "model": "EXPLORER",
+      "registrations": "17"
+    },
+    {
+      "model": "RAV4",
+      "registrations": "17"
+    },
+    {
+      "model": "SORENTO",
+      "registrations": "17"
+    },
+    {
+      "model": "KODIAQ",
+      "registrations": "16"
+    },
+    {
+      "model": "HILUX",
+      "registrations": "13"
+    },
+    {
+      "model": "TRANSIT CUSTOM",
+      "registrations": "12"
+    },
+    {
+      "model": "IONIQ5",
+      "registrations": "11"
+    },
+    {
+      "model": "MACAN 4",
+      "registrations": "10"
+    },
+    {
+      "model": "PROACE",
+      "registrations": "10"
+    },
+    {
+      "model": "TRAFIC",
+      "registrations": "10"
+    },
+    {
+      "model": "FH16",
+      "registrations": "9"
+    },
+    {
+      "model": "G6",
+      "registrations": "9"
+    },
+    {
+      "model": "MG4 ELECTRIC",
+      "registrations": "9"
+    },
+    {
+      "model": "NIRO",
+      "registrations": "9"
+    },
+    {
+      "model": "OUTLANDER",
+      "registrations": "9"
+    },
+    {
+      "model": "TUCSON",
+      "registrations": "9"
+    },
+    {
+      "model": "XC60",
+      "registrations": "9"
+    },
+    {
+      "model": "ARIYA",
+      "registrations": "7"
+    },
+    {
+      "model": "Q6 SUV E-TRON QUATTRO",
+      "registrations": "7"
+    },
+    {
+      "model": "SANTA FE",
+      "registrations": "7"
+    },
+    {
+      "model": "SPORTAGE",
+      "registrations": "7"
+    },
+    {
+      "model": "XC40",
+      "registrations": "7"
+    },
+    {
+      "model": "CFORCE520L",
+      "registrations": "6"
+    },
+    {
+      "model": "DUSTER",
+      "registrations": "6"
+    },
+    {
+      "model": "MG MARVEL R ELECTRIC",
+      "registrations": "6"
+    },
+    {
+      "model": "MODEL 3",
+      "registrations": "6"
+    },
+    {
+      "model": "PICANTO",
+      "registrations": "6"
+    },
+    {
+      "model": "SPRINTER",
+      "registrations": "6"
+    },
+    {
+      "model": "TRANSIT",
+      "registrations": "6"
+    },
+    {
+      "model": "TRANSPORTER",
+      "registrations": "6"
+    },
+    {
+      "model": "ENYAQ 85X",
+      "registrations": "5"
+    },
+    {
+      "model": "EV6",
+      "registrations": "5"
+    },
+    {
+      "model": "FREERIDE",
+      "registrations": "5"
+    },
+    {
+      "model": "MAZDA CX-60",
+      "registrations": "5"
+    },
+    {
+      "model": "MAZDA MX-30",
+      "registrations": "5"
+    },
+    {
+      "model": "MEGANE E-TECH ELECTRIC",
+      "registrations": "5"
+    },
+    {
+      "model": "R560",
+      "registrations": "5"
+    },
+    {
+      "model": "CFORCE 1000 TOURING",
+      "registrations": "4"
+    },
+    {
+      "model": "CFORCE 850 TOURING",
+      "registrations": "4"
+    },
+    {
+      "model": "EX30",
+      "registrations": "4"
+    },
+    {
+      "model": "G9",
+      "registrations": "4"
+    },
+    {
+      "model": "GH",
+      "registrations": "4"
+    },
+    {
+      "model": "JUMPY",
+      "registrations": "4"
+    },
+    {
+      "model": "KONA",
+      "registrations": "4"
+    },
+    {
+      "model": "LBX",
+      "registrations": "4"
+    },
+    {
+      "model": "POLESTAR 3",
+      "registrations": "4"
+    },
+    {
+      "model": "Q4 45 E-TRON",
+      "registrations": "4"
+    },
+    {
+      "model": "SCB*S3",
+      "registrations": "4"
+    },
+    {
+      "model": "SHREDDER RE",
+      "registrations": "4"
+    },
+    {
+      "model": "STONIC",
+      "registrations": "4"
+    },
+    {
+      "model": "2008",
+      "registrations": "3"
+    },
+    {
+      "model": "3008",
+      "registrations": "3"
+    },
+    {
+      "model": "5008",
+      "registrations": "3"
+    },
+    {
+      "model": "DEFENDER",
+      "registrations": "3"
+    },
+    {
+      "model": "EQB 300 4MATIC",
+      "registrations": "3"
+    },
+    {
+      "model": "EX90",
+      "registrations": "3"
+    },
+    {
+      "model": "FLUTNINGSKERRA",
+      "registrations": "3"
+    },
+    {
+      "model": "FM",
+      "registrations": "3"
+    },
+    {
+      "model": "ID. BUZZ CARGO 150 KW",
+      "registrations": "3"
+    },
+    {
+      "model": "JUKE",
+      "registrations": "3"
+    },
+    {
+      "model": "KANGOO VAN",
+      "registrations": "3"
+    },
+    {
+      "model": "MASTER",
+      "registrations": "3"
+    },
+    {
+      "model": "MAZDA2 HYBRID",
+      "registrations": "3"
+    },
+    {
+      "model": "P360",
+      "registrations": "3"
+    },
+    {
+      "model": "PARTNER",
+      "registrations": "3"
+    },
+    {
+      "model": "POLESTAR 4",
+      "registrations": "3"
+    },
+    {
+      "model": "RAVE",
+      "registrations": "3"
+    },
+    {
+      "model": "S5-K",
+      "registrations": "3"
+    },
+    {
+      "model": "SEAL U",
+      "registrations": "3"
+    },
+    {
+      "model": "SUPERB",
+      "registrations": "3"
+    },
+    {
+      "model": "VITARA",
+      "registrations": "3"
+    },
+    {
+      "model": "WRANGLER UNLIMITED",
+      "registrations": "3"
+    },
+    {
+      "model": "X5 XDRIVE50E",
+      "registrations": "3"
+    },
+    {
+      "model": "XC90",
+      "registrations": "3"
+    },
+    {
+      "model": "XWOLF700 L",
+      "registrations": "3"
+    },
+    {
+      "model": "YARIS",
+      "registrations": "3"
+    },
+    {
+      "model": "YARIS CROSS",
+      "registrations": "3"
+    },
+    {
+      "model": "10CTS",
+      "registrations": "2"
+    },
+    {
+      "model": "26",
+      "registrations": "2"
+    },
+    {
+      "model": "49 RANGER",
+      "registrations": "2"
+    },
+    {
+      "model": "50C18",
+      "registrations": "2"
+    },
+    {
+      "model": "ADVENTURE LX",
+      "registrations": "2"
+    },
+    {
+      "model": "AMAROK",
+      "registrations": "2"
+    },
+    {
+      "model": "AYGO X",
+      "registrations": "2"
+    },
+    {
+      "model": "BR2",
+      "registrations": "2"
+    },
+    {
+      "model": "C7",
+      "registrations": "2"
+    },
+    {
+      "model": "CADDY",
+      "registrations": "2"
+    },
+    {
+      "model": "CFORCE 625 TOURING",
+      "registrations": "2"
+    },
+    {
+      "model": "C-HR",
+      "registrations": "2"
+    },
+    {
+      "model": "CORSA",
+      "registrations": "2"
+    },
+    {
+      "model": "CX-5",
+      "registrations": "2"
+    },
+    {
+      "model": "Ducato",
+      "registrations": "2"
+    },
+    {
+      "model": "E20",
+      "registrations": "2"
+    },
+    {
+      "model": "E-PARTNER",
+      "registrations": "2"
+    },
+    {
+      "model": "EQA 300 4MATIC",
+      "registrations": "2"
+    },
+    {
+      "model": "EQC 400 4MATIC",
+      "registrations": "2"
+    },
+    {
+      "model": "EQE 350 4MATIC",
+      "registrations": "2"
+    },
+    {
+      "model": "ESPRINTER",
+      "registrations": "2"
+    },
+    {
+      "model": "EV9",
+      "registrations": "2"
+    },
+    {
+      "model": "FLATVAGN",
+      "registrations": "2"
+    },
+    {
+      "model": "FRIEDRICH",
+      "registrations": "2"
+    },
+    {
+      "model": "GP",
+      "registrations": "2"
+    },
+    {
+      "model": "IONIQ6",
+      "registrations": "2"
+    },
+    {
+      "model": "LM",
+      "registrations": "2"
+    },
+    {
+      "model": "MXZ",
+      "registrations": "2"
+    },
+    {
+      "model": "POLESTAR 2",
+      "registrations": "2"
+    },
+    {
+      "model": "PROACE CITY",
+      "registrations": "2"
+    },
+    {
+      "model": "PUMA",
+      "registrations": "2"
+    },
+    {
+      "model": "RAM 3500",
+      "registrations": "2"
+    },
+    {
+      "model": "RANGE ROVER SPORT",
+      "registrations": "2"
+    },
+    {
+      "model": "S560",
+      "registrations": "2"
+    },
+    {
+      "model": "SNARLER",
+      "registrations": "2"
+    },
+    {
+      "model": "SOLTERRA",
+      "registrations": "2"
+    },
+    {
+      "model": "SPORTSMAN",
+      "registrations": "2"
+    },
+    {
+      "model": "TEG6125EUBEV01",
+      "registrations": "2"
+    },
+    {
+      "model": "TELE-49-03V",
+      "registrations": "2"
+    },
+    {
+      "model": "TGS",
+      "registrations": "2"
+    },
+    {
+      "model": "TGX",
+      "registrations": "2"
+    },
+    {
+      "model": "TT",
+      "registrations": "2"
+    },
+    {
+      "model": "TXT RACING 280",
+      "registrations": "2"
+    },
+    {
+      "model": "1",
+      "registrations": "1"
+    },
+    {
+      "model": "225E XDRIVE ACTIVE TOURER",
+      "registrations": "1"
+    },
+    {
+      "model": "300 EXC TPI",
+      "registrations": "1"
+    },
+    {
+      "model": "35S18",
+      "registrations": "1"
+    },
+    {
+      "model": "4310 ATB",
+      "registrations": "1"
+    },
+    {
+      "model": "5420",
+      "registrations": "1"
+    },
+    {
+      "model": "6120M",
+      "registrations": "1"
+    },
+    {
+      "model": "70C21",
+      "registrations": "1"
+    },
+    {
+      "model": "77/ BRAVO 310B",
+      "registrations": "1"
+    },
+    {
+      "model": "850 RMK",
+      "registrations": "1"
+    },
+    {
+      "model": "890 ADVENTURE",
+      "registrations": "1"
+    },
+    {
+      "model": "911 GT3 RS",
+      "registrations": "1"
+    },
+    {
+      "model": "9R RMK",
+      "registrations": "1"
+    },
+    {
+      "model": "A115",
+      "registrations": "1"
+    },
+    {
+      "model": "ACROSS",
+      "registrations": "1"
+    },
+    {
+      "model": "ACTROS",
+      "registrations": "1"
+    },
+    {
+      "model": "AD27094",
+      "registrations": "1"
+    },
+    {
+      "model": "AD35105",
+      "registrations": "1"
+    },
+    {
+      "model": "ARION 450",
+      "registrations": "1"
+    },
+    {
+      "model": "AROCS",
+      "registrations": "1"
+    },
+    {
+      "model": "AS440XTZ/P",
+      "registrations": "1"
+    },
+    {
+      "model": "ATTO 3",
+      "registrations": "1"
+    },
+    {
+      "model": "AU110",
+      "registrations": "1"
+    },
+    {
+      "model": "AVENGER",
+      "registrations": "1"
+    },
+    {
+      "model": "AY70",
+      "registrations": "1"
+    },
+    {
+      "model": "AZURE",
+      "registrations": "1"
+    },
+    {
+      "model": "BOOST",
+      "registrations": "1"
+    },
+    {
+      "model": "BR3",
+      "registrations": "1"
+    },
+    {
+      "model": "BX3717S-2",
+      "registrations": "1"
+    },
+    {
+      "model": "CAPRI",
+      "registrations": "1"
+    },
+    {
+      "model": "CFORCE 110",
+      "registrations": "1"
+    },
+    {
+      "model": "CITAN",
+      "registrations": "1"
+    },
+    {
+      "model": "COBALT",
+      "registrations": "1"
+    },
+    {
+      "model": "COROLLA",
+      "registrations": "1"
+    },
+    {
+      "model": "COUNTRYMAN E",
+      "registrations": "1"
+    },
+    {
+      "model": "CT",
+      "registrations": "1"
+    },
+    {
+      "model": "CV Stage V",
+      "registrations": "1"
+    },
+    {
+      "model": "DISCOVERY SPORT",
+      "registrations": "1"
+    },
+    {
+      "model": "DOLPHIN",
+      "registrations": "1"
+    },
+    {
+      "model": "E-BERLINGO VAN",
+      "registrations": "1"
+    },
+    {
+      "model": "EC40",
+      "registrations": "1"
+    },
+    {
+      "model": "ECITAN",
+      "registrations": "1"
+    },
+    {
+      "model": "EQS 450 4MATIC",
+      "registrations": "1"
+    },
+    {
+      "model": "EX40",
+      "registrations": "1"
+    },
+    {
+      "model": "F5523T",
+      "registrations": "1"
+    },
+    {
+      "model": "FE",
+      "registrations": "1"
+    },
+    {
+      "model": "FIRST",
+      "registrations": "1"
+    },
+    {
+      "model": "FORESTER",
+      "registrations": "1"
+    },
+    {
+      "model": "FUGLEMAN UT10X",
+      "registrations": "1"
+    },
+    {
+      "model": "G 580",
+      "registrations": "1"
+    },
+    {
+      "model": "G135",
+      "registrations": "1"
+    },
+    {
+      "model": "G460",
+      "registrations": "1"
+    },
+    {
+      "model": "GCV",
+      "registrations": "1"
+    },
+    {
+      "model": "GENSET TRAILER",
+      "registrations": "1"
+    },
+    {
+      "model": "GLC 300 E 4MATIC",
+      "registrations": "1"
+    },
+    {
+      "model": "GLE 400 E 4MATIC",
+      "registrations": "1"
+    },
+    {
+      "model": "GLE 400 E 4MATIC COUPE",
+      "registrations": "1"
+    },
+    {
+      "model": "GLS 450 D 4MATIC",
+      "registrations": "1"
+    },
+    {
+      "model": "GOLF",
+      "registrations": "1"
+    },
+    {
+      "model": "HAN",
+      "registrations": "1"
+    },
+    {
+      "model": "HESTAKERRA",
+      "registrations": "1"
+    },
+    {
+      "model": "HIGHLANDER",
+      "registrations": "1"
+    },
+    {
+      "model": "HL4121/270",
+      "registrations": "1"
+    },
+    {
+      "model": "HPL150PG007304BG",
+      "registrations": "1"
+    },
+    {
+      "model": "HT 354121",
+      "registrations": "1"
+    },
+    {
+      "model": "HTK 3000.37",
+      "registrations": "1"
+    },
+    {
+      "model": "I4 M50",
+      "registrations": "1"
+    },
+    {
+      "model": "I5 M60 XDRIVE",
+      "registrations": "1"
+    },
+    {
+      "model": "ID.3 PRO 150 KW",
+      "registrations": "1"
+    },
+    {
+      "model": "ID.4 PRO 4MOTION 210KW",
+      "registrations": "1"
+    },
+    {
+      "model": "INDIGO",
+      "registrations": "1"
+    },
+    {
+      "model": "JAZZ",
+      "registrations": "1"
+    },
+    {
+      "model": "JIMNY",
+      "registrations": "1"
+    },
+    {
+      "model": "KS-F 27",
+      "registrations": "1"
+    },
+    {
+      "model": "LS146TRI",
+      "registrations": "1"
+    },
+    {
+      "model": "M6-142",
+      "registrations": "1"
+    },
+    {
+      "model": "MACAN TURBO",
+      "registrations": "1"
+    },
+    {
+      "model": "MATRIX",
+      "registrations": "1"
+    },
+    {
+      "model": "MAVERICK",
+      "registrations": "1"
+    },
+    {
+      "model": "MAZDA CX-80",
+      "registrations": "1"
+    },
+    {
+      "model": "MAZDA3",
+      "registrations": "1"
+    },
+    {
+      "model": "MODEL X",
+      "registrations": "1"
+    },
+    {
+      "model": "MUSTANG MACH-E",
+      "registrations": "1"
+    },
+    {
+      "model": "NX450H+",
+      "registrations": "1"
+    },
+    {
+      "model": "OCTAVIA",
+      "registrations": "1"
+    },
+    {
+      "model": "P280",
+      "registrations": "1"
+    },
+    {
+      "model": "P320",
+      "registrations": "1"
+    },
+    {
+      "model": "P460",
+      "registrations": "1"
+    },
+    {
+      "model": "P500",
+      "registrations": "1"
+    },
+    {
+      "model": "PATHCROSS MAX PRO",
+      "registrations": "1"
+    },
+    {
+      "model": "PO27",
+      "registrations": "1"
+    },
+    {
+      "model": "PROSTAR S4",
+      "registrations": "1"
+    },
+    {
+      "model": "Q7 60 TFSI E",
+      "registrations": "1"
+    },
+    {
+      "model": "Q8 SPORTBACK 50 E-TRON",
+      "registrations": "1"
+    },
+    {
+      "model": "QASHQAI",
+      "registrations": "1"
+    },
+    {
+      "model": "R 1300GS",
+      "registrations": "1"
+    },
+    {
+      "model": "R660",
+      "registrations": "1"
+    },
+    {
+      "model": "RANGE ROVER",
+      "registrations": "1"
+    },
+    {
+      "model": "RANGER",
+      "registrations": "1"
+    },
+    {
+      "model": "S660",
+      "registrations": "1"
+    },
+    {
+      "model": "SCB",
+      "registrations": "1"
+    },
+    {
+      "model": "SCUDO",
+      "registrations": "1"
+    },
+    {
+      "model": "SHV",
+      "registrations": "1"
+    },
+    {
+      "model": "T-13-TL",
+      "registrations": "1"
+    },
+    {
+      "model": "T195",
+      "registrations": "1"
+    },
+    {
+      "model": "T3500T",
+      "registrations": "1"
+    },
+    {
+      "model": "T3-K",
+      "registrations": "1"
+    },
+    {
+      "model": "T5.120",
+      "registrations": "1"
+    },
+    {
+      "model": "T5.140 DC",
+      "registrations": "1"
+    },
+    {
+      "model": "TA",
+      "registrations": "1"
+    },
+    {
+      "model": "TERROX500L",
+      "registrations": "1"
+    },
+    {
+      "model": "TG6507GC",
+      "registrations": "1"
+    },
+    {
+      "model": "TS90",
+      "registrations": "1"
+    },
+    {
+      "model": "TT140",
+      "registrations": "1"
+    },
+    {
+      "model": "VITO",
+      "registrations": "1"
+    },
+    {
+      "model": "VV270/2/H",
+      "registrations": "1"
+    },
+    {
+      "model": "WS-130DG",
+      "registrations": "1"
+    },
+    {
+      "model": "X3 XDRIVE30E",
+      "registrations": "1"
+    },
+    {
+      "model": "XCEED",
+      "registrations": "1"
+    },
+    {
+      "model": "Z650",
+      "registrations": "1"
+    },
+    {
+      "model": "ZGV",
+      "registrations": "1"
+    }
+  ]
+}
