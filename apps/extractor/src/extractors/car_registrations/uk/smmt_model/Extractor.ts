@@ -15,6 +15,13 @@ import {
 
 const SOURCE_URL = 'https://www.smmt.co.uk/category/news/registrations/';
 
+/**
+ * Extractor de los top modelos vendidos en el Reino Unido
+ *
+ * TODO: mejorar la extracción de la imagen usando esta fuente mejor
+ * https://www.smmt.co.uk/vehicle-data/car-registrations/
+ * Aqui puedo sacar la cantidad por powertrain
+ */
 class Extractor extends MonthExtractor {
   constructor() {
     super({
@@ -154,7 +161,8 @@ class Extractor extends MonthExtractor {
         // Identifico si cambio de tabla
         const number = Number(cell.Text.replace(',', ''));
         const isNumber = !isNaN(number);
-        if (isNumber && number > 10) {
+        const hasComma = cell.Text.includes(',');
+        if (isNumber && number > 10 && hasComma) {
           if (isTable1) {
             table1.push(rowTable1);
           } else {
