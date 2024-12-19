@@ -8,6 +8,11 @@ import {
   MonthDateId,
   MonthExtractor,
 } from '../../../../lib';
+import path from 'path';
+import { writeFile } from 'fs/promises';
+import os from 'os';
+import { execSync } from 'child_process';
+import { text } from 'stream/consumers';
 
 const SOURCE_URL = 'https://www.mia.org.nz/Sales-Data/Vehicle-Sales';
 
@@ -85,6 +90,153 @@ class Extractor extends MonthExtractor {
   }
 
   async transform(
+    dateId: MonthDateId,
+    fileData: FileData
+  ): Promise<FileOuput[]> {
+    const { year, month } = dateId;
+
+    if (dateId.lessThan(new MonthDateId(2024, 11))) {
+      return this.transformBefore2024_11(dateId, fileData);
+    }
+
+    // Convierto el pdf a json
+    const pdfJSON = await new Promise<Output>((resolve, reject) => {
+      const pdfParser = new PDFParser();
+
+      pdfParser.on('pdfParser_dataError', (errData) =>
+        reject(errData.parserError)
+      );
+
+      pdfParser.on('pdfParser_dataReady', async (pdfData) => {
+        resolve(pdfData);
+      });
+
+      pdfParser.loadPDF(fileData.path);
+    });
+
+    // Siempre es una página
+    const pages = pdfJSON.Pages;
+    if (pages.length !== 1) {
+      throw new Error('Unexpected number of pages');
+    }
+
+    const texts = pages[0].Texts;
+
+    // Hago un corte del contenido
+    // para que quedarme con los datos de la tabla
+    const startPos = texts.findIndex((cell) => cell.R[0].T === 'Year');
+    if (startPos === -1) {
+      throw new Error('Start position not found');
+    }
+
+    const endPos = texts.findIndex((cell) => cell.R[0].T.endsWith('Passenger'));
+    if (endPos === -1) {
+      throw new Error('End position not found');
+    }
+    const cells = texts.slice(startPos + 1, endPos);
+
+    // La tabla tiene 13 columnas asi
+    // que separo por cada 13 cells para fomar los rows
+    const totalColumns = 13;
+    let rows: Text[][] = [];
+    let currentRow: Text[] = [];
+    for (let i = 0; i < cells.length; i++) {
+      if (currentRow.length === totalColumns) {
+        rows.push(currentRow);
+        currentRow = [];
+      }
+      currentRow.push(cells[i]);
+    }
+
+    // Creo grupos de rows que pertenecen a un clasificación
+    // esto lo hago identificando si hay un row que la primera celda
+    // el texto termina con "Total (Autobase)"
+    let groups: Text[][][] = [];
+    let currentGroup: Text[][] = [];
+    for (const row of rows) {
+      if (decodeURIComponent(row[0].R[0].T).endsWith('Total (Autobase)')) {
+        currentGroup = [];
+        groups.push(currentGroup);
+      }
+      currentGroup.push(row);
+    }
+    // Deben ser 13 grupos
+    if (groups.length !== 13) {
+      throw new Error('Unexpected number of groups');
+    }
+
+    // Valido con zod
+    const Schema = z
+      .object({
+        year: z.number(),
+        month: z.number(),
+        engine_type: z.preprocess(
+          (val: string) =>
+            decodeURIComponent(val).toUpperCase().trim().replace(/\s+/g, '_'),
+          z.string()
+        ),
+        segment: z.preprocess(
+          (val: string) =>
+            decodeURIComponent(val).toUpperCase().trim().replace(/\s+/g, '_'),
+          z.string()
+        ),
+        model: z.preprocess(
+          (val: string) =>
+            decodeURIComponent(val).toUpperCase().trim().replace(/\s+/g, '_'),
+          z.string()
+        ),
+        registrations: z.preprocess((val: string) => {
+          return parseInt(decodeURIComponent(val).replace(/\s/g, ''), 10);
+        }, z.number().int()),
+      })
+      .strict();
+    type Registrations = z.infer<typeof Schema>;
+    const registrations: Registrations[] = [];
+    const clasifications = [
+      ['ELECTRIC', 'PASSENGER'],
+      ['ELECTRIC', 'SUV'],
+      ['ELECTRIC', 'LIGHT COMMERCIAL'],
+      ['ELECTRIC', 'HEAVY COMMERCIAL'],
+      ['ELECTRIC', 'OTHERS'],
+      ['ELECTRIC HYDROGEN FUEL CELL', 'PASSENGER'],
+      ['PLUG-IN PETROL HYBRID', 'PASSENGER'],
+      ['PLUG-IN PETROL HYBRID', 'SUV'],
+      ['PLUG-IN PETROL HYBRID', 'LIGHT COMMERCIAL'],
+      ['PETROL HYBRID', 'PASSENGER'],
+      ['PETROL HYBRID', 'SUV'],
+      ['PETROL HYBRID', 'LIGHT COMMERCIAL'],
+      ['PETROL HYBRID', 'OTHERS'],
+    ];
+    for (let i = 0; i < clasifications.length; i++) {
+      const clasification = clasifications[i];
+      const group = groups[i];
+
+      const engine_type = clasification[0];
+      const segment = clasification[1];
+
+      for (const row of group) {
+        const parsed = Schema.parse({
+          year,
+          month,
+          engine_type,
+          segment,
+          model: row[0].R[0].T,
+          registrations: row[month].R[0].T,
+        });
+
+        registrations.push(parsed);
+      }
+    }
+
+    return [
+      {
+        name: 'registrations_by_model',
+        data: registrations,
+      },
+    ];
+  }
+
+  async transformBefore2024_11(
     dateId: MonthDateId,
     fileData: FileData
   ): Promise<FileOuput[]> {
