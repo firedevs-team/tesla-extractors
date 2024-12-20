@@ -1,5 +1,5 @@
 import Papa from 'papaparse';
-import { BaseTransformer } from '../../../lib';
+import { BaseGenerator } from '../../lib';
 import { mkdir, readFile, writeFile } from 'fs/promises';
 import path from 'path';
 import { Parser } from 'json2csv';
@@ -15,12 +15,12 @@ interface IBrandRegistrations {
   country: string;
 }
 
-class Transformer extends BaseTransformer {
+class Generator extends BaseGenerator {
   constructor() {
-    super({ id: 'car_registrations_by_brand' });
+    super({ id: 'tesla_monthly_registrations' });
   }
 
-  async transform(): Promise<void> {
+  async generate(): Promise<void> {
     const registrations: IBrandRegistrations[] = [];
 
     // --------
@@ -1037,24 +1037,19 @@ class Transformer extends BaseTransformer {
     })();
 
     // --------
-    // Salvo registrations_by_brand.csv
+    // Salvo tesla_monthly_registrations.csv
     const json2csvParser = new Parser();
     const csv = json2csvParser.parse(registrations);
-    const outputFolder = path.join(
-      this.sources_path,
-      'car_registrations',
-      'global'
+    const outputPath = path.join(
+      this.generated_path,
+      'tesla_monthly_registrations.csv'
     );
-    await mkdir(outputFolder, { recursive: true });
-    const outputPath = path.join(outputFolder, 'tesla_registrations.csv');
     await writeFile(outputPath, csv);
 
-    console.log(`> ${chalk.gray(`Saved [tesla_registrations]`)}`);
+    console.log(`> ${chalk.gray(`Saved [tesla_monthly_registrations]`)}`);
   }
 
-  async debug(): Promise<void> {
-    await this.transform();
-  }
+  async debug(): Promise<void> {}
 
   private async loadSource(sourcePath: string): Promise<object[]> {
     const fileContent = await readFile(
@@ -1069,4 +1064,4 @@ class Transformer extends BaseTransformer {
   }
 }
 
-export default new Transformer();
+export default new Generator();

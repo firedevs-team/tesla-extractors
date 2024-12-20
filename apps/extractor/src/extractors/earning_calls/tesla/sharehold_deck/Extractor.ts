@@ -7,14 +7,14 @@ import {
   FileOuput,
   QuarterDateId,
   QuarterExtractor,
-} from '../../../lib';
+} from '../../../../lib';
 
 const SOURCE_URL = 'https://ir.tesla.com/#quarterly-disclosure';
 
 class Extractor extends QuarterExtractor {
   constructor() {
     super({
-      folders: ['tesla_ir_info'],
+      folders: ['earning_calls', 'tesla'],
       source: 'shareholder_deck',
       fileext: 'pdf',
     });

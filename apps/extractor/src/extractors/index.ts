@@ -1,4 +1,4 @@
-import { BaseExtractor } from '../lib/extractor/BaseExtractor';
+import { BaseExtractor } from '../lib/extractors/BaseExtractor';
 import path from 'path';
 import fs from 'fs';
 
