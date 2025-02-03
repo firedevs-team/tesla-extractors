@@ -159,7 +159,13 @@ export abstract class BaseExtractor<C extends Config = Config> {
       console.log('- Cleaning downloaded file...');
       await unlink(filePath);
 
-      throw error;
+      // Imprimo el error
+      console.error(error);
+      console.log(`> ${chalk.red(`Error doing transformation`)}`);
+
+      // Salta la ejecución del extractor
+      // para no detener los demás, ahi debo revisar que le pasa
+      return;
     }
   }
 
