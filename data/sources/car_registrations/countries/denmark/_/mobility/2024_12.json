@@ -1,0 +1,1966 @@
+{
+  "by_brand": [
+    [
+      "Tesla",
+      "2.377",
+      "13,6%"
+    ],
+    [
+      "BMW",
+      "2.263",
+      "13,0%"
+    ],
+    [
+      "Volkswagen",
+      "1.742",
+      "10,0%"
+    ],
+    [
+      "Mercedes-Benz",
+      "1.475",
+      "8,4%"
+    ],
+    [
+      "Audi",
+      "1.260",
+      "7,2%"
+    ],
+    [
+      "Toyota",
+      "1.246",
+      "7,1%"
+    ],
+    [
+      "Skoda",
+      "1.032",
+      "5,9%"
+    ],
+    [
+      "Renault",
+      "967",
+      "5,5%"
+    ],
+    [
+      "Kia",
+      "629",
+      "3,6%"
+    ],
+    [
+      "Cupra",
+      "618",
+      "3,5%"
+    ],
+    [
+      "Ford",
+      "523",
+      "3,0%"
+    ],
+    [
+      "Nissan",
+      "498",
+      "2,9%"
+    ],
+    [
+      "Xpeng",
+      "352",
+      "2,0%"
+    ],
+    [
+      "Hyundai",
+      "313",
+      "1,8%"
+    ],
+    [
+      "Volvo",
+      "263",
+      "1,5%"
+    ],
+    [
+      "BYD",
+      "247",
+      "1,4%"
+    ],
+    [
+      "Peugeot",
+      "227",
+      "1,3%"
+    ],
+    [
+      "Polestar",
+      "225",
+      "1,3%"
+    ],
+    [
+      "Seat",
+      "194",
+      "1,1%"
+    ],
+    [
+      "Mazda",
+      "162",
+      "0,9%"
+    ],
+    [
+      "Suzuki",
+      "134",
+      "0,8%"
+    ],
+    [
+      "Porsche",
+      "110",
+      "0,6%"
+    ],
+    [
+      "Mini",
+      "101",
+      "0,6%"
+    ],
+    [
+      "Dacia",
+      "95",
+      "0,5%"
+    ],
+    [
+      "Opel",
+      "63",
+      "0,4%"
+    ],
+    [
+      "Citroen",
+      "58",
+      "0,3%"
+    ],
+    [
+      "MG",
+      "52",
+      "0,3%"
+    ],
+    [
+      "Jeep",
+      "35",
+      "0,2%"
+    ],
+    [
+      "Lexus",
+      "27",
+      "0,2%"
+    ],
+    [
+      "Honda",
+      "26",
+      "0,2%"
+    ],
+    [
+      "Fiat",
+      "24",
+      "0,1%"
+    ],
+    [
+      "Land Rover",
+      "24",
+      "0,1%"
+    ],
+    [
+      "Maxus",
+      "18",
+      "0,1%"
+    ],
+    [
+      "Alfa Romeo",
+      "16",
+      "0,1%"
+    ],
+    [
+      "Fisker",
+      "16",
+      "0,1%"
+    ],
+    [
+      "Hongqi",
+      "15",
+      "0,1%"
+    ],
+    [
+      "MAN",
+      "15",
+      "0,1%"
+    ],
+    [
+      "KGM",
+      "4",
+      "0,0%"
+    ],
+    [
+      "DS",
+      "3",
+      "0,0%"
+    ],
+    [
+      "Nilsson",
+      "3",
+      "0,0%"
+    ],
+    [
+      "Eagle",
+      "2",
+      "0,0%"
+    ],
+    [
+      "Jaguar",
+      "2",
+      "0,0%"
+    ],
+    [
+      "Jia Ji",
+      "2",
+      "0,0%"
+    ],
+    [
+      "Maserati",
+      "2",
+      "0,0%"
+    ],
+    [
+      "Aiways",
+      "1",
+      "0,0%"
+    ],
+    [
+      "Bach",
+      "1",
+      "0,0%"
+    ],
+    [
+      "Hisun",
+      "1",
+      "0,0%"
+    ],
+    [
+      "JAC",
+      "1",
+      "0,0%"
+    ],
+    [
+      "Reo",
+      "1",
+      "0,0%"
+    ],
+    [
+      "Rolls-Royce",
+      "1",
+      "0,0%"
+    ],
+    [
+      "Subaru",
+      "1",
+      "0,0%"
+    ],
+    [
+      "Voyah",
+      "1",
+      "0,0%"
+    ],
+    [
+      "Xingyun",
+      "1",
+      "0,0%"
+    ],
+    [
+      "BAW",
+      "0",
+      "0,0%"
+    ],
+    [
+      "Can-Am",
+      "0",
+      "0,0%"
+    ],
+    [
+      "Ferrari",
+      "0",
+      "0,0%"
+    ],
+    [
+      "Italcar",
+      "0",
+      "0,0%"
+    ],
+    [
+      "Lamborghini",
+      "0",
+      "0,0%"
+    ],
+    [
+      "Lotus",
+      "0",
+      "0,0%"
+    ],
+    [
+      "Mitsubishi",
+      "0",
+      "0,0%"
+    ],
+    [
+      "Nio",
+      "0",
+      "0,0%"
+    ],
+    [
+      "Polaris",
+      "0",
+      "0,0%"
+    ],
+    [
+      "Powerland",
+      "0",
+      "0,0%"
+    ],
+    [
+      "Regal Raptor",
+      "0",
+      "0,0%"
+    ],
+    [
+      "Rex",
+      "0",
+      "0,0%"
+    ],
+    [
+      "Smart",
+      "0",
+      "0,0%"
+    ]
+  ],
+  "by_model": [
+    [
+      "Tesla Model Y",
+      "1.891",
+      "10,8%"
+    ],
+    [
+      "BMW 3'er",
+      "722",
+      "4,1%"
+    ],
+    [
+      "Skoda Enyaq iV",
+      "630",
+      "3,6%"
+    ],
+    [
+      "Audi Q4 e-tron",
+      "574",
+      "3,3%"
+    ],
+    [
+      "Renault Scenic",
+      "526",
+      "3,0%"
+    ],
+    [
+      "Tesla Model 3",
+      "484",
+      "2,8%"
+    ],
+    [
+      "Cupra Formentor",
+      "384",
+      "2,2%"
+    ],
+    [
+      "Volkswagen ID.4",
+      "363",
+      "2,1%"
+    ],
+    [
+      "Audi Q6 e-tron",
+      "353",
+      "2,0%"
+    ],
+    [
+      "Volkswagen T-Roc",
+      "349",
+      "2,0%"
+    ],
+    [
+      "Kia EV3",
+      "335",
+      "1,9%"
+    ],
+    [
+      "BMW i5",
+      "328",
+      "1,9%"
+    ],
+    [
+      "Mercedes-Benz EQA",
+      "280",
+      "1,6%"
+    ],
+    [
+      "Volkswagen ID.7",
+      "277",
+      "1,6%"
+    ],
+    [
+      "BMW iX1",
+      "276",
+      "1,6%"
+    ],
+    [
+      "Volkswagen ID.3",
+      "270",
+      "1,6%"
+    ],
+    [
+      "Xpeng G6",
+      "262",
+      "1,5%"
+    ],
+    [
+      "Toyota Yaris Cross",
+      "261",
+      "1,5%"
+    ],
+    [
+      "Mercedes-Benz EQB",
+      "255",
+      "1,5%"
+    ],
+    [
+      "Nissan Ariya",
+      "234",
+      "1,3%"
+    ],
+    [
+      "Toyota Aygo X",
+      "225",
+      "1,3%"
+    ],
+    [
+      "Toyota C-HR",
+      "222",
+      "1,3%"
+    ],
+    [
+      "Audi Q2",
+      "218",
+      "1,3%"
+    ],
+    [
+      "BMW i4",
+      "218",
+      "1,3%"
+    ],
+    [
+      "Toyota Yaris",
+      "214",
+      "1,2%"
+    ],
+    [
+      "Volkswagen ID. Buzz",
+      "200",
+      "1,1%"
+    ],
+    [
+      "Renault Megane E-Tech",
+      "193",
+      "1,1%"
+    ],
+    [
+      "Ford Explorer",
+      "184",
+      "1,1%"
+    ],
+    [
+      "Mercedes-Benz GLC",
+      "180",
+      "1,0%"
+    ],
+    [
+      "Nissan Qashqai",
+      "179",
+      "1,0%"
+    ],
+    [
+      "Kia Niro",
+      "174",
+      "1,0%"
+    ],
+    [
+      "BYD Dolphin",
+      "144",
+      "0,8%"
+    ],
+    [
+      "Ford Kuga",
+      "144",
+      "0,8%"
+    ],
+    [
+      "Skoda Octavia",
+      "142",
+      "0,8%"
+    ],
+    [
+      "BMW 1'er",
+      "137",
+      "0,8%"
+    ],
+    [
+      "Skoda Kodiaq",
+      "133",
+      "0,8%"
+    ],
+    [
+      "Mercedes-Benz EQE",
+      "124",
+      "0,7%"
+    ],
+    [
+      "BMW 5'er",
+      "123",
+      "0,7%"
+    ],
+    [
+      "Volvo EX40",
+      "122",
+      "0,7%"
+    ],
+    [
+      "Mercedes-Benz A-Klasse",
+      "110",
+      "0,6%"
+    ],
+    [
+      "Polestar 4",
+      "110",
+      "0,6%"
+    ],
+    [
+      "BMW X1",
+      "109",
+      "0,6%"
+    ],
+    [
+      "Polestar 2",
+      "104",
+      "0,6%"
+    ],
+    [
+      "Mercedes-Benz E-Klasse",
+      "102",
+      "0,6%"
+    ],
+    [
+      "Toyota Corolla Cross",
+      "102",
+      "0,6%"
+    ],
+    [
+      "Renault Captur",
+      "99",
+      "0,6%"
+    ],
+    [
+      "BMW iX3",
+      "92",
+      "0,5%"
+    ],
+    [
+      "Porsche Macan",
+      "91",
+      "0,5%"
+    ],
+    [
+      "Mercedes-Benz EQE SUV",
+      "90",
+      "0,5%"
+    ],
+    [
+      "Toyota RAV4",
+      "86",
+      "0,5%"
+    ],
+    [
+      "Xpeng G9",
+      "86",
+      "0,5%"
+    ],
+    [
+      "Renault Clio",
+      "85",
+      "0,5%"
+    ],
+    [
+      "Dacia Sandero",
+      "84",
+      "0,5%"
+    ],
+    [
+      "Cupra Born",
+      "83",
+      "0,5%"
+    ],
+    [
+      "Peugeot 208",
+      "82",
+      "0,5%"
+    ],
+    [
+      "Mercedes-Benz C-Klasse",
+      "81",
+      "0,5%"
+    ],
+    [
+      "Ford Mustang Mach-E",
+      "80",
+      "0,5%"
+    ],
+    [
+      "Suzuki Swift",
+      "80",
+      "0,5%"
+    ],
+    [
+      "Volkswagen ID.5",
+      "80",
+      "0,5%"
+    ],
+    [
+      "Seat Arona",
+      "78",
+      "0,5%"
+    ],
+    [
+      "Mercedes-Benz GLA",
+      "72",
+      "0,4%"
+    ],
+    [
+      "BMW iX2",
+      "71",
+      "0,4%"
+    ],
+    [
+      "Mercedes-Benz GLB",
+      "69",
+      "0,4%"
+    ],
+    [
+      "Hyundai Ioniq 5",
+      "66",
+      "0,4%"
+    ],
+    [
+      "Audi A3",
+      "64",
+      "0,4%"
+    ],
+    [
+      "Cupra Terramar",
+      "63",
+      "0,4%"
+    ],
+    [
+      "Hyundai Kona",
+      "63",
+      "0,4%"
+    ],
+    [
+      "Peugeot 2008",
+      "62",
+      "0,4%"
+    ],
+    [
+      "Toyota Corolla",
+      "62",
+      "0,4%"
+    ],
+    [
+      "BMW iX",
+      "61",
+      "0,4%"
+    ],
+    [
+      "Volkswagen Passat",
+      "60",
+      "0,3%"
+    ],
+    [
+      "Renault Austral",
+      "58",
+      "0,3%"
+    ],
+    [
+      "Volkswagen Polo",
+      "58",
+      "0,3%"
+    ],
+    [
+      "Cupra Tavascan",
+      "57",
+      "0,3%"
+    ],
+    [
+      "Seat Tavascan",
+      "57",
+      "0,3%"
+    ],
+    [
+      "BMW 4'er",
+      "55",
+      "0,3%"
+    ],
+    [
+      "Mazda CX-30",
+      "54",
+      "0,3%"
+    ],
+    [
+      "Nissan X-Trail",
+      "54",
+      "0,3%"
+    ],
+    [
+      "Peugeot 5008",
+      "52",
+      "0,3%"
+    ],
+    [
+      "Seat Ibiza",
+      "52",
+      "0,3%"
+    ],
+    [
+      "Mini Countryman",
+      "51",
+      "0,3%"
+    ],
+    [
+      "Volvo EX30",
+      "49",
+      "0,3%"
+    ],
+    [
+      "Hyundai I10",
+      "46",
+      "0,3%"
+    ],
+    [
+      "Kia EV6",
+      "46",
+      "0,3%"
+    ],
+    [
+      "Toyota bZ4X",
+      "44",
+      "0,3%"
+    ],
+    [
+      "BMW X4",
+      "43",
+      "0,3%"
+    ],
+    [
+      "BYD Seal U",
+      "42",
+      "0,2%"
+    ],
+    [
+      "Citroen C3",
+      "41",
+      "0,2%"
+    ],
+    [
+      "Ford Tourneo Custom",
+      "41",
+      "0,2%"
+    ],
+    [
+      "Jeep Avenger",
+      "35",
+      "0,2%"
+    ],
+    [
+      "Kia Picanto",
+      "35",
+      "0,2%"
+    ],
+    [
+      "Hyundai I20",
+      "34",
+      "0,2%"
+    ],
+    [
+      "Hyundai Ioniq 6",
+      "34",
+      "0,2%"
+    ],
+    [
+      "Hyundai I30",
+      "32",
+      "0,2%"
+    ],
+    [
+      "Mazda CX-80",
+      "32",
+      "0,2%"
+    ],
+    [
+      "Skoda Scala",
+      "32",
+      "0,2%"
+    ],
+    [
+      "Ford Capri",
+      "31",
+      "0,2%"
+    ],
+    [
+      "Skoda Kamiq",
+      "31",
+      "0,2%"
+    ],
+    [
+      "BYD Seal",
+      "30",
+      "0,2%"
+    ],
+    [
+      "Nissan Juke",
+      "30",
+      "0,2%"
+    ],
+    [
+      "Mercedes-Benz CLA",
+      "28",
+      "0,2%"
+    ],
+    [
+      "Suzuki Ignis",
+      "28",
+      "0,2%"
+    ],
+    [
+      "Mini 3-dørs",
+      "27",
+      "0,2%"
+    ],
+    [
+      "Volvo EC40",
+      "26",
+      "0,2%"
+    ],
+    [
+      "Mazda CX-60",
+      "25",
+      "0,1%"
+    ],
+    [
+      "Volvo XC60",
+      "24",
+      "0,1%"
+    ],
+    [
+      "Audi Q3",
+      "23",
+      "0,1%"
+    ],
+    [
+      "Cupra Leon",
+      "23",
+      "0,1%"
+    ],
+    [
+      "Fiat 500",
+      "23",
+      "0,1%"
+    ],
+    [
+      "Lexus NX",
+      "23",
+      "0,1%"
+    ],
+    [
+      "Mazda MX-30",
+      "23",
+      "0,1%"
+    ],
+    [
+      "Opel Corsa",
+      "23",
+      "0,1%"
+    ],
+    [
+      "Skoda Fabia",
+      "23",
+      "0,1%"
+    ],
+    [
+      "Volkswagen Tiguan",
+      "23",
+      "0,1%"
+    ],
+    [
+      "BYD Tang",
+      "22",
+      "0,1%"
+    ],
+    [
+      "MG HS",
+      "21",
+      "0,1%"
+    ],
+    [
+      "Peugeot 3008",
+      "21",
+      "0,1%"
+    ],
+    [
+      "Skoda Karoq",
+      "21",
+      "0,1%"
+    ],
+    [
+      "Ford Transit Custom",
+      "19",
+      "0,1%"
+    ],
+    [
+      "Kia EV9",
+      "19",
+      "0,1%"
+    ],
+    [
+      "Mini Aceman",
+      "19",
+      "0,1%"
+    ],
+    [
+      "Hyundai Tucson",
+      "18",
+      "0,1%"
+    ],
+    [
+      "Alfa Romeo Junior",
+      "16",
+      "0,1%"
+    ],
+    [
+      "Fisker Ocean",
+      "16",
+      "0,1%"
+    ],
+    [
+      "Mazda 2",
+      "16",
+      "0,1%"
+    ],
+    [
+      "Opel Zafira",
+      "16",
+      "0,1%"
+    ],
+    [
+      "Audi A5",
+      "15",
+      "0,1%"
+    ],
+    [
+      "BMW X5",
+      "15",
+      "0,1%"
+    ],
+    [
+      "Honda e:Ny1",
+      "15",
+      "0,1%"
+    ],
+    [
+      "Hongqi E-HS9",
+      "15",
+      "0,1%"
+    ],
+    [
+      "Land Rover Range Rover Sport",
+      "15",
+      "0,1%"
+    ],
+    [
+      "MAN TGE",
+      "15",
+      "0,1%"
+    ],
+    [
+      "Volkswagen T-Cross",
+      "15",
+      "0,1%"
+    ],
+    [
+      "Volvo C40",
+      "15",
+      "0,1%"
+    ],
+    [
+      "Suzuki SX4",
+      "14",
+      "0,1%"
+    ],
+    [
+      "Volkswagen Multivan",
+      "14",
+      "0,1%"
+    ],
+    [
+      "Ford Transit",
+      "13",
+      "0,1%"
+    ],
+    [
+      "Hyundai Bayon",
+      "13",
+      "0,1%"
+    ],
+    [
+      "Mercedes-Benz G-Klasse",
+      "13",
+      "0,1%"
+    ],
+    [
+      "Mercedes-Benz GLE",
+      "13",
+      "0,1%"
+    ],
+    [
+      "MG 4",
+      "12",
+      "0,1%"
+    ],
+    [
+      "MG Cyberster",
+      "12",
+      "0,1%"
+    ],
+    [
+      "Opel Mokka",
+      "12",
+      "0,1%"
+    ],
+    [
+      "Suzuki Vitara",
+      "12",
+      "0,1%"
+    ],
+    [
+      "Volkswagen Golf",
+      "12",
+      "0,1%"
+    ],
+    [
+      "Dacia Jogger",
+      "11",
+      "0,1%"
+    ],
+    [
+      "Mercedes-Benz CLE",
+      "11",
+      "0,1%"
+    ],
+    [
+      "Mercedes-Benz Sprinter",
+      "11",
+      "0,1%"
+    ],
+    [
+      "Polestar 3",
+      "11",
+      "0,1%"
+    ],
+    [
+      "Toyota Proace City Verso",
+      "11",
+      "0,1%"
+    ],
+    [
+      "Volvo XC90",
+      "11",
+      "0,1%"
+    ],
+    [
+      "BMW i7",
+      "10",
+      "0,1%"
+    ],
+    [
+      "Citroen C4",
+      "10",
+      "0,1%"
+    ],
+    [
+      "Kia Ceed",
+      "10",
+      "0,1%"
+    ],
+    [
+      "Maxus e-Deliver 9",
+      "10",
+      "0,1%"
+    ],
+    [
+      "Toyota Proace Verso",
+      "10",
+      "0,1%"
+    ],
+    [
+      "Volkswagen Touran",
+      "10",
+      "0,1%"
+    ],
+    [
+      "Cupra Ateca",
+      "8",
+      "0,1%"
+    ],
+    [
+      "Mazda 3",
+      "8",
+      "0,1%"
+    ],
+    [
+      "Opel Astra",
+      "8",
+      "0,1%"
+    ],
+    [
+      "Porsche Cayenne",
+      "8",
+      "0,1%"
+    ],
+    [
+      "Skoda Superb",
+      "8",
+      "0,1%"
+    ],
+    [
+      "Hyundai Santa Fe",
+      "7",
+      "0,0%"
+    ],
+    [
+      "Mercedes-Benz V-Klasse",
+      "7",
+      "0,0%"
+    ],
+    [
+      "Peugeot 308",
+      "7",
+      "0,0%"
+    ],
+    [
+      "Skoda Kodiaq iV",
+      "7",
+      "0,0%"
+    ],
+    [
+      "Volkswagen Crafter",
+      "7",
+      "0,0%"
+    ],
+    [
+      "Volvo EX90",
+      "7",
+      "0,0%"
+    ],
+    [
+      "BYD Atto 3",
+      "6",
+      "0,0%"
+    ],
+    [
+      "Citroen C3 Aircross",
+      "6",
+      "0,0%"
+    ],
+    [
+      "Ford Focus",
+      "6",
+      "0,0%"
+    ],
+    [
+      "Mercedes-Benz Citan",
+      "6",
+      "0,0%"
+    ],
+    [
+      "Mercedes-Benz EQV",
+      "6",
+      "0,0%"
+    ],
+    [
+      "Porsche Taycan",
+      "6",
+      "0,0%"
+    ],
+    [
+      "Renault Trafic",
+      "6",
+      "0,0%"
+    ],
+    [
+      "Toyota Prius",
+      "6",
+      "0,0%"
+    ],
+    [
+      "Audi A6",
+      "5",
+      "0,0%"
+    ],
+    [
+      "Mercedes-Benz Vito Tourer",
+      "5",
+      "0,0%"
+    ],
+    [
+      "Skoda Superb iV",
+      "5",
+      "0,0%"
+    ],
+    [
+      "Volvo XC40",
+      "5",
+      "0,0%"
+    ],
+    [
+      "Audi Q7",
+      "4",
+      "0,0%"
+    ],
+    [
+      "KGM Torres EVX",
+      "4",
+      "0,0%"
+    ],
+    [
+      "Kia Stonic",
+      "4",
+      "0,0%"
+    ],
+    [
+      "Land Rover Range Rover",
+      "4",
+      "0,0%"
+    ],
+    [
+      "Mazda CX-5",
+      "4",
+      "0,0%"
+    ],
+    [
+      "Mini 5-dørs",
+      "4",
+      "0,0%"
+    ],
+    [
+      "Seat Ateca",
+      "4",
+      "0,0%"
+    ],
+    [
+      "Xpeng P7",
+      "4",
+      "0,0%"
+    ],
+    [
+      "BYD Sealion 7",
+      "3",
+      "0,0%"
+    ],
+    [
+      "Ford Puma",
+      "3",
+      "0,0%"
+    ],
+    [
+      "Honda Civic",
+      "3",
+      "0,0%"
+    ],
+    [
+      "Honda CR-V",
+      "3",
+      "0,0%"
+    ],
+    [
+      "Honda HR-V",
+      "3",
+      "0,0%"
+    ],
+    [
+      "Kia Sportage",
+      "3",
+      "0,0%"
+    ],
+    [
+      "Maxus Euniq5",
+      "3",
+      "0,0%"
+    ],
+    [
+      "Maxus MIFA 9",
+      "3",
+      "0,0%"
+    ],
+    [
+      "MG 3",
+      "3",
+      "0,0%"
+    ],
+    [
+      "MG EHS",
+      "3",
+      "0,0%"
+    ],
+    [
+      "Nilsson Hearse",
+      "3",
+      "0,0%"
+    ],
+    [
+      "Seat Leon",
+      "3",
+      "0,0%"
+    ],
+    [
+      "Toyota Land Cruiser",
+      "3",
+      "0,0%"
+    ],
+    [
+      "Volkswagen Caddy",
+      "3",
+      "0,0%"
+    ],
+    [
+      "DS 7 Crossback",
+      "2",
+      "0,0%"
+    ],
+    [
+      "Ford Tourneo Connect",
+      "2",
+      "0,0%"
+    ],
+    [
+      "Honda Jazz",
+      "2",
+      "0,0%"
+    ],
+    [
+      "Jia Ji JJ2000DBP",
+      "2",
+      "0,0%"
+    ],
+    [
+      "Kia Sorento",
+      "2",
+      "0,0%"
+    ],
+    [
+      "Lexus RZ",
+      "2",
+      "0,0%"
+    ],
+    [
+      "Maserati Grecale",
+      "2",
+      "0,0%"
+    ],
+    [
+      "Mercedes-Benz AMG GT",
+      "2",
+      "0,0%"
+    ],
+    [
+      "Mercedes-Benz B-Klasse",
+      "2",
+      "0,0%"
+    ],
+    [
+      "Mercedes-Benz GLS",
+      "2",
+      "0,0%"
+    ],
+    [
+      "Mercedes-Benz Vito",
+      "2",
+      "0,0%"
+    ],
+    [
+      "Opel Combo",
+      "2",
+      "0,0%"
+    ],
+    [
+      "Opel Crossland",
+      "2",
+      "0,0%"
+    ],
+    [
+      "Porsche Panamera",
+      "2",
+      "0,0%"
+    ],
+    [
+      "Tesla Model S",
+      "2",
+      "0,0%"
+    ],
+    [
+      "Volvo V60",
+      "2",
+      "0,0%"
+    ],
+    [
+      "Volvo V90",
+      "2",
+      "0,0%"
+    ],
+    [
+      "Aiways U5",
+      "1",
+      "0,0%"
+    ],
+    [
+      "Audi A1",
+      "1",
+      "0,0%"
+    ],
+    [
+      "Audi e-tron GT",
+      "1",
+      "0,0%"
+    ],
+    [
+      "Audi Q5",
+      "1",
+      "0,0%"
+    ],
+    [
+      "Audi Q8",
+      "1",
+      "0,0%"
+    ],
+    [
+      "Bach YM2000DP",
+      "1",
+      "0,0%"
+    ],
+    [
+      "BMW 2'er",
+      "1",
+      "0,0%"
+    ],
+    [
+      "BMW 7'er",
+      "1",
+      "0,0%"
+    ],
+    [
+      "BMW X7",
+      "1",
+      "0,0%"
+    ],
+    [
+      "Citroen C5 Aircross",
+      "1",
+      "0,0%"
+    ],
+    [
+      "DS 4",
+      "1",
+      "0,0%"
+    ],
+    [
+      "Eagle",
+      "1",
+      "0,0%"
+    ],
+    [
+      "Eagle Golf Car",
+      "1",
+      "0,0%"
+    ],
+    [
+      "Fiat Ducato",
+      "1",
+      "0,0%"
+    ],
+    [
+      "Hisun HS",
+      "1",
+      "0,0%"
+    ],
+    [
+      "JAC e-JS4",
+      "1",
+      "0,0%"
+    ],
+    [
+      "Jaguar F-Pace",
+      "1",
+      "0,0%"
+    ],
+    [
+      "Jaguar I-Pace",
+      "1",
+      "0,0%"
+    ],
+    [
+      "Kia XCeed",
+      "1",
+      "0,0%"
+    ],
+    [
+      "Land Rover Defender",
+      "1",
+      "0,0%"
+    ],
+    [
+      "Land Rover Discovery",
+      "1",
+      "0,0%"
+    ],
+    [
+      "Land Rover Discovery Sport",
+      "1",
+      "0,0%"
+    ],
+    [
+      "Land Rover Range Rover Evoque",
+      "1",
+      "0,0%"
+    ],
+    [
+      "Land Rover Range Rover Velar",
+      "1",
+      "0,0%"
+    ],
+    [
+      "Lexus LBX",
+      "1",
+      "0,0%"
+    ],
+    [
+      "Lexus RX",
+      "1",
+      "0,0%"
+    ],
+    [
+      "Maxus e-Deliver 7",
+      "1",
+      "0,0%"
+    ],
+    [
+      "Maxus Euniq6",
+      "1",
+      "0,0%"
+    ],
+    [
+      "Mercedes-Benz EQS",
+      "1",
+      "0,0%"
+    ],
+    [
+      "Mercedes-Benz EQS SUV",
+      "1",
+      "0,0%"
+    ],
+    [
+      "Mercedes-Benz S-Klasse",
+      "1",
+      "0,0%"
+    ],
+    [
+      "Mercedes-Benz SL",
+      "1",
+      "0,0%"
+    ],
+    [
+      "MG ZS",
+      "1",
+      "0,0%"
+    ],
+    [
+      "Nissan Leaf",
+      "1",
+      "0,0%"
+    ],
+    [
+      "Peugeot 508",
+      "1",
+      "0,0%"
+    ],
+    [
+      "Peugeot Rifter",
+      "1",
+      "0,0%"
+    ],
+    [
+      "Peugeot Traveller",
+      "1",
+      "0,0%"
+    ],
+    [
+      "Porsche 718 Spyder RS",
+      "1",
+      "0,0%"
+    ],
+    [
+      "Porsche 911",
+      "1",
+      "0,0%"
+    ],
+    [
+      "Porsche Cayman",
+      "1",
+      "0,0%"
+    ],
+    [
+      "Reo UTV",
+      "1",
+      "0,0%"
+    ],
+    [
+      "Rolls-Royce Spectre",
+      "1",
+      "0,0%"
+    ],
+    [
+      "Subaru Forester",
+      "1",
+      "0,0%"
+    ],
+    [
+      "Volkswagen Taigo",
+      "1",
+      "0,0%"
+    ],
+    [
+      "Voyah Free",
+      "1",
+      "0,0%"
+    ],
+    [
+      "Xingyun UTV",
+      "1",
+      "0,0%"
+    ],
+    [
+      "Alfa Romeo Tonale",
+      "0",
+      "0,0%"
+    ],
+    [
+      "Audi A4",
+      "0",
+      "0,0%"
+    ],
+    [
+      "Audi A8",
+      "0",
+      "0,0%"
+    ],
+    [
+      "Audi Q8 e-tron",
+      "0",
+      "0,0%"
+    ],
+    [
+      "Audi TT",
+      "0",
+      "0,0%"
+    ],
+    [
+      "BAW Pony",
+      "0",
+      "0,0%"
+    ],
+    [
+      "BMW X3",
+      "0",
+      "0,0%"
+    ],
+    [
+      "BMW XM",
+      "0",
+      "0,0%"
+    ],
+    [
+      "Can-Am Outlander",
+      "0",
+      "0,0%"
+    ],
+    [
+      "Citroen AMI",
+      "0",
+      "0,0%"
+    ],
+    [
+      "Citroen Berlingo",
+      "0",
+      "0,0%"
+    ],
+    [
+      "Citroen C4 X",
+      "0",
+      "0,0%"
+    ],
+    [
+      "Citroen C5 X",
+      "0",
+      "0,0%"
+    ],
+    [
+      "Citroen ë-C4 X",
+      "0",
+      "0,0%"
+    ],
+    [
+      "Citroen e-SpaceTourer",
+      "0",
+      "0,0%"
+    ],
+    [
+      "Citroen Jumpy",
+      "0",
+      "0,0%"
+    ],
+    [
+      "Dacia Duster",
+      "0",
+      "0,0%"
+    ],
+    [
+      "Dacia Spring",
+      "0",
+      "0,0%"
+    ],
+    [
+      "DS 7",
+      "0",
+      "0,0%"
+    ],
+    [
+      "Ferrari Purosangue",
+      "0",
+      "0,0%"
+    ],
+    [
+      "Ford Fiesta",
+      "0",
+      "0,0%"
+    ],
+    [
+      "Ford Mustang",
+      "0",
+      "0,0%"
+    ],
+    [
+      "Italcar C2C",
+      "0",
+      "0,0%"
+    ],
+    [
+      "Jia Ji S45",
+      "0",
+      "0,0%"
+    ],
+    [
+      "Kia Rio",
+      "0",
+      "0,0%"
+    ],
+    [
+      "Kia Soul",
+      "0",
+      "0,0%"
+    ],
+    [
+      "Lamborghini Urus",
+      "0",
+      "0,0%"
+    ],
+    [
+      "Lexus ES",
+      "0",
+      "0,0%"
+    ],
+    [
+      "Lexus LS",
+      "0",
+      "0,0%"
+    ],
+    [
+      "Lexus UX",
+      "0",
+      "0,0%"
+    ],
+    [
+      "Lotus Eletre",
+      "0",
+      "0,0%"
+    ],
+    [
+      "Maxus e-Deliver 3",
+      "0",
+      "0,0%"
+    ],
+    [
+      "Mazda MX-5",
+      "0",
+      "0,0%"
+    ],
+    [
+      "Mercedes-Benz EQC",
+      "0",
+      "0,0%"
+    ],
+    [
+      "MG Marvel R",
+      "0",
+      "0,0%"
+    ],
+    [
+      "Mini Cabriolet",
+      "0",
+      "0,0%"
+    ],
+    [
+      "Mitsubishi ASX",
+      "0",
+      "0,0%"
+    ],
+    [
+      "Mitsubishi Eclipse Cross",
+      "0",
+      "0,0%"
+    ],
+    [
+      "Mitsubishi Space Star",
+      "0",
+      "0,0%"
+    ],
+    [
+      "Nio EL6",
+      "0",
+      "0,0%"
+    ],
+    [
+      "Nio ET5",
+      "0",
+      "0,0%"
+    ],
+    [
+      "Opel Grandland",
+      "0",
+      "0,0%"
+    ],
+    [
+      "Peugeot 408",
+      "0",
+      "0,0%"
+    ],
+    [
+      "Polaris Ranger Kinetic",
+      "0",
+      "0,0%"
+    ],
+    [
+      "Powerland Tachyon",
+      "0",
+      "0,0%"
+    ],
+    [
+      "Regal Raptor Rex Cargo",
+      "0",
+      "0,0%"
+    ],
+    [
+      "Renault Zoe",
+      "0",
+      "0,0%"
+    ],
+    [
+      "Rex Q7",
+      "0",
+      "0,0%"
+    ],
+    [
+      "Smart Fortwo",
+      "0",
+      "0,0%"
+    ],
+    [
+      "Subaru Solterra",
+      "0",
+      "0,0%"
+    ],
+    [
+      "Subaru XV",
+      "0",
+      "0,0%"
+    ],
+    [
+      "Suzuki Across",
+      "0",
+      "0,0%"
+    ],
+    [
+      "Suzuki S-Cross",
+      "0",
+      "0,0%"
+    ],
+    [
+      "Tesla Model X",
+      "0",
+      "0,0%"
+    ],
+    [
+      "Toyota Camry",
+      "0",
+      "0,0%"
+    ],
+    [
+      "Toyota Proace",
+      "0",
+      "0,0%"
+    ],
+    [
+      "Volkswagen Arteon",
+      "0",
+      "0,0%"
+    ],
+    [
+      "Volkswagen Caravelle",
+      "0",
+      "0,0%"
+    ],
+    [
+      "Volkswagen up!",
+      "0",
+      "0,0%"
+    ],
+    [
+      "Volvo S60",
+      "0",
+      "0,0%"
+    ],
+    [
+      "Volvo S90",
+      "0",
+      "0,0%"
+    ]
+  ]
+}
