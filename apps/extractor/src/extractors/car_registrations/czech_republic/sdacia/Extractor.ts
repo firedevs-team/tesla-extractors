@@ -31,7 +31,8 @@ class Extractor extends MonthExtractor {
 
     // Encuentro el link a descargar
     let link: string | null = null;
-    let textToFind = `${year}-${month}.mesicni.F.EN.xlsx`;
+    let textToFind = `${year}-${month}.monthly.EN.xlsx`;
+
     links.each((_, element) => {
       const href = $(element).attr('href');
       const text = $(element).text().trim().replace(/\t$/, '');
@@ -65,9 +66,7 @@ class Extractor extends MonthExtractor {
     return [byBrand, byModel];
   }
 
-  async debug() {
-    // await this.reindex();
-  }
+  async debug() {}
 
   private getRegistrationsByBrand = async (
     dateId: MonthDateId,
