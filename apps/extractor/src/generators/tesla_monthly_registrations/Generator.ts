@@ -53,6 +53,8 @@ class Generator extends BaseGenerator {
     // Cargo Austria registrations_by_brand.csv
     await (async () => {
       const country = 'austria';
+      // WARNING: estos datos puede estar en un momento temporales
+      // Lo bueno es que son solo del mes en curso
       const dataPath = path.join(
         COUNTRIES_PATH,
         country,
