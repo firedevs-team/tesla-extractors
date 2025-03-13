@@ -85,9 +85,7 @@ class Extractor extends MonthExtractor {
     return outputs;
   }
 
-  async debug() {
-    // await this.reindex();
-  }
+  async debug() {}
 
   private async getTop30RegistrationsByBrand(
     dateId: MonthDateId,
@@ -104,7 +102,7 @@ class Extractor extends MonthExtractor {
     );
 
     let totalColumns = 9;
-    if (year === 2023 && month === 1) {
+    if ([2023, 2025].includes(year) && month === 1) {
       totalColumns = 7;
     }
 
@@ -182,7 +180,7 @@ class Extractor extends MonthExtractor {
     );
 
     let totalColumns = 9;
-    if (year === 2023 && month === 1) {
+    if ([2023, 2025].includes(year) && month === 1) {
       totalColumns = 7;
     }
 
