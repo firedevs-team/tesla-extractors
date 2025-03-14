@@ -11,6 +11,14 @@ import {
 const KBA_SOURCE_URL =
   'https://www.kba.de/DE/Statistik/Produktkatalog/produkte/Fahrzeuge/fz10/fz10_gentab.html?nn=3514348';
 
+/**
+ * TODO: Este extractor debería obtener también
+ * la info de los tipo de transmisiones para saber cuando electricos
+ * de otras marcas, para comparar con los datos de Tesla.
+ *
+ * También he visto que aj encuentra datos primero
+ * que yo, debe ser otro archivo en este mismo sitio.
+ */
 class Extractor extends MonthExtractor {
   constructor() {
     super({
@@ -159,9 +167,7 @@ class Extractor extends MonthExtractor {
     ];
   }
 
-  async debug() {
-    // await this.reindex();
-  }
+  async debug() {}
 }
 
 export default new Extractor();
