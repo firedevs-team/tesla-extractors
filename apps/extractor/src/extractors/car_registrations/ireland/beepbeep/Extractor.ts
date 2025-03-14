@@ -19,6 +19,9 @@ interface IData {
   }[];
 }
 
+/**
+ * Nota: En este source se puede saber hasta el color
+ */
 class Extractor extends MonthExtractor {
   constructor() {
     super({
