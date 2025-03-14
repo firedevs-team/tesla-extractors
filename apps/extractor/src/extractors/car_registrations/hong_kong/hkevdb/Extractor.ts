@@ -106,8 +106,12 @@ class Extractor extends MonthExtractor {
       });
 
       // Obtengo la variable global
-      const data: { label: string; value: string[] }[] =
+      let data: { label: string; value: string[] }[] =
         await iframePage.evaluate(() => window['_Flourish_data'].data);
+
+      // Filtro datos que no tengan label
+      // en el 2024_12 llegaron varios label sin texto ("")
+      data = data.filter((d) => d.label !== '');
 
       if (i === 0) {
         registrations.by_brand = data.map((d) => ({
