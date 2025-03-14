@@ -128,25 +128,7 @@ class Extractor extends MonthExtractor {
     ];
   }
 
-  async debug() {
-    // const dateId = new MonthDateId(2023, 1);
-    // const result = await this.download(dateId);
-    // if (result === null) {
-    //   console.log('No data available yet');
-    //   return;
-    // }
-
-    // const pathFile = path.join(this.downloadsPath, `${dateId.toString()}.xls`);
-    // await writeFile(pathFile, result);
-    // console.log(`File saved at ${pathFile}`);
-
-    // const dateId = new MonthDateId(2024, 10);
-    // const filePath = path.join(this.downloadsPath, `${dateId.toString()}.xls`);
-    // const fileData = await readFile(filePath);
-    // await this.transform(dateId, { path: filePath, data: fileData });
-
-    await this.reindex();
-  }
+  async debug() {}
 }
 
 export default new Extractor();
