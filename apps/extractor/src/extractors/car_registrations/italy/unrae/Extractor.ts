@@ -208,9 +208,7 @@ class Extractor extends MonthExtractor {
     ];
   }
 
-  async debug() {
-    // await this.reindex();
-  }
+  async debug() {}
 }
 
 export default new Extractor();
