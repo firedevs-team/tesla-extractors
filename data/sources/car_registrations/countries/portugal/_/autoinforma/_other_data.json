@@ -2,6 +2,12 @@
   "registrations_by_brand": [
     {
       "year": 2024,
+      "month": 12,
+      "brand": "TESLA",
+      "registrations": 1383
+    },
+    {
+      "year": 2024,
       "month": 8,
       "brand": "TESLA",
       "registrations": 181
