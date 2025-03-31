@@ -59,6 +59,10 @@ interface IGrouped {
    */
   stv_registrations: number;
   /**
+   * Multi-Purpose Vehicle/ Station-wagon registrations
+   */
+  mpv_stv_registrations: number;
+  /**
    * Sports Utility Vehicle registrations
    */
   suv_registrations: number;
@@ -153,11 +157,17 @@ class Extractor extends MonthExtractor {
       throw new Error('File not found in zip');
     }
 
+    // DEBUG ONLY: Carga la data de un archivo local
+    // const csvData = await readFile(
+    //   '/Users/kmilo/Downloads/M03-Car_Regn_by_make.csv'
+    // );
+
     // Extraigo la data del mes del csv
     const result = Papa.parse<object>(csvData.toString('utf-8'), {
       header: true,
       dynamicTyping: true,
     });
+
     const data = result.data.filter((row) => {
       return row['month'] === `${year}-${month.toString().padStart(2, '0')}`;
     });
@@ -197,6 +207,7 @@ class Extractor extends MonthExtractor {
           sdn_registrations: 0,
           mpv_registrations: 0,
           stv_registrations: 0,
+          mpv_stv_registrations: 0,
           suv_registrations: 0,
           cpe_conv_registrations: 0,
         };
@@ -216,6 +227,9 @@ class Extractor extends MonthExtractor {
           break;
         case 'STATION-WAGON':
           grouped.stv_registrations += number;
+          break;
+        case 'MULTI-PURPOSE VEHICLE/STATION-WAGON':
+          grouped.mpv_stv_registrations += number;
           break;
         case 'SPORTS UTILITY VEHICLE':
           grouped.suv_registrations += number;
