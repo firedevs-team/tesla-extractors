@@ -45,15 +45,20 @@ class Extractor extends MonthExtractor {
     const { year, month } = dateId;
 
     // Para cargar datos antiguos
-    // const { data: mainPage } = await axios.get(this.getOldSourceUrl(dateId));
+    const { data: mainPage } = await axios.get(this.getOldSourceUrl(dateId));
 
-    const { data: mainPage } = await axios.get(SOURCE_URL);
+    // const { data: mainPage } = await axios.get(SOURCE_URL);
     const $ = cheerio.load(mainPage);
 
     // En el header sobre la tabla indica el mes
     // Esto me sirve para saber que data está publicada
-    const title = $('#ContentPlaceHolder1_CurrentSales1_MonthSales').text();
+    const title = $('.leftColumn > .columnHeader:nth-of-type(2) span').text();
+
+    // // Version antigua
+    // const title = $('#ContentPlaceHolder1_CurrentSales1_MonthSales').text();
+
     const expectedTitle = `${MONTH_MAP[month]} ${year}`;
+
     if (title !== expectedTitle) {
       // Informo que no hay datos publicados aún
       return null;
@@ -171,6 +176,8 @@ class Extractor extends MonthExtractor {
   getOldSourceUrl(dateId: MonthDateId): string {
     const dateIdStr = dateId.toString();
     switch (dateIdStr) {
+      case '2024_12':
+        return 'https://web.archive.org/web/20250124032423/https://motorintelligence.com/';
       case '2024_8':
         return 'https://web.archive.org/web/20241001100656/http://www.motorintelligence.com/';
       case '2024_7':
