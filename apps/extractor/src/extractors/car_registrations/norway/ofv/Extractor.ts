@@ -72,9 +72,7 @@ class Extractor extends MonthExtractor {
     return outputs;
   }
 
-  async debug() {
-    // await this.reindex();
-  }
+  async debug() {}
 
   private downloadTopRegistrationsByBrand = async (
     dateId: MonthDateId
@@ -96,6 +94,31 @@ class Extractor extends MonthExtractor {
 
     // Espero a que se muestren los selectores de los slicers
     await page.waitForSelector('.slicer-dropdown-menu', { timeout: 10000 });
+
+    // Doy click en ordenar por marca
+    const { x, y } = await page.evaluate(() => {
+      // Selecciona todos los elementos con el selector .visual-actionButton
+      const divs = document.querySelectorAll('.visual-actionButton');
+
+      // Encuento el que tiene el texto "Merke"
+      const match = Array.from(divs).find((div) => {
+        const text = div.textContent?.trim();
+        return text === 'Merke';
+      });
+      if (!match) {
+        throw new Error('Elemento no encontrado');
+      }
+
+      // Obtiene el rectángulo del elemento para obtener sus coordenadas
+      const rect = match.getBoundingClientRect();
+
+      // Calcula las coordenadas X, Y en el centro del elemento
+      return {
+        x: rect.left + rect.width / 2,
+        y: rect.top + rect.height / 2,
+      };
+    });
+    await page.mouse.click(x, y);
 
     // Selecciono año
     await this.changeSlicer(page, 0, `${dateId.year}`);
@@ -134,15 +157,21 @@ class Extractor extends MonthExtractor {
     await page.waitForSelector('.slicer-dropdown-menu', { timeout: 10000 });
 
     // Doy click en ordenar por modelos
-    // Obtiene las coordenadas del segundo <path> en el selector
     const { x, y } = await page.evaluate(() => {
-      // Selecciona todos los elementos con el selector .ui-role-button-fill
-      const paths = document.querySelectorAll('.ui-role-button-fill');
+      // Selecciona todos los elementos con el selector .visual-actionButton
+      const divs = document.querySelectorAll('.visual-actionButton');
 
-      const pathElement = paths[1]; // Selecciona el segundo elemento (posición 1)
+      // Encuento el que tiene el texto "Modell"
+      const match = Array.from(divs).find((div) => {
+        const text = div.textContent?.trim();
+        return text === 'Modell';
+      });
+      if (!match) {
+        throw new Error('Elemento no encontrado');
+      }
 
       // Obtiene el rectángulo del elemento para obtener sus coordenadas
-      const rect = pathElement.getBoundingClientRect();
+      const rect = match.getBoundingClientRect();
 
       // Calcula las coordenadas X, Y en el centro del elemento
       return {
@@ -150,8 +179,6 @@ class Extractor extends MonthExtractor {
         y: rect.top + rect.height / 2,
       };
     });
-
-    // Doy click en el botón
     await page.mouse.click(x, y);
 
     // Espero a que cargue el contenido del dashboard
@@ -176,36 +203,38 @@ class Extractor extends MonthExtractor {
     dateId: MonthDateId,
     tableValues: string[][]
   ): Promise<FileOuput> => {
-    const Schema = z.object({
-      year: z.number().int().min(1900).max(2100),
-      month: z.number().int().min(1).max(12),
-      brand: z.preprocess((value) => {
-        // Decodifica, limpia y convierte a mayúsculas
-        return (value as string).trim().toUpperCase();
-      }, z.string()),
-      registrations: z.preprocess((value) => {
-        const text = (value as string).trim().replace(/[.,]/g, '');
-        if (text === '') {
-          return undefined;
-        }
+    const Schema = z
+      .object({
+        year: z.number().int().min(1900).max(2100),
+        month: z.number().int().min(1).max(12),
+        brand: z.preprocess((value) => {
+          // Decodifica, limpia y convierte a mayúsculas
+          return (value as string).trim().toUpperCase();
+        }, z.string()),
+        registrations: z.preprocess((value) => {
+          const text = (value as string).trim().replace(/[.,]/g, '');
+          if (text === '') {
+            return undefined;
+          }
 
-        // Decodifica, limpia, elimina puntos y convierte a número entero
-        return parseInt(text, 10);
-      }, z.number().optional()),
+          // Decodifica, limpia, elimina puntos y convierte a número entero
+          return parseInt(text, 10);
+        }, z.number().optional()),
 
-      market_share: z.preprocess((value) => {
-        const text = (value as string)
-          .replace(',', '.')
-          .replace('%', '')
-          .trim();
-        if (text === '') {
-          return undefined;
-        }
+        market_share: z.preprocess((value) => {
+          const text = (value as string)
+            .replace(',', '.')
+            .replace('%', '')
+            .trim();
+          if (text === '') {
+            return undefined;
+          }
 
-        // Decodifica y convierte a número flotante
-        return parseFloat(text);
-      }, z.number().optional()),
-    });
+          // Decodifica y convierte a número flotante
+          return parseFloat(text);
+        }, z.number().optional()),
+      })
+      .strict();
 
     const registrations = [];
     for (const row of tableValues) {
@@ -230,36 +259,38 @@ class Extractor extends MonthExtractor {
     dateId: MonthDateId,
     tableValues: string[][]
   ): Promise<FileOuput> => {
-    const Schema = z.object({
-      year: z.number().int().min(1900).max(2100),
-      month: z.number().int().min(1).max(12),
-      model: z.preprocess((value) => {
-        // Decodifica, limpia y convierte a mayúsculas
-        return (value as string).trim().toUpperCase();
-      }, z.string()),
-      registrations: z.preprocess((value) => {
-        const text = (value as string).trim().replace(/[.,]/g, '');
-        if (text === '') {
-          return undefined;
-        }
+    const Schema = z
+      .object({
+        year: z.number().int().min(1900).max(2100),
+        month: z.number().int().min(1).max(12),
+        model: z.preprocess((value) => {
+          // Decodifica, limpia y convierte a mayúsculas
+          return (value as string).trim().toUpperCase();
+        }, z.string()),
+        registrations: z.preprocess((value) => {
+          const text = (value as string).trim().replace(/[.,]/g, '');
+          if (text === '') {
+            return undefined;
+          }
 
-        // Decodifica, limpia, elimina puntos y convierte a número entero
-        return parseInt(text, 10);
-      }, z.number().optional()),
+          // Decodifica, limpia, elimina puntos y convierte a número entero
+          return parseInt(text, 10);
+        }, z.number().optional()),
 
-      market_share: z.preprocess((value) => {
-        const text = (value as string)
-          .replace(',', '.')
-          .replace('%', '')
-          .trim();
-        if (text === '') {
-          return undefined;
-        }
+        market_share: z.preprocess((value) => {
+          const text = (value as string)
+            .replace(',', '.')
+            .replace('%', '')
+            .trim();
+          if (text === '') {
+            return undefined;
+          }
 
-        // Decodifica y convierte a número flotante
-        return parseFloat(text);
-      }, z.number().optional()),
-    });
+          // Decodifica y convierte a número flotante
+          return parseFloat(text);
+        }, z.number().optional()),
+      })
+      .strict();
 
     const registrations = [];
     for (const row of tableValues) {
