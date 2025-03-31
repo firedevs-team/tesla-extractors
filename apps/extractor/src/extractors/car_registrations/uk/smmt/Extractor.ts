@@ -131,12 +131,11 @@ class Extractor extends MonthExtractor {
     const $page = cheerio.load(mainPage);
 
     // Obtengo los links y fechas de las reportes
-    const reportsLinks = Array.from($page('.tw-space-y-6 .title a')).map(
-      (e) => {
-        return $page(e).attr('href');
-      }
-    );
-    const reportsDates = Array.from($page('.tw-space-y-6 .time')).map((e) => {
+
+    const reportsLinks = Array.from($page('.post-list a')).map((e) => {
+      return $page(e).attr('href');
+    });
+    const reportsDates = Array.from($page('.post-list a .text-10')).map((e) => {
       return new Date($page(e).text().trim());
     });
 
@@ -169,13 +168,8 @@ class Extractor extends MonthExtractor {
     const $ = cheerio.load(response.data);
 
     // Encuentro el link de descarga
-    let downloadLink: string;
-    $('.post-entry a.btn_sml').each((_, e) => {
-      const text = $(e).text().trim();
-      if (text === 'DOWNLOAD PRESS RELEASE AND DATA TABLE') {
-        downloadLink = $(e).attr('href');
-      }
-    });
+    // Que este a element con selector ".file-download-single .btn"
+    const downloadLink = $('.file-download-single .btn').attr('href');
 
     if (!downloadLink) {
       throw new Error('Download link not found');
