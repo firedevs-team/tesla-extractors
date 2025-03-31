@@ -60,6 +60,7 @@ export abstract class MonthExtractor extends BaseExtractor<MonthConfig> {
     const publishedDay = this.config.published_day;
     if (tmpDate.getDate() >= publishedDay) {
       // Resuelvo el mes anterior
+      tmpDate.setDate(1); // 👈 ajusto el día para evitar el bug del 31 de marzo
       tmpDate.setMonth(tmpDate.getMonth() - 1);
 
       const year = tmpDate.getFullYear();
@@ -68,6 +69,7 @@ export abstract class MonthExtractor extends BaseExtractor<MonthConfig> {
       return new MonthDateId(year, month);
     } else {
       // Resuelvo el mes antes del anterior
+      tmpDate.setDate(1); // 👈 ajusto el día para evitar el bug del 31 de marzo
       tmpDate.setMonth(tmpDate.getMonth() - 2);
 
       const year = tmpDate.getFullYear();
