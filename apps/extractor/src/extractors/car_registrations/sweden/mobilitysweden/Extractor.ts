@@ -100,7 +100,13 @@ class Extractor extends MonthExtractor {
     ].map((name) => name.normalize().toUpperCase());
     const links = Array.from($('.filelist_type_listing_row_filename a'));
     for (const link of links) {
-      const text = $(link).text().trim().normalize().toUpperCase();
+      const text = $(link)
+        .text()
+        .trim()
+        .split(/\s+/)
+        .join(' ')
+        .normalize()
+        .toUpperCase();
       if (posibleFileNames.includes(text)) {
         downloadLink = `https://mobilitysweden.se${$(link).attr('href')}`;
         break;
