@@ -8,23 +8,21 @@ import {
   MonthDateId,
   MonthExtractor,
 } from '../../../../lib';
-import path from 'path';
-import { writeFile } from 'fs/promises';
 
-const SOURCE_URL = `https://www.pzpm.org.pl/en/Electromobility/eRegistrations`;
+const SOURCE_URL = `https://www.pzpm.org.pl/pl/Elektromobilnosc/eRejestracje`;
 const MONTH_MAP = {
-  1: 'JANUARY',
-  2: 'FEBRUARY',
-  3: 'MARCH',
-  4: 'APRIL',
-  5: 'MAY',
-  6: 'JUNE',
-  7: 'JULY',
-  8: 'AUGUST',
-  9: 'SEPTEMBER',
-  10: 'OCTOBER',
-  11: 'NOVEMBER',
-  12: 'DECEMBER',
+  1: 'STYCZEŃ',
+  2: 'LUTY',
+  3: 'MARZEC',
+  4: 'KWIECIEŃ',
+  5: 'MAJ',
+  6: 'CZERWIEC',
+  7: 'LIPIEC',
+  8: 'SIERPIEŃ',
+  9: 'WRZESIEŃ',
+  10: 'PAŹDZIERNIK',
+  11: 'LISTOPAD',
+  12: 'GRUDZIEŃ',
 };
 
 class Extractor extends MonthExtractor {
@@ -40,37 +38,15 @@ class Extractor extends MonthExtractor {
     const { year, month } = dateId;
 
     // Descargo la página principal
-    let response = await axios.get(SOURCE_URL);
+    let response = await axios.get(`${SOURCE_URL}/${MONTH_MAP[month]}-${year}`);
     let $ = cheerio.load(response.data);
-
-    // Extraigo los links de las páginas
-    const pageLinks = $('.content-view-line a');
-
-    // Encuentro la url del artículo
-    let arcticleUrl: string = null;
-    for (let i = 0; i < pageLinks.length; i++) {
-      const text = $(pageLinks[i]).text().trim();
-      if (text === `${MONTH_MAP[month]} ${year}`) {
-        arcticleUrl = $(pageLinks[i]).attr('href');
-        break;
-      }
-    }
-
-    // Informo que los datos aún no están publicados
-    if (!arcticleUrl) {
-      return null;
-    }
-
-    // Descargo el artículo
-    response = await axios.get(`https://www.pzpm.org.pl${arcticleUrl}`);
-    $ = cheerio.load(response.data);
 
     let downloadUrl: string = null;
     const items = Array.from($('.content-view-line'));
     for (const item of items) {
       const aElements = $(item).find('a');
-      const text = $(aElements[0]).text().trim();
-      if (text === 'eRegistrations') {
+      const text = $(aElements[0]).text().trim().toUpperCase();
+      if (text === `EREJESTRACJE TABELE ${MONTH_MAP[month]} ${year}`) {
         downloadUrl = `https://www.pzpm.org.pl${$(aElements[1]).attr('href')}`;
         break;
       }
@@ -78,9 +54,6 @@ class Extractor extends MonthExtractor {
 
     // Debe haber un link de descarga si no es un error
     if (!downloadUrl) {
-      console.debug({
-        arcticleUrl,
-      });
       throw new Error('Download link not found');
     }
 
