@@ -29,7 +29,7 @@ class Extractor extends MonthExtractor {
   constructor() {
     super({
       folders: ['car_registrations', 'countries', 'uk'],
-      source: 'smmt_model_2',
+      source: 'smmt_model',
       fileext: 'json',
     });
   }
