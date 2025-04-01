@@ -1,0 +1,86 @@
+{
+  "top_montly_models": [
+    {
+      "model": "MINI Cooper",
+      "registrations": "2,074"
+    },
+    {
+      "model": "Tesla Model 3",
+      "registrations": "1,990"
+    },
+    {
+      "model": "Tesla Model Y",
+      "registrations": "1,861"
+    },
+    {
+      "model": "Volkswagen Golf",
+      "registrations": "1,688"
+    },
+    {
+      "model": "Volkswagen Tiguan",
+      "registrations": "1,635"
+    },
+    {
+      "model": "Nissan Juke",
+      "registrations": "1,623"
+    },
+    {
+      "model": "Nissan Qashqai",
+      "registrations": "1,527"
+    },
+    {
+      "model": "Kia Sportage",
+      "registrations": "1,516"
+    },
+    {
+      "model": "Volvo XC40",
+      "registrations": "1,485"
+    },
+    {
+      "model": "Ford Puma",
+      "registrations": "1,466"
+    }
+  ],
+  "top_yearly_models": [
+    {
+      "model": "Kia Sportage",
+      "registrations": "4,992"
+    },
+    {
+      "model": "Nissan Qashqai",
+      "registrations": "4,948"
+    },
+    {
+      "model": "Vauxhall Corsa",
+      "registrations": "4,625"
+    },
+    {
+      "model": "Volkswagen Golf",
+      "registrations": "4,302"
+    },
+    {
+      "model": "Nissan Juke",
+      "registrations": "3,943"
+    },
+    {
+      "model": "Peugeot 3008",
+      "registrations": "3,851"
+    },
+    {
+      "model": "Peugeot 2008",
+      "registrations": "3,826"
+    },
+    {
+      "model": "MINI Cooper",
+      "registrations": "3,802"
+    },
+    {
+      "model": "Ford Puma",
+      "registrations": "3,798"
+    },
+    {
+      "model": "Volkswagen Tiguan",
+      "registrations": "3,676"
+    }
+  ]
+}
