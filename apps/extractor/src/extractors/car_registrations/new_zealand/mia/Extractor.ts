@@ -101,13 +101,8 @@ class Extractor extends MonthExtractor {
       pdfParser.loadPDF(fileData.path);
     });
 
-    // Siempre es una página
     const pages = pdfJSON.Pages;
-    if (pages.length !== 1) {
-      throw new Error('Unexpected number of pages');
-    }
-
-    const texts = pages[0].Texts;
+    const texts = pages.reduce((acc, page) => acc.concat(page.Texts), []);
 
     // Me quedo con las celdas de la tabla
     const startPos = texts.findIndex((cell) => cell.R[0].T === 'MAKE');
@@ -130,6 +125,14 @@ class Extractor extends MonthExtractor {
       } else {
         rows.push([text]);
       }
+    }
+
+    // Elimino el título si es que aparece como una fila
+    const titleRow = rows.find(
+      (row) => row.length === 1 && row[0].R[0].T.length > 50
+    );
+    if (titleRow) {
+      rows.splice(rows.indexOf(titleRow), 1);
     }
 
     // El primer row es el header, lo extraigo
