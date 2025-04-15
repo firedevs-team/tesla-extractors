@@ -1,0 +1,6 @@
+TODO: 
+   [X] Implementar get top models y get top models ytd en uk(smmt_model)
+   [] Nuevos source para thailandia y australia
+   [] Corregir problema de china
+   [] New zealand transformer
+   [] Chile transformer
