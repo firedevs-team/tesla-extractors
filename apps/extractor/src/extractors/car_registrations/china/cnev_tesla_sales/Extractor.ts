@@ -1,9 +1,7 @@
 import { Page } from 'puppeteer';
+import z from 'zod';
 import { FileData, FileOuput, MonthDateId } from '../../../../lib';
 import CNEVExtractor from '../CNEVExtractor';
-import { readFile, writeFile } from 'fs/promises';
-import path from 'path';
-import z from 'zod';
 
 const SOURCE_URL = 'https://cnevdata.com/tesla/';
 
@@ -93,7 +91,7 @@ class Extractor extends CNEVExtractor {
         return null;
       },
       year,
-      month
+      month < 10 ? `0${month}` : month // El mes debe tener 2 dígitos
     );
 
     if (data === null) {
@@ -141,25 +139,7 @@ class Extractor extends CNEVExtractor {
     ];
   }
 
-  async debug() {
-    // const dateId = new MonthDateId(2024, 10);
-    // const result = await this.download(dateId);
-    // if (result === null) {
-    //   console.log('No data available yet');
-    //   return;
-    // }
-
-    // const filePath = path.join(this.downloadsPath, `${dateId.toString()}.json`);
-    // await writeFile(filePath, result);
-    // console.log('Data saved to:', filePath);
-
-    // const dateId = new MonthDateId(2024, 10);
-    // const filePath = path.join(this.downloadsPath, `${dateId.toString()}.json`);
-    // const fileData = await readFile(filePath);
-    // await this.transform(dateId, { path: filePath, data: fileData });
-
-    await this.reindex();
-  }
+  async debug() {}
 }
 
 export default new Extractor();
