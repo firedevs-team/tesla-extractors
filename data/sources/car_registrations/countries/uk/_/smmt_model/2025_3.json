@@ -1,0 +1,86 @@
+{
+  "top_montly_models": [
+    {
+      "model": "Ford Puma",
+      "registrations": "11,132"
+    },
+    {
+      "model": "Kia Sportage",
+      "registrations": "7,874"
+    },
+    {
+      "model": "Vauxhall Corsa",
+      "registrations": "6,851"
+    },
+    {
+      "model": "Nissan Qashqai",
+      "registrations": "6,844"
+    },
+    {
+      "model": "Nissan Juke",
+      "registrations": "6,471"
+    },
+    {
+      "model": "Volkswagen Golf",
+      "registrations": "6,447"
+    },
+    {
+      "model": "MG HS",
+      "registrations": "6,337"
+    },
+    {
+      "model": "Ford Kuga",
+      "registrations": "5,949"
+    },
+    {
+      "model": "MG ZS",
+      "registrations": "5,907"
+    },
+    {
+      "model": "Volkswagen Tiguan",
+      "registrations": "5,464"
+    }
+  ],
+  "top_yearly_models": [
+    {
+      "model": "Ford Puma",
+      "registrations": "14,930"
+    },
+    {
+      "model": "Kia Sportage",
+      "registrations": "12,866"
+    },
+    {
+      "model": "Nissan Qashqai",
+      "registrations": "11,792"
+    },
+    {
+      "model": "Vauxhall Corsa",
+      "registrations": "11,476"
+    },
+    {
+      "model": "Volkswagen Golf",
+      "registrations": "10,749"
+    },
+    {
+      "model": "Nissan Juke",
+      "registrations": "10,414"
+    },
+    {
+      "model": "MG HS",
+      "registrations": "9,738"
+    },
+    {
+      "model": "Tiguan",
+      "registrations": "9,140"
+    },
+    {
+      "model": "MG ZS",
+      "registrations": "9,041"
+    },
+    {
+      "model": "Hyundai Tucson",
+      "registrations": "8,715"
+    }
+  ]
+}

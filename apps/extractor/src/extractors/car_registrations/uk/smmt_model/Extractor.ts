@@ -1,4 +1,4 @@
-import puppeteer from 'puppeteer';
+import puppeteer, { ElementHandle } from 'puppeteer';
 import z from 'zod';
 import {
   FileData,
@@ -53,19 +53,35 @@ class Extractor extends MonthExtractor {
     // así valido q la pagina q se cargó correctamente
     await page.waitForSelector('.buttons-container .tab-btn');
 
-    // Ubico el tab de los modelos del mes
-    const monthTabs = await page.$$('.buttons-container .tab-btn');
-    const topModelsTab = monthTabs[3];
-
-    // me aseguro que el layout de la pagina se mantenga
-    if (monthTabs.length !== 5) {
-      throw new Error('The number of tabs is not 5');
+    // Ubico el data tab id de los top models
+    const topModelsTabId = await page.$eval(
+      '.buttons-container .tab-btn[data-tab-slug="top-models"]',
+      (el) => el.getAttribute('data-tab-id')
+    );
+    if (!topModelsTabId) {
+      throw new Error('The top models tab id was not found');
     }
 
-    // Valido que el texto del tab sea el esperado
-    // y que diga el mes esperado
-    // si no es el mes esperado, asumo que no hay datos aún
-    // o que ya se pusieron datos de otro mes
+    // Ubico el container del tab de los top models
+    const topModelsContainer = await page.$(
+      `.tabs-container .tab-container[data-tab-id="${topModelsTabId}"]`
+    );
+    if (!topModelsContainer) {
+      throw new Error('The top models container was not found');
+    }
+
+    // Obtengo las dos tablas que contiene el container
+    const tables = await topModelsContainer.$$('table');
+    if (tables.length !== 2) {
+      throw new Error('The number of tables is not 2');
+    }
+
+    // Valido que la primera tabla el primer row la segunda columna tenga el texto del mes esperado
+    const monthText = await tables[0].evaluate((el) =>
+      el
+        .querySelector('tbody tr:nth-child(1) th:nth-child(2)')
+        ?.textContent?.toUpperCase()
+    );
     const MONTH_MAP = {
       1: 'JANUARY',
       2: 'FEBRUARY',
@@ -80,39 +96,16 @@ class Extractor extends MonthExtractor {
       11: 'NOVEMBER',
       12: 'DECEMBER',
     };
-    const expectedPrefix = 'TOP MODELS ';
-    const expectedText = expectedPrefix + MONTH_MAP[month] + ' ' + year;
-    const monthTabText = await page.evaluate(
-      (el) => (el as HTMLElement).innerText.toUpperCase(),
-      topModelsTab
-    );
-    if (!monthTabText.startsWith(expectedPrefix)) {
-      console.debug({
-        monthTabText,
-        expectedPrefix,
-        expectedText,
-      });
-      throw new Error(
-        `The tab text dont starts with the expected prefix: "${expectedPrefix}"`
-      );
-    }
-    if (monthTabText !== expectedText) {
+    if (monthText !== MONTH_MAP[month]) {
       // Si el texto no es el esperado informo que no hay datos
       return null;
     }
 
-    // Los datos están en unos tab containers,
-    // deben haber 5 al igual q los tabs
-    const tabContainers = await page.$$('.tabs-container .tab-container');
-    if (tabContainers.length !== 5) {
-      throw new Error('The number of tab containers is not 5');
-    }
-
-    // Ambas tablas la misma estructura
+    // Ambas tablas tienen la misma estructura
     // por lo que puedo usar la misma función para extraer los datos
-    const getDataFromTab = async (tabIndex: number) => {
-      // Extraigo los datos de la tabla del container
-      const rows = await tabContainers[tabIndex].$$('tbody tr');
+    const getDataFromTable = async (table: ElementHandle<HTMLTableElement>) => {
+      // Extraigo los datos de la tabla
+      const rows = await table.$$('tbody tr');
       // Elimino la primera row que es el header
       rows.shift();
       const data: IRawRegistration[] = [];
@@ -130,8 +123,12 @@ class Extractor extends MonthExtractor {
     };
 
     // Obtengo los datos
-    const topMonthlyModels: IRawRegistration[] = await getDataFromTab(3);
-    const topYearlyModels: IRawRegistration[] = await getDataFromTab(4);
+    const topMonthlyModels: IRawRegistration[] = await getDataFromTable(
+      tables[0]
+    );
+    const topYearlyModels: IRawRegistration[] = await getDataFromTable(
+      tables[1]
+    );
 
     const data: IData = {
       top_montly_models: topMonthlyModels,

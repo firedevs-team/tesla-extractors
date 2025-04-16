@@ -45,9 +45,9 @@ class Extractor extends MonthExtractor {
     const { year, month } = dateId;
 
     // Para cargar datos antiguos
-    const { data: mainPage } = await axios.get(this.getOldSourceUrl(dateId));
+    // const { data: mainPage } = await axios.get(this.getOldSourceUrl(dateId));
 
-    // const { data: mainPage } = await axios.get(SOURCE_URL);
+    const { data: mainPage } = await axios.get(SOURCE_URL);
     const $ = cheerio.load(mainPage);
 
     // En el header sobre la tabla indica el mes
