@@ -21,6 +21,7 @@ export interface Config {
   folders: string[];
   source: string;
   fileext: string;
+  disabled?: boolean;
 }
 
 export class DateId {
@@ -107,6 +108,12 @@ export abstract class BaseExtractor<C extends Config = Config> {
     const folder = path.join(...folders);
 
     console.log('');
+
+    if (this.config.disabled) {
+      console.log(`> ${chalk.gray(`Extractor ${source} is disabled`)}`);
+      return;
+    }
+
     console.log(`Running [${folder}] ${source} extractor...`);
 
     const dateId = await this.resolveId();

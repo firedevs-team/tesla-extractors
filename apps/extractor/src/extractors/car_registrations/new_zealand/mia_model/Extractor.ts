@@ -17,6 +17,7 @@ class Extractor extends MonthExtractor {
       folders: ['car_registrations', 'countries', 'new_zealand'],
       source: 'mia_model',
       fileext: 'pdf',
+      disabled: true,
     });
   }
 
