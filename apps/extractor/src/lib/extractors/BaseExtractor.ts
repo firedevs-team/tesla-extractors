@@ -110,7 +110,7 @@ export abstract class BaseExtractor<C extends Config = Config> {
     console.log('');
 
     if (this.config.disabled) {
-      console.log(`> ${chalk.gray(`Extractor ${source} is disabled`)}`);
+      console.log(`> ${chalk.yellow(`Extractor ${source} is disabled`)}`);
       return;
     }
 
