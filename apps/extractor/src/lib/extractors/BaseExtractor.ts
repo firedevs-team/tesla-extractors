@@ -43,6 +43,10 @@ export class DateId {
     return this.year.toString();
   }
 
+  equals(dateId: DateId): boolean {
+    return this.valueOf() === dateId.valueOf();
+  }
+
   greaterThan(dateId: DateId): boolean {
     return this.valueOf() > dateId.valueOf();
   }
