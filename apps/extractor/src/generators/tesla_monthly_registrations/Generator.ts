@@ -699,10 +699,10 @@ class Generator extends BaseGenerator {
     })();
 
     // --------
-    // Cargo China tesla_sales.csv
+    // Cargo China tesla_retail.csv
     await (async () => {
       const country = 'china';
-      const dataPath = path.join(COUNTRIES_PATH, country, 'tesla_sales.csv');
+      const dataPath = path.join(COUNTRIES_PATH, country, 'tesla_retail.csv');
       let data = await this.loadSource(dataPath);
 
       registrations.push(
@@ -712,7 +712,7 @@ class Generator extends BaseGenerator {
             month: r['month'],
             region: 'CHINA',
             country: country.toUpperCase(),
-            registrations: r['sales'],
+            registrations: r['total'],
           };
 
           return result;
