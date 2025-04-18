@@ -1,6 +1,14 @@
 TODO: 
-   [X] Implementar get top models y get top models ytd en uk(smmt_model)
-   [] Nuevos source para thailandia y australia
-   [] Corregir problema de china
-   [] New zealand transformer
+   [] Separar los extractores de la data
+   [] Nuevo source para Australia
    [] Chile transformer
+   [] Nuevo source para Thailandia
+
+LISTO:
+   [X] Agregar mas data de China (export, wholesale)
+   [X] Corregir error con usa
+   [X] Corregir error con uk
+   [X] Implementar get top models y get top models ytd en uk(smmt_model)
+   [X] Corregir problema de china
+   [X] New zealand transformer
+   
