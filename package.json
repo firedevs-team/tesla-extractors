@@ -6,7 +6,6 @@
   "private": true,
   "dependencies": {
     "@aws-sdk/client-textract": "^3.645.0",
-    "@google-cloud/storage": "^7.14.0",
     "@nrwl/node": "^19.5.7",
     "adm-zip": "^0.5.16",
     "axios": "^1.7.7",
