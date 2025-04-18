@@ -1,5 +1,5 @@
+import puppeteer, { Page } from 'puppeteer';
 import { MonthDateId, MonthExtractor } from '../../../lib';
-import puppeteer, { Browser, Page } from 'puppeteer';
 
 const SITE_URL = 'https://cnevdata.com';
 
@@ -36,7 +36,7 @@ export default abstract class CNEVExtractor extends MonthExtractor {
     // Escribo el email
     await iframe.waitForSelector('#session_email');
     await iframe.click('#session_email');
-    await iframe.type('#session_email', 'kmilo8346@gmail.com');
+    await iframe.type('#session_email', process.env.CNEV_DATA_USERNAME);
 
     // Le doy click al botón de continue
     await iframe.click('#session .btn-main');
@@ -44,7 +44,7 @@ export default abstract class CNEVExtractor extends MonthExtractor {
     // Escribo la contraseña
     await iframe.waitForSelector('#session_password');
     await iframe.click('#session_password');
-    await iframe.type('#session_password', 'Cojimar123');
+    await iframe.type('#session_password', process.env.CNEV_DATA_PASSWORD);
 
     // Le doy click al botón de sign in
     await iframe.click('#session .btn-main');

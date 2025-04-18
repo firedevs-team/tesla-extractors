@@ -13,7 +13,10 @@ export abstract class BaseGenerator {
   constructor(config: IConfig) {
     this.config = config;
 
-    this.sources_path = path.join(process.cwd(), 'data', 'sources');
+    this.sources_path = path.join(
+      process.cwd(),
+      process.env.TESLA_DATA_LOCAL_PATH
+    );
     this.generated_path = path.join(this.sources_path, '_generated');
 
     // Creo los folders

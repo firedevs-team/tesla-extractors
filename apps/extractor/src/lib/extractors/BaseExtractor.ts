@@ -4,7 +4,10 @@ import { Parser } from 'json2csv';
 import path from 'path';
 import chalk from 'chalk';
 
-const SOURCES_PATH = path.join(process.cwd(), 'data', 'sources');
+const SOURCES_PATH = path.join(
+  process.cwd(),
+  process.env.TESLA_DATA_LOCAL_PATH
+);
 
 export interface FileData {
   path: string;

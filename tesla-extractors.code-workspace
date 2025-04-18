@@ -5,10 +5,6 @@
       "path": "./apps/extractor/src"
     },
     {
-      "name": "🗄️ Sources",
-      "path": "./data/sources"
-    },
-    {
       "name": "Monorepo",
       "path": "."
     }
