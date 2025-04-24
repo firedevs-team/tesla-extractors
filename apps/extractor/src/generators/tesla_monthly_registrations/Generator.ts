@@ -1,6 +1,6 @@
 import Papa from 'papaparse';
 import { BaseGenerator } from '../../lib';
-import { mkdir, readFile, writeFile } from 'fs/promises';
+import { readFile, writeFile } from 'fs/promises';
 import path from 'path';
 import { Parser } from 'json2csv';
 import chalk from 'chalk';
