@@ -195,6 +195,7 @@ class Extractor extends MonthExtractor {
     }
 
     // Si tesla no tiene datos, lo agrego con todo 0
+
     const tesla = registrations.find((r) => r.brand === 'TESLA');
     if (!tesla) {
       registrations.push({
