@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios, { AxiosError, AxiosResponse } from 'axios';
 import * as cheerio from 'cheerio';
 import xlsx, { CellObject } from 'xlsx';
 import z from 'zod';
@@ -11,18 +11,18 @@ import {
 
 const SOURCE_URL = `https://www.pzpm.org.pl/pl/Elektromobilnosc/eRejestracje`;
 const MONTH_MAP = {
-  1: 'STYCZEŃ',
+  1: 'STYCZEN',
   2: 'LUTY',
   3: 'MARZEC',
-  4: 'KWIECIEŃ',
+  4: 'KWIECIEN',
   5: 'MAJ',
   6: 'CZERWIEC',
   7: 'LIPIEC',
-  8: 'SIERPIEŃ',
-  9: 'WRZESIEŃ',
-  10: 'PAŹDZIERNIK',
+  8: 'SIERPIEN',
+  9: 'WRZESIEN',
+  10: 'PAZDZIERNIK',
   11: 'LISTOPAD',
-  12: 'GRUDZIEŃ',
+  12: 'GRUDZIEN',
 };
 
 class Extractor extends MonthExtractor {
@@ -38,7 +38,20 @@ class Extractor extends MonthExtractor {
     const { year, month } = dateId;
 
     // Descargo la página principal
-    let response = await axios.get(`${SOURCE_URL}/${MONTH_MAP[month]}-${year}`);
+    let response: AxiosResponse<any, any>;
+    try {
+      response = await axios.get(`${SOURCE_URL}/${MONTH_MAP[month]}-${year}`);
+    } catch (error) {
+      const e = error as AxiosError;
+      if (e.response?.status === 404) {
+        // Si no existe la página, no hay datos publicados aún
+        return null;
+      }
+
+      throw error;
+    }
+
+    // Parseo el HTML
     let $ = cheerio.load(response.data);
 
     let downloadUrl: string = null;
